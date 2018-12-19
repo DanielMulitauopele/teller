@@ -1,7 +1,34 @@
 .container {
   background: var(--MainGradient);
-  height: 10rem;
+  height: 11rem;
   width: 100%;
   border-radius: 0 0 15px 15px;
   position: fixed;
+  text-align: center;
+  color: var(--AlmostWhite);
+  -moz-box-shadow: inset 0 -10px 10px -10px white;
+  -webkit-box-shadow: inset 0 -10px 10px -10px white;
+  box-shadow: inset 0 -20px 20px -20px white;
+}
+
+.container h5 {
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.container h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+}
+
+.container h1:first-letter {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+.container h2 {
+  font-weight: 400;
+  font-size: 1rem;
 }

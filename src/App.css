@@ -8,7 +8,9 @@
     #db5db2,
     #fc599f
   );
-  --Almostwhite: rgb(230, 230, 230);
+  --AlmostWhite: rgb(230, 230, 230);
+  margin: 0;
+  padding: 0;
 }
 
 .App {
