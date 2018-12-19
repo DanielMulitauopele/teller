@@ -13,4 +13,14 @@ describe('API', () => {
     await API.fetchData(mockUrl)
     expect(window.fetch).toHaveBeenCalledWith(mockUrl)
   })
+
+  it('should throw an error if fetch call fails', async () => {
+    const mockUrl = 'someUrl.com'
+    window.fetch = jest.fn().mockImplementation(() => 
+      Promise.reject({
+        error: 'Fetch has failed'
+      })
+    )
+    expect(API.fetchData(mockUrl)).rejects.toEqual({error: 'Fetch has failed'})
+  })
 })
