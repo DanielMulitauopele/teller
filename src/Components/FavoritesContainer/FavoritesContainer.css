@@ -1,5 +1,5 @@
 .container-box {
-  height: 12rem;
+  height: 12.1rem;
   overflow: hidden;
 }
 
@@ -11,7 +11,6 @@
   position: relative;
   text-align: center;
   color: var(--AlmostWhite);
-  /* overflow: hidden; */
 }
 
 .container:before {
@@ -21,10 +20,11 @@
   border-radius: 0 0 15px 15px;
   position: absolute;
   top: 11rem;
-  background-color: #9862dab9;
+  background-color: #aa78e6;
   left: 0;
   right: 0;
   margin: 0 auto;
+  z-index: 20;
 }
 
 .container:after {
@@ -33,11 +33,12 @@
   content: "";
   border-radius: 0 0 15px 15px;
   position: absolute;
-  top: 11.5rem;
-  background-color: #9862dab9;
+  top: 11.55rem;
+  background-color: #ad83e0;
   left: 0;
   right: 0;
   margin: 0 auto;
+  z-index: 20;
 }
 
 .container div {
@@ -48,6 +49,7 @@
   margin: 1.5rem 0;
   font-weight: 300;
   text-transform: uppercase;
+  z-index: -5;
 }
 
 .container h1 {
@@ -69,6 +71,7 @@
 
 .container button {
   border: none;
-  position: fixed;
-  z-index: 50;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
 }
