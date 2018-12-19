@@ -13,12 +13,12 @@
 
 .container h5 {
   margin-bottom: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
 .container h1 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 2.5rem;
   letter-spacing: -1px;
 }
@@ -29,6 +29,6 @@
 }
 
 .container h2 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1rem;
 }

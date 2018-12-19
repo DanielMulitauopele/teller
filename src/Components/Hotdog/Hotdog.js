@@ -18,3 +18,5 @@ class Hotdog extends Component {
     );
   }
 }
+
+export default Hotdog;
