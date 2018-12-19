@@ -10,12 +10,23 @@ class App extends Component {
     this.state = {
       favorites: []
     };
+
+    addToFavorites = (favorite) => {
+      this.setState({ favorites: [favorite, ...this.state.favorites] });
+    };
+
+    removeFromFavorites = (id) => {
+      const filteredFavorites = this.state.favorites.filter(favorite => favorite.id !== id);
+      this.setState({filteredFavorites})
+    }
   }
+
   render() {
+    const 
     return (
       <div className="App">
         <Hotdog />
-        <FavoritesContainer />
+        <FavoritesContainer addToFavorites = {this.addToFavorites} removeFromFavorites = {this.removeFromFavorites}/>
       </div>
     );
   }
