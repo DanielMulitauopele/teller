@@ -1,0 +1,16 @@
+/* ! Colors ! */
+* {
+  --MainGradient: linear-gradient(
+    to right,
+    #8065e9,
+    #9862da,
+    #b760c5,
+    #db5db2,
+    #fc599f
+  );
+  --Almostwhite: rgb(230, 230, 230);
+}
+
+.App {
+  width: 100%;
+}
