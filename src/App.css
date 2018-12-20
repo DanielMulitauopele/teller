@@ -1,4 +1,3 @@
-/* ! Colors ! */
 * {
   --MainGradient: linear-gradient(
     to right,
@@ -18,5 +17,4 @@
   width: 100%;
   height: 100vh;
   background-color: #303859;
-  /* overflow: hidden; */
 }
