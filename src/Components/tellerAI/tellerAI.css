@@ -7,19 +7,21 @@
   z-index: 50;
   right: 2rem;
   top: 9.5rem;
+  transition: 0.3s;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.349);
 }
 
 .teller img {
-  width: 40px;
-  padding: 0.5rem;
+  width: 30px;
+  padding: 0.8rem;
   animation: rotate 15s linear infinite;
   transition: 0.2s;
   cursor: pointer;
 }
 
-.teller:hover img {
+.teller:hover {
   filter: brightness(120%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
 }
 
 @keyframes rotate {
