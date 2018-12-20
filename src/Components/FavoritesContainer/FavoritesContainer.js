@@ -5,6 +5,7 @@ import FavoriteCurrencies from "../FavoriteCurrencies/FavoriteCurrencies";
 import settings from "../Settings/Settings";
 import "./slick-theme.css";
 import "./FavoritesContainer.css";
+import TellerAI from "../tellerAI/tellerAI";
 
 export class FavoritesContainer extends Component {
   constructor({ favorites, addToFavorites, removeFromFavorites }) {
@@ -31,6 +32,7 @@ export class FavoritesContainer extends Component {
         <div className="container">
           <Slider {...settings}>{favoriteCurrencies}</Slider>
         </div>
+        <TellerAI />
       </div>
     );
   }

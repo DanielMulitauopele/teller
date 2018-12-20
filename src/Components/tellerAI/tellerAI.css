@@ -1,0 +1,9 @@
+.teller {
+  width: 5rem;
+  height: 5rem;
+  background-color: white;
+  left: 0;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 500;
+}
