@@ -1,77 +1,32 @@
 .container-box {
-  height: 12.1rem;
   overflow: hidden;
-}
-
-.container {
-  background: var(--MainGradient);
   height: 11rem;
-  width: 100%;
-  border-radius: 0 0 15px 15px;
-  position: relative;
-  text-align: center;
-  color: var(--AlmostWhite);
 }
-
-.container:before {
-  width: 90%;
-  height: 5%;
+.container-box:before {
+  width: 23rem;
+  height: 1%;
   content: "";
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 5px 5px;
   position: absolute;
-  top: 11rem;
+  /* top: 11rem; */
   background-color: #aa78e6;
   left: 0;
   right: 0;
   margin: 0 auto;
   z-index: 20;
+  top: 11rem;
 }
 
-.container:after {
-  width: 80%;
-  height: 5%;
+.container-box:after {
+  width: 85%;
+  height: 1.5%;
   content: "";
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 5px 5px;
   position: absolute;
-  top: 11.55rem;
-  background-color: #ad83e0;
+  top: 11.15rem;
+  background-color: #c5a3ee;
   left: 0;
   right: 0;
   margin: 0 auto;
-  z-index: 20;
-}
-
-.container div {
-  height: 11rem;
-}
-
-.container h5 {
-  margin: 1.5rem 0;
-  font-weight: 300;
-  text-transform: uppercase;
-  z-index: -5;
-}
-
-.container h1 {
-  font-weight: 300;
-  font-size: 2.5rem;
-  letter-spacing: -1px;
-}
-
-.container h1:first-letter {
-  font-size: 1.5rem;
-  margin-right: 5px;
-  margin-bottom: 1rem;
-}
-
-.container h2 {
-  font-weight: 300;
-  font-size: 1rem;
-}
-
-.container button {
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  display: inline-block;
+  z-index: 15;
 }
