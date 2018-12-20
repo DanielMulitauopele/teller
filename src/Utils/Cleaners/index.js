@@ -13,4 +13,6 @@ class DataCleaner {
   }
 }
 
+//clean price and percent change to only 2 decimal points
+
 export default DataCleaner

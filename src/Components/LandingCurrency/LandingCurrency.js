@@ -3,8 +3,9 @@ import "./LandingCurrency.css";
 import Heart from "../../Assets/heart.svg";
 
 class LandingCurrency extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    // console.log(props)
+    super(props);
     this.state = {
       expanded: false
     };
@@ -17,31 +18,27 @@ class LandingCurrency extends Component {
   };
 
   render() {
+    const { symbol, name, price_usd, price_change_24_hr, rank } = this.props.currency
+    console.log(this.props.currency.symbol)
     return (
       <div className="currency-card" onClick={this.expand}>
         <div className="card-inside-text">
           <div className="cc-left">
-            <p>BTC</p>
-            <p>$2000.00</p>
+            {/*insert image here*/}
           </div>
           <div className="cc-center">
-            <p>$150.00</p>
-            <p>.0382 coin</p>
+            <p>{symbol}</p>
+            <p>{price_usd}</p>
           </div>
-          <div clasName="cc-right">
-            <p> +2.86% </p>
+          <div className="cc-right">
+            <p>{price_change_24_hr}</p>
           </div>
         </div>
         {this.state.expanded && (
           <div className="expanded-currency">
             <div className="ec-left">
-              <p>Market Cap</p>
-              <p>$1000.00</p>
-              <p>30%</p>
-            </div>
-            <div className="ec-right">
-              <p>Volume</p>
-              <p>$450.00</p>
+              <p>{name}</p>
+              <p>{rank}</p>
             </div>
             <img src={Heart} className="fave-this" />
           </div>
