@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./LandingCurrencyContainer.css";
+import LandingCurrency from "../LandingCurrency/LandingCurrency";
 
 class LandingCurrencyContainer extends Component {
   constructor() {
@@ -10,7 +11,11 @@ class LandingCurrencyContainer extends Component {
   }
 
   render() {
-    return <div className="currency-container" />;
+    return (
+      <div className="currency-container">
+        <LandingCurrency />
+      </div>
+    );
   }
 }
 

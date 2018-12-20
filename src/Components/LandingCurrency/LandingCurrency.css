@@ -1,0 +1,7 @@
+.currency-card {
+  height: 5rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  background: linear-gradient(to right, #424b6e, #272e4e);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.459);
+}
