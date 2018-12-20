@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./tellerAI.css";
+import Ball from "../../Assets/ball.svg";
 
 class TellerAI extends Component {
   constructor() {
@@ -12,9 +13,9 @@ class TellerAI extends Component {
   render() {
     return (
       <div className="teller">
-        <div />
-        <div />
-        <div />
+        <div className="teller-insides">
+          <img src={Ball} />
+        </div>
       </div>
     );
   }

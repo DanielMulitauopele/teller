@@ -1,9 +1,29 @@
 .teller {
-  width: 5rem;
-  height: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   background-color: white;
-  left: 0;
   border-radius: 50%;
   position: absolute;
-  z-index: 500;
+  z-index: 50;
+  right: 2rem;
+  top: 9.5rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.349);
+}
+
+.teller img {
+  width: 40px;
+  padding: 0.5rem;
+  animation: rotate 15s linear infinite;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.teller:hover img {
+  filter: brightness(120%);
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
