@@ -33,3 +33,7 @@
 .cc-center p:first-child:first-letter {
   padding-right: 3px;
 }
+
+.expanded-currency .currency-card {
+  height: 5rem;
+}
