@@ -11,7 +11,7 @@ const FavoriteCurrencies = () => {
         <div />
       </div>
       <p className="fave-name">BITCOIN</p>
-      <p class="fave-price">
+      <p className="fave-price">
         $9000.<span>00</span>
       </p>
       <div className="bubbles bubbles-right">
