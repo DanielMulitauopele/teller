@@ -3,18 +3,8 @@
   height: 11rem;
 }
 
-.fave-currency {
-  background: var(--MainGradient);
-  height: 11rem;
-  width: 100%;
-  border-radius: 5px;
-  position: relative;
-  text-align: center;
-  color: var(--AlmostWhite);
-}
-
 .container-box:before {
-  width: 95%;
+  width: 23rem;
   height: 1%;
   content: "";
   border-radius: 0 0 5px 5px;

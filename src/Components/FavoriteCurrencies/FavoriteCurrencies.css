@@ -1,6 +1,16 @@
-.fave-currency p:first-child {
+.fave-currency {
+  background: var(--MainGradient);
+  height: 11rem;
+  width: 25rem;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+  color: var(--AlmostWhite);
+}
+
+.fave-name {
   font-size: 0.8rem;
-  padding-top: 35px;
+  padding-top: 50px;
 }
 
 .fave-price {
@@ -20,7 +30,7 @@
 
 .price-progress {
   display: inline-block;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
 }
 
 .fave-currency img {
@@ -28,4 +38,94 @@
   width: 0.5rem;
   transform: rotate(90deg);
   margin-bottom: -2px;
+}
+
+.bubbles {
+  width: 5rem;
+  height: 2rem;
+  bottom: 2rem;
+  position: absolute;
+  display: flex;
+}
+
+.bubbles-left {
+  left: 4rem;
+}
+
+.bubbles-right {
+  right: 4rem;
+}
+
+.bubbles div {
+  margin: 8px;
+}
+
+.bubbles div:first-child,
+.bubbles div:nth-child(3) {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 25px;
+}
+
+.bubbles div:nth-child(2) {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(216, 216, 216);
+  border-radius: 50%;
+}
+
+.bubbles-left div:first-child {
+  animation: rise 2s linear infinite;
+  bottom: 0;
+  position: absolute;
+}
+
+.bubbles-left div:nth-child(2) {
+  animation: rise 4s linear infinite;
+  bottom: 0;
+  left: 1rem;
+  position: absolute;
+}
+
+.bubbles-left div:nth-child(3) {
+  animation: rise 2.5s linear infinite;
+  bottom: 15px;
+  left: 3rem;
+  position: absolute;
+}
+
+.bubbles-right div:first-child {
+  animation: rise 3s linear infinite;
+  bottom: 0;
+  position: absolute;
+}
+
+.bubbles-right div:nth-child(2) {
+  animation: rise 3.5s linear infinite;
+  bottom: 0;
+  left: 1rem;
+  position: absolute;
+}
+
+.bubbles-right div:nth-child(3) {
+  animation: rise 1.5s linear infinite;
+  bottom: 15px;
+  left: 3rem;
+  position: absolute;
+}
+
+@keyframes rise {
+  0% {
+    bottom: 1rem;
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 5rem;
+    opacity: 0;
+  }
 }
