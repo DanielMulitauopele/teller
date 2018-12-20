@@ -1,0 +1,25 @@
+.hotdog-container {
+  width: 1.3rem;
+  height: 1rem;
+  position: fixed;
+  left: 2rem;
+  top: 2rem;
+  z-index: 50;
+  cursor: pointer;
+}
+
+.hotdog-container div {
+  width: 60%;
+  height: 2px;
+  margin: 0 auto 5px;
+  transition: 0.3s;
+  background-color: var(--AlmostWhite);
+}
+
+.hotdog-container div:nth-child(2) {
+  width: 100%;
+}
+
+.hotdog-container:hover div {
+  margin: 0 auto 6px;
+}

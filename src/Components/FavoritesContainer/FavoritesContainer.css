@@ -1,0 +1,32 @@
+.container-box {
+  overflow: hidden;
+  height: 11rem;
+}
+.container-box:before {
+  width: 23rem;
+  height: 1%;
+  content: "";
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  /* top: 11rem; */
+  background-color: #aa78e6;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 20;
+  top: 11rem;
+}
+
+.container-box:after {
+  width: 85%;
+  height: 1.5%;
+  content: "";
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  top: 11.15rem;
+  background-color: #c5a3ee;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 15;
+}
