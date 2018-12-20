@@ -20,7 +20,7 @@
 
 .container-box:after {
   width: 85%;
-  height: 1%;
+  height: 1.5%;
   content: "";
   border-radius: 0 0 5px 5px;
   position: absolute;

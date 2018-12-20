@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { FavoritesContainer } from "./Components/FavoritesContainer/FavoritesContainer";
 import Hotdog from "./Components/Hotdog/Hotdog";
+import LandingCurrencyContainer from "./Components/LandingCurrencyContainer/LandingCurrencyContainer";
 
 class App extends Component {
   constructor() {
@@ -32,6 +33,7 @@ class App extends Component {
           addToFavorites={this.addToFavorites}
           removeFromFavorites={this.removeFromFavorites}
         />
+        <LandingCurrencyContainer />
       </div>
     );
   }
