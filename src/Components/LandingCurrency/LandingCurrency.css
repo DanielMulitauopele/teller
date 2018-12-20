@@ -4,4 +4,32 @@
   border-radius: 5px;
   background: linear-gradient(to right, #424b6e, #272e4e);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.459);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--AlmostWhite);
+  transition: 0.2s;
+}
+
+.currency-card:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+.cc-left p:first-child,
+.cc-center p:first-child {
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding-bottom: 5px;
+}
+
+.cc-left p:nth-child(2),
+.cc-center p:nth-child(2) {
+  color: rgba(255, 255, 255, 0.555);
+  font-size: 0.8rem;
+}
+
+.cc-left p:nth-child(2):first-letter,
+.cc-center p:first-child:first-letter {
+  padding-right: 3px;
 }

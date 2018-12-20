@@ -14,6 +14,19 @@ class LandingCurrencyContainer extends Component {
     return (
       <div className="currency-container">
         <LandingCurrency />
+        <LandingCurrency />
+        <LandingCurrency />
+        <LandingCurrency />
+        <LandingCurrency />
+        <LandingCurrency />
+        <LandingCurrency />
+        <LandingCurrency />
+        <LandingCurrency />
+        <LandingCurrency />
+        <LandingCurrency />
+        <LandingCurrency />
+        <LandingCurrency />
+        <LandingCurrency />
       </div>
     );
   }
