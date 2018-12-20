@@ -7,10 +7,14 @@ import mockCurrencies from '../MockData/mockCurrencies'
 describe('DataCleaner', () => {
   const mockCleaner = new DataCleaner()
 
+  mockCleaner.fetchData = jest.fn(() => {
+    return mockCurrencies
+  })
+
   describe('getCurrencies function', () => {
-    xit('should call fetchData with the correct params', async () => {
+    it('should call fetchData with the correct params', async () => {
       await mockCleaner.getCurrencies()
-      expect(mockCleaner.fetchData).toHaveBeenCalled()
+      await expect(mockCleaner.fetchData).toHaveBeenCalled()
     })
   })
 

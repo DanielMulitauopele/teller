@@ -6,7 +6,8 @@ class DataCleaner {
   }
 
   getCurrencies = async () => {
-    const currencyData = await this.fetchData()
+    const url = 'https://guarded-reef-25579.herokuapp.com/api/v1/assets'
+    const currencyData = await this.fetchData(url)
     console.log(currencyData)
     return currencyData
   }
