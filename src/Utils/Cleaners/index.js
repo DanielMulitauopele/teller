@@ -34,13 +34,8 @@ class DataCleaner {
         market_cap: Math.round(currency.market_cap_usd * 100)/100
       }
     })
-    console.log(cleanCurrency)
     return cleanCurrency
   }
-
-
 }
-
-//clean price and percent change to only 2 decimal points
 
 export default DataCleaner

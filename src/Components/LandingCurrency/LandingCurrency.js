@@ -4,7 +4,6 @@ import Heart from "../../Assets/heart.svg";
 
 class LandingCurrency extends Component {
   constructor(props) {
-    // console.log(props)
     super(props);
     this.state = {
       expanded: false
@@ -19,7 +18,6 @@ class LandingCurrency extends Component {
 
   render() {
     const { symbol, name, price, percent_change, rank } = this.props.currency
-    // console.log(this.props.currency.symbol)
     return (
       <div className="currency-card" onClick={this.expand}>
         <div className="card-inside-text">
