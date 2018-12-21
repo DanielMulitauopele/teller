@@ -1,6 +1,6 @@
 .teller {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3.3rem;
+  height: 3.3rem;
   background-color: white;
   border-radius: 50%;
   position: absolute;
@@ -13,7 +13,7 @@
 
 .teller img {
   width: 30px;
-  padding: 0.8rem;
+  padding: 0.735rem;
   animation: rotate 15s linear infinite;
   transition: 0.2s;
   cursor: pointer;
