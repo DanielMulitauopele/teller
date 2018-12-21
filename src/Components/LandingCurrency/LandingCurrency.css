@@ -9,10 +9,10 @@
 
 .card-inside-text {
   height: 5rem;
-  margin: 0.8rem;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 50px 3rem 10rem 4rem;
   align-items: center;
+  padding: 0 1rem;
 }
 
 .currency-card:hover {
@@ -21,57 +21,51 @@
   transform: scale(1.05);
 }
 
-.cc-left p:first-child,
-.cc-center p:first-child {
-  font-weight: 600;
-  font-size: 0.9rem;
-  padding-bottom: 5px;
-}
-
-.cc-left p:nth-child(2),
-.cc-center p:nth-child(2) {
-  color: rgba(255, 255, 255, 0.555);
-  font-size: 0.8rem;
-}
-
-.cc-left p:nth-child(2):first-letter,
-.cc-center p:first-child:first-letter {
-  padding-right: 3px;
-}
-
 .expanded-currency {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   transition: 0.2s;
   display: flex;
   justify-content: space-around;
   text-transform: uppercase;
 }
 
-.ec-left p:first-child,
-.ec-right p:first-child {
-  font-weight: 600;
-  font-size: 0.9rem;
-  padding-bottom: 5px;
+.cc-left img {
+  height: 20px;
+  background: var(--Peachy);
+  border-radius: 5px;
+  padding: 5px;
 }
 
-.ec-left p:nth-child(2),
-.ec-left p:nth-child(3),
-.ec-right p:nth-child(2) {
-  color: rgba(255, 255, 255, 0.555);
-  font-size: 0.8rem;
+.cc-center p:first-child {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.cc-center-right {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cc-center p:nth-child(2) {
+  color: rgba(255, 255, 255, 0.609);
+  font-size: 12px;
 }
 
 .fave-this {
-  fill: #fff;
+  fill: #000;
   height: 20px;
   right: 0rem;
   width: 20px;
   position: relative;
-  transition: .2s;
+  transition: 0.2s;
   bottom: -1rem;
 }
 
-.fave-this:hover{
+.fave-this:hover {
   filter: brightness(1.5);
   transform: scale(1.2);
+}
+
+.cc-right {
+  text-align: center;
 }
