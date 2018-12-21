@@ -1,5 +1,5 @@
 import React from 'react'
-import * as API from './'
+import API from './'
 
 describe('API', () => {
   it('should call fetch with the correct params', async () => {
@@ -10,7 +10,7 @@ describe('API', () => {
         json: () => Promise.resolve()
       })
     )
-    await API.fetchData(mockUrl)
+    await API(mockUrl)
     expect(window.fetch).toHaveBeenCalledWith(mockUrl)
   })
 
@@ -21,6 +21,6 @@ describe('API', () => {
         error: 'Fetch has failed'
       })
     )
-    expect(API.fetchData(mockUrl)).rejects.toEqual({error: 'Fetch has failed'})
+    expect(API(mockUrl)).rejects.toEqual({error: 'Fetch has failed'})
   })
 })
