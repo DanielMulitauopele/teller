@@ -30,7 +30,7 @@ class LandingCurrency extends Component {
             <p>{name}</p>
           </div>
           <div className="cc-center-right">
-            <p>{price}</p>
+            <p>$ {price}</p>
           </div>
           <div className="cc-right">
             <p>{percent_change}</p>

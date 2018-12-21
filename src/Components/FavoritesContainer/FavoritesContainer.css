@@ -1,14 +1,16 @@
 .container-box {
   overflow: hidden;
   height: 11rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.774);
+  width: 25rem;
 }
-.container-box:before {
+
+/* .container-box:before {
   width: 23rem;
   height: 1%;
   content: "";
   border-radius: 0 0 5px 5px;
   position: absolute;
-  /* top: 11rem; */
   background-color: #aa78e6;
   left: 0;
   right: 0;
@@ -29,4 +31,4 @@
   right: 0;
   margin: 0 auto;
   z-index: 15;
-}
+} */
