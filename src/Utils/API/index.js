@@ -1,4 +1,4 @@
-export const fetchData = async (url) => {
+const API = async (url) => {
   const response = await fetch(url)
   if (response.status >= 300) {
     throw new Error('Fetch has failed')
@@ -7,3 +7,5 @@ export const fetchData = async (url) => {
     return result
   }
 }
+
+export default API
