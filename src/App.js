@@ -13,19 +13,24 @@ class App extends Component {
     this.state = {
       favorites: [1, 2, 3, 4, 5],
       abbrevCurrencies: [],
-      expandedCurrencies: []
+      expandedCurrencies: [],
+      userEmail: ''
     }
+  }
 
-    const addToFavorites = favorite => {
-      this.setState({ favorites: [favorite, ...this.state.favorites] });
-    };
+  addToFavorites = favorite => {
+    this.setState({ favorites: [favorite, ...this.state.favorites] })
+  }
 
-    const removeFromFavorites = id => {
-      const filteredFavorites = this.state.favorites.filter(
-        favorite => favorite.id !== id
-      );
-      this.setState({ filteredFavorites });
-    };
+  removeFromFavorites = id => {
+    const filteredFavorites = this.state.favorites.filter(
+      favorite => favorite.id !== id
+    );
+    this.setState({ filteredFavorites });
+  }
+
+  loginUser = userEmail => {
+    this.setState({userEmail})
   }
 
   async componentDidMount(){
@@ -45,7 +50,7 @@ class App extends Component {
           addToFavorites={this.addToFavorites}
           removeFromFavorites={this.removeFromFavorites}
         />
-        <LoginForm />
+        <LoginForm loginUser={this.loginUser} />
         <RegisterForm />
         <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} />
       </div>

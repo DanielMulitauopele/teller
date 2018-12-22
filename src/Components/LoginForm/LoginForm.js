@@ -11,7 +11,10 @@ export class LoginForm extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault()
-    // call function that logs in user
+    //check password against password stored in db
+    //if password doesn't match, display error message
+    //if password matches, call loginUser
+    this.props.loginUser(this.state.email)
   }
 
   handleChange = async (e) => {

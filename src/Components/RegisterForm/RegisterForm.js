@@ -53,6 +53,7 @@ class RegisterForm extends Component {
           name="confirmedPassword"
           onChange={this.handleChange}
           value={confirmedPassword} />
+        <button className="register-button">Register</button>
       </form>
     )
   }
