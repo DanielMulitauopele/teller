@@ -20,7 +20,23 @@ describe('LoginForm Component', () => {
   })
 
   describe('handleSubmit function', () => {
+    let mockForm
 
+    beforeEach(() => {
+      mockForm = wrapper.find('.login-form')
+    })
+
+    xit('should verify password', () => {
+
+    })
+
+    xit('should display error if password is incorrect', () => {
+
+    })
+
+    xit('should call logInUser if password is correct', () => {
+
+    })
   })
 
   describe('handleChange function', () => {
