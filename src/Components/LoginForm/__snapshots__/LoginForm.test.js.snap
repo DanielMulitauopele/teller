@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm Component should match the snapshot 1`] = `undefined`;
+
+exports[`LoginForm matches the snapshot 1`] = `undefined`;
