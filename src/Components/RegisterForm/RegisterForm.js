@@ -24,7 +24,7 @@ class RegisterForm extends Component {
   render() {
     const { name, email, password, confirmedPassword } = this.state
     return (
-      <form className="register-form" onSubmit={handleSubmit}>
+      <form className="register-form" onSubmit={this.handleSubmit}>
         <input
           className="register-input register-name-input"
           placeholder="Enter Full Name"
