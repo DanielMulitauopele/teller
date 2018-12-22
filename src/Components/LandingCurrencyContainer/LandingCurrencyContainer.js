@@ -12,14 +12,19 @@ class LandingCurrencyContainer extends Component {
 
   render() {
     const landingCurrencies = this.props.abbrevCurrencies.map(currency => {
-      return (
-        <LandingCurrency currency={currency} />
-      )
-    })
+      return <LandingCurrency currency={currency} />;
+    });
 
     return (
-      <div className="currency-container">
-        {landingCurrencies}
+      <div className="sort-box">
+        <div className="currency-container">
+          <div className="sort">
+            <p>Rank</p>
+            <p>Price</p>
+            <p>%Change</p>
+          </div>
+          {landingCurrencies}
+        </div>
       </div>
     );
   }
