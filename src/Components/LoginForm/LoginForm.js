@@ -11,7 +11,7 @@ export class LoginForm extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault()
-    // call function that logs in user
+    this.props.logInUser(this.state.email)
   }
 
   handleChange = async (e) => {
