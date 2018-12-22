@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./LandingCurrency.css";
 import Heart from "../../Assets/heart.svg";
+import Bitcoin from "../../Assets/bitcoin-logo.svg";
 
 class LandingCurrency extends Component {
   constructor(props) {
@@ -17,16 +18,19 @@ class LandingCurrency extends Component {
   };
 
   render() {
-    const { symbol, name, price, percent_change, rank } = this.props.currency
+    const { symbol, name, price, percent_change, rank } = this.props.currency;
     return (
       <div className="currency-card" onClick={this.expand}>
         <div className="card-inside-text">
           <div className="cc-left">
-            {/*insert image here*/}
+            <img src={Bitcoin} />
           </div>
           <div className="cc-center">
             <p>{symbol}</p>
-            <p>{price}</p>
+            <p>{name}</p>
+          </div>
+          <div className="cc-center-right">
+            <p>$ {price}</p>
           </div>
           <div className="cc-right">
             <p>{percent_change}</p>
@@ -34,7 +38,7 @@ class LandingCurrency extends Component {
         </div>
         {this.state.expanded && (
           <div className="expanded-currency">
-            <div className="ec-left">
+            <div className="ec-right">
               <p>{name}</p>
               <p>{rank}</p>
             </div>
