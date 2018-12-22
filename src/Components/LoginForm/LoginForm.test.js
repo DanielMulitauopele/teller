@@ -24,6 +24,18 @@ describe('LoginForm Component', () => {
   })
 
   describe('handleChange function', () => {
+    it('should set state with the correct keys and values', () => {
+      const emailInput = wrapper.find('.user-email')
+      const passwordInput = wrapper.find('.user-password')
+      emailInput.simulate('change', {
+        target: { name: 'email', value: 'someDude@gmail.com' }
+      })
+      passwordInput.simulate('change', {
+        target: { name: 'password', value: 'yaaaaaaayyyy'}
+      })
 
+      expect(wrapper.state().email).toEqual('someDude@gmail.com')
+      expect(wrapper.state().password).toEqual('yaaaaaaayyyy')
+    })
   })
 })
