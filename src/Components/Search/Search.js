@@ -7,14 +7,25 @@ class Search extends Component {
     super(props);
     this.state = {
       active: false,
-      expanded: false
+      hasText: false
     };
   }
 
+  toggleSearchBtn = () => {
+    this.setState({
+      active: !this.state.active
+    });
+    console.log("lol");
+  };
+
   render() {
+    const { active } = this.state;
     return (
-      <div className="search-button">
-        <img src={SearchGlass} />
+      <div className="bigger-box">
+        <div className={active ? "search-button-active" : "search-button"}>
+          <img src={SearchGlass} onClick={this.toggleSearchBtn} />
+          <input className="search-bar" type="text" placeholder="Search" />
+        </div>
       </div>
     );
   }
