@@ -20,7 +20,7 @@
 }
 
 .search-button-active {
-  animation: makeBigger 1s forwards;
+  animation: makeBigger 0.6s forwards;
   background: none;
   background-color: #303859;
   border-left: 2px solid #db5db2;
@@ -32,6 +32,8 @@
   height: 56px;
   position: fixed;
   right: 35px;
+  transition: 0.1s;
+  width: 23rem;
   z-index: 50;
 }
 
@@ -82,7 +84,7 @@
 }
 
 .search-button-active input {
-  animation: appear 1.5s forwards;
+  animation: appear 1.2s forwards;
 }
 
 /* ! Animations ! */
@@ -115,11 +117,29 @@
   0% {
     width: 56px;
   }
+  50% {
+    width: 50px;
+  }
   80% {
     width: 56px;
   }
   100% {
     width: 20rem;
+  }
+}
+
+@keyframes makeSmaller {
+  0% {
+    width: 20rem;
+  }
+  50% {
+    width: 20.5rem;
+  }
+  80% {
+    width: 20rem;
+  }
+  100% {
+    width: 56px;
   }
 }
 

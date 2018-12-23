@@ -5,6 +5,8 @@ import Hotdog from "./Components/Hotdog/Hotdog";
 import LandingCurrencyContainer from "./Components/LandingCurrencyContainer/LandingCurrencyContainer";
 import DataCleaner from "./Utils/Cleaners/";
 import Search from "./Components/Search/Search";
+import { Route, withRouter, Switch } from "react-router-dom";
+import Landing from "./Components/Landing/Landing";
 
 class App extends Component {
   constructor(props) {
@@ -38,15 +40,20 @@ class App extends Component {
     const { abbrevCurrencies, favorites } = this.state;
     return (
       <div className="App">
-        <Hotdog />
-        <Search />
-
-        <FavoritesContainer
-          favorites={favorites}
-          addToFavorites={this.addToFavorites}
-          removeFromFavorites={this.removeFromFavorites}
-        />
-        <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} />
+        {/* <Hotdog />
+        <Search /> */}
+        <Switch>
+          <Route
+            exact
+            path="/"
+            component={Landing}
+            favorites={favorites}
+            addToFavorites={this.addToFavorites}
+            removeFromFavorites={this.removeFromFavorites}
+          />
+          {/* <FavoritesContainer />
+          <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} /> */}
+        </Switch>
       </div>
     );
   }
