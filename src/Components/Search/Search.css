@@ -1,5 +1,4 @@
-.search-button,
-.search-button-active {
+.search-button {
   background: var(--MainGradient);
   border-top: 2px solid transparent;
   bottom: 25px;
@@ -12,6 +11,17 @@
   transform: rotate(45deg);
   width: 56px;
   z-index: 50;
+}
+
+.search-button-active {
+  bottom: 25px;
+  position: fixed;
+  right: 35px;
+  z-index: 50;
+  width: 56px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.256);
+  cursor: pointer;
 }
 
 .search-button:hover {
@@ -34,13 +44,22 @@
   border-right: 2px solid #db5db2;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.434);
   height: 56px;
-  transition: 0.9s width;
+  transition: 0.5s;
   transform: rotate(0deg);
   width: 56px;
 }
 
 .search-button-active:hover {
   transform: scale(1.05);
+}
+
+.search-button-active img {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.search-button-active img:hover {
+  filter: brightness(2);
 }
 
 .search-field input {
@@ -60,7 +79,7 @@
   position: relative;
   text-transform: uppercase;
   transition: 0.5s;
-  width: 10rem;
+  width: 15rem;
 }
 
 .search-button {
@@ -129,12 +148,12 @@
 
 @keyframes woom {
   0% {
-    filter: hue-rotate(0);
+    filter: hue-rotate(-10deg);
   }
   50% {
-    filter: hue-rotate(20deg);
+    filter: hue-rotate(30deg);
   }
   100% {
-    filter: hue-rotate(0deg);
+    filter: hue-rotate(-10deg);
   }
 }
