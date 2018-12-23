@@ -1,29 +1,47 @@
 .search-button,
 .search-button-active {
-  height: 56px;
-  width: 56px;
-  right: 35px;
-  position: fixed;
-  bottom: 25px;
-  z-index: 50;
-  transform: rotate(45deg);
-  background-color: #db5db2;
-  border-radius: 15px;
-  animation: ❤️ 2s linear infinite;
-  cursor: pointer;
-  transition: background 0.9s;
+  background: var(--MainGradient);
   border-top: 2px solid transparent;
+  bottom: 25px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.256);
+  cursor: pointer;
+  height: 56px;
+  position: fixed;
+  right: 35px;
+  transform: rotate(45deg);
+  width: 56px;
+  z-index: 50;
+}
+
+.search-button:hover {
+  animation: woom 2s linear infinite;
+}
+
+.search-button img {
+  transition: 0.2s;
+}
+
+.search-button:hover img {
+  transform: scale(1.1) rotate(-45deg);
 }
 
 .search-button-active {
   transform: rotate(0deg);
   transition: 0.9s width;
-  width: 20rem;
-  height: 3.5rem;
+  width: 56px;
+  height: 56px;
+  background: none;
   background-color: #303859;
-  border: 2px solid #db5db2;
+  border-bottom: 2px solid #db5db2;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.434);
   animation: none;
+  transition: 0.5s;
+  animation: makeBigger 1s forwards;
+}
+
+.search-button-active:hover {
+  transform: scale(1.05);
 }
 
 .search-field input {
@@ -31,14 +49,8 @@
   background: black;
 }
 
-.search-button-active:hover svg,
-.search-button:hover svg {
-  transform: rotate(-45deg);
-}
-
 .search-bar,
 .search-bar-active input {
-  padding: 15px;
   border: 0px;
   position: relative;
   bottom: 1.5rem;
@@ -52,6 +64,10 @@
   transition: 0.5s;
 }
 
+.search-button {
+  animation: makeSmaller 0.2s forwards;
+}
+
 .search-button img {
   transform: rotate(-45deg);
 }
@@ -60,9 +76,21 @@
 .search-button-active img {
   height: 25px;
   margin: 1rem;
-  transition: 0.5s;
-  transition: 0.9s;
 }
+
+.search-button-active img {
+  transition: 0.2s;
+}
+
+.search-button input {
+  opacity: 0;
+}
+
+.search-button-active input {
+  animation: appear 1.5s forwards;
+}
+
+/* ! Animations ! */
 
 @keyframes ❤️ {
   0% {
@@ -80,7 +108,7 @@
   0% {
     opacity: 0;
   }
-  95% {
+  75% {
     opacity: 0;
   }
   100% {
@@ -88,10 +116,26 @@
   }
 }
 
-.search-button input {
-  opacity: 0;
+@keyframes makeBigger {
+  0% {
+    width: 56px;
+  }
+  80% {
+    width: 56px;
+  }
+  100% {
+    width: 20rem;
+  }
 }
 
-.search-button-active input {
-  animation: appear 1.5s forwards;
+@keyframes woom {
+  0% {
+    filter: hue-rotate(0);
+  }
+  50% {
+    filter: hue-rotate(20deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
 }
