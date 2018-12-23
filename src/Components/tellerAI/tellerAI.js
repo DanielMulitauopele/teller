@@ -13,9 +13,9 @@ class TellerAI extends Component {
   render() {
     return (
       <div className="teller">
-        <div className="teller-insides">
-          <img src={Ball} />
-        </div>
+        <div className="line one" />
+        {/* <div className="line two" />
+        <div className="line three" /> */}
       </div>
     );
   }

@@ -8,24 +8,6 @@
   right: 2rem;
   top: 9.5rem;
   transition: 0.3s;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.349);
-}
-
-.teller img {
-  width: 30px;
-  padding: 0.735rem;
-  animation: rotate 15s linear infinite;
-  transition: 0.2s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.541);
   cursor: pointer;
-}
-
-.teller:hover {
-  filter: brightness(120%);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
 }
