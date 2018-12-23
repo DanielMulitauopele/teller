@@ -3,8 +3,7 @@ import "./App.css";
 import { FavoritesContainer } from "./Components/FavoritesContainer/FavoritesContainer";
 import Hotdog from "./Components/Hotdog/Hotdog";
 import LandingCurrencyContainer from "./Components/LandingCurrencyContainer/LandingCurrencyContainer";
-import DataCleaner from "./Utils/Cleaners/";
-import RegisterForm from "./Components/RegisterForm/RegisterForm";
+import DataCleaner from "./Utils/Cleaners/"
 import LoginForm from "./Components/LoginForm/LoginForm"
 
 class App extends Component {
@@ -46,7 +45,6 @@ class App extends Component {
           removeFromFavorites={this.removeFromFavorites}
         />
         <LoginForm />
-        <RegisterForm />
         <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} />
       </div>
     );
