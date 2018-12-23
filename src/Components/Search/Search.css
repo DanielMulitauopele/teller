@@ -8,32 +8,15 @@
   height: 56px;
   position: fixed;
   right: 35px;
+  transition: 0.9s;
+  transition-delay: 0.1s;
   transform: rotate(45deg);
   width: 56px;
   z-index: 50;
 }
 
-.search-button-active {
-  bottom: 25px;
-  position: fixed;
-  right: 35px;
-  z-index: 50;
-  width: 56px;
-  border-radius: 15px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.256);
-  cursor: pointer;
-}
-
 .search-button:hover {
   animation: woom 2s linear infinite;
-}
-
-.search-button img {
-  transition: 0.5s;
-}
-
-.search-button:hover img {
-  transform: scale(1.1) rotate(-45deg);
 }
 
 .search-button-active {
@@ -42,20 +25,18 @@
   background-color: #303859;
   border-left: 2px solid #db5db2;
   border-right: 2px solid #db5db2;
+  border-radius: 15px;
+  bottom: 25px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.434);
+  cursor: pointer;
   height: 56px;
-  transition: 0.5s;
-  transform: rotate(0deg);
-  width: 56px;
+  position: fixed;
+  right: 35px;
+  z-index: 50;
 }
 
 .search-button-active:hover {
   transform: scale(1.05);
-}
-
-.search-button-active img {
-  transform: rotate(180deg);
-  transition: 0.5s;
 }
 
 .search-button-active img:hover {
@@ -80,10 +61,6 @@
   text-transform: uppercase;
   transition: 0.5s;
   width: 15rem;
-}
-
-.search-button {
-  animation: makeSmaller 0.2s forwards;
 }
 
 .search-button img {

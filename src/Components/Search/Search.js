@@ -16,7 +16,6 @@ class Search extends Component {
     this.setState({
       active: !this.state.active
     });
-    console.log("lol");
   };
 
   render() {
