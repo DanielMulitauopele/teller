@@ -19,7 +19,7 @@
 }
 
 .search-button img {
-  transition: 0.2s;
+  transition: 0.5s;
 }
 
 .search-button:hover img {
@@ -27,17 +27,16 @@
 }
 
 .search-button-active {
-  transform: rotate(0deg);
-  transition: 0.9s width;
-  width: 56px;
-  height: 56px;
+  animation: makeBigger 1s forwards;
   background: none;
   background-color: #303859;
-  border-bottom: 2px solid #db5db2;
+  border-left: 2px solid #db5db2;
+  border-right: 2px solid #db5db2;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.434);
-  animation: none;
-  transition: 0.5s;
-  animation: makeBigger 1s forwards;
+  height: 56px;
+  transition: 0.9s width;
+  transform: rotate(0deg);
+  width: 56px;
 }
 
 .search-button-active:hover {
@@ -45,23 +44,23 @@
 }
 
 .search-field input {
-  padding: 0.5rem 1rem;
   background: black;
+  padding: 0.5rem 1rem;
 }
 
 .search-bar,
 .search-bar-active input {
-  border: 0px;
-  position: relative;
-  bottom: 1.5rem;
-  width: 10rem;
-  font-size: 1rem;
-  letter-spacing: 2px;
   background-color: transparent;
+  border: 0px;
+  bottom: 1.5rem;
   color: white;
+  font-size: 1rem;
   font-weight: 400;
+  letter-spacing: 2px;
+  position: relative;
   text-transform: uppercase;
   transition: 0.5s;
+  width: 10rem;
 }
 
 .search-button {
