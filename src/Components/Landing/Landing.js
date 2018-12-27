@@ -1,9 +1,17 @@
 import React, { Component } from "react";
 import "./Landing.css";
+import FavoritesContainer from "../FavoritesContainer/FavoritesContainer";
+import LandingCurrencyContainer from "../LandingCurrencyContainer/LandingCurrencyContainer";
 
 class Landing extends Component {
-  constructor() {
-    super();
+  constructor({
+    props,
+    abbrevCurrencies,
+    favorites,
+    addToFavorites,
+    removeFromFavorites
+  }) {
+    super(props);
     this.state = {
       active: false,
       news: []
@@ -18,9 +26,18 @@ class Landing extends Component {
 
   render() {
     const { active } = this.state;
+    const {
+      favorites,
+      addToFavorites,
+      removeFromFavorites,
+      abbrevCurrencies
+    } = this.props;
+    console.log(abbrevCurrencies);
+
     return (
       <div className="landing-literal">
-        <h1> Hello </h1>
+        <FavoritesContainer {...this.props} />
+        <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} />
       </div>
     );
   }

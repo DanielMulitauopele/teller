@@ -38,21 +38,31 @@ class App extends Component {
 
   render() {
     const { abbrevCurrencies, favorites } = this.state;
+    console.log(abbrevCurrencies);
     return (
       <div className="App">
-        {/* <Hotdog />
-        <Search /> */}
+        <Hotdog />
+        <Search />
         <Switch>
           <Route
             exact
             path="/"
-            component={Landing}
-            favorites={favorites}
-            addToFavorites={this.addToFavorites}
-            removeFromFavorites={this.removeFromFavorites}
+            render={() => {
+              return (
+                <Landing
+                  favorites={favorites}
+                  addToFavorites={this.addToFavorites}
+                  removeFromFavorites={this.removeFromFavorites}
+                  abbrevCurrencies={abbrevCurrencies}
+                />
+              );
+            }}
           />
-          {/* <FavoritesContainer />
-          <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} /> */}
+          )}
+          {/* <Route exact path="/about" component={about} />
+          <Route exact path="/login" component={login} />
+          <Route component={Wrong} /> */}
+          {/* <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} /> */}
         </Switch>
       </div>
     );
