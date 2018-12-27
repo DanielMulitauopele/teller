@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import "./LandingCurrency.css";
 import Heart from "../../Assets/heart.svg";
-import Bitcoin from "../../Assets/bitcoin-logo.svg";
+// import Bitcoin from "../../Assets/bitcoin-logo.svg";
+// import Bitcoin from "../../../node_modules/cryptocurrency-icons/svg/white/btc.svg";
+// import Icons from "../../../node_modules/cryptocurrency-icons/manifest.json";
+// import Icons from "../../Assets/cryptoIcons/cryptoIcons.json";
+import { Icons } from "../../Assets/cryptoIcons/cryptoIcons";
 
 class LandingCurrency extends Component {
   constructor(props) {
@@ -19,11 +23,12 @@ class LandingCurrency extends Component {
 
   render() {
     const { symbol, name, price, percent_change, rank } = this.props.currency;
+    console.log(Icons[this.props.currency.symbol]);
     return (
       <div className="currency-card" onClick={this.expand}>
         <div className="card-inside-text">
           <div className="cc-left">
-            <img src={Bitcoin} />
+            <img src={Icons[this.props.currency.symbol]} />
           </div>
           <div className="cc-center">
             <p>{symbol}</p>

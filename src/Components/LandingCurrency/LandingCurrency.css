@@ -30,6 +30,7 @@
 }
 
 .cc-left img {
+  width: 20px;
   height: 20px;
   background: var(--Peachy);
   border-radius: 5px;

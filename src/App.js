@@ -61,8 +61,9 @@ class App extends Component {
           )}
           {/* <Route exact path="/about" component={about} />
           <Route exact path="/login" component={login} />
-          <Route component={Wrong} /> */}
-          {/* <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} /> */}
+          <Route component={Wrong} /> */}{" "}
+          */}
+          {/* {/* <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} /> */}
         </Switch>
       </div>
     );
