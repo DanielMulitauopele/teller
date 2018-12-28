@@ -49,7 +49,9 @@ class LandingCurrency extends Component {
         };
         break;
       default:
-        style = { background: "linear-gradient(to bottom, #b24592, #f15f79" };
+        style = {
+          background: "linear-gradient(to bottom, #b24592, #f15f79"
+        };
         break;
     }
 
