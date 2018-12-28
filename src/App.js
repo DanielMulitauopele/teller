@@ -14,7 +14,8 @@ class App extends Component {
     this.state = {
       favorites: [1, 2, 3, 4, 5],
       abbrevCurrencies: [],
-      expandedCurrencies: []
+      expandedCurrencies: [],
+      news: []
     };
 
     const addToFavorites = favorite => {

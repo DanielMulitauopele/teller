@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Landing.css";
 import FavoritesContainer from "../FavoritesContainer/FavoritesContainer";
 import LandingCurrencyContainer from "../LandingCurrencyContainer/LandingCurrencyContainer";
+import NewsContainer from "../../Components/NewsContainer/NewsContainer";
 
 class Landing extends Component {
   constructor({
@@ -35,7 +36,8 @@ class Landing extends Component {
 
     return (
       <div className="landing-literal">
-        <FavoritesContainer {...this.props} />
+        <NewsContainer />
+        {/* <FavoritesContainer {...this.props} /> */}
         <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} />
       </div>
     );
