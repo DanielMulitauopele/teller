@@ -2,7 +2,7 @@
 - [_] Implemented
 - [_] Reviewed
 
-# Neccesary checkmarks:
+# Necessary checkmarks:
 
 - [_] All Tests are Passing
 

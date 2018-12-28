@@ -20,7 +20,7 @@ export class LoginForm extends Component {
   }
 
   render() {
-    const { email, value } = this.state
+    const { email, password } = this.state
     return (
       <div className="form-wrapper">
         <form className="login-form" onSubmit={this.handleSubmit}>
@@ -35,7 +35,7 @@ export class LoginForm extends Component {
             className="form-input user-password"
             type="password"
             name="password"
-            value={value}
+            value={password}
             onChange={this.handleChange}
             placeholder="Enter Password"
           />
@@ -46,3 +46,4 @@ export class LoginForm extends Component {
   }
 }
 
+export default LoginForm

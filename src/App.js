@@ -7,6 +7,8 @@ import DataCleaner from "./Utils/Cleaners/";
 import Search from "./Components/Search/Search";
 import { Route, withRouter, Switch } from "react-router-dom";
 import Landing from "./Components/Landing/Landing";
+import RegisterForm from "./Components/RegisterForm/RegisterForm";
+import LoginForm from "./Components/LoginForm/LoginForm"
 
 class App extends Component {
   constructor(props) {
@@ -63,6 +65,8 @@ class App extends Component {
           <Route component={Wrong} /> */}{" "}
           */}
         </Switch>
+//         <LoginForm />
+//         <RegisterForm />
       </div>
     );
   }
