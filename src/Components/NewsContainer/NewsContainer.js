@@ -15,7 +15,7 @@ class NewsContainer extends Component {
   render() {
     return (
       <div className="news-container-literal">
-        <NewsCard />
+        <NewsCard news={this.props.news} />
       </div>
     );
   }

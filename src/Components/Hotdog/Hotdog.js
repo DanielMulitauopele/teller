@@ -8,9 +8,19 @@ class Hotdog extends Component {
       expanded: false
     };
   }
+  toggleHotdog = () => {
+    this.setState({
+      expanded: !this.state.expanded
+    });
+  };
+
   render() {
+    const { expanded } = this.state;
     return (
-      <div className="hotdog-container">
+      <div
+        className={expanded ? "hotdog-container-expanded" : "hotdog-container"}
+        onClick={this.toggleHotdog}
+      >
         <div />
         <div />
         <div />
