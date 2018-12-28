@@ -17,13 +17,20 @@ class Hotdog extends Component {
   render() {
     const { expanded } = this.state;
     return (
-      <div
-        className={expanded ? "hotdog-container-expanded" : "hotdog-container"}
-        onClick={this.toggleHotdog}
-      >
-        <div />
-        <div />
-        <div />
+      <div>
+        <div
+          className={
+            expanded ? "hotdog-container-expanded" : "hotdog-container"
+          }
+          onClick={this.toggleHotdog}
+        >
+          <div />
+          <div />
+          <div />
+        </div>
+        <div className={expanded ? "hotdog-menu-expanded" : "hotdog-menu"}>
+          <h1> hello </h1>
+        </div>
       </div>
     );
   }
