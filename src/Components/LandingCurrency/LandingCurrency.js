@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import "./LandingCurrency.css";
 import Heart from "../../Assets/heart.svg";
-// import Bitcoin from "../../Assets/bitcoin-logo.svg";
-// import Bitcoin from "../../../node_modules/cryptocurrency-icons/svg/white/btc.svg";
-// import Icons from "../../../node_modules/cryptocurrency-icons/manifest.json";
-// import Icons from "../../Assets/cryptoIcons/cryptoIcons.json";
 import { Icons } from "../../Assets/cryptoIcons/cryptoIcons";
 
 class LandingCurrency extends Component {
@@ -23,12 +19,45 @@ class LandingCurrency extends Component {
 
   render() {
     const { symbol, name, price, percent_change, rank } = this.props.currency;
-    console.log(Icons[this.props.currency.symbol]);
+    let style;
+    const randomGradientSelector = Math.floor(Math.random() * 5);
+
+    switch (randomGradientSelector) {
+      case 1:
+        style = {
+          background: "linear-gradient(to bottom, #fd746c, #ff9068)"
+        };
+        break;
+      case 2:
+        style = {
+          background: "linear-gradient(to bottom, #c2e59c, #64b3f4)"
+        };
+        break;
+      case 3:
+        style = {
+          background: "linear-gradient(to bottom, #b24592, #f15f79"
+        };
+        break;
+      case 4:
+        style = {
+          background: "linear-gradient(to bottom, #00c6ff, #0072ff)"
+        };
+        break;
+      case 5:
+        style = {
+          background: "linear-gradient(to bottom, #4ca1af, #c4e0e5)"
+        };
+        break;
+      default:
+        style = { background: "linear-gradient(to bottom, #b24592, #f15f79" };
+        break;
+    }
+
     return (
       <div className="currency-card" onClick={this.expand}>
         <div className="card-inside-text">
           <div className="cc-left">
-            <img src={Icons[this.props.currency.symbol]} />
+            <img style={style} src={Icons[this.props.currency.symbol]} />
           </div>
           <div className="cc-center">
             <p>{symbol}</p>

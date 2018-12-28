@@ -12,7 +12,6 @@ export default class FavoritesContainer extends Component {
     super(favorites, props);
     this.state = {
       expanded: false
-      // favorites: [1, 2, 3, 4, 5]
     };
   }
 

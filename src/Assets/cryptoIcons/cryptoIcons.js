@@ -98,6 +98,7 @@ import WICC from "../../../node_modules/cryptocurrency-icons/svg/white/wicc.svg"
 import SYS from "../../../node_modules/cryptocurrency-icons/svg/white/sys.svg";
 import FUN from "../../../node_modules/cryptocurrency-icons/svg/white/fun.svg";
 import EDO from "../../../node_modules/cryptocurrency-icons/svg/white/edo.svg";
+import MOAC from "../../../node_modules/cryptocurrency-icons/svg/white/generic.svg";
 
 export const Icons = {
   BTC,
@@ -150,6 +151,7 @@ export const Icons = {
   AE,
   REP,
   KMD,
+  MOAC,
   NPXS,
   BTM,
   STEEM,

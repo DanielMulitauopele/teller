@@ -32,7 +32,6 @@ class Landing extends Component {
       removeFromFavorites,
       abbrevCurrencies
     } = this.props;
-    console.log(abbrevCurrencies);
 
     return (
       <div className="landing-literal">
