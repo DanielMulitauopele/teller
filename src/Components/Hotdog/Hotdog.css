@@ -1,4 +1,5 @@
-.hotdog-container {
+.hotdog-container,
+.hotdog-container-expanded {
   width: 1.3rem;
   height: 1rem;
   position: fixed;
@@ -8,18 +9,51 @@
   cursor: pointer;
 }
 
-.hotdog-container div {
+.hotdog-container div,
+.hotdog-container-expanded div {
   width: 60%;
   height: 2px;
   margin: 0 auto 5px;
   transition: 0.3s;
   background-color: var(--AlmostWhite);
+  position: relative;
 }
 
 .hotdog-container div:nth-child(2) {
   width: 100%;
+  display: block;
 }
 
 .hotdog-container:hover div {
-  margin: 0 auto 6px;
+  width: 100%;
+}
+
+.hotdog-container:hover div:nth-child(2) {
+  width: 60%;
+}
+
+/* ! Hotdog Expanded ! */
+
+.hotdog-container-expanded div:first-child {
+  transform: rotate(45deg);
+  top: 3.5px;
+  width: 100%;
+}
+
+.hotdog-container-expanded div:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 3.5px;
+  width: 100%;
+}
+
+.hotdog-container-expanded div:nth-child(2) {
+  display: none;
+}
+
+.hotdog-container-expanded:hover div:first-child {
+  transform: rotate(-45deg);
+}
+
+.hotdog-container-expanded:hover div:nth-child(3) {
+  transform: rotate(45deg);
 }
