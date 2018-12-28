@@ -1,8 +1,17 @@
 .currency-container {
-  margin-top: 8rem;
+  margin-top: 2.5rem;
   width: 25rem;
-  height: 28.9rem;
+  height: 34.2rem;
   overflow: scroll;
+}
+
+.bottom-gradient {
+  height: 6rem;
+  width: 100%;
+  bottom: -10px;
+  filter: blur(10px);
+  position: fixed;
+  background: linear-gradient(to top, #303859, rgba(48, 56, 89, 0.379));
 }
 
 .sort {
@@ -23,11 +32,11 @@
 }
 
 .sort p:hover {
-  filter: brightness(1.5);
+  color: var(--AlmostWhite);
   border-bottom: 3px solid #fc599f;
 }
 
-.sort p:first-child {
+.sort .active {
   color: var(--AlmostWhite);
   border-bottom: 3px solid #fc599f;
 }

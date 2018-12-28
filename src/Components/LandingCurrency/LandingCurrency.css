@@ -5,6 +5,7 @@
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.459);
   color: var(--AlmostWhite);
   transition: 0.7s;
+  width: 23rem;
 }
 
 .card-inside-text {
@@ -30,8 +31,9 @@
 }
 
 .cc-left img {
+  width: 20px;
   height: 20px;
-  background: var(--Peachy);
+  /* background: var(--Peachy); */
   border-radius: 5px;
   padding: 5px;
 }
