@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import "./Hotdog.css";
+import Home from "../../Assets/home.svg";
+import Blog from "../../Assets/newspaper.svg";
+import Notes from "../../Assets/blogging.svg";
+import Code from "../../Assets/code.svg";
+import Exit from "../../Assets/exit.svg";
 
 class Hotdog extends Component {
   constructor() {
@@ -40,13 +45,31 @@ class Hotdog extends Component {
         </div>
         <div className={expanded ? "hotdog-menu-expanded" : "hotdog-menu"}>
           <div className="menu-card">
-            <h1> teller.</h1>
+            <h1>
+              {" "}
+              t<span>eller</span>.
+            </h1>
             <ul>
-              <li onClick={this.changeActiveRoute}>Home</li>
-              <li onClick={this.changeActiveRoute}>Blog</li>
-              <li onClick={this.changeActiveRoute}>Notes</li>
-              <li onClick={this.changeActiveRoute}>About</li>
-              <li onClick={this.changeActiveRoute}>Log Out</li>
+              <li onClick={this.changeActiveRoute}>
+                <img src={Home} alt="home-icon" />
+                <span>Home</span>
+              </li>
+              <li onClick={this.changeActiveRoute}>
+                <img src={Blog} alt="blog-icon" />
+                <span>Blog</span>
+              </li>
+              <li onClick={this.changeActiveRoute}>
+                <img src={Notes} alt="notes-icon" />
+                <span>Notes</span>
+              </li>
+              <li onClick={this.changeActiveRoute}>
+                <img src={Code} alt="about-us-icon" />
+                <span>About</span>
+              </li>
+              <li onClick={this.changeActiveRoute}>
+                <img src={Exit} alt="exit-icon" />
+                <span>Log Out</span>
+              </li>
             </ul>
             <div className="donate">
               <p>Enjoying this app?</p>

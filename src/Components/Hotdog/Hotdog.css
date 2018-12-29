@@ -3,8 +3,9 @@
   width: 1.3rem;
   height: 1rem;
   position: fixed;
-  left: 2rem;
-  top: 2rem;
+  padding: 1rem;
+  left: 0.8rem;
+  top: 0.5rem;
   z-index: 90;
   cursor: pointer;
 }
@@ -96,6 +97,10 @@
   margin-top: 4rem;
 }
 
+.menu-card img {
+  display: none;
+}
+
 .hotdog-menu h1,
 .hotdog-menu-expanded h1 {
   font-family: teller;
@@ -132,12 +137,49 @@
 }
 
 @media only screen and (min-width: 700px) {
-  .hotdog-menu,
+  .hotdog-menu {
+    left: -5rem;
+    bottom: 0;
+    width: 5rem;
+  }
+
+  .hotdog-menu img {
+    display: none;
+    width: 25px;
+  }
+
   .hotdog-menu-expanded {
     width: 5rem;
     left: 0;
+    bottom: 0;
   }
+
+  .hotdog-menu-expanded img {
+    opacity: 1;
+    transition: 0.9s;
+    width: 25px;
+  }
+
   .hotdog-menu-expanded li:hover {
-    background-color: #454f75;
+    background-color: #424d79;
+  }
+
+  .hotdog-menu-expanded li:hover img {
+    fill: red;
+  }
+
+  .menu-card li {
+    padding: 2rem 1.6rem;
+  }
+
+  .donate {
+    overflow: hidden;
+  }
+
+  .menu-card span {
+    display: none;
+  }
+  .menu-card img {
+    display: block;
   }
 }
