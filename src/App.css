@@ -20,6 +20,11 @@
   outline: none;
 }
 
+@font-face {
+  font-family: teller;
+  src: url(./Assets/fonts/GeorgeRegular.ttf);
+}
+
 .App {
   height: 100vh;
   background-color: var(--TellerBG);
