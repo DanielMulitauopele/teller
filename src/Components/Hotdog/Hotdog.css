@@ -1,6 +1,6 @@
 .hotdog-container,
 .hotdog-container-expanded {
-  width: 1.3rem;
+  width: 1.5rem;
   height: 1rem;
   position: fixed;
   padding: 1rem;
@@ -169,15 +169,25 @@
   }
 
   .menu-card li {
-    padding: 2rem 1.6rem;
+    padding: 1rem 1.6rem;
   }
 
   .donate {
     overflow: hidden;
   }
 
-  .menu-card span {
+  .menu-card h1 span {
     display: none;
+  }
+
+  .menu-card span {
+    opacity: 0;
+    font-size: 0.5rem;
+  }
+
+  .menu-card li:hover span {
+    opacity: 1;
+    font-size: 0.5rem;
   }
   .menu-card img {
     display: block;

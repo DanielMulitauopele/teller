@@ -68,7 +68,7 @@ class Hotdog extends Component {
               </li>
               <li onClick={this.changeActiveRoute}>
                 <img src={Exit} alt="exit-icon" />
-                <span>Log Out</span>
+                <span>Quit</span>
               </li>
             </ul>
             <div className="donate">
