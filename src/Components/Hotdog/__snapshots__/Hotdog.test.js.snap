@@ -18,11 +18,100 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div />,
-        <div />,
-        <div />,
+        <div
+          className="hotdog-container"
+          onClick={[Function]}
+        >
+          <div />
+          <div />
+          <div />
+        </div>,
+        <div
+          className="hotdog-menu"
+        >
+          <div
+            className="menu-card"
+          >
+            <h1>
+               
+              t
+              <span>
+                eller
+              </span>
+              .
+            </h1>
+            <ul>
+              <li
+                onClick={[Function]}
+              >
+                <img
+                  alt="home-icon"
+                  src="home.svg"
+                />
+                <span>
+                  Home
+                </span>
+              </li>
+              <li
+                onClick={[Function]}
+              >
+                <img
+                  alt="blog-icon"
+                  src="newspaper.svg"
+                />
+                <span>
+                  Blog
+                </span>
+              </li>
+              <li
+                onClick={[Function]}
+              >
+                <img
+                  alt="notes-icon"
+                  src="blogging.svg"
+                />
+                <span>
+                  Notes
+                </span>
+              </li>
+              <li
+                onClick={[Function]}
+              >
+                <img
+                  alt="about-us-icon"
+                  src="code.svg"
+                />
+                <span>
+                  About
+                </span>
+              </li>
+              <li
+                onClick={[Function]}
+              >
+                <img
+                  alt="exit-icon"
+                  src="exit.svg"
+                />
+                <span>
+                  Quit
+                </span>
+              </li>
+            </ul>
+            <div
+              className="donate"
+            >
+              <p>
+                Enjoying this app?
+              </p>
+              <p
+                className="wallet-ID"
+              >
+                Q2E9RH128EYG9Y1HE88U2T
+              </p>
+            </div>
+          </div>
+        </div>,
       ],
-      "className": "hotdog-container",
     },
     "ref": null,
     "rendered": Array [
@@ -30,27 +119,593 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
-        "props": Object {},
+        "props": Object {
+          "children": Array [
+            <div />,
+            <div />,
+            <div />,
+          ],
+          "className": "hotdog-container",
+          "onClick": [Function],
+        },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
         "type": "div",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
-        "props": Object {},
+        "props": Object {
+          "children": <div
+            className="menu-card"
+          >
+            <h1>
+               
+              t
+              <span>
+                eller
+              </span>
+              .
+            </h1>
+            <ul>
+              <li
+                onClick={[Function]}
+              >
+                <img
+                  alt="home-icon"
+                  src="home.svg"
+                />
+                <span>
+                  Home
+                </span>
+              </li>
+              <li
+                onClick={[Function]}
+              >
+                <img
+                  alt="blog-icon"
+                  src="newspaper.svg"
+                />
+                <span>
+                  Blog
+                </span>
+              </li>
+              <li
+                onClick={[Function]}
+              >
+                <img
+                  alt="notes-icon"
+                  src="blogging.svg"
+                />
+                <span>
+                  Notes
+                </span>
+              </li>
+              <li
+                onClick={[Function]}
+              >
+                <img
+                  alt="about-us-icon"
+                  src="code.svg"
+                />
+                <span>
+                  About
+                </span>
+              </li>
+              <li
+                onClick={[Function]}
+              >
+                <img
+                  alt="exit-icon"
+                  src="exit.svg"
+                />
+                <span>
+                  Quit
+                </span>
+              </li>
+            </ul>
+            <div
+              className="donate"
+            >
+              <p>
+                Enjoying this app?
+              </p>
+              <p
+                className="wallet-ID"
+              >
+                Q2E9RH128EYG9Y1HE88U2T
+              </p>
+            </div>
+          </div>,
+          "className": "hotdog-menu",
+        },
         "ref": null,
-        "rendered": null,
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                 
+                t
+                <span>
+                  eller
+                </span>
+                .
+              </h1>,
+              <ul>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="home-icon"
+                    src="home.svg"
+                  />
+                  <span>
+                    Home
+                  </span>
+                </li>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="blog-icon"
+                    src="newspaper.svg"
+                  />
+                  <span>
+                    Blog
+                  </span>
+                </li>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="notes-icon"
+                    src="blogging.svg"
+                  />
+                  <span>
+                    Notes
+                  </span>
+                </li>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="about-us-icon"
+                    src="code.svg"
+                  />
+                  <span>
+                    About
+                  </span>
+                </li>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="exit-icon"
+                    src="exit.svg"
+                  />
+                  <span>
+                    Quit
+                  </span>
+                </li>
+              </ul>,
+              <div
+                className="donate"
+              >
+                <p>
+                  Enjoying this app?
+                </p>
+                <p
+                  className="wallet-ID"
+                >
+                  Q2E9RH128EYG9Y1HE88U2T
+                </p>
+              </div>,
+            ],
+            "className": "menu-card",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "t",
+                  <span>
+                    eller
+                  </span>,
+                  ".",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "t",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "eller",
+                  },
+                  "ref": null,
+                  "rendered": "eller",
+                  "type": "span",
+                },
+                ".",
+              ],
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="home-icon"
+                      src="home.svg"
+                    />
+                    <span>
+                      Home
+                    </span>
+                  </li>,
+                  <li
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="blog-icon"
+                      src="newspaper.svg"
+                    />
+                    <span>
+                      Blog
+                    </span>
+                  </li>,
+                  <li
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="notes-icon"
+                      src="blogging.svg"
+                    />
+                    <span>
+                      Notes
+                    </span>
+                  </li>,
+                  <li
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="about-us-icon"
+                      src="code.svg"
+                    />
+                    <span>
+                      About
+                    </span>
+                  </li>,
+                  <li
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="exit-icon"
+                      src="exit.svg"
+                    />
+                    <span>
+                      Quit
+                    </span>
+                  </li>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        alt="home-icon"
+                        src="home.svg"
+                      />,
+                      <span>
+                        Home
+                      </span>,
+                    ],
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "home-icon",
+                        "src": "home.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Home",
+                      },
+                      "ref": null,
+                      "rendered": "Home",
+                      "type": "span",
+                    },
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        alt="blog-icon"
+                        src="newspaper.svg"
+                      />,
+                      <span>
+                        Blog
+                      </span>,
+                    ],
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "blog-icon",
+                        "src": "newspaper.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Blog",
+                      },
+                      "ref": null,
+                      "rendered": "Blog",
+                      "type": "span",
+                    },
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        alt="notes-icon"
+                        src="blogging.svg"
+                      />,
+                      <span>
+                        Notes
+                      </span>,
+                    ],
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "notes-icon",
+                        "src": "blogging.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Notes",
+                      },
+                      "ref": null,
+                      "rendered": "Notes",
+                      "type": "span",
+                    },
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        alt="about-us-icon"
+                        src="code.svg"
+                      />,
+                      <span>
+                        About
+                      </span>,
+                    ],
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "about-us-icon",
+                        "src": "code.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "About",
+                      },
+                      "ref": null,
+                      "rendered": "About",
+                      "type": "span",
+                    },
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        alt="exit-icon"
+                        src="exit.svg"
+                      />,
+                      <span>
+                        Quit
+                      </span>,
+                    ],
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "exit-icon",
+                        "src": "exit.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Quit",
+                      },
+                      "ref": null,
+                      "rendered": "Quit",
+                      "type": "span",
+                    },
+                  ],
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Enjoying this app?
+                  </p>,
+                  <p
+                    className="wallet-ID"
+                  >
+                    Q2E9RH128EYG9Y1HE88U2T
+                  </p>,
+                ],
+                "className": "donate",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Enjoying this app?",
+                  },
+                  "ref": null,
+                  "rendered": "Enjoying this app?",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Q2E9RH128EYG9Y1HE88U2T",
+                    "className": "wallet-ID",
+                  },
+                  "ref": null,
+                  "rendered": "Q2E9RH128EYG9Y1HE88U2T",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
         "type": "div",
       },
     ],
@@ -63,11 +718,100 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div />,
-          <div />,
-          <div />,
+          <div
+            className="hotdog-container"
+            onClick={[Function]}
+          >
+            <div />
+            <div />
+            <div />
+          </div>,
+          <div
+            className="hotdog-menu"
+          >
+            <div
+              className="menu-card"
+            >
+              <h1>
+                 
+                t
+                <span>
+                  eller
+                </span>
+                .
+              </h1>
+              <ul>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="home-icon"
+                    src="home.svg"
+                  />
+                  <span>
+                    Home
+                  </span>
+                </li>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="blog-icon"
+                    src="newspaper.svg"
+                  />
+                  <span>
+                    Blog
+                  </span>
+                </li>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="notes-icon"
+                    src="blogging.svg"
+                  />
+                  <span>
+                    Notes
+                  </span>
+                </li>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="about-us-icon"
+                    src="code.svg"
+                  />
+                  <span>
+                    About
+                  </span>
+                </li>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="exit-icon"
+                    src="exit.svg"
+                  />
+                  <span>
+                    Quit
+                  </span>
+                </li>
+              </ul>
+              <div
+                className="donate"
+              >
+                <p>
+                  Enjoying this app?
+                </p>
+                <p
+                  className="wallet-ID"
+                >
+                  Q2E9RH128EYG9Y1HE88U2T
+                </p>
+              </div>
+            </div>
+          </div>,
         ],
-        "className": "hotdog-container",
       },
       "ref": null,
       "rendered": Array [
@@ -75,27 +819,593 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
-          "props": Object {},
+          "props": Object {
+            "children": Array [
+              <div />,
+              <div />,
+              <div />,
+            ],
+            "className": "hotdog-container",
+            "onClick": [Function],
+          },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
           "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
-          "props": Object {},
+          "props": Object {
+            "children": <div
+              className="menu-card"
+            >
+              <h1>
+                 
+                t
+                <span>
+                  eller
+                </span>
+                .
+              </h1>
+              <ul>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="home-icon"
+                    src="home.svg"
+                  />
+                  <span>
+                    Home
+                  </span>
+                </li>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="blog-icon"
+                    src="newspaper.svg"
+                  />
+                  <span>
+                    Blog
+                  </span>
+                </li>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="notes-icon"
+                    src="blogging.svg"
+                  />
+                  <span>
+                    Notes
+                  </span>
+                </li>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="about-us-icon"
+                    src="code.svg"
+                  />
+                  <span>
+                    About
+                  </span>
+                </li>
+                <li
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="exit-icon"
+                    src="exit.svg"
+                  />
+                  <span>
+                    Quit
+                  </span>
+                </li>
+              </ul>
+              <div
+                className="donate"
+              >
+                <p>
+                  Enjoying this app?
+                </p>
+                <p
+                  className="wallet-ID"
+                >
+                  Q2E9RH128EYG9Y1HE88U2T
+                </p>
+              </div>
+            </div>,
+            "className": "hotdog-menu",
+          },
           "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1>
+                   
+                  t
+                  <span>
+                    eller
+                  </span>
+                  .
+                </h1>,
+                <ul>
+                  <li
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="home-icon"
+                      src="home.svg"
+                    />
+                    <span>
+                      Home
+                    </span>
+                  </li>
+                  <li
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="blog-icon"
+                      src="newspaper.svg"
+                    />
+                    <span>
+                      Blog
+                    </span>
+                  </li>
+                  <li
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="notes-icon"
+                      src="blogging.svg"
+                    />
+                    <span>
+                      Notes
+                    </span>
+                  </li>
+                  <li
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="about-us-icon"
+                      src="code.svg"
+                    />
+                    <span>
+                      About
+                    </span>
+                  </li>
+                  <li
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="exit-icon"
+                      src="exit.svg"
+                    />
+                    <span>
+                      Quit
+                    </span>
+                  </li>
+                </ul>,
+                <div
+                  className="donate"
+                >
+                  <p>
+                    Enjoying this app?
+                  </p>
+                  <p
+                    className="wallet-ID"
+                  >
+                    Q2E9RH128EYG9Y1HE88U2T
+                  </p>
+                </div>,
+              ],
+              "className": "menu-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "t",
+                    <span>
+                      eller
+                    </span>,
+                    ".",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "t",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "eller",
+                    },
+                    "ref": null,
+                    "rendered": "eller",
+                    "type": "span",
+                  },
+                  ".",
+                ],
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li
+                      onClick={[Function]}
+                    >
+                      <img
+                        alt="home-icon"
+                        src="home.svg"
+                      />
+                      <span>
+                        Home
+                      </span>
+                    </li>,
+                    <li
+                      onClick={[Function]}
+                    >
+                      <img
+                        alt="blog-icon"
+                        src="newspaper.svg"
+                      />
+                      <span>
+                        Blog
+                      </span>
+                    </li>,
+                    <li
+                      onClick={[Function]}
+                    >
+                      <img
+                        alt="notes-icon"
+                        src="blogging.svg"
+                      />
+                      <span>
+                        Notes
+                      </span>
+                    </li>,
+                    <li
+                      onClick={[Function]}
+                    >
+                      <img
+                        alt="about-us-icon"
+                        src="code.svg"
+                      />
+                      <span>
+                        About
+                      </span>
+                    </li>,
+                    <li
+                      onClick={[Function]}
+                    >
+                      <img
+                        alt="exit-icon"
+                        src="exit.svg"
+                      />
+                      <span>
+                        Quit
+                      </span>
+                    </li>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <img
+                          alt="home-icon"
+                          src="home.svg"
+                        />,
+                        <span>
+                          Home
+                        </span>,
+                      ],
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "home-icon",
+                          "src": "home.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Home",
+                        },
+                        "ref": null,
+                        "rendered": "Home",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <img
+                          alt="blog-icon"
+                          src="newspaper.svg"
+                        />,
+                        <span>
+                          Blog
+                        </span>,
+                      ],
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "blog-icon",
+                          "src": "newspaper.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Blog",
+                        },
+                        "ref": null,
+                        "rendered": "Blog",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <img
+                          alt="notes-icon"
+                          src="blogging.svg"
+                        />,
+                        <span>
+                          Notes
+                        </span>,
+                      ],
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "notes-icon",
+                          "src": "blogging.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Notes",
+                        },
+                        "ref": null,
+                        "rendered": "Notes",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <img
+                          alt="about-us-icon"
+                          src="code.svg"
+                        />,
+                        <span>
+                          About
+                        </span>,
+                      ],
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "about-us-icon",
+                          "src": "code.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "About",
+                        },
+                        "ref": null,
+                        "rendered": "About",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <img
+                          alt="exit-icon"
+                          src="exit.svg"
+                        />,
+                        <span>
+                          Quit
+                        </span>,
+                      ],
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "exit-icon",
+                          "src": "exit.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Quit",
+                        },
+                        "ref": null,
+                        "rendered": "Quit",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p>
+                      Enjoying this app?
+                    </p>,
+                    <p
+                      className="wallet-ID"
+                    >
+                      Q2E9RH128EYG9Y1HE88U2T
+                    </p>,
+                  ],
+                  "className": "donate",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Enjoying this app?",
+                    },
+                    "ref": null,
+                    "rendered": "Enjoying this app?",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Q2E9RH128EYG9Y1HE88U2T",
+                      "className": "wallet-ID",
+                    },
+                    "ref": null,
+                    "rendered": "Q2E9RH128EYG9Y1HE88U2T",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
           "type": "div",
         },
       ],
