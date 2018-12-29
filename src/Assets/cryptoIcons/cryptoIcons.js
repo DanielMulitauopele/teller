@@ -99,7 +99,8 @@ import SYS from "../../../node_modules/cryptocurrency-icons/svg/white/sys.svg";
 import FUN from "../../../node_modules/cryptocurrency-icons/svg/white/fun.svg";
 import EDO from "../../../node_modules/cryptocurrency-icons/svg/white/edo.svg";
 import MOAC from "../../../node_modules/cryptocurrency-icons/svg/white/generic.svg";
-
+import ENG from "../../../node_modules/cryptocurrency-icons/svg/white/generic.svg";
+import GUSD from "../../../node_modules/cryptocurrency-icons/svg/white/generic.svg";
 export const Icons = {
   BTC,
   XRP,
@@ -109,6 +110,7 @@ export const Icons = {
   EOS,
   USDT,
   LTC,
+  GUSD,
   BSV,
   TRX,
   ADA,
@@ -177,6 +179,7 @@ export const Icons = {
   PAY,
   AION,
   WAN,
+  ENG,
   BNT,
   WAX,
   HC,
