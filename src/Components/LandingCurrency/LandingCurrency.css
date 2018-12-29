@@ -19,7 +19,6 @@
 .currency-card:hover {
   filter: brightness(1.5);
   cursor: pointer;
-  transform: scale(1.05);
 }
 
 .expanded-currency {
@@ -65,7 +64,6 @@
 
 .fave-this:hover {
   filter: brightness(1.5);
-  transform: scale(1.2);
 }
 
 .cc-right {
