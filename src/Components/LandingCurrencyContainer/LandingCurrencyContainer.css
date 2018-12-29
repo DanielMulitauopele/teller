@@ -3,6 +3,7 @@
   width: 25rem;
   height: 34.2rem;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .bottom-gradient {
