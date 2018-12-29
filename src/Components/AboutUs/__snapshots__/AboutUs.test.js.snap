@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutUs Component should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AboutUs />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Meet the Team
+        </h1>,
+        <h2>
+          Dina Caraballo
+        </h2>,
+        <h2>
+          Nick D'Ambrosio
+        </h2>,
+        <h2>
+          Autumn Martin
+        </h2>,
+        <h2>
+          Daniel Mulitauopele
+        </h2>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Meet the Team",
+        },
+        "ref": null,
+        "rendered": "Meet the Team",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Dina Caraballo",
+        },
+        "ref": null,
+        "rendered": "Dina Caraballo",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Nick D'Ambrosio",
+        },
+        "ref": null,
+        "rendered": "Nick D'Ambrosio",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Autumn Martin",
+        },
+        "ref": null,
+        "rendered": "Autumn Martin",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Daniel Mulitauopele",
+        },
+        "ref": null,
+        "rendered": "Daniel Mulitauopele",
+        "type": "h2",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Meet the Team
+          </h1>,
+          <h2>
+            Dina Caraballo
+          </h2>,
+          <h2>
+            Nick D'Ambrosio
+          </h2>,
+          <h2>
+            Autumn Martin
+          </h2>,
+          <h2>
+            Daniel Mulitauopele
+          </h2>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Meet the Team",
+          },
+          "ref": null,
+          "rendered": "Meet the Team",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Dina Caraballo",
+          },
+          "ref": null,
+          "rendered": "Dina Caraballo",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Nick D'Ambrosio",
+          },
+          "ref": null,
+          "rendered": "Nick D'Ambrosio",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Autumn Martin",
+          },
+          "ref": null,
+          "rendered": "Autumn Martin",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Daniel Mulitauopele",
+          },
+          "ref": null,
+          "rendered": "Daniel Mulitauopele",
+          "type": "h2",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

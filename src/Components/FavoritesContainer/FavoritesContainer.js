@@ -7,7 +7,7 @@ import "./slick-theme.css";
 import "./FavoritesContainer.css";
 import TellerAI from "../tellerAI/tellerAI";
 
-export default class FavoritesContainer extends Component {
+class FavoritesContainer extends Component {
   constructor({ props, favorites, addToFavorites, removeFromFavorites }) {
     super(favorites, props);
     this.state = {
@@ -38,3 +38,5 @@ export default class FavoritesContainer extends Component {
     );
   }
 }
+
+export default FavoritesContainer;

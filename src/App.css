@@ -12,15 +12,21 @@
   --BlueGreen: linear-gradient(to bottom, #c2e59c, #64b3f4);
   --Pinkish: linear-gradient(to bottom, #b24592, #f15f79);
   --Descent: linear-gradient(to bottom, #00c6ff, #0072ff);
-  --Tranquil: linear-gradient(to bottom, #4ca1af, #c4e0e5);
+  --Tranquil: linear-gradient(to bottom, #9862da, #db5db2);
   --AlmostWhite: rgb(230, 230, 230);
+  --TellerBG: #303859;
   margin: 0;
   padding: 0;
   outline: none;
 }
 
+@font-face {
+  font-family: teller;
+  src: url(./Assets/fonts/GeorgeRegular.ttf);
+}
+
 .App {
   height: 100vh;
-  background-color: #303859;
+  background-color: var(--TellerBG);
   overflow: hidden;
 }

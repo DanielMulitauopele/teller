@@ -8,7 +8,7 @@ import Search from "./Components/Search/Search";
 import { Route, withRouter, Switch } from "react-router-dom";
 import Landing from "./Components/Landing/Landing";
 import RegisterForm from "./Components/RegisterForm/RegisterForm";
-import LoginForm from "./Components/LoginForm/LoginForm"
+import LoginForm from "./Components/LoginForm/LoginForm";
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +16,9 @@ class App extends Component {
     this.state = {
       favorites: [1, 2, 3, 4, 5],
       abbrevCurrencies: [],
-      expandedCurrencies: []
+      expandedCurrencies: [],
+      userEmail: "",
+      news: []
     };
 
     const addToFavorites = favorite => {
@@ -38,11 +40,29 @@ class App extends Component {
     this.setState({ abbrevCurrencies, expandedCurrencies });
   }
 
+  addToFavorites = favorite => {
+    this.setState({ favorites: [favorite, ...this.state.favorites] });
+  };
+
+  removeFromFavorites = id => {
+    const filteredFavorites = this.state.favorites.filter(
+      favorite => favorite.id !== id
+    );
+    this.setState({ favorites: filteredFavorites });
+  };
+
+  logInUser = userEmail => {
+    this.setState({ userEmail });
+  };
+
   render() {
     const { abbrevCurrencies, favorites } = this.state;
     return (
       <div className="App">
         <Hotdog />
+        {/* //         <LoginForm logInUser={this.logInUser}/>
+//         <RegisterForm />
+//         <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} /> */}
         <Search />
         <Switch>
           <Route
@@ -65,8 +85,8 @@ class App extends Component {
           <Route component={Wrong} /> */}{" "}
           */}
         </Switch>
-//         <LoginForm />
-//         <RegisterForm />
+        // <LoginForm />
+        // <RegisterForm />
       </div>
     );
   }
