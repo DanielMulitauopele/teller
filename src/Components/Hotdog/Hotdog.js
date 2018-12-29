@@ -43,7 +43,7 @@ class Hotdog extends Component {
             <h1> teller.</h1>
             <ul>
               <li onClick={this.changeActiveRoute}>Home</li>
-              <li onClick={this.changeActiveRoute}>Crypto News</li>
+              <li onClick={this.changeActiveRoute}>Blog</li>
               <li onClick={this.changeActiveRoute}>Notes</li>
               <li onClick={this.changeActiveRoute}>About</li>
               <li onClick={this.changeActiveRoute}>Log Out</li>

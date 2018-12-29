@@ -102,15 +102,15 @@
   display: inline-block;
   text-transform: lowercase;
   font-size: 3rem;
-  color: white;
+  color: #fc599f;
   margin-bottom: 2rem;
-  border-bottom: 5px solid white;
+  border-bottom: 5px solid #fc599f;
 }
 
 .hotdog-menu li,
 .hotdog-menu-expanded li {
   font-size: 2rem;
-  margin: 3rem 0;
+  padding: 1rem 0;
   color: white;
   transition: 0.4s;
 }
@@ -131,37 +131,13 @@
   margin: 0 auto;
 }
 
-.wallet-ID {
-  color: #fc599f;
-  animation: colorful 5s linear infinite;
-}
-
-@keyframes colorful {
-  10% {
-    color: #8065e9;
+@media only screen and (min-width: 700px) {
+  .hotdog-menu,
+  .hotdog-menu-expanded {
+    width: 5rem;
+    left: 0;
   }
-  20% {
-    color: #9862da;
-  }
-  30% {
-    color: #b760c5;
-  }
-  40% {
-    color: #db5db2;
-  }
-  50% {
-    color: #fc599f;
-  }
-  40% {
-    color: #db5db2;
-  }
-  30% {
-    color: #b760c5;
-  }
-  20% {
-    color: #9862da;
-  }
-  10% {
-    color: #8065e9;
+  .hotdog-menu-expanded li:hover {
+    background-color: #454f75;
   }
 }
