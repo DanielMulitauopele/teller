@@ -1,25 +1,167 @@
-.hotdog-container {
+.hotdog-container,
+.hotdog-container-expanded {
   width: 1.3rem;
   height: 1rem;
   position: fixed;
   left: 2rem;
   top: 2rem;
-  z-index: 50;
+  z-index: 90;
   cursor: pointer;
 }
 
-.hotdog-container div {
+.hotdog-container div,
+.hotdog-container-expanded div {
   width: 60%;
   height: 2px;
   margin: 0 auto 5px;
   transition: 0.3s;
   background-color: var(--AlmostWhite);
+  position: relative;
 }
 
 .hotdog-container div:nth-child(2) {
   width: 100%;
+  display: block;
 }
 
 .hotdog-container:hover div {
-  margin: 0 auto 6px;
+  width: 100%;
+}
+
+.hotdog-container:hover div:nth-child(2) {
+  width: 60%;
+}
+
+/* ! Hotdog Expanded ! */
+
+.hotdog-container-expanded div:first-child {
+  transform: rotate(45deg);
+  top: 3.5px;
+  width: 100%;
+}
+
+.hotdog-container-expanded div:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 3.5px;
+  width: 100%;
+}
+
+.hotdog-container-expanded div:nth-child(2) {
+  display: none;
+}
+
+.hotdog-container-expanded:hover div:first-child {
+  transform: rotate(-45deg);
+}
+
+.hotdog-container-expanded:hover div:nth-child(3) {
+  transform: rotate(45deg);
+}
+
+/* ! Hotdog Menu ! */
+
+.hotdog-menu {
+  width: 100%;
+  height: 100%;
+  bottom: 105%;
+  box-shadow: 2px 2px 10px black;
+  z-index: 1;
+  text-align: center;
+  position: fixed;
+  opacity: 0;
+  background-color: var(--TellerBG);
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.hotdog-menu-expanded {
+  position: fixed;
+  height: 100%;
+  opacity: 1;
+  text-align: center;
+  width: 100%;
+  z-index: 60;
+  background-color: var(--TellerBG);
+  box-shadow: 1px 1px 5px rgb(27, 27, 27);
+  bottom: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out, opacity 0s;
+}
+
+.menu-card {
+  margin-top: 4rem;
+}
+
+.hotdog-menu h1,
+.hotdog-menu-expanded h1 {
+  font-family: teller;
+  display: inline-block;
+  text-transform: lowercase;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 2rem;
+  border-bottom: 5px solid white;
+}
+
+.hotdog-menu li,
+.hotdog-menu-expanded li {
+  font-size: 2rem;
+  margin: 3rem 0;
+  color: white;
+  transition: 0.4s;
+}
+
+.hotdog-menu li:hover,
+.hotdog-menu-expanded li:hover {
+  color: #fc599f;
+  cursor: pointer;
+  text-shadow: 0px 0px 10px #fc59a02a;
+}
+
+.donate {
+  color: rgb(206, 206, 206);
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.wallet-ID {
+  color: #fc599f;
+  animation: colorful 5s linear infinite;
+}
+
+@keyframes colorful {
+  10% {
+    color: #8065e9;
+  }
+  20% {
+    color: #9862da;
+  }
+  30% {
+    color: #b760c5;
+  }
+  40% {
+    color: #db5db2;
+  }
+  50% {
+    color: #fc599f;
+  }
+  40% {
+    color: #db5db2;
+  }
+  30% {
+    color: #b760c5;
+  }
+  20% {
+    color: #9862da;
+  }
+  10% {
+    color: #8065e9;
+  }
 }

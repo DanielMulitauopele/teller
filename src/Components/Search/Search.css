@@ -1,0 +1,156 @@
+.search-button {
+  background: var(--MainGradient);
+  border-top: 2px solid transparent;
+  bottom: 25px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.256);
+  cursor: pointer;
+  height: 56px;
+  position: fixed;
+  right: 35px;
+  transition: 0.9s;
+  transition-delay: 0.1s;
+  transform: rotate(45deg);
+  width: 56px;
+  z-index: 50;
+}
+
+.search-button:hover {
+  animation: woom 2s linear infinite;
+}
+
+.search-button-active {
+  animation: makeBigger 0.6s forwards;
+  background: none;
+  background-color: #303859;
+  border-left: 2px solid #db5db2;
+  border-right: 2px solid #db5db2;
+  border-radius: 15px;
+  bottom: 25px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.434);
+  cursor: pointer;
+  height: 56px;
+  position: fixed;
+  right: 35px;
+  transition: 0.1s;
+  width: 23rem;
+  z-index: 50;
+}
+
+.search-button-active:hover {
+  transform: scale(1.05);
+}
+
+.search-button-active img:hover {
+  filter: brightness(2);
+}
+
+.search-field input {
+  background: black;
+  padding: 0.5rem 1rem;
+}
+
+.search-bar,
+.search-bar-active input {
+  background-color: transparent;
+  border: 0px;
+  bottom: 1.4rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.5s;
+  width: 15rem;
+}
+
+.search-button img {
+  transform: rotate(-45deg);
+}
+
+.search-button img,
+.search-button-active img {
+  height: 25px;
+  margin: 1rem;
+}
+
+.search-button-active img {
+  transition: 0.2s;
+}
+
+.search-button input {
+  opacity: 0;
+}
+
+.search-button-active input {
+  animation: appear 1.2s forwards;
+}
+
+/* ! Animations ! */
+
+@keyframes ❤️ {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 217, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 1px #9862da;
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(255, 217, 0, 0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes makeBigger {
+  0% {
+    width: 56px;
+  }
+  50% {
+    width: 50px;
+  }
+  80% {
+    width: 56px;
+  }
+  100% {
+    width: 20rem;
+  }
+}
+
+@keyframes makeSmaller {
+  0% {
+    width: 20rem;
+  }
+  50% {
+    width: 20.5rem;
+  }
+  80% {
+    width: 20rem;
+  }
+  100% {
+    width: 56px;
+  }
+}
+
+@keyframes woom {
+  0% {
+    filter: hue-rotate(-10deg);
+  }
+  50% {
+    filter: hue-rotate(30deg);
+  }
+  100% {
+    filter: hue-rotate(-10deg);
+  }
+}

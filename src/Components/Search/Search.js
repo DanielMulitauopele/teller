@@ -1,0 +1,37 @@
+import React, { Component } from "react";
+import "./Search.css";
+import SearchGlass from "../../Assets/search.svg";
+import Cancel from "../../Assets/cancel.svg";
+
+class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: false,
+      hasText: false
+    };
+  }
+
+  toggleSearchBtn = () => {
+    this.setState({
+      active: !this.state.active
+    });
+  };
+
+  render() {
+    const { active } = this.state;
+    return (
+      <div className="bigger-box">
+        <div className={active ? "search-button-active" : "search-button"}>
+          <img
+            src={active ? Cancel : SearchGlass}
+            onClick={this.toggleSearchBtn}
+          />
+          <input className="search-bar" type="text" placeholder="Search" />
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Search;

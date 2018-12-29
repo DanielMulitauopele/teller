@@ -4,6 +4,9 @@ import { FavoritesContainer } from "./Components/FavoritesContainer/FavoritesCon
 import Hotdog from "./Components/Hotdog/Hotdog";
 import LandingCurrencyContainer from "./Components/LandingCurrencyContainer/LandingCurrencyContainer";
 import DataCleaner from "./Utils/Cleaners/";
+import Search from "./Components/Search/Search";
+import { Route, withRouter, Switch } from "react-router-dom";
+import Landing from "./Components/Landing/Landing";
 import RegisterForm from "./Components/RegisterForm/RegisterForm";
 import LoginForm from "./Components/LoginForm/LoginForm"
 
@@ -14,15 +17,27 @@ class App extends Component {
       favorites: [1, 2, 3, 4, 5],
       abbrevCurrencies: [],
       expandedCurrencies: [],
-      userEmail: ''
-    }
+      userEmail: '',
+      news: []
+    };
+
+    const addToFavorites = favorite => {
+      this.setState({ favorites: [favorite, ...this.state.favorites] });
+    };
+
+    const removeFromFavorites = id => {
+      const filteredFavorites = this.state.favorites.filter(
+        favorite => favorite.id !== id
+      );
+      this.setState({ filteredFavorites });
+    };
   }
 
-  async componentDidMount(){
-    const cleaner = new DataCleaner()
-    const abbrevCurrencies = await cleaner.getAbbrevCurrencies()
-    const expandedCurrencies = await cleaner.getExpandedCurrencies()
-    this.setState({abbrevCurrencies, expandedCurrencies})
+  async componentDidMount() {
+    const cleaner = new DataCleaner();
+    const abbrevCurrencies = await cleaner.getAbbrevCurrencies();
+    const expandedCurrencies = await cleaner.getExpandedCurrencies();
+    this.setState({ abbrevCurrencies, expandedCurrencies });
   }
 
   addToFavorites = favorite => {
@@ -41,18 +56,42 @@ class App extends Component {
   }
 
   render() {
-    const { abbrevCurrencies, favorites } = this.state
+    const { abbrevCurrencies, favorites } = this.state;
     return (
       <div className="App">
         <Hotdog />
-        <FavoritesContainer
-          favorites={favorites}
-          addToFavorites={this.addToFavorites}
-          removeFromFavorites={this.removeFromFavorites}
-        />
-        <LoginForm logInUser={this.logInUser}/>
-        <RegisterForm />
-        <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} />
+//         <FavoritesContainer
+//           favorites={favorites}
+//           addToFavorites={this.addToFavorites}
+//           removeFromFavorites={this.removeFromFavorites}
+//         />
+//         <LoginForm logInUser={this.logInUser}/>
+//         <RegisterForm />
+//         <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} />
+        <Search />
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => {
+              return (
+                <Landing
+                  favorites={favorites}
+                  addToFavorites={this.addToFavorites}
+                  removeFromFavorites={this.removeFromFavorites}
+                  abbrevCurrencies={abbrevCurrencies}
+                />
+              );
+            }}
+          />
+          )}
+          {/* <Route exact path="/about" component={about} />
+          <Route exact path="/login" component={login} />
+          <Route component={Wrong} /> */}{" "}
+          */}
+        </Switch>
+//         <LoginForm />
+//         <RegisterForm />
       </div>
     );
   }
