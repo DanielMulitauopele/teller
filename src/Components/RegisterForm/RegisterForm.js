@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 
 class RegisterForm extends Component {
   constructor(props) {
-    super ('props')
+    super (props)
     this.state = {
       name: '',
       email: '',
       password: '',
-      confirmedPassword: ''
+      confirmedPassword: '',
+      passwordError: false
     }
   }
 
@@ -18,7 +19,16 @@ class RegisterForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    const { password, confirmedPassword } = this.state
     //send user info to DB
+    if (!password || !confirmedPassword || password !== confirmedPassword) {
+      this.togglePasswordError()
+    }
+  }
+
+  togglePasswordError = () => {
+    const { passwordError } = this.state
+    this.setState({ passwordError: !passwordError})
   }
 
   render() {
@@ -53,6 +63,7 @@ class RegisterForm extends Component {
           name="confirmedPassword"
           onChange={this.handleChange}
           value={confirmedPassword} />
+        <button className="register-button">Register</button>
       </form>
     )
   }

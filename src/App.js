@@ -17,6 +17,7 @@ class App extends Component {
       favorites: [1, 2, 3, 4, 5],
       abbrevCurrencies: [],
       expandedCurrencies: [],
+      userEmail: '',
       news: []
     };
 
@@ -39,11 +40,34 @@ class App extends Component {
     this.setState({ abbrevCurrencies, expandedCurrencies });
   }
 
+  addToFavorites = favorite => {
+    this.setState({ favorites: [favorite, ...this.state.favorites] });
+  }
+
+  removeFromFavorites = id => {
+    const filteredFavorites = this.state.favorites.filter(
+      favorite => favorite.id !== id
+    );
+    this.setState({ favorites: filteredFavorites });
+  }
+
+  logInUser = userEmail => {
+    this.setState({userEmail})
+  }
+
   render() {
     const { abbrevCurrencies, favorites } = this.state;
     return (
       <div className="App">
         <Hotdog />
+//         <FavoritesContainer
+//           favorites={favorites}
+//           addToFavorites={this.addToFavorites}
+//           removeFromFavorites={this.removeFromFavorites}
+//         />
+//         <LoginForm logInUser={this.logInUser}/>
+//         <RegisterForm />
+//         <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} />
         <Search />
         <Switch>
           <Route
