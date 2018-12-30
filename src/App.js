@@ -20,17 +20,6 @@ class App extends Component {
       userEmail: "",
       news: []
     };
-
-    const addToFavorites = favorite => {
-      this.setState({ favorites: [favorite, ...this.state.favorites] });
-    };
-
-    const removeFromFavorites = id => {
-      const filteredFavorites = this.state.favorites.filter(
-        favorite => favorite.id !== id
-      );
-      this.setState({ filteredFavorites });
-    };
   }
 
   async componentDidMount() {
@@ -54,6 +43,13 @@ class App extends Component {
   logInUser = userEmail => {
     this.setState({ userEmail });
   };
+
+  displaySearch = (currency) => {
+    this.setState({
+      abbrevCurrencies: ,
+      expandedCurrencies: ,
+    })
+  }
 
   render() {
     const { abbrevCurrencies, favorites } = this.state;

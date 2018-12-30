@@ -8,7 +8,8 @@ class Search extends Component {
     super(props);
     this.state = {
       active: false,
-      hasText: false
+      hasText: false,
+      search: ''
     };
   }
 
@@ -18,16 +19,30 @@ class Search extends Component {
     });
   };
 
+  handleChange = (e) => {
+    const { name, value } = e.target
+    this.setState({ [name]: value })
+  }
+
+
+
   render() {
-    const { active } = this.state;
+    const { active, search } = this.state;
     return (
       <div className="bigger-box">
         <div className={active ? "search-button-active" : "search-button"}>
           <img
+            className="search-image"
             src={active ? Cancel : SearchGlass}
             onClick={this.toggleSearchBtn}
           />
-          <input className="search-bar" type="text" placeholder="Search" />
+          <input 
+            className="search-bar" 
+            type="text" 
+            placeholder="Search"
+            name="search"
+            value={search}
+            onChange={this.handleChange} />
         </div>
       </div>
     );
