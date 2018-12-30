@@ -5,13 +5,13 @@ import Blog from "../../Assets/newspaper.svg";
 import Notes from "../../Assets/blogging.svg";
 import Code from "../../Assets/code.svg";
 import Exit from "../../Assets/exit.svg";
+import Donate from "../../Assets/donate.svg";
 
 class Hotdog extends Component {
   constructor() {
     super();
     this.state = {
-      expanded: false,
-      activeMenu: "Home"
+      expanded: false
     };
   }
 
@@ -21,17 +21,8 @@ class Hotdog extends Component {
     });
   };
 
-  changeActiveRoute = e => {
-    this.setState({
-      activeMenu: e.target.innerText
-    });
-    console.log(e.target);
-    console.log(this.state);
-  };
-
   render() {
     const { expanded } = this.state;
-    const activeColor = { color: "#fc599f" };
     return (
       <div>
         <div
@@ -47,7 +38,6 @@ class Hotdog extends Component {
         <div className={expanded ? "hotdog-menu-expanded" : "hotdog-menu"}>
           <div className="menu-card">
             <h1>
-              {" "}
               t<span>eller</span>.
             </h1>
             <ul>
@@ -55,24 +45,25 @@ class Hotdog extends Component {
                 <img src={Home} alt="home-icon" />
                 <span>Home</span>
               </li>
-              <li onClick={this.changeActiveRoute}>
+              <li>
                 <img src={Blog} alt="blog-icon" />
                 <span>Blog</span>
               </li>
-              <li onClick={this.changeActiveRoute}>
+              <li>
                 <img src={Notes} alt="notes-icon" />
                 <span>Notes</span>
               </li>
-              <li onClick={this.changeActiveRoute}>
+              <li>
                 <img src={Code} alt="about-us-icon" />
                 <span>About</span>
               </li>
-              <li onClick={this.changeActiveRoute}>
+              <li>
                 <img src={Exit} alt="exit-icon" />
                 <span>Quit</span>
               </li>
             </ul>
             <div className="donate">
+              <img src={Donate} alt="donate-button" />
               <p>Enjoying this app?</p>
               <p className="wallet-ID">Q2E9RH128EYG9Y1HE88U2T</p>
             </div>
