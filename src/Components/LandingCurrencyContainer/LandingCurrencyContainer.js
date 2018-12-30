@@ -19,15 +19,12 @@ class LandingCurrencyContainer extends Component {
     return (
       <div className="sort-box">
         <div className="sort">
-          {/* change this 'active' class to something more specific */}
-          <p className="active">Rank</p>
+          <p className="sort-active">Rank</p>
           <p>Price</p>
           <p>%Change</p>
         </div>
-        <div className="currency-container">
-          {landingCurrencies}
-          <div className="bottom-gradient" />
-        </div>
+        <div className="currency-container">{landingCurrencies}</div>
+        <div className="bottom-gradient" />
       </div>
     );
   }

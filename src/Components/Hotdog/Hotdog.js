@@ -5,6 +5,7 @@ import Blog from "../../Assets/newspaper.svg";
 import Notes from "../../Assets/blogging.svg";
 import Code from "../../Assets/code.svg";
 import Exit from "../../Assets/exit.svg";
+import Donate from "../../Assets/donate.svg";
 
 class Hotdog extends Component {
   constructor() {
@@ -71,6 +72,7 @@ class Hotdog extends Component {
               </li>
             </ul>
             <div className="donate">
+              <img src={Donate} alt="donate-button" />
               <p>Enjoying this app?</p>
               <p className="wallet-ID">Q2E9RH128EYG9Y1HE88U2T</p>
             </div>

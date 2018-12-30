@@ -169,7 +169,8 @@
   }
 
   .menu-card li {
-    padding: 1rem 1.6rem;
+    font-size: 2rem;
+    padding: 1rem 0rem;
   }
 
   .donate {
@@ -182,14 +183,29 @@
 
   .menu-card span {
     opacity: 0;
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
 
   .menu-card li:hover span {
     opacity: 1;
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
   .menu-card img {
     display: block;
+    padding: 0 1.5rem;
+  }
+
+  .donate img {
+    padding: 1.3rem;
+    width: 35px;
+  }
+
+  .donate img:hover {
+    cursor: pointer;
+    filter: brightness(1.5);
+  }
+
+  .donate p {
+    display: none;
   }
 }
