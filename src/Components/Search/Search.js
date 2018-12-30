@@ -28,6 +28,7 @@ class Search extends Component {
     e.preventDefault()
     const { search } = this.state
     this.props.displaySearch(search)
+    // this.setState({ search: '' })
   }
 
   render() {
