@@ -60,9 +60,6 @@ class App extends Component {
     return (
       <div className="App">
         <Hotdog />
-        {/* //         <LoginForm logInUser={this.logInUser}/>
-//         <RegisterForm />
-//         <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} /> */}
         <Search />
         <Switch>
           <Route
@@ -79,14 +76,8 @@ class App extends Component {
               );
             }}
           />
-          )}
-          {/* <Route exact path="/about" component={about} />
-          <Route exact path="/login" component={login} />
-          <Route component={Wrong} /> */}{" "}
-          */}
+          )}}
         </Switch>
-        // <LoginForm />
-        // <RegisterForm />
       </div>
     );
   }

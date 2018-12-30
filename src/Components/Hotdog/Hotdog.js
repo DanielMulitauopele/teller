@@ -46,27 +46,26 @@ class Hotdog extends Component {
         <div className={expanded ? "hotdog-menu-expanded" : "hotdog-menu"}>
           <div className="menu-card">
             <h1>
-              {" "}
               t<span>eller</span>.
             </h1>
             <ul>
-              <li onClick={this.changeActiveRoute}>
+              <li>
                 <img src={Home} alt="home-icon" />
                 <span>Home</span>
               </li>
-              <li onClick={this.changeActiveRoute}>
+              <li>
                 <img src={Blog} alt="blog-icon" />
                 <span>Blog</span>
               </li>
-              <li onClick={this.changeActiveRoute}>
+              <li>
                 <img src={Notes} alt="notes-icon" />
                 <span>Notes</span>
               </li>
-              <li onClick={this.changeActiveRoute}>
+              <li>
                 <img src={Code} alt="about-us-icon" />
                 <span>About</span>
               </li>
-              <li onClick={this.changeActiveRoute}>
+              <li>
                 <img src={Exit} alt="exit-icon" />
                 <span>Quit</span>
               </li>
