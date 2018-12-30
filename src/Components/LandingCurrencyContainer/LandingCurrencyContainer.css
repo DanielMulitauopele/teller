@@ -16,6 +16,10 @@
 }
 
 .sort-box {
+  text-align: left;
+}
+
+.sort {
   text-align: right;
 }
 
@@ -25,7 +29,6 @@
   font-size: 0.8rem;
   letter-spacing: 1px;
   margin-right: 1rem;
-  text-align: right;
   text-decoration: none;
   display: inline-block;
   border-bottom: 3px solid transparent;
