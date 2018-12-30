@@ -46,14 +46,19 @@
 
 .search-field input {
   background: black;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
+}
+
+.search-button input {
+  opacity: 0;
 }
 
 .search-bar,
 .search-bar-active input {
   background-color: transparent;
   border: 0px;
-  bottom: 1.4rem;
+  bottom: 2.5rem;
+  left: 3rem;
   color: white;
   font-size: 1rem;
   font-weight: 400;
@@ -76,10 +81,6 @@
 
 .search-button-active img {
   transition: 0.2s;
-}
-
-.search-button input {
-  opacity: 0;
 }
 
 .search-button-active input {
