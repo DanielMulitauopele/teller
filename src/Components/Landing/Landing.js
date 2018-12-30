@@ -38,7 +38,9 @@ class Landing extends Component {
       <div className="landing-literal">
         <NewsContainer />
         <FavoritesContainer {...this.props} />
-        <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} />
+        <LandingCurrencyContainer 
+          abbrevCurrencies={abbrevCurrencies}
+          setFilter={this.props.setFilter} />
       </div>
     );
   }
