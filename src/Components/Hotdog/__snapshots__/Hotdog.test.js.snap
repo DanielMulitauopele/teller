@@ -42,6 +42,7 @@ ShallowWrapper {
             </h1>
             <ul>
               <li
+                className="home-li"
                 onClick={[Function]}
               >
                 <img
@@ -178,6 +179,7 @@ ShallowWrapper {
             </h1>
             <ul>
               <li
+                className="home-li"
                 onClick={[Function]}
               >
                 <img
@@ -265,6 +267,7 @@ ShallowWrapper {
               </h1>,
               <ul>
                 <li
+                  className="home-li"
                   onClick={[Function]}
                 >
                   <img
@@ -377,6 +380,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <li
+                    className="home-li"
                     onClick={[Function]}
                   >
                     <img
@@ -449,6 +453,7 @@ ShallowWrapper {
                         Home
                       </span>,
                     ],
+                    "className": "home-li",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -742,6 +747,7 @@ ShallowWrapper {
               </h1>
               <ul>
                 <li
+                  className="home-li"
                   onClick={[Function]}
                 >
                   <img
@@ -878,6 +884,7 @@ ShallowWrapper {
               </h1>
               <ul>
                 <li
+                  className="home-li"
                   onClick={[Function]}
                 >
                   <img
@@ -965,6 +972,7 @@ ShallowWrapper {
                 </h1>,
                 <ul>
                   <li
+                    className="home-li"
                     onClick={[Function]}
                   >
                     <img
@@ -1077,6 +1085,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <li
+                      className="home-li"
                       onClick={[Function]}
                     >
                       <img
@@ -1149,6 +1158,7 @@ ShallowWrapper {
                           Home
                         </span>,
                       ],
+                      "className": "home-li",
                       "onClick": [Function],
                     },
                     "ref": null,

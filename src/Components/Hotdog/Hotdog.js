@@ -14,6 +14,7 @@ class Hotdog extends Component {
       activeMenu: "Home"
     };
   }
+
   toggleHotdog = () => {
     this.setState({
       expanded: !this.state.expanded
@@ -50,7 +51,7 @@ class Hotdog extends Component {
               t<span>eller</span>.
             </h1>
             <ul>
-              <li onClick={this.changeActiveRoute}>
+              <li className="home-li" onClick={this.changeActiveRoute}>
                 <img src={Home} alt="home-icon" />
                 <span>Home</span>
               </li>

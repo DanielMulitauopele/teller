@@ -54,7 +54,7 @@ class App extends Component {
     })
   }
 
-  setFilter = (filterCategory) => {
+  setFilter = filterCategory => {
     const { abbrevCurrencies, expandedCurrencies } = this.state
     let sortedAbbrev
     let sortedExp

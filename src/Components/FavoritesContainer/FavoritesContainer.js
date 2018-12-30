@@ -8,8 +8,8 @@ import "./FavoritesContainer.css";
 import TellerAI from "../tellerAI/tellerAI";
 
 class FavoritesContainer extends Component {
-  constructor({ props, favorites, addToFavorites, removeFromFavorites }) {
-    super(favorites, props);
+  constructor(props) {
+    super(props);
     this.state = {
       expanded: false
     };
