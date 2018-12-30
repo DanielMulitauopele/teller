@@ -1,7 +1,7 @@
 .currency-container {
-  margin-top: 2.5rem;
+  margin-top: 12rem;
   width: 25rem;
-  height: 34.2rem;
+  height: 33rem;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
 }
@@ -40,4 +40,15 @@
 .sort .active {
   color: var(--AlmostWhite);
   border-bottom: 3px solid #fc599f;
+}
+
+@media only screen and (min-width: 700px) {
+  .currency-container {
+    position: absolute;
+    right: 0;
+  }
+
+  .sort-box {
+    margin-bottom: 2rem;
+  }
 }

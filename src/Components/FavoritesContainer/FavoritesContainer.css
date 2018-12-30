@@ -3,32 +3,13 @@
   height: 11rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.774);
   width: 25rem;
+  position: absolute;
+  right: 0;
 }
 
-/* .container-box:before {
-  width: 23rem;
-  height: 1%;
-  content: "";
-  border-radius: 0 0 5px 5px;
-  position: absolute;
-  background-color: #aa78e6;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  z-index: 20;
-  top: 11rem;
+@media only screen and (min-width: 700px) {
+  .container-box {
+    position: absolute;
+    right: 0;
+  }
 }
-
-.container-box:after {
-  width: 85%;
-  height: 1.5%;
-  content: "";
-  border-radius: 0 0 5px 5px;
-  position: absolute;
-  top: 11.15rem;
-  background-color: #c5a3ee;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  z-index: 15;
-} */

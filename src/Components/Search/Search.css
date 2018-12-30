@@ -8,11 +8,10 @@
   height: 56px;
   position: fixed;
   right: 35px;
-  transition: 0.9s;
-  transition-delay: 0.1s;
   transform: rotate(45deg);
   width: 56px;
   z-index: 50;
+  transition: width 0.3s ease-in-out, transform 0.3s linear 0.3s;
 }
 
 .search-button:hover {
