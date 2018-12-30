@@ -21,17 +21,6 @@ class App extends Component {
       userEmail: "",
       news: []
     };
-
-    const addToFavorites = favorite => {
-      this.setState({ favorites: [favorite, ...this.state.favorites] });
-    };
-
-    const removeFromFavorites = id => {
-      const filteredFavorites = this.state.favorites.filter(
-        favorite => favorite.id !== id
-      );
-      this.setState({ filteredFavorites });
-    };
   }
 
   async componentDidMount() {
@@ -56,12 +45,45 @@ class App extends Component {
     this.setState({ userEmail });
   };
 
+  displaySearch = currency => {
+    const { abbrevCurrencies, expandedCurrencies } = this.state
+    const abbCurr = abbrevCurrencies.find(curr => curr.name.toUpperCase() === currency.toUpperCase())
+    const expCurr = expandedCurrencies.find(curr => curr.name.toUpperCase() === currency.toUpperCase())
+    this.setState({
+      abbrevCurrencies: [abbCurr],
+      expandedCurrencies: [expCurr],
+    })
+  }
+
+  setFilter = (filterCategory) => {
+    const { abbrevCurrencies, expandedCurrencies } = this.state
+    let sortedAbbrev
+    let sortedExp
+    if (filterCategory === "Rank") {
+      sortedAbbrev = abbrevCurrencies.sort((a, b) => a.rank - b.rank)
+      sortedExp = expandedCurrencies.sort((a, b) => a.rank - b.rank)
+    } else if (filterCategory === "Price") {
+      sortedAbbrev = abbrevCurrencies.sort((a, b) => a.price - b.price)
+      sortedExp = expandedCurrencies.sort((a, b) => a.price - b.price)
+    } else if (filterCategory === "%Change") {
+      sortedAbbrev = abbrevCurrencies.sort((a, b) => a.percent_change - b.percent_change)
+      sortedExp = expandedCurrencies.sort((a, b) => a.percent_change - b.percent_change)
+    }
+    this.setState({
+      abbrevCurrencies: sortedAbbrev,
+      expandedCurrencies: sortedExp
+    })
+  }
+
   render() {
     const { abbrevCurrencies, favorites } = this.state;
     return (
       <div className="App">
         <Hotdog />
-        <Search />
+        {/* //         <LoginForm logInUser={this.logInUser}/>
+//         <RegisterForm />
+//         <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} /> */}
+        <Search displaySearch={this.displaySearch} />
         <Switch>
           <Route
             exact
@@ -73,6 +95,7 @@ class App extends Component {
                   addToFavorites={this.addToFavorites}
                   removeFromFavorites={this.removeFromFavorites}
                   abbrevCurrencies={abbrevCurrencies}
+                  setFilter={this.setFilter}
                 />
               );
             }}

@@ -10,6 +10,11 @@ class LandingCurrencyContainer extends Component {
     };
   }
 
+  handleClick = (e) => {
+    const { name } = e.target
+    this.props.setFilter(name)
+  }
+
   render() {
     const { abbrevCurrencies } = this.props;
     const landingCurrencies = abbrevCurrencies.map((currency, i) => {
@@ -23,8 +28,37 @@ class LandingCurrencyContainer extends Component {
           <p>Price</p>
           <p>%Change</p>
         </div>
-        <div className="currency-container">{landingCurrencies}</div>
-        <div className="bottom-gradient" />
+        <div className="currency-container">
+          <div className="sort">
+            {/* change this 'active' class to something more specific */}
+            <p className="active">
+              <a 
+                href="#" 
+                name="Rank" 
+                onClick={this.handleClick}>
+                Rank
+              </a>
+            </p>
+            <p>
+              <a 
+                href="#"
+                name="Price"
+                onClick={this.handleClick}>
+                Price
+              </a>
+            </p>
+            <p>
+              <a
+                href="#"
+                name="%Change"
+                onClick={this.handleClick}>
+                %Change
+              </a>
+            </p>
+          </div>
+          {landingCurrencies}
+          <div className="bottom-gradient" />
+        </div>
       </div>
     );
   }

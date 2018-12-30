@@ -8,7 +8,8 @@ class Search extends Component {
     super(props);
     this.state = {
       active: false,
-      hasText: false
+      hasText: false,
+      search: ''
     };
   }
 
@@ -18,16 +19,38 @@ class Search extends Component {
     });
   };
 
+  handleChange = (e) => {
+    const { name, value } = e.target
+    this.setState({ [name]: value })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const { search } = this.state
+    this.props.displaySearch(search)
+  }
+
   render() {
-    const { active } = this.state;
+    const { active, search } = this.state;
     return (
       <div className="bigger-box">
         <div className={active ? "search-button-active" : "search-button"}>
           <img
+            className="search-image"
             src={active ? Cancel : SearchGlass}
             onClick={this.toggleSearchBtn}
           />
-          <input className="search-bar" type="text" placeholder="Search" />
+          <form 
+            className="search-form"
+            onSubmit={this.handleSubmit}>
+            <input 
+              className="search-bar" 
+              type="text" 
+              placeholder="Search"
+              name="search"
+              value={search}
+              onChange={this.handleChange}/>
+          </form>
         </div>
       </div>
     );
