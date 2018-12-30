@@ -1,3 +1,522 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LandingCurrency Component should match the snapshot 1`] = `undefined`;
+exports[`LandingCurrency Component should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LandingCurrency
+    currency={
+      Object {
+        "name": "XRP",
+        "percent_change": 3.94,
+        "price": 0.33,
+        "rank": "2",
+        "symbol": "XRP",
+      }
+    }
+    index={1}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="card-inside-text"
+        >
+          <div
+            className="cc-left"
+          >
+            <img
+              src="xrp.svg"
+              style={
+                Object {
+                  "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="cc-center"
+          >
+            <p>
+              XRP
+            </p>
+            <p>
+              XRP
+            </p>
+          </div>
+          <div
+            className="cc-center-right"
+          >
+            <p>
+              $ 
+              0.33
+            </p>
+          </div>
+          <div
+            className="cc-right"
+          >
+            <p>
+              3.94
+            </p>
+          </div>
+        </div>,
+        false,
+      ],
+      "className": "currency-card",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="cc-left"
+            >
+              <img
+                src="xrp.svg"
+                style={
+                  Object {
+                    "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                  }
+                }
+              />
+            </div>,
+            <div
+              className="cc-center"
+            >
+              <p>
+                XRP
+              </p>
+              <p>
+                XRP
+              </p>
+            </div>,
+            <div
+              className="cc-center-right"
+            >
+              <p>
+                $ 
+                0.33
+              </p>
+            </div>,
+            <div
+              className="cc-right"
+            >
+              <p>
+                3.94
+              </p>
+            </div>,
+          ],
+          "className": "card-inside-text",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                src="xrp.svg"
+                style={
+                  Object {
+                    "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                  }
+                }
+              />,
+              "className": "cc-left",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "src": "xrp.svg",
+                "style": Object {
+                  "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  XRP
+                </p>,
+                <p>
+                  XRP
+                </p>,
+              ],
+              "className": "cc-center",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "XRP",
+                },
+                "ref": null,
+                "rendered": "XRP",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "XRP",
+                },
+                "ref": null,
+                "rendered": "XRP",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <p>
+                $ 
+                0.33
+              </p>,
+              "className": "cc-center-right",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "$ ",
+                  0.33,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "$ ",
+                0.33,
+              ],
+              "type": "p",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <p>
+                3.94
+              </p>,
+              "className": "cc-right",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": 3.94,
+              },
+              "ref": null,
+              "rendered": 3.94,
+              "type": "p",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      false,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="card-inside-text"
+          >
+            <div
+              className="cc-left"
+            >
+              <img
+                src="xrp.svg"
+                style={
+                  Object {
+                    "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="cc-center"
+            >
+              <p>
+                XRP
+              </p>
+              <p>
+                XRP
+              </p>
+            </div>
+            <div
+              className="cc-center-right"
+            >
+              <p>
+                $ 
+                0.33
+              </p>
+            </div>
+            <div
+              className="cc-right"
+            >
+              <p>
+                3.94
+              </p>
+            </div>
+          </div>,
+          false,
+        ],
+        "className": "currency-card",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="cc-left"
+              >
+                <img
+                  src="xrp.svg"
+                  style={
+                    Object {
+                      "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                    }
+                  }
+                />
+              </div>,
+              <div
+                className="cc-center"
+              >
+                <p>
+                  XRP
+                </p>
+                <p>
+                  XRP
+                </p>
+              </div>,
+              <div
+                className="cc-center-right"
+              >
+                <p>
+                  $ 
+                  0.33
+                </p>
+              </div>,
+              <div
+                className="cc-right"
+              >
+                <p>
+                  3.94
+                </p>
+              </div>,
+            ],
+            "className": "card-inside-text",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  src="xrp.svg"
+                  style={
+                    Object {
+                      "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                    }
+                  }
+                />,
+                "className": "cc-left",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "src": "xrp.svg",
+                  "style": Object {
+                    "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    XRP
+                  </p>,
+                  <p>
+                    XRP
+                  </p>,
+                ],
+                "className": "cc-center",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "XRP",
+                  },
+                  "ref": null,
+                  "rendered": "XRP",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "XRP",
+                  },
+                  "ref": null,
+                  "rendered": "XRP",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <p>
+                  $ 
+                  0.33
+                </p>,
+                "className": "cc-center-right",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "$ ",
+                    0.33,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "$ ",
+                  0.33,
+                ],
+                "type": "p",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <p>
+                  3.94
+                </p>,
+                "className": "cc-right",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 3.94,
+                },
+                "ref": null,
+                "rendered": 3.94,
+                "type": "p",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        false,
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
