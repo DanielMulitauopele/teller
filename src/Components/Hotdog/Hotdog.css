@@ -164,10 +164,6 @@
     background-color: #424d79;
   }
 
-  .hotdog-menu-expanded li:hover img {
-    fill: red;
-  }
-
   .menu-card li {
     font-size: 2rem;
     padding: 1rem 0rem;
