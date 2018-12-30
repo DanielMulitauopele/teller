@@ -4,9 +4,10 @@ import Search from './Search'
 
 describe('Search Component', () => {
   let wrapper
+  let mockDisplaySearch = jest.fn()
 
   beforeEach(() => {
-    wrapper = shallow(<Search />)
+    wrapper = shallow(<Search displaySearch={mockDisplaySearch}/>)
   })
 
   it('should match the snapshot', () => {
@@ -34,6 +35,14 @@ describe('Search Component', () => {
         target: { name: 'search', value: 'bitcoin'}
       })
       expect(wrapper.state().search).toEqual('bitcoin')
+    })
+  })
+
+  describe('handleSubmit function', () => {
+    it('should call displaySearch', () => {
+      const searchForm = wrapper.find('.search-form')
+      searchForm.simulate('submit', { preventDefault() {} })
+      expect(mockDisplaySearch).toHaveBeenCalled()
     })
   })
 })

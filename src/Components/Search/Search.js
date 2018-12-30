@@ -25,7 +25,6 @@ class Search extends Component {
   }
 
   handleSubmit = (e) => {
-    console.log('We handling submit!')
     e.preventDefault()
     const { search } = this.state
     this.props.displaySearch(search)
@@ -41,7 +40,9 @@ class Search extends Component {
             src={active ? Cancel : SearchGlass}
             onClick={this.toggleSearchBtn}
           />
-          <form onSubmit={this.handleSubmit}>
+          <form 
+            className="search-form"
+            onSubmit={this.handleSubmit}>
             <input 
               className="search-bar" 
               type="text" 
