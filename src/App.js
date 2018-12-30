@@ -46,34 +46,42 @@ class App extends Component {
   };
 
   displaySearch = currency => {
-    const { abbrevCurrencies, expandedCurrencies } = this.state
-    const abbCurr = abbrevCurrencies.find(curr => curr.name.toUpperCase() === currency.toUpperCase())
-    const expCurr = expandedCurrencies.find(curr => curr.name.toUpperCase() === currency.toUpperCase())
+    const { abbrevCurrencies, expandedCurrencies } = this.state;
+    const abbCurr = abbrevCurrencies.find(
+      curr => curr.name.toUpperCase() === currency.toUpperCase()
+    );
+    const expCurr = expandedCurrencies.find(
+      curr => curr.name.toUpperCase() === currency.toUpperCase()
+    );
     this.setState({
       abbrevCurrencies: [abbCurr],
-      expandedCurrencies: [expCurr],
-    })
-  }
+      expandedCurrencies: [expCurr]
+    });
+  };
 
-  setFilter = (filterCategory) => {
-    const { abbrevCurrencies, expandedCurrencies } = this.state
-    let sortedAbbrev
-    let sortedExp
+  setFilter = filterCategory => {
+    const { abbrevCurrencies, expandedCurrencies } = this.state;
+    let sortedAbbrev;
+    let sortedExp;
     if (filterCategory === "Rank") {
-      sortedAbbrev = abbrevCurrencies.sort((a, b) => a.rank - b.rank)
-      sortedExp = expandedCurrencies.sort((a, b) => a.rank - b.rank)
+      sortedAbbrev = abbrevCurrencies.sort((a, b) => a.rank - b.rank);
+      sortedExp = expandedCurrencies.sort((a, b) => a.rank - b.rank);
     } else if (filterCategory === "Price") {
-      sortedAbbrev = abbrevCurrencies.sort((a, b) => a.price - b.price)
-      sortedExp = expandedCurrencies.sort((a, b) => a.price - b.price)
+      sortedAbbrev = abbrevCurrencies.sort((a, b) => a.price - b.price);
+      sortedExp = expandedCurrencies.sort((a, b) => a.price - b.price);
     } else if (filterCategory === "%Change") {
-      sortedAbbrev = abbrevCurrencies.sort((a, b) => a.percent_change - b.percent_change)
-      sortedExp = expandedCurrencies.sort((a, b) => a.percent_change - b.percent_change)
+      sortedAbbrev = abbrevCurrencies.sort(
+        (a, b) => a.percent_change - b.percent_change
+      );
+      sortedExp = expandedCurrencies.sort(
+        (a, b) => a.percent_change - b.percent_change
+      );
     }
     this.setState({
       abbrevCurrencies: sortedAbbrev,
       expandedCurrencies: sortedExp
-    })
-  }
+    });
+  };
 
   render() {
     const { abbrevCurrencies, favorites } = this.state;
@@ -87,7 +95,7 @@ class App extends Component {
         <Switch>
           <Route
             exact
-            path="/a"
+            path="/"
             render={() => {
               return (
                 <Landing
@@ -103,7 +111,7 @@ class App extends Component {
           )}}
           <Route
             exact
-            path="/"
+            path="/a"
             render={() => {
               return <Login />;
             }}
