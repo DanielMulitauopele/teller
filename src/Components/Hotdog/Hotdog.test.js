@@ -15,7 +15,6 @@ describe('Hotdog Component', () => {
 
   it('should start with the correct default state', () => {
     expect(wrapper.state().expanded).toEqual(false)
-    expect(wrapper.state().activeMenu).toEqual("Home")
   })
 
   describe('toggleHotdog function', () => {
@@ -23,16 +22,6 @@ describe('Hotdog Component', () => {
       const closedHotdog = wrapper.find('.hotdog-container')
       closedHotdog.simulate('click')
       expect(wrapper.state().expanded).toEqual(true)
-    })
-  })
-
-  describe('changeActiveRoute function', () => {
-    it('should set state with the correct value for activeMenu', () => {
-      const homeRoute = wrapper.find('.home-li')
-      homeRoute.simulate('click', {
-        target: { innerText: 'Home' }
-      })
-      expect(wrapper.state().activeMenu).toEqual('Home')
     })
   })
 })

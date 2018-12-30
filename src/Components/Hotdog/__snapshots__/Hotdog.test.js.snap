@@ -33,7 +33,6 @@ ShallowWrapper {
             className="menu-card"
           >
             <h1>
-               
               t
               <span>
                 eller
@@ -43,7 +42,6 @@ ShallowWrapper {
             <ul>
               <li
                 className="home-li"
-                onClick={[Function]}
               >
                 <img
                   alt="home-icon"
@@ -53,9 +51,7 @@ ShallowWrapper {
                   Home
                 </span>
               </li>
-              <li
-                onClick={[Function]}
-              >
+              <li>
                 <img
                   alt="blog-icon"
                   src="newspaper.svg"
@@ -64,9 +60,7 @@ ShallowWrapper {
                   Blog
                 </span>
               </li>
-              <li
-                onClick={[Function]}
-              >
+              <li>
                 <img
                   alt="notes-icon"
                   src="blogging.svg"
@@ -75,9 +69,7 @@ ShallowWrapper {
                   Notes
                 </span>
               </li>
-              <li
-                onClick={[Function]}
-              >
+              <li>
                 <img
                   alt="about-us-icon"
                   src="code.svg"
@@ -86,9 +78,7 @@ ShallowWrapper {
                   About
                 </span>
               </li>
-              <li
-                onClick={[Function]}
-              >
+              <li>
                 <img
                   alt="exit-icon"
                   src="exit.svg"
@@ -101,6 +91,10 @@ ShallowWrapper {
             <div
               className="donate"
             >
+              <img
+                alt="donate-button"
+                src="donate.svg"
+              />
               <p>
                 Enjoying this app?
               </p>
@@ -170,7 +164,6 @@ ShallowWrapper {
             className="menu-card"
           >
             <h1>
-               
               t
               <span>
                 eller
@@ -180,7 +173,6 @@ ShallowWrapper {
             <ul>
               <li
                 className="home-li"
-                onClick={[Function]}
               >
                 <img
                   alt="home-icon"
@@ -190,9 +182,7 @@ ShallowWrapper {
                   Home
                 </span>
               </li>
-              <li
-                onClick={[Function]}
-              >
+              <li>
                 <img
                   alt="blog-icon"
                   src="newspaper.svg"
@@ -201,9 +191,7 @@ ShallowWrapper {
                   Blog
                 </span>
               </li>
-              <li
-                onClick={[Function]}
-              >
+              <li>
                 <img
                   alt="notes-icon"
                   src="blogging.svg"
@@ -212,9 +200,7 @@ ShallowWrapper {
                   Notes
                 </span>
               </li>
-              <li
-                onClick={[Function]}
-              >
+              <li>
                 <img
                   alt="about-us-icon"
                   src="code.svg"
@@ -223,9 +209,7 @@ ShallowWrapper {
                   About
                 </span>
               </li>
-              <li
-                onClick={[Function]}
-              >
+              <li>
                 <img
                   alt="exit-icon"
                   src="exit.svg"
@@ -238,6 +222,10 @@ ShallowWrapper {
             <div
               className="donate"
             >
+              <img
+                alt="donate-button"
+                src="donate.svg"
+              />
               <p>
                 Enjoying this app?
               </p>
@@ -258,7 +246,6 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <h1>
-                 
                 t
                 <span>
                   eller
@@ -268,7 +255,6 @@ ShallowWrapper {
               <ul>
                 <li
                   className="home-li"
-                  onClick={[Function]}
                 >
                   <img
                     alt="home-icon"
@@ -278,9 +264,7 @@ ShallowWrapper {
                     Home
                   </span>
                 </li>
-                <li
-                  onClick={[Function]}
-                >
+                <li>
                   <img
                     alt="blog-icon"
                     src="newspaper.svg"
@@ -289,9 +273,7 @@ ShallowWrapper {
                     Blog
                   </span>
                 </li>
-                <li
-                  onClick={[Function]}
-                >
+                <li>
                   <img
                     alt="notes-icon"
                     src="blogging.svg"
@@ -300,9 +282,7 @@ ShallowWrapper {
                     Notes
                   </span>
                 </li>
-                <li
-                  onClick={[Function]}
-                >
+                <li>
                   <img
                     alt="about-us-icon"
                     src="code.svg"
@@ -311,9 +291,7 @@ ShallowWrapper {
                     About
                   </span>
                 </li>
-                <li
-                  onClick={[Function]}
-                >
+                <li>
                   <img
                     alt="exit-icon"
                     src="exit.svg"
@@ -326,6 +304,10 @@ ShallowWrapper {
               <div
                 className="donate"
               >
+                <img
+                  alt="donate-button"
+                  src="donate.svg"
+                />
                 <p>
                   Enjoying this app?
                 </p>
@@ -346,7 +328,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  " ",
                   "t",
                   <span>
                     eller
@@ -356,7 +337,6 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
-                " ",
                 "t",
                 Object {
                   "instance": null,
@@ -381,7 +361,6 @@ ShallowWrapper {
                 "children": Array [
                   <li
                     className="home-li"
-                    onClick={[Function]}
                   >
                     <img
                       alt="home-icon"
@@ -391,9 +370,7 @@ ShallowWrapper {
                       Home
                     </span>
                   </li>,
-                  <li
-                    onClick={[Function]}
-                  >
+                  <li>
                     <img
                       alt="blog-icon"
                       src="newspaper.svg"
@@ -402,9 +379,7 @@ ShallowWrapper {
                       Blog
                     </span>
                   </li>,
-                  <li
-                    onClick={[Function]}
-                  >
+                  <li>
                     <img
                       alt="notes-icon"
                       src="blogging.svg"
@@ -413,9 +388,7 @@ ShallowWrapper {
                       Notes
                     </span>
                   </li>,
-                  <li
-                    onClick={[Function]}
-                  >
+                  <li>
                     <img
                       alt="about-us-icon"
                       src="code.svg"
@@ -424,9 +397,7 @@ ShallowWrapper {
                       About
                     </span>
                   </li>,
-                  <li
-                    onClick={[Function]}
-                  >
+                  <li>
                     <img
                       alt="exit-icon"
                       src="exit.svg"
@@ -454,7 +425,7 @@ ShallowWrapper {
                       </span>,
                     ],
                     "className": "home-li",
-                    "onClick": [Function],
+                    "onClick": undefined,
                   },
                   "ref": null,
                   "rendered": Array [
@@ -498,7 +469,6 @@ ShallowWrapper {
                         Blog
                       </span>,
                     ],
-                    "onClick": [Function],
                   },
                   "ref": null,
                   "rendered": Array [
@@ -542,7 +512,6 @@ ShallowWrapper {
                         Notes
                       </span>,
                     ],
-                    "onClick": [Function],
                   },
                   "ref": null,
                   "rendered": Array [
@@ -586,7 +555,6 @@ ShallowWrapper {
                         About
                       </span>,
                     ],
-                    "onClick": [Function],
                   },
                   "ref": null,
                   "rendered": Array [
@@ -630,7 +598,6 @@ ShallowWrapper {
                         Quit
                       </span>,
                     ],
-                    "onClick": [Function],
                   },
                   "ref": null,
                   "rendered": Array [
@@ -669,6 +636,10 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
+                  <img
+                    alt="donate-button"
+                    src="donate.svg"
+                  />,
                   <p>
                     Enjoying this app?
                   </p>,
@@ -682,6 +653,18 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "donate-button",
+                    "src": "donate.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -738,7 +721,6 @@ ShallowWrapper {
               className="menu-card"
             >
               <h1>
-                 
                 t
                 <span>
                   eller
@@ -748,7 +730,6 @@ ShallowWrapper {
               <ul>
                 <li
                   className="home-li"
-                  onClick={[Function]}
                 >
                   <img
                     alt="home-icon"
@@ -758,9 +739,7 @@ ShallowWrapper {
                     Home
                   </span>
                 </li>
-                <li
-                  onClick={[Function]}
-                >
+                <li>
                   <img
                     alt="blog-icon"
                     src="newspaper.svg"
@@ -769,9 +748,7 @@ ShallowWrapper {
                     Blog
                   </span>
                 </li>
-                <li
-                  onClick={[Function]}
-                >
+                <li>
                   <img
                     alt="notes-icon"
                     src="blogging.svg"
@@ -780,9 +757,7 @@ ShallowWrapper {
                     Notes
                   </span>
                 </li>
-                <li
-                  onClick={[Function]}
-                >
+                <li>
                   <img
                     alt="about-us-icon"
                     src="code.svg"
@@ -791,9 +766,7 @@ ShallowWrapper {
                     About
                   </span>
                 </li>
-                <li
-                  onClick={[Function]}
-                >
+                <li>
                   <img
                     alt="exit-icon"
                     src="exit.svg"
@@ -806,6 +779,10 @@ ShallowWrapper {
               <div
                 className="donate"
               >
+                <img
+                  alt="donate-button"
+                  src="donate.svg"
+                />
                 <p>
                   Enjoying this app?
                 </p>
@@ -875,7 +852,6 @@ ShallowWrapper {
               className="menu-card"
             >
               <h1>
-                 
                 t
                 <span>
                   eller
@@ -885,7 +861,6 @@ ShallowWrapper {
               <ul>
                 <li
                   className="home-li"
-                  onClick={[Function]}
                 >
                   <img
                     alt="home-icon"
@@ -895,9 +870,7 @@ ShallowWrapper {
                     Home
                   </span>
                 </li>
-                <li
-                  onClick={[Function]}
-                >
+                <li>
                   <img
                     alt="blog-icon"
                     src="newspaper.svg"
@@ -906,9 +879,7 @@ ShallowWrapper {
                     Blog
                   </span>
                 </li>
-                <li
-                  onClick={[Function]}
-                >
+                <li>
                   <img
                     alt="notes-icon"
                     src="blogging.svg"
@@ -917,9 +888,7 @@ ShallowWrapper {
                     Notes
                   </span>
                 </li>
-                <li
-                  onClick={[Function]}
-                >
+                <li>
                   <img
                     alt="about-us-icon"
                     src="code.svg"
@@ -928,9 +897,7 @@ ShallowWrapper {
                     About
                   </span>
                 </li>
-                <li
-                  onClick={[Function]}
-                >
+                <li>
                   <img
                     alt="exit-icon"
                     src="exit.svg"
@@ -943,6 +910,10 @@ ShallowWrapper {
               <div
                 className="donate"
               >
+                <img
+                  alt="donate-button"
+                  src="donate.svg"
+                />
                 <p>
                   Enjoying this app?
                 </p>
@@ -963,7 +934,6 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <h1>
-                   
                   t
                   <span>
                     eller
@@ -973,7 +943,6 @@ ShallowWrapper {
                 <ul>
                   <li
                     className="home-li"
-                    onClick={[Function]}
                   >
                     <img
                       alt="home-icon"
@@ -983,9 +952,7 @@ ShallowWrapper {
                       Home
                     </span>
                   </li>
-                  <li
-                    onClick={[Function]}
-                  >
+                  <li>
                     <img
                       alt="blog-icon"
                       src="newspaper.svg"
@@ -994,9 +961,7 @@ ShallowWrapper {
                       Blog
                     </span>
                   </li>
-                  <li
-                    onClick={[Function]}
-                  >
+                  <li>
                     <img
                       alt="notes-icon"
                       src="blogging.svg"
@@ -1005,9 +970,7 @@ ShallowWrapper {
                       Notes
                     </span>
                   </li>
-                  <li
-                    onClick={[Function]}
-                  >
+                  <li>
                     <img
                       alt="about-us-icon"
                       src="code.svg"
@@ -1016,9 +979,7 @@ ShallowWrapper {
                       About
                     </span>
                   </li>
-                  <li
-                    onClick={[Function]}
-                  >
+                  <li>
                     <img
                       alt="exit-icon"
                       src="exit.svg"
@@ -1031,6 +992,10 @@ ShallowWrapper {
                 <div
                   className="donate"
                 >
+                  <img
+                    alt="donate-button"
+                    src="donate.svg"
+                  />
                   <p>
                     Enjoying this app?
                   </p>
@@ -1051,7 +1016,6 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    " ",
                     "t",
                     <span>
                       eller
@@ -1061,7 +1025,6 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": Array [
-                  " ",
                   "t",
                   Object {
                     "instance": null,
@@ -1086,7 +1049,6 @@ ShallowWrapper {
                   "children": Array [
                     <li
                       className="home-li"
-                      onClick={[Function]}
                     >
                       <img
                         alt="home-icon"
@@ -1096,9 +1058,7 @@ ShallowWrapper {
                         Home
                       </span>
                     </li>,
-                    <li
-                      onClick={[Function]}
-                    >
+                    <li>
                       <img
                         alt="blog-icon"
                         src="newspaper.svg"
@@ -1107,9 +1067,7 @@ ShallowWrapper {
                         Blog
                       </span>
                     </li>,
-                    <li
-                      onClick={[Function]}
-                    >
+                    <li>
                       <img
                         alt="notes-icon"
                         src="blogging.svg"
@@ -1118,9 +1076,7 @@ ShallowWrapper {
                         Notes
                       </span>
                     </li>,
-                    <li
-                      onClick={[Function]}
-                    >
+                    <li>
                       <img
                         alt="about-us-icon"
                         src="code.svg"
@@ -1129,9 +1085,7 @@ ShallowWrapper {
                         About
                       </span>
                     </li>,
-                    <li
-                      onClick={[Function]}
-                    >
+                    <li>
                       <img
                         alt="exit-icon"
                         src="exit.svg"
@@ -1159,7 +1113,7 @@ ShallowWrapper {
                         </span>,
                       ],
                       "className": "home-li",
-                      "onClick": [Function],
+                      "onClick": undefined,
                     },
                     "ref": null,
                     "rendered": Array [
@@ -1203,7 +1157,6 @@ ShallowWrapper {
                           Blog
                         </span>,
                       ],
-                      "onClick": [Function],
                     },
                     "ref": null,
                     "rendered": Array [
@@ -1247,7 +1200,6 @@ ShallowWrapper {
                           Notes
                         </span>,
                       ],
-                      "onClick": [Function],
                     },
                     "ref": null,
                     "rendered": Array [
@@ -1291,7 +1243,6 @@ ShallowWrapper {
                           About
                         </span>,
                       ],
-                      "onClick": [Function],
                     },
                     "ref": null,
                     "rendered": Array [
@@ -1335,7 +1286,6 @@ ShallowWrapper {
                           Quit
                         </span>,
                       ],
-                      "onClick": [Function],
                     },
                     "ref": null,
                     "rendered": Array [
@@ -1374,6 +1324,10 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
+                    <img
+                      alt="donate-button"
+                      src="donate.svg"
+                    />,
                     <p>
                       Enjoying this app?
                     </p>,
@@ -1387,6 +1341,18 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "donate-button",
+                      "src": "donate.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
                   Object {
                     "instance": null,
                     "key": undefined,

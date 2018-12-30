@@ -37,11 +37,6 @@ ShallowWrapper {
           >
             <img
               src="xrp.svg"
-              style={
-                Object {
-                  "background": "linear-gradient(to bottom, #b24592, #f15f79",
-                }
-              }
             />
           </div>
           <div
@@ -88,11 +83,6 @@ ShallowWrapper {
             >
               <img
                 src="xrp.svg"
-                style={
-                  Object {
-                    "background": "linear-gradient(to bottom, #b24592, #f15f79",
-                  }
-                }
               />
             </div>,
             <div
@@ -132,11 +122,6 @@ ShallowWrapper {
             "props": Object {
               "children": <img
                 src="xrp.svg"
-                style={
-                  Object {
-                    "background": "linear-gradient(to bottom, #b24592, #f15f79",
-                  }
-                }
               />,
               "className": "cc-left",
             },
@@ -147,9 +132,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "src": "xrp.svg",
-                "style": Object {
-                  "background": "linear-gradient(to bottom, #b24592, #f15f79",
-                },
               },
               "ref": null,
               "rendered": null,
@@ -276,11 +258,6 @@ ShallowWrapper {
             >
               <img
                 src="xrp.svg"
-                style={
-                  Object {
-                    "background": "linear-gradient(to bottom, #b24592, #f15f79",
-                  }
-                }
               />
             </div>
             <div
@@ -327,11 +304,6 @@ ShallowWrapper {
               >
                 <img
                   src="xrp.svg"
-                  style={
-                    Object {
-                      "background": "linear-gradient(to bottom, #b24592, #f15f79",
-                    }
-                  }
                 />
               </div>,
               <div
@@ -371,11 +343,6 @@ ShallowWrapper {
               "props": Object {
                 "children": <img
                   src="xrp.svg"
-                  style={
-                    Object {
-                      "background": "linear-gradient(to bottom, #b24592, #f15f79",
-                    }
-                  }
                 />,
                 "className": "cc-left",
               },
@@ -386,9 +353,6 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "src": "xrp.svg",
-                  "style": Object {
-                    "background": "linear-gradient(to bottom, #b24592, #f15f79",
-                  },
                 },
                 "ref": null,
                 "rendered": null,

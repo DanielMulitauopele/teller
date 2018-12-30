@@ -18,7 +18,10 @@ class LandingCurrencyContainer extends Component {
   render() {
     const { abbrevCurrencies } = this.props;
     const landingCurrencies = abbrevCurrencies.map((currency, i) => {
-      return <LandingCurrency index={i} currency={currency} />;
+      return <LandingCurrency 
+                key={i} 
+                index={i} 
+                currency={currency} />;
     });
 
     return (
@@ -33,6 +36,7 @@ class LandingCurrencyContainer extends Component {
             {/* change this 'active' class to something more specific */}
             <p className="active">
               <a 
+                className="rank-link"
                 href="#" 
                 name="Rank" 
                 onClick={this.handleClick}>
@@ -41,6 +45,7 @@ class LandingCurrencyContainer extends Component {
             </p>
             <p>
               <a 
+                className="price-link"
                 href="#"
                 name="Price"
                 onClick={this.handleClick}>
@@ -49,6 +54,7 @@ class LandingCurrencyContainer extends Component {
             </p>
             <p>
               <a
+                className="percent-change-link"
                 href="#"
                 name="%Change"
                 onClick={this.handleClick}>
