@@ -78,15 +78,15 @@ describe('RegisterForm Component', () => {
       expect(wrapper.state().passwordError).toBe(true)
     })
 
-    it('should toggle error display if the confirmedPassword and password do not match', () => {
-      passwordInput.value = 'mypassword'
-      confirmedInput.value = 'yourpassword'
+    it('should toggle error display if there is no confirmed password', () => {
+      confirmedInput.value = ''
       registerForm.simulate('submit', { preventDefault() {} })
       expect(wrapper.state().passwordError).toEqual(true)
     })
 
-    it('should toggle error display if there is no confirmed password', () => {
-      confirmedInput.value = ''
+    it('should toggle error display if the confirmedPassword and password do not match', () => {
+      passwordInput.value = 'mypassword'
+      confirmedInput.value = 'yourpassword'
       registerForm.simulate('submit', { preventDefault() {} })
       expect(wrapper.state().passwordError).toEqual(true)
     })
