@@ -11,8 +11,7 @@ class Hotdog extends Component {
   constructor() {
     super();
     this.state = {
-      expanded: false,
-      activeMenu: "Home"
+      expanded: false
     };
   }
   toggleHotdog = () => {
@@ -21,17 +20,8 @@ class Hotdog extends Component {
     });
   };
 
-  changeActiveRoute = e => {
-    this.setState({
-      activeMenu: e.target.innerText
-    });
-    console.log(e.target);
-    console.log(this.state);
-  };
-
   render() {
     const { expanded } = this.state;
-    const activeColor = { color: "#fc599f" };
     return (
       <div>
         <div
