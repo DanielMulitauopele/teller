@@ -39,7 +39,7 @@ ShallowWrapper {
               src="xrp.svg"
               style={
                 Object {
-                  "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                  "background": "linear-gradient(to bottom, #b24592, #f15f79",
                 }
               }
             />
@@ -90,7 +90,7 @@ ShallowWrapper {
                 src="xrp.svg"
                 style={
                   Object {
-                    "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                    "background": "linear-gradient(to bottom, #b24592, #f15f79",
                   }
                 }
               />
@@ -134,7 +134,7 @@ ShallowWrapper {
                 src="xrp.svg"
                 style={
                   Object {
-                    "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                    "background": "linear-gradient(to bottom, #b24592, #f15f79",
                   }
                 }
               />,
@@ -148,7 +148,7 @@ ShallowWrapper {
               "props": Object {
                 "src": "xrp.svg",
                 "style": Object {
-                  "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                  "background": "linear-gradient(to bottom, #b24592, #f15f79",
                 },
               },
               "ref": null,
@@ -278,7 +278,7 @@ ShallowWrapper {
                 src="xrp.svg"
                 style={
                   Object {
-                    "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                    "background": "linear-gradient(to bottom, #b24592, #f15f79",
                   }
                 }
               />
@@ -329,7 +329,7 @@ ShallowWrapper {
                   src="xrp.svg"
                   style={
                     Object {
-                      "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                      "background": "linear-gradient(to bottom, #b24592, #f15f79",
                     }
                   }
                 />
@@ -373,7 +373,7 @@ ShallowWrapper {
                   src="xrp.svg"
                   style={
                     Object {
-                      "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                      "background": "linear-gradient(to bottom, #b24592, #f15f79",
                     }
                   }
                 />,
@@ -387,7 +387,7 @@ ShallowWrapper {
                 "props": Object {
                   "src": "xrp.svg",
                   "style": Object {
-                    "background": "linear-gradient(to bottom, #00c6ff, #0072ff)",
+                    "background": "linear-gradient(to bottom, #b24592, #f15f79",
                   },
                 },
                 "ref": null,
