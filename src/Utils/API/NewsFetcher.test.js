@@ -1,0 +1,1 @@
+NewsFetcher.test.js
