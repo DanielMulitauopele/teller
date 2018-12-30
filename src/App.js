@@ -45,9 +45,12 @@ class App extends Component {
   };
 
   displaySearch = (currency) => {
+    const { abbrevCurrencies, expandedCurrencies } = this.state
+    const abbCurr = abbrevCurrencies.find(curr => curr.name.toUpperCase() === currency.toUpperCase())
+    const expCurr = expandedCurrencies.find(curr => curr.name.toUpperCase() === currency.toUpperCase())
     this.setState({
-      abbrevCurrencies: ,
-      expandedCurrencies: ,
+      abbrevCurrencies: [abbCurr],
+      expandedCurrencies: [expCurr],
     })
   }
 
@@ -59,7 +62,7 @@ class App extends Component {
         {/* //         <LoginForm logInUser={this.logInUser}/>
 //         <RegisterForm />
 //         <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} /> */}
-        <Search />
+        <Search displaySearch={this.displaySearch} />
         <Switch>
           <Route
             exact

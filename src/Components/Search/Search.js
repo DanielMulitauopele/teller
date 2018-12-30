@@ -24,7 +24,12 @@ class Search extends Component {
     this.setState({ [name]: value })
   }
 
-
+  handleSubmit = (e) => {
+    console.log('We handling submit!')
+    e.preventDefault()
+    const { search } = this.state
+    this.props.displaySearch(search)
+  }
 
   render() {
     const { active, search } = this.state;
@@ -36,13 +41,15 @@ class Search extends Component {
             src={active ? Cancel : SearchGlass}
             onClick={this.toggleSearchBtn}
           />
-          <input 
-            className="search-bar" 
-            type="text" 
-            placeholder="Search"
-            name="search"
-            value={search}
-            onChange={this.handleChange} />
+          <form onSubmit={this.handleSubmit}>
+            <input 
+              className="search-bar" 
+              type="text" 
+              placeholder="Search"
+              name="search"
+              value={search}
+              onChange={this.handleChange}/>
+          </form>
         </div>
       </div>
     );
