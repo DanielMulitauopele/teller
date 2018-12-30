@@ -9,6 +9,7 @@ import { Route, withRouter, Switch } from "react-router-dom";
 import Landing from "./Components/Landing/Landing";
 import RegisterForm from "./Components/RegisterForm/RegisterForm";
 import LoginForm from "./Components/LoginForm/LoginForm";
+import Login from "./Components/LoginForm/LoginForm";
 
 class App extends Component {
   constructor(props) {
@@ -86,7 +87,7 @@ class App extends Component {
         <Switch>
           <Route
             exact
-            path="/"
+            path="/a"
             render={() => {
               return (
                 <Landing
@@ -100,6 +101,13 @@ class App extends Component {
             }}
           />
           )}}
+          <Route
+            exact
+            path="/"
+            render={() => {
+              return <Login />;
+            }}
+          />
         </Switch>
       </div>
     );

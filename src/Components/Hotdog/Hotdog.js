@@ -5,13 +5,13 @@ import Blog from "../../Assets/newspaper.svg";
 import Notes from "../../Assets/blogging.svg";
 import Code from "../../Assets/code.svg";
 import Exit from "../../Assets/exit.svg";
+import Donate from "../../Assets/donate.svg";
 
 class Hotdog extends Component {
   constructor() {
     super();
     this.state = {
-      expanded: false,
-      activeMenu: "Home"
+      expanded: false
     };
   }
   toggleHotdog = () => {
@@ -20,17 +20,8 @@ class Hotdog extends Component {
     });
   };
 
-  changeActiveRoute = e => {
-    this.setState({
-      activeMenu: e.target.innerText
-    });
-    console.log(e.target);
-    console.log(this.state);
-  };
-
   render() {
     const { expanded } = this.state;
-    const activeColor = { color: "#fc599f" };
     return (
       <div>
         <div
@@ -71,6 +62,7 @@ class Hotdog extends Component {
               </li>
             </ul>
             <div className="donate">
+              <img src={Donate} alt="donate-button" />
               <p>Enjoying this app?</p>
               <p className="wallet-ID">Q2E9RH128EYG9Y1HE88U2T</p>
             </div>

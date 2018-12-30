@@ -17,19 +17,19 @@
 
 .sort {
   text-align: right;
+  z-index: 100;
 }
 
 .sort p {
-  font-size: 0.8rem;
-  display: inline-block;
+  border-bottom: 3px solid transparent;
   color: rgba(255, 255, 255, 0.609);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
   margin-right: 1rem;
   text-transform: uppercase;
-  font-weight: 600;
-  margin-left: 0.5;
   transition: 0.4s;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
 }
 
 .sort p:hover {
@@ -37,7 +37,7 @@
   border-bottom: 3px solid #fc599f;
 }
 
-.sort .active {
+.sort-active {
   color: var(--AlmostWhite);
   border-bottom: 3px solid #fc599f;
 }
