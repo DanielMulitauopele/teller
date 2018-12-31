@@ -24,7 +24,7 @@ class LandingCurrency extends Component {
   render() {
     const { symbol, name, price, percent_change, rank } = this.props.currency;
     return (
-      <div className="currency-card" onClick={this.expand}>
+      <div className="currency-card">
         <div className="card-inside-text">
           <div className="cc-left">
             <img src={Icons[this.props.currency.symbol]} />
@@ -38,6 +38,11 @@ class LandingCurrency extends Component {
           </div>
           <div className="cc-right">
             <p>{percent_change}</p>
+          </div>
+          <div className="expansion-dots" onClick={this.expand}>
+            <div />
+            <div />
+            <div />
           </div>
         </div>
         {this.state.expanded && (
