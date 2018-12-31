@@ -4,6 +4,7 @@ const Settings = {
   initialSlide: 1,
   buttons: false,
   arrows: false,
+  dots: true,
   vertical: true,
   slidesToShow: 1,
   verticalSwiping: true,
