@@ -40,7 +40,8 @@ class Landing extends Component {
         <FavoritesContainer {...this.props} />
         <LandingCurrencyContainer 
           abbrevCurrencies={abbrevCurrencies}
-          setFilter={this.props.setFilter} />
+          setFilter={this.props.setFilter}
+          addToFavorites={addToFavorites} />
       </div>
     );
   }

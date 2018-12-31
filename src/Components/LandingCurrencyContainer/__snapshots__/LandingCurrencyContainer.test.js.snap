@@ -93,23 +93,700 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <div
+        className="currency-container"
+      >
         <div
           className="sort"
         >
           <p
-            className="sort-active"
+            className="active"
           >
-            Rank
+            <a
+              className="rank-link"
+              href="#"
+              name="Rank"
+              onClick={[Function]}
+            >
+              Rank
+            </a>
           </p>
           <p>
-            Price
+            <a
+              className="price-link"
+              href="#"
+              name="Price"
+              onClick={[Function]}
+            >
+              Price
+            </a>
           </p>
           <p>
-            %Change
+            <a
+              className="percent-change-link"
+              href="#"
+              name="%Change"
+              onClick={[Function]}
+            >
+              %Change
+            </a>
           </p>
-        </div>,
+        </div>
+        <LandingCurrency
+          currency={
+            Object {
+              "name": "Bitcoin",
+              "percent_change": 0.83,
+              "price": 3586.16,
+              "rank": "1",
+              "symbol": "BTC",
+            }
+          }
+          index={0}
+        />
+        <LandingCurrency
+          currency={
+            Object {
+              "name": "XRP",
+              "percent_change": 3.94,
+              "price": 0.33,
+              "rank": "2",
+              "symbol": "XRP",
+            }
+          }
+          index={1}
+        />
+        <LandingCurrency
+          currency={
+            Object {
+              "name": "Ethereum",
+              "percent_change": 0.2,
+              "price": 95.07,
+              "rank": "3",
+              "symbol": "ETH",
+            }
+          }
+          index={2}
+        />
+        <LandingCurrency
+          currency={
+            Object {
+              "name": "EOS",
+              "percent_change": 6.87,
+              "price": 2.54,
+              "rank": "4",
+              "symbol": "EOS",
+            }
+          }
+          index={3}
+        />
+        <LandingCurrency
+          currency={
+            Object {
+              "name": "Stellar",
+              "percent_change": -0.58,
+              "price": 0.11,
+              "rank": "5",
+              "symbol": "XLM",
+            }
+          }
+          index={4}
+        />
+        <LandingCurrency
+          currency={
+            Object {
+              "name": "Tether",
+              "percent_change": -0.37,
+              "price": 1.02,
+              "rank": "6",
+              "symbol": "USDT",
+            }
+          }
+          index={5}
+        />
+        <LandingCurrency
+          currency={
+            Object {
+              "name": "Bitcoin Cash",
+              "percent_change": 12.32,
+              "price": 100.65,
+              "rank": "7",
+              "symbol": "BCH",
+            }
+          }
+          index={6}
+        />
+        <LandingCurrency
+          currency={
+            Object {
+              "name": "Litecoin",
+              "percent_change": -1.97,
+              "price": 28.99,
+              "rank": "8",
+              "symbol": "LTC",
+            }
+          }
+          index={7}
+        />
+        <LandingCurrency
+          currency={
+            Object {
+              "name": "Bitcoin SV",
+              "percent_change": -1.04,
+              "price": 81.84,
+              "rank": "9",
+              "symbol": "BSV",
+            }
+          }
+          index={8}
+        />
+        <LandingCurrency
+          currency={
+            Object {
+              "name": "TRON",
+              "percent_change": 0.17,
+              "price": 0.01,
+              "rank": "10",
+              "symbol": "TRX",
+            }
+          }
+          index={9}
+        />
         <div
+          className="bottom-gradient"
+        />
+      </div>,
+      "className": "sort-box",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="sort"
+          >
+            <p
+              className="active"
+            >
+              <a
+                className="rank-link"
+                href="#"
+                name="Rank"
+                onClick={[Function]}
+              >
+                Rank
+              </a>
+            </p>
+            <p>
+              <a
+                className="price-link"
+                href="#"
+                name="Price"
+                onClick={[Function]}
+              >
+                Price
+              </a>
+            </p>
+            <p>
+              <a
+                className="percent-change-link"
+                href="#"
+                name="%Change"
+                onClick={[Function]}
+              >
+                %Change
+              </a>
+            </p>
+          </div>,
+          Array [
+            <LandingCurrency
+              currency={
+                Object {
+                  "name": "Bitcoin",
+                  "percent_change": 0.83,
+                  "price": 3586.16,
+                  "rank": "1",
+                  "symbol": "BTC",
+                }
+              }
+              index={0}
+            />,
+            <LandingCurrency
+              currency={
+                Object {
+                  "name": "XRP",
+                  "percent_change": 3.94,
+                  "price": 0.33,
+                  "rank": "2",
+                  "symbol": "XRP",
+                }
+              }
+              index={1}
+            />,
+            <LandingCurrency
+              currency={
+                Object {
+                  "name": "Ethereum",
+                  "percent_change": 0.2,
+                  "price": 95.07,
+                  "rank": "3",
+                  "symbol": "ETH",
+                }
+              }
+              index={2}
+            />,
+            <LandingCurrency
+              currency={
+                Object {
+                  "name": "EOS",
+                  "percent_change": 6.87,
+                  "price": 2.54,
+                  "rank": "4",
+                  "symbol": "EOS",
+                }
+              }
+              index={3}
+            />,
+            <LandingCurrency
+              currency={
+                Object {
+                  "name": "Stellar",
+                  "percent_change": -0.58,
+                  "price": 0.11,
+                  "rank": "5",
+                  "symbol": "XLM",
+                }
+              }
+              index={4}
+            />,
+            <LandingCurrency
+              currency={
+                Object {
+                  "name": "Tether",
+                  "percent_change": -0.37,
+                  "price": 1.02,
+                  "rank": "6",
+                  "symbol": "USDT",
+                }
+              }
+              index={5}
+            />,
+            <LandingCurrency
+              currency={
+                Object {
+                  "name": "Bitcoin Cash",
+                  "percent_change": 12.32,
+                  "price": 100.65,
+                  "rank": "7",
+                  "symbol": "BCH",
+                }
+              }
+              index={6}
+            />,
+            <LandingCurrency
+              currency={
+                Object {
+                  "name": "Litecoin",
+                  "percent_change": -1.97,
+                  "price": 28.99,
+                  "rank": "8",
+                  "symbol": "LTC",
+                }
+              }
+              index={7}
+            />,
+            <LandingCurrency
+              currency={
+                Object {
+                  "name": "Bitcoin SV",
+                  "percent_change": -1.04,
+                  "price": 81.84,
+                  "rank": "9",
+                  "symbol": "BSV",
+                }
+              }
+              index={8}
+            />,
+            <LandingCurrency
+              currency={
+                Object {
+                  "name": "TRON",
+                  "percent_change": 0.17,
+                  "price": 0.01,
+                  "rank": "10",
+                  "symbol": "TRX",
+                }
+              }
+              index={9}
+            />,
+          ],
+          <div
+            className="bottom-gradient"
+          />,
+        ],
+        "className": "currency-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="active"
+              >
+                <a
+                  className="rank-link"
+                  href="#"
+                  name="Rank"
+                  onClick={[Function]}
+                >
+                  Rank
+                </a>
+              </p>,
+              <p>
+                <a
+                  className="price-link"
+                  href="#"
+                  name="Price"
+                  onClick={[Function]}
+                >
+                  Price
+                </a>
+              </p>,
+              <p>
+                <a
+                  className="percent-change-link"
+                  href="#"
+                  name="%Change"
+                  onClick={[Function]}
+                >
+                  %Change
+                </a>
+              </p>,
+            ],
+            "className": "sort",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  className="rank-link"
+                  href="#"
+                  name="Rank"
+                  onClick={[Function]}
+                >
+                  Rank
+                </a>,
+                "className": "active",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Rank",
+                  "className": "rank-link",
+                  "href": "#",
+                  "name": "Rank",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Rank",
+                "type": "a",
+              },
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  className="price-link"
+                  href="#"
+                  name="Price"
+                  onClick={[Function]}
+                >
+                  Price
+                </a>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Price",
+                  "className": "price-link",
+                  "href": "#",
+                  "name": "Price",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Price",
+                "type": "a",
+              },
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  className="percent-change-link"
+                  href="#"
+                  name="%Change"
+                  onClick={[Function]}
+                >
+                  %Change
+                </a>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "%Change",
+                  "className": "percent-change-link",
+                  "href": "#",
+                  "name": "%Change",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "%Change",
+                "type": "a",
+              },
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "class",
+          "props": Object {
+            "addToFavorites": undefined,
+            "currency": Object {
+              "name": "Bitcoin",
+              "percent_change": 0.83,
+              "price": 3586.16,
+              "rank": "1",
+              "symbol": "BTC",
+            },
+            "index": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "class",
+          "props": Object {
+            "addToFavorites": undefined,
+            "currency": Object {
+              "name": "XRP",
+              "percent_change": 3.94,
+              "price": 0.33,
+              "rank": "2",
+              "symbol": "XRP",
+            },
+            "index": 1,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "class",
+          "props": Object {
+            "addToFavorites": undefined,
+            "currency": Object {
+              "name": "Ethereum",
+              "percent_change": 0.2,
+              "price": 95.07,
+              "rank": "3",
+              "symbol": "ETH",
+            },
+            "index": 2,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "class",
+          "props": Object {
+            "addToFavorites": undefined,
+            "currency": Object {
+              "name": "EOS",
+              "percent_change": 6.87,
+              "price": 2.54,
+              "rank": "4",
+              "symbol": "EOS",
+            },
+            "index": 3,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "4",
+          "nodeType": "class",
+          "props": Object {
+            "addToFavorites": undefined,
+            "currency": Object {
+              "name": "Stellar",
+              "percent_change": -0.58,
+              "price": 0.11,
+              "rank": "5",
+              "symbol": "XLM",
+            },
+            "index": 4,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "5",
+          "nodeType": "class",
+          "props": Object {
+            "addToFavorites": undefined,
+            "currency": Object {
+              "name": "Tether",
+              "percent_change": -0.37,
+              "price": 1.02,
+              "rank": "6",
+              "symbol": "USDT",
+            },
+            "index": 5,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "6",
+          "nodeType": "class",
+          "props": Object {
+            "addToFavorites": undefined,
+            "currency": Object {
+              "name": "Bitcoin Cash",
+              "percent_change": 12.32,
+              "price": 100.65,
+              "rank": "7",
+              "symbol": "BCH",
+            },
+            "index": 6,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "7",
+          "nodeType": "class",
+          "props": Object {
+            "addToFavorites": undefined,
+            "currency": Object {
+              "name": "Litecoin",
+              "percent_change": -1.97,
+              "price": 28.99,
+              "rank": "8",
+              "symbol": "LTC",
+            },
+            "index": 7,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "8",
+          "nodeType": "class",
+          "props": Object {
+            "addToFavorites": undefined,
+            "currency": Object {
+              "name": "Bitcoin SV",
+              "percent_change": -1.04,
+              "price": 81.84,
+              "rank": "9",
+              "symbol": "BSV",
+            },
+            "index": 8,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "9",
+          "nodeType": "class",
+          "props": Object {
+            "addToFavorites": undefined,
+            "currency": Object {
+              "name": "TRON",
+              "percent_change": 0.17,
+              "price": 0.01,
+              "rank": "10",
+              "symbol": "TRX",
+            },
+            "index": 9,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "bottom-gradient",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
           className="currency-container"
         >
           <div
@@ -272,71 +949,10 @@ ShallowWrapper {
             className="bottom-gradient"
           />
         </div>,
-      ],
-      "className": "sort-box",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <p
-              className="sort-active"
-            >
-              Rank
-            </p>,
-            <p>
-              Price
-            </p>,
-            <p>
-              %Change
-            </p>,
-          ],
-          "className": "sort",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Rank",
-              "className": "sort-active",
-            },
-            "ref": null,
-            "rendered": "Rank",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Price",
-            },
-            "ref": null,
-            "rendered": "Price",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "%Change",
-            },
-            "ref": null,
-            "rendered": "%Change",
-            "type": "p",
-          },
-        ],
-        "type": "div",
+        "className": "sort-box",
       },
-      Object {
+      "ref": null,
+      "rendered": Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
@@ -656,6 +1272,7 @@ ShallowWrapper {
             "key": "0",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Bitcoin",
                 "percent_change": 0.83,
@@ -674,6 +1291,7 @@ ShallowWrapper {
             "key": "1",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "XRP",
                 "percent_change": 3.94,
@@ -692,6 +1310,7 @@ ShallowWrapper {
             "key": "2",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Ethereum",
                 "percent_change": 0.2,
@@ -710,6 +1329,7 @@ ShallowWrapper {
             "key": "3",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "EOS",
                 "percent_change": 6.87,
@@ -728,6 +1348,7 @@ ShallowWrapper {
             "key": "4",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Stellar",
                 "percent_change": -0.58,
@@ -746,6 +1367,7 @@ ShallowWrapper {
             "key": "5",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Tether",
                 "percent_change": -0.37,
@@ -764,6 +1386,7 @@ ShallowWrapper {
             "key": "6",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Bitcoin Cash",
                 "percent_change": 12.32,
@@ -782,6 +1405,7 @@ ShallowWrapper {
             "key": "7",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Litecoin",
                 "percent_change": -1.97,
@@ -800,6 +1424,7 @@ ShallowWrapper {
             "key": "8",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Bitcoin SV",
                 "percent_change": -1.04,
@@ -818,6 +1443,7 @@ ShallowWrapper {
             "key": "9",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "TRON",
                 "percent_change": 0.17,
@@ -845,768 +1471,6 @@ ShallowWrapper {
         ],
         "type": "div",
       },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <div
-            className="sort"
-          >
-            <p
-              className="sort-active"
-            >
-              Rank
-            </p>
-            <p>
-              Price
-            </p>
-            <p>
-              %Change
-            </p>
-          </div>,
-          <div
-            className="currency-container"
-          >
-            <div
-              className="sort"
-            >
-              <p
-                className="active"
-              >
-                <a
-                  className="rank-link"
-                  href="#"
-                  name="Rank"
-                  onClick={[Function]}
-                >
-                  Rank
-                </a>
-              </p>
-              <p>
-                <a
-                  className="price-link"
-                  href="#"
-                  name="Price"
-                  onClick={[Function]}
-                >
-                  Price
-                </a>
-              </p>
-              <p>
-                <a
-                  className="percent-change-link"
-                  href="#"
-                  name="%Change"
-                  onClick={[Function]}
-                >
-                  %Change
-                </a>
-              </p>
-            </div>
-            <LandingCurrency
-              currency={
-                Object {
-                  "name": "Bitcoin",
-                  "percent_change": 0.83,
-                  "price": 3586.16,
-                  "rank": "1",
-                  "symbol": "BTC",
-                }
-              }
-              index={0}
-            />
-            <LandingCurrency
-              currency={
-                Object {
-                  "name": "XRP",
-                  "percent_change": 3.94,
-                  "price": 0.33,
-                  "rank": "2",
-                  "symbol": "XRP",
-                }
-              }
-              index={1}
-            />
-            <LandingCurrency
-              currency={
-                Object {
-                  "name": "Ethereum",
-                  "percent_change": 0.2,
-                  "price": 95.07,
-                  "rank": "3",
-                  "symbol": "ETH",
-                }
-              }
-              index={2}
-            />
-            <LandingCurrency
-              currency={
-                Object {
-                  "name": "EOS",
-                  "percent_change": 6.87,
-                  "price": 2.54,
-                  "rank": "4",
-                  "symbol": "EOS",
-                }
-              }
-              index={3}
-            />
-            <LandingCurrency
-              currency={
-                Object {
-                  "name": "Stellar",
-                  "percent_change": -0.58,
-                  "price": 0.11,
-                  "rank": "5",
-                  "symbol": "XLM",
-                }
-              }
-              index={4}
-            />
-            <LandingCurrency
-              currency={
-                Object {
-                  "name": "Tether",
-                  "percent_change": -0.37,
-                  "price": 1.02,
-                  "rank": "6",
-                  "symbol": "USDT",
-                }
-              }
-              index={5}
-            />
-            <LandingCurrency
-              currency={
-                Object {
-                  "name": "Bitcoin Cash",
-                  "percent_change": 12.32,
-                  "price": 100.65,
-                  "rank": "7",
-                  "symbol": "BCH",
-                }
-              }
-              index={6}
-            />
-            <LandingCurrency
-              currency={
-                Object {
-                  "name": "Litecoin",
-                  "percent_change": -1.97,
-                  "price": 28.99,
-                  "rank": "8",
-                  "symbol": "LTC",
-                }
-              }
-              index={7}
-            />
-            <LandingCurrency
-              currency={
-                Object {
-                  "name": "Bitcoin SV",
-                  "percent_change": -1.04,
-                  "price": 81.84,
-                  "rank": "9",
-                  "symbol": "BSV",
-                }
-              }
-              index={8}
-            />
-            <LandingCurrency
-              currency={
-                Object {
-                  "name": "TRON",
-                  "percent_change": 0.17,
-                  "price": 0.01,
-                  "rank": "10",
-                  "symbol": "TRX",
-                }
-              }
-              index={9}
-            />
-            <div
-              className="bottom-gradient"
-            />
-          </div>,
-        ],
-        "className": "sort-box",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <p
-                className="sort-active"
-              >
-                Rank
-              </p>,
-              <p>
-                Price
-              </p>,
-              <p>
-                %Change
-              </p>,
-            ],
-            "className": "sort",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Rank",
-                "className": "sort-active",
-              },
-              "ref": null,
-              "rendered": "Rank",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Price",
-              },
-              "ref": null,
-              "rendered": "Price",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "%Change",
-              },
-              "ref": null,
-              "rendered": "%Change",
-              "type": "p",
-            },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <div
-                className="sort"
-              >
-                <p
-                  className="active"
-                >
-                  <a
-                    className="rank-link"
-                    href="#"
-                    name="Rank"
-                    onClick={[Function]}
-                  >
-                    Rank
-                  </a>
-                </p>
-                <p>
-                  <a
-                    className="price-link"
-                    href="#"
-                    name="Price"
-                    onClick={[Function]}
-                  >
-                    Price
-                  </a>
-                </p>
-                <p>
-                  <a
-                    className="percent-change-link"
-                    href="#"
-                    name="%Change"
-                    onClick={[Function]}
-                  >
-                    %Change
-                  </a>
-                </p>
-              </div>,
-              Array [
-                <LandingCurrency
-                  currency={
-                    Object {
-                      "name": "Bitcoin",
-                      "percent_change": 0.83,
-                      "price": 3586.16,
-                      "rank": "1",
-                      "symbol": "BTC",
-                    }
-                  }
-                  index={0}
-                />,
-                <LandingCurrency
-                  currency={
-                    Object {
-                      "name": "XRP",
-                      "percent_change": 3.94,
-                      "price": 0.33,
-                      "rank": "2",
-                      "symbol": "XRP",
-                    }
-                  }
-                  index={1}
-                />,
-                <LandingCurrency
-                  currency={
-                    Object {
-                      "name": "Ethereum",
-                      "percent_change": 0.2,
-                      "price": 95.07,
-                      "rank": "3",
-                      "symbol": "ETH",
-                    }
-                  }
-                  index={2}
-                />,
-                <LandingCurrency
-                  currency={
-                    Object {
-                      "name": "EOS",
-                      "percent_change": 6.87,
-                      "price": 2.54,
-                      "rank": "4",
-                      "symbol": "EOS",
-                    }
-                  }
-                  index={3}
-                />,
-                <LandingCurrency
-                  currency={
-                    Object {
-                      "name": "Stellar",
-                      "percent_change": -0.58,
-                      "price": 0.11,
-                      "rank": "5",
-                      "symbol": "XLM",
-                    }
-                  }
-                  index={4}
-                />,
-                <LandingCurrency
-                  currency={
-                    Object {
-                      "name": "Tether",
-                      "percent_change": -0.37,
-                      "price": 1.02,
-                      "rank": "6",
-                      "symbol": "USDT",
-                    }
-                  }
-                  index={5}
-                />,
-                <LandingCurrency
-                  currency={
-                    Object {
-                      "name": "Bitcoin Cash",
-                      "percent_change": 12.32,
-                      "price": 100.65,
-                      "rank": "7",
-                      "symbol": "BCH",
-                    }
-                  }
-                  index={6}
-                />,
-                <LandingCurrency
-                  currency={
-                    Object {
-                      "name": "Litecoin",
-                      "percent_change": -1.97,
-                      "price": 28.99,
-                      "rank": "8",
-                      "symbol": "LTC",
-                    }
-                  }
-                  index={7}
-                />,
-                <LandingCurrency
-                  currency={
-                    Object {
-                      "name": "Bitcoin SV",
-                      "percent_change": -1.04,
-                      "price": 81.84,
-                      "rank": "9",
-                      "symbol": "BSV",
-                    }
-                  }
-                  index={8}
-                />,
-                <LandingCurrency
-                  currency={
-                    Object {
-                      "name": "TRON",
-                      "percent_change": 0.17,
-                      "price": 0.01,
-                      "rank": "10",
-                      "symbol": "TRX",
-                    }
-                  }
-                  index={9}
-                />,
-              ],
-              <div
-                className="bottom-gradient"
-              />,
-            ],
-            "className": "currency-container",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <p
-                    className="active"
-                  >
-                    <a
-                      className="rank-link"
-                      href="#"
-                      name="Rank"
-                      onClick={[Function]}
-                    >
-                      Rank
-                    </a>
-                  </p>,
-                  <p>
-                    <a
-                      className="price-link"
-                      href="#"
-                      name="Price"
-                      onClick={[Function]}
-                    >
-                      Price
-                    </a>
-                  </p>,
-                  <p>
-                    <a
-                      className="percent-change-link"
-                      href="#"
-                      name="%Change"
-                      onClick={[Function]}
-                    >
-                      %Change
-                    </a>
-                  </p>,
-                ],
-                "className": "sort",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <a
-                      className="rank-link"
-                      href="#"
-                      name="Rank"
-                      onClick={[Function]}
-                    >
-                      Rank
-                    </a>,
-                    "className": "active",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Rank",
-                      "className": "rank-link",
-                      "href": "#",
-                      "name": "Rank",
-                      "onClick": [Function],
-                    },
-                    "ref": null,
-                    "rendered": "Rank",
-                    "type": "a",
-                  },
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <a
-                      className="price-link"
-                      href="#"
-                      name="Price"
-                      onClick={[Function]}
-                    >
-                      Price
-                    </a>,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Price",
-                      "className": "price-link",
-                      "href": "#",
-                      "name": "Price",
-                      "onClick": [Function],
-                    },
-                    "ref": null,
-                    "rendered": "Price",
-                    "type": "a",
-                  },
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <a
-                      className="percent-change-link"
-                      href="#"
-                      name="%Change"
-                      onClick={[Function]}
-                    >
-                      %Change
-                    </a>,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "%Change",
-                      "className": "percent-change-link",
-                      "href": "#",
-                      "name": "%Change",
-                      "onClick": [Function],
-                    },
-                    "ref": null,
-                    "rendered": "%Change",
-                    "type": "a",
-                  },
-                  "type": "p",
-                },
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": "0",
-              "nodeType": "class",
-              "props": Object {
-                "currency": Object {
-                  "name": "Bitcoin",
-                  "percent_change": 0.83,
-                  "price": 3586.16,
-                  "rank": "1",
-                  "symbol": "BTC",
-                },
-                "index": 0,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "1",
-              "nodeType": "class",
-              "props": Object {
-                "currency": Object {
-                  "name": "XRP",
-                  "percent_change": 3.94,
-                  "price": 0.33,
-                  "rank": "2",
-                  "symbol": "XRP",
-                },
-                "index": 1,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "2",
-              "nodeType": "class",
-              "props": Object {
-                "currency": Object {
-                  "name": "Ethereum",
-                  "percent_change": 0.2,
-                  "price": 95.07,
-                  "rank": "3",
-                  "symbol": "ETH",
-                },
-                "index": 2,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "3",
-              "nodeType": "class",
-              "props": Object {
-                "currency": Object {
-                  "name": "EOS",
-                  "percent_change": 6.87,
-                  "price": 2.54,
-                  "rank": "4",
-                  "symbol": "EOS",
-                },
-                "index": 3,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "4",
-              "nodeType": "class",
-              "props": Object {
-                "currency": Object {
-                  "name": "Stellar",
-                  "percent_change": -0.58,
-                  "price": 0.11,
-                  "rank": "5",
-                  "symbol": "XLM",
-                },
-                "index": 4,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "5",
-              "nodeType": "class",
-              "props": Object {
-                "currency": Object {
-                  "name": "Tether",
-                  "percent_change": -0.37,
-                  "price": 1.02,
-                  "rank": "6",
-                  "symbol": "USDT",
-                },
-                "index": 5,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "6",
-              "nodeType": "class",
-              "props": Object {
-                "currency": Object {
-                  "name": "Bitcoin Cash",
-                  "percent_change": 12.32,
-                  "price": 100.65,
-                  "rank": "7",
-                  "symbol": "BCH",
-                },
-                "index": 6,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "7",
-              "nodeType": "class",
-              "props": Object {
-                "currency": Object {
-                  "name": "Litecoin",
-                  "percent_change": -1.97,
-                  "price": 28.99,
-                  "rank": "8",
-                  "symbol": "LTC",
-                },
-                "index": 7,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "8",
-              "nodeType": "class",
-              "props": Object {
-                "currency": Object {
-                  "name": "Bitcoin SV",
-                  "percent_change": -1.04,
-                  "price": 81.84,
-                  "rank": "9",
-                  "symbol": "BSV",
-                },
-                "index": 8,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "9",
-              "nodeType": "class",
-              "props": Object {
-                "currency": Object {
-                  "name": "TRON",
-                  "percent_change": 0.17,
-                  "price": 0.01,
-                  "rank": "10",
-                  "symbol": "TRX",
-                },
-                "index": 9,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "bottom-gradient",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "div",
-            },
-          ],
-          "type": "div",
-        },
-      ],
       "type": "div",
     },
   ],

@@ -32,7 +32,12 @@ class App extends Component {
   }
 
   addToFavorites = favorite => {
-    this.setState({ favorites: [favorite, ...this.state.favorites] });
+    if (this.state.favorites.length < 5) {
+      this.setState({ favorites: [favorite, ...this.state.favorites] }); 
+    } else if (this.state.favorites.length >= 5) {
+      this.setState({ favorites: [favorite, ...this.state.favorites.slice(0, 4)]})
+    }
+    console.log(this.state.favorites)
   };
 
   removeFromFavorites = id => {

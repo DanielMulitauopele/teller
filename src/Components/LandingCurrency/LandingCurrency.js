@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./LandingCurrency.css";
 import Heart from "../../Assets/heart.svg";
 import { Icons } from "../../Assets/cryptoIcons/cryptoIcons";
+import DataCleaner from "../../Utils/Cleaners/"; 
 
 class LandingCurrency extends Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class LandingCurrency extends Component {
     this.state = {
       expanded: false
     };
+    this.cleaner = new DataCleaner()
   }
 
   expand = () => {
@@ -17,9 +19,11 @@ class LandingCurrency extends Component {
     });
   };
 
-  printToConsole = () => {
-    console.log("hey");
-  };
+  handleClick = async e => {
+    const { name } = e.target
+    const fave = await this.cleaner.formatFavorite(name)
+    this.props.addToFavorites(fave)
+  }
 
   render() {
     const { symbol, name, price, percent_change, rank } = this.props.currency;
@@ -52,10 +56,10 @@ class LandingCurrency extends Component {
               <p>{rank}</p>
             </div>
             <img
-              src={Heart}
-              onClick={this.printToConsole}
+              name={name} 
+              src={Heart} 
               className="fave-this"
-            />
+              onClick={this.handleClick} />
           </div>
         )}
       </div>
