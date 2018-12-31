@@ -14,8 +14,6 @@ class TellerAI extends Component {
     return (
       <div className="teller">
         <div className="line one" />
-        {/* <div className="line two" />
-        <div className="line three" /> */}
       </div>
     );
   }
