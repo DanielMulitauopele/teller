@@ -27,9 +27,7 @@ class FavoritesContainer extends Component {
       favorites, 
       removeFromFavorites, 
       addToFavorites } = this.props;
-      console.log(favorites)
     const favoriteCurrencies = favorites.map(favorite => {
-      console.log(favorite)
       return (
         <FavoriteCurrencies
           key={favorite.id}
