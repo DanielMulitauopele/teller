@@ -357,6 +357,7 @@ ShallowWrapper {
               },
             ]
           }
+          addToFavorites={[MockFunction]}
         />,
       ],
       "className": "landing-literal",
@@ -585,6 +586,7 @@ ShallowWrapper {
               "symbol": "TRX",
             },
           ],
+          "addToFavorites": [MockFunction],
           "setFilter": undefined,
         },
         "ref": null,
@@ -809,6 +811,7 @@ ShallowWrapper {
                 },
               ]
             }
+            addToFavorites={[MockFunction]}
           />,
         ],
         "className": "landing-literal",
@@ -1037,6 +1040,7 @@ ShallowWrapper {
                 "symbol": "TRX",
               },
             ],
+            "addToFavorites": [MockFunction],
             "setFilter": undefined,
           },
           "ref": null,

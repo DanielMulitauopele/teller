@@ -656,6 +656,7 @@ ShallowWrapper {
             "key": "0",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Bitcoin",
                 "percent_change": 0.83,
@@ -674,6 +675,7 @@ ShallowWrapper {
             "key": "1",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "XRP",
                 "percent_change": 3.94,
@@ -692,6 +694,7 @@ ShallowWrapper {
             "key": "2",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Ethereum",
                 "percent_change": 0.2,
@@ -710,6 +713,7 @@ ShallowWrapper {
             "key": "3",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "EOS",
                 "percent_change": 6.87,
@@ -728,6 +732,7 @@ ShallowWrapper {
             "key": "4",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Stellar",
                 "percent_change": -0.58,
@@ -746,6 +751,7 @@ ShallowWrapper {
             "key": "5",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Tether",
                 "percent_change": -0.37,
@@ -764,6 +770,7 @@ ShallowWrapper {
             "key": "6",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Bitcoin Cash",
                 "percent_change": 12.32,
@@ -782,6 +789,7 @@ ShallowWrapper {
             "key": "7",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Litecoin",
                 "percent_change": -1.97,
@@ -800,6 +808,7 @@ ShallowWrapper {
             "key": "8",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "Bitcoin SV",
                 "percent_change": -1.04,
@@ -818,6 +827,7 @@ ShallowWrapper {
             "key": "9",
             "nodeType": "class",
             "props": Object {
+              "addToFavorites": undefined,
               "currency": Object {
                 "name": "TRON",
                 "percent_change": 0.17,
@@ -1417,6 +1427,7 @@ ShallowWrapper {
               "key": "0",
               "nodeType": "class",
               "props": Object {
+                "addToFavorites": undefined,
                 "currency": Object {
                   "name": "Bitcoin",
                   "percent_change": 0.83,
@@ -1435,6 +1446,7 @@ ShallowWrapper {
               "key": "1",
               "nodeType": "class",
               "props": Object {
+                "addToFavorites": undefined,
                 "currency": Object {
                   "name": "XRP",
                   "percent_change": 3.94,
@@ -1453,6 +1465,7 @@ ShallowWrapper {
               "key": "2",
               "nodeType": "class",
               "props": Object {
+                "addToFavorites": undefined,
                 "currency": Object {
                   "name": "Ethereum",
                   "percent_change": 0.2,
@@ -1471,6 +1484,7 @@ ShallowWrapper {
               "key": "3",
               "nodeType": "class",
               "props": Object {
+                "addToFavorites": undefined,
                 "currency": Object {
                   "name": "EOS",
                   "percent_change": 6.87,
@@ -1489,6 +1503,7 @@ ShallowWrapper {
               "key": "4",
               "nodeType": "class",
               "props": Object {
+                "addToFavorites": undefined,
                 "currency": Object {
                   "name": "Stellar",
                   "percent_change": -0.58,
@@ -1507,6 +1522,7 @@ ShallowWrapper {
               "key": "5",
               "nodeType": "class",
               "props": Object {
+                "addToFavorites": undefined,
                 "currency": Object {
                   "name": "Tether",
                   "percent_change": -0.37,
@@ -1525,6 +1541,7 @@ ShallowWrapper {
               "key": "6",
               "nodeType": "class",
               "props": Object {
+                "addToFavorites": undefined,
                 "currency": Object {
                   "name": "Bitcoin Cash",
                   "percent_change": 12.32,
@@ -1543,6 +1560,7 @@ ShallowWrapper {
               "key": "7",
               "nodeType": "class",
               "props": Object {
+                "addToFavorites": undefined,
                 "currency": Object {
                   "name": "Litecoin",
                   "percent_change": -1.97,
@@ -1561,6 +1579,7 @@ ShallowWrapper {
               "key": "8",
               "nodeType": "class",
               "props": Object {
+                "addToFavorites": undefined,
                 "currency": Object {
                   "name": "Bitcoin SV",
                   "percent_change": -1.04,
@@ -1579,6 +1598,7 @@ ShallowWrapper {
               "key": "9",
               "nodeType": "class",
               "props": Object {
+                "addToFavorites": undefined,
                 "currency": Object {
                   "name": "TRON",
                   "percent_change": 0.17,

@@ -21,7 +21,8 @@ class LandingCurrencyContainer extends Component {
       return <LandingCurrency 
                 key={i} 
                 index={i} 
-                currency={currency} />;
+                currency={currency}
+                addToFavorites={this.props.addToFavorites} />;
     });
 
     return (
