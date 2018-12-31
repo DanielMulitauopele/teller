@@ -43,7 +43,7 @@
 .fave-currency .negative {
   height: 1rem;
   width: 0.5rem;
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
   margin-bottom: -2px;
 }
 
