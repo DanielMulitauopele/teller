@@ -11,7 +11,6 @@ class FavoriteCurrencies extends Component {
       addToFavorites
     }) {
     super(props)
-    console.log(favorite)
   }
 
   render() {
