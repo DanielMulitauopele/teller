@@ -33,7 +33,8 @@
   font-size: 0.8rem;
 }
 
-.fave-currency .positive {
+.fave-currency .positive,
+.fave-currency .negative {
   height: 1rem;
   width: 0.5rem;
   transform: rotate(90deg);
@@ -41,10 +42,7 @@
 }
 
 .fave-currency .negative {
-  height: 1rem;
-  width: 0.5rem;
   transform: rotate(-90deg);
-  margin-bottom: -2px;
 }
 
 .bubbles {
