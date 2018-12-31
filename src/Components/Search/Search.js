@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./Search.css";
 import SearchGlass from "../../Assets/search.svg";
 import Cancel from "../../Assets/cancel.svg";
+import Trie from './autocomplete'
+import { coinNames } from './CoinNames'
 
 class Search extends Component {
   constructor(props) {
@@ -11,6 +13,12 @@ class Search extends Component {
       hasText: false,
       search: ''
     };
+    this.trie = new Trie()
+  }
+
+  async componentDidMount() {
+    const coins = await coinNames()
+    this.trie.populate(coins)
   }
 
   toggleSearchBtn = () => {
@@ -21,14 +29,15 @@ class Search extends Component {
 
   handleChange = (e) => {
     const { name, value } = e.target
+    const { search } = this.state
     this.setState({ [name]: value })
+    this.trie.suggest(search)
   }
 
   handleSubmit = (e) => {
     e.preventDefault()
     const { search } = this.state
     this.props.displaySearch(search)
-    // this.setState({ search: '' })
   }
 
   render() {

@@ -5,11 +5,12 @@ import Hotdog from "./Components/Hotdog/Hotdog";
 import LandingCurrencyContainer from "./Components/LandingCurrencyContainer/LandingCurrencyContainer";
 import DataCleaner from "./Utils/Cleaners/";
 import Search from "./Components/Search/Search";
-import { Route, withRouter, Switch } from "react-router-dom";
+import { BrowserRouter, Route, withRouter, Switch } from "react-router-dom";
 import Landing from "./Components/Landing/Landing";
 import RegisterForm from "./Components/RegisterForm/RegisterForm";
 import LoginForm from "./Components/LoginForm/LoginForm";
 import Login from "./Components/LoginForm/LoginForm";
+import { coinNames } from "./Components/Search/CoinNames"
 
 class App extends Component {
   constructor(props) {
@@ -21,12 +22,12 @@ class App extends Component {
       userEmail: "",
       news: []
     };
+    this.cleaner = new DataCleaner();
   }
 
   async componentDidMount() {
-    const cleaner = new DataCleaner();
-    const abbrevCurrencies = await cleaner.getAbbrevCurrencies();
-    const expandedCurrencies = await cleaner.getExpandedCurrencies();
+    const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
+    const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
     this.setState({ abbrevCurrencies, expandedCurrencies });
   }
 
@@ -45,14 +46,23 @@ class App extends Component {
     this.setState({ userEmail });
   };
 
-  displaySearch = currency => {
+  displaySearch = async currency => {
     const { abbrevCurrencies, expandedCurrencies } = this.state
-    const abbCurr = abbrevCurrencies.find(curr => curr.name.toUpperCase() === currency.toUpperCase())
-    const expCurr = expandedCurrencies.find(curr => curr.name.toUpperCase() === currency.toUpperCase())
-    this.setState({
-      abbrevCurrencies: [abbCurr],
-      expandedCurrencies: [expCurr],
-    })
+    if (currency === "") {
+      const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
+      const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
+      this.setState({
+        abbrevCurrencies,
+        expandedCurrencies
+      })
+    } else {
+      const abbCurr = abbrevCurrencies.find(curr => curr.name.toUpperCase() === currency.toUpperCase())
+      const expCurr = expandedCurrencies.find(curr => curr.name.toUpperCase() === currency.toUpperCase())
+      this.setState({
+        abbrevCurrencies: [abbCurr],
+        expandedCurrencies: [expCurr],
+      })
+    }
   }
 
   setFilter = filterCategory => {
@@ -78,38 +88,40 @@ class App extends Component {
   render() {
     const { abbrevCurrencies, favorites } = this.state;
     return (
-      <div className="App">
-        <Hotdog />
-        {/* //         <LoginForm logInUser={this.logInUser}/>
-//         <RegisterForm />
-//         <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} /> */}
-        <Search displaySearch={this.displaySearch} />
-        <Switch>
-          <Route
-            exact
-            path="/a"
-            render={() => {
-              return (
-                <Landing
-                  favorites={favorites}
-                  addToFavorites={this.addToFavorites}
-                  removeFromFavorites={this.removeFromFavorites}
-                  abbrevCurrencies={abbrevCurrencies}
-                  setFilter={this.setFilter}
-                />
-              );
-            }}
-          />
-          )}}
-          <Route
-            exact
-            path="/"
-            render={() => {
-              return <Login />;
-            }}
-          />
-        </Switch>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Hotdog />
+          {/* //         <LoginForm logInUser={this.logInUser}/>
+  //         <RegisterForm />
+  //         <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} /> */}
+          <Search displaySearch={this.displaySearch} />
+          <Switch>
+            <Route
+              exact
+              path="/a"
+              render={() => {
+                return (
+                  <Landing
+                    favorites={favorites}
+                    addToFavorites={this.addToFavorites}
+                    removeFromFavorites={this.removeFromFavorites}
+                    abbrevCurrencies={abbrevCurrencies}
+                    setFilter={this.setFilter}
+                  />
+                );
+              }}
+            />
+            )}}
+            <Route
+              exact
+              path="/"
+              render={() => {
+                return <Login />;
+              }}
+            />
+          </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }
