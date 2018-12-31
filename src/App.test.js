@@ -24,9 +24,6 @@ describe('App Component', () => {
 
   describe('addToFavorites function', () => {
     it('should add a coin to favorites', () => {
-      const favorite = {name: 'Some Coin', price: '1', percent_change: '0'},
-      wrapper.instance().addToFavorites(favorite)
-      expect(wrapper.state().favorites).toEqual([favorite,1,2,3,4,5])
     })
   })
 })

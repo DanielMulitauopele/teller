@@ -38,7 +38,7 @@ class Trie {
     let splitPrefix = prefix.toLowerCase().split('');
     let currNode = this.traverseTrie(splitPrefix);
     this.findLast(currNode.children);
-    console.log(this.wordList)
+    // console.log(this.wordList)
     return this.wordList;
   }
 
