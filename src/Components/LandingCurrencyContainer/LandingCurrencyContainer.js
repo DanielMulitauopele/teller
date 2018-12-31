@@ -10,10 +10,10 @@ class LandingCurrencyContainer extends Component {
     };
   }
 
-  handleClick = (e) => {
-    const { name } = e.target
-    this.props.setFilter(name)
-  }
+  handleClick = e => {
+    const { name } = e.target;
+    this.props.setFilter(name);
+  };
 
   render() {
     const { abbrevCurrencies } = this.props;
@@ -26,11 +26,6 @@ class LandingCurrencyContainer extends Component {
 
     return (
       <div className="sort-box">
-        <div className="sort">
-          <p className="sort-active">Rank</p>
-          <p>Price</p>
-          <p>%Change</p>
-        </div>
         <div className="currency-container">
           <div className="sort">
             {/* change this 'active' class to something more specific */}
@@ -61,6 +56,7 @@ class LandingCurrencyContainer extends Component {
                 %Change
               </a>
             </p>
+
           </div>
           {landingCurrencies}
           <div className="bottom-gradient" />

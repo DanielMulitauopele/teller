@@ -17,10 +17,14 @@ class LandingCurrency extends Component {
     });
   };
 
+  printToConsole = () => {
+    console.log("hey");
+  };
+
   render() {
     const { symbol, name, price, percent_change, rank } = this.props.currency;
     return (
-      <div className="currency-card" onClick={this.expand}>
+      <div className="currency-card">
         <div className="card-inside-text">
           <div className="cc-left">
             <img src={Icons[this.props.currency.symbol]} />
@@ -35,6 +39,11 @@ class LandingCurrency extends Component {
           <div className="cc-right">
             <p>{percent_change}</p>
           </div>
+          <div className="expansion-dots" onClick={this.expand}>
+            <div />
+            <div />
+            <div />
+          </div>
         </div>
         {this.state.expanded && (
           <div className="expanded-currency">
@@ -42,7 +51,11 @@ class LandingCurrency extends Component {
               <p>{name}</p>
               <p>{rank}</p>
             </div>
-            <img src={Heart} className="fave-this" />
+            <img
+              src={Heart}
+              onClick={this.printToConsole}
+              className="fave-this"
+            />
           </div>
         )}
       </div>
