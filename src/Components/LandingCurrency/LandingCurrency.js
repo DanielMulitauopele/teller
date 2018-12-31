@@ -17,6 +17,10 @@ class LandingCurrency extends Component {
     });
   };
 
+  printToConsole = () => {
+    console.log("hey");
+  };
+
   render() {
     const { symbol, name, price, percent_change, rank } = this.props.currency;
     return (
@@ -42,7 +46,11 @@ class LandingCurrency extends Component {
               <p>{name}</p>
               <p>{rank}</p>
             </div>
-            <img src={Heart} className="fave-this" />
+            <img
+              src={Heart}
+              onClick={this.printToConsole}
+              className="fave-this"
+            />
           </div>
         )}
       </div>

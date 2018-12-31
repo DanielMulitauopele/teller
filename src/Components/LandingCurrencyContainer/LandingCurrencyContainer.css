@@ -1,15 +1,17 @@
 .currency-container {
-  margin-top: 12rem;
+  margin-top: 10rem;
   width: 25rem;
-  height: 33rem;
+  height: 36rem;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
+  bottom: 0;
+  z-index: 2;
 }
 
 .bottom-gradient {
   height: 6rem;
   width: 100%;
-  bottom: -10px;
+  bottom: 0;
   filter: blur(10px);
   position: fixed;
   background: linear-gradient(to top, #303859, rgba(48, 56, 89, 0.379));
@@ -21,6 +23,11 @@
 
 .sort {
   text-align: right;
+  position: sticky;
+  top: 0rem;
+  padding: 0.5rem 0;
+  background-color: var(--TellerBG);
+  z-index: 55;
 }
 
 .sort a {

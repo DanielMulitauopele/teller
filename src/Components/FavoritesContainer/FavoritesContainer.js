@@ -33,7 +33,7 @@ class FavoritesContainer extends Component {
         <div className="container">
           <Slider {...settings}>{favoriteCurrencies}</Slider>
         </div>
-        <TellerAI />
+        {/* <TellerAI /> */}
       </div>
     );
   }
