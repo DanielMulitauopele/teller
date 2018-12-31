@@ -69,13 +69,14 @@
   text-align: center;
 }
 
+.expansion-dots-glowing,
 .expansion-dots {
-  height: 70px;
-  justify-content: center;
+  height: 100%;
   cursor: pointer;
 }
 
-.expansion-dots div {
+.expansion-dots div,
+.expansion-dots-glowing div {
   height: 5px;
   width: 5px;
   margin: 2px 0px 2px 10px;
@@ -84,23 +85,24 @@
   background-color: rgba(109, 109, 109, 0.514);
 }
 
+.expansion-dots-glowing div:first-child,
 .expansion-dots div:first-child {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
-.expansion-dots:hover div {
+.expansion-dots-glowing div {
   animation: wavey 2s linear infinite;
 }
 
-.expansion-dots div:first-child {
+.expansion-dots-glowing div:first-child {
   animation-delay: 0.3s;
 }
 
-.expansion-dots div:nth-child(2) {
+.expansion-dots-glowing div:nth-child(2) {
   animation-delay: 0.5s;
 }
 
-.expansion-dots div:nth-child(3) {
+.expansion-dots-glowing div:nth-child(3) {
   animation-delay: 0.7s;
 }
 
