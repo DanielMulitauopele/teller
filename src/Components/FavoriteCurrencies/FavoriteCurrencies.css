@@ -33,7 +33,14 @@
   font-size: 0.8rem;
 }
 
-.fave-currency img {
+.fave-currency .positive {
+  height: 1rem;
+  width: 0.5rem;
+  transform: rotate(90deg);
+  margin-bottom: -2px;
+}
+
+.fave-currency .negative {
   height: 1rem;
   width: 0.5rem;
   transform: rotate(90deg);

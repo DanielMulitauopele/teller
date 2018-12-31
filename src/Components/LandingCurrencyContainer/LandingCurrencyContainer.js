@@ -32,7 +32,6 @@ class LandingCurrencyContainer extends Component {
       <div className="sort-box">
         <div className="currency-container">
           <div className="sort">
-            {/* change this 'active' class to something more specific */}
             <a
               className="rank-link"
               href="#"
