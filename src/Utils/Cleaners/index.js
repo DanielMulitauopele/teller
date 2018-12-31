@@ -36,6 +36,13 @@ class DataCleaner {
     })
     return cleanCurrency
   }
+
+  getCoinNames = async () => {
+    const url = 'https://cors-anywhere.herokuapp.com/https://guarded-reef-25579.herokuapp.com/api/v1/assets'
+    const currencyData = await this.fetchData(url)
+    const cleanCurrency = currencyData.map(currency => currency.name)
+    return cleanCurrency
+  }
 }
 
 export default DataCleaner

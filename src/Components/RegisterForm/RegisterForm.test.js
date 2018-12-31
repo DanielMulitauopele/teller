@@ -59,37 +59,36 @@ describe('RegisterForm Component', () => {
       })
       expect(wrapper.state().confirmedPassword).toEqual('mypassword')
     })
+  })
+
+  describe('handleSubmit function', () => {
+    let wrapper = shallow(<RegisterForm />)
+
+    afterEach(() => {
+      wrapper.setState({ passwordError: false })
+    })
+
+    const passwordInput = wrapper.find('.register-password-input')
+    const confirmedInput = wrapper.find('.register-confirm-input')
+    const registerForm = wrapper.find('.register-form')
 
     it('should toggle error display if there is no password', () => {
-      const passwordInput = wrapper.find('.register-password-input')
-      const submitBtn = wrapper.find('.register-button')
       passwordInput.value = ''
-      submitBtn.simulate('click')
+      registerForm.simulate('submit', { preventDefault() {} })
       expect(wrapper.state().passwordError).toBe(true)
     })
 
     it('should toggle error display if there is no confirmed password', () => {
-
+      confirmedInput.value = ''
+      registerForm.simulate('submit', { preventDefault() {} })
+      expect(wrapper.state().passwordError).toEqual(true)
     })
 
     it('should toggle error display if the confirmedPassword and password do not match', () => {
-      const passwordInput = wrapper.find('.register-password-input')
-      const confirmedInput = wrapper.find('.register-confirm-input')
-      const submitBtn = wrapper.find('.register-button')
-
       passwordInput.value = 'mypassword'
       confirmedInput.value = 'yourpassword'
-      submitBtn.simulate('click')
-      console.log(wrapper.state())
+      registerForm.simulate('submit', { preventDefault() {} })
       expect(wrapper.state().passwordError).toEqual(true)
-    })
-  })
-
-  describe('handleSubmit function', () => {
-    let mockForm
-
-    beforeEach(() => {
-      mockForm = wrapper.find('.register-form')
     })
 
     xit('should submit user info to database', () => {
