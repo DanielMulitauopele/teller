@@ -16,7 +16,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      favorites: [1, 2, 3, 4, 5],
+      favorites: [{
+        name: "No favorites saved", 
+        price: "0",
+        percent_change: "0"
+      }],
       abbrevCurrencies: [],
       expandedCurrencies: [],
       userEmail: "",
