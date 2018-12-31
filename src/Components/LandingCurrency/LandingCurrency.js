@@ -27,6 +27,7 @@ class LandingCurrency extends Component {
 
   render() {
     const { symbol, name, price, percent_change, rank } = this.props.currency;
+    const { expanded } = this.state;
     return (
       <div className="currency-card">
         <div className="card-inside-text">
@@ -43,7 +44,10 @@ class LandingCurrency extends Component {
           <div className="cc-right">
             <p>{percent_change}</p>
           </div>
-          <div className="expansion-dots" onClick={this.expand}>
+          <div
+            className={expanded ? "expansion-dots-glowing" : "expansion-dots"}
+            onClick={this.expand}
+          >
             <div />
             <div />
             <div />
