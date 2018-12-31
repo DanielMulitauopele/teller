@@ -4,6 +4,7 @@ exports[`LandingCurrency Component should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <LandingCurrency
+    addToFavorites={[MockFunction]}
     currency={
       Object {
         "name": "XRP",
@@ -64,11 +65,18 @@ ShallowWrapper {
               3.94
             </p>
           </div>
+          <div
+            className="expansion-dots"
+            onClick={[Function]}
+          >
+            <div />
+            <div />
+            <div />
+          </div>
         </div>,
         false,
       ],
       "className": "currency-card",
-      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -109,6 +117,14 @@ ShallowWrapper {
               <p>
                 3.94
               </p>
+            </div>,
+            <div
+              className="expansion-dots"
+              onClick={[Function]}
+            >
+              <div />
+              <div />
+              <div />
             </div>,
           ],
           "className": "card-inside-text",
@@ -236,6 +252,51 @@ ShallowWrapper {
             },
             "type": "div",
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div />,
+                <div />,
+                <div />,
+              ],
+              "className": "expansion-dots",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
         ],
         "type": "div",
       },
@@ -285,11 +346,18 @@ ShallowWrapper {
                 3.94
               </p>
             </div>
+            <div
+              className="expansion-dots"
+              onClick={[Function]}
+            >
+              <div />
+              <div />
+              <div />
+            </div>
           </div>,
           false,
         ],
         "className": "currency-card",
-        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -330,6 +398,14 @@ ShallowWrapper {
                 <p>
                   3.94
                 </p>
+              </div>,
+              <div
+                className="expansion-dots"
+                onClick={[Function]}
+              >
+                <div />
+                <div />
+                <div />
               </div>,
             ],
             "className": "card-inside-text",
@@ -455,6 +531,51 @@ ShallowWrapper {
                 "rendered": 3.94,
                 "type": "p",
               },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div />,
+                  <div />,
+                  <div />,
+                ],
+                "className": "expansion-dots",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+              ],
               "type": "div",
             },
           ],
