@@ -21,7 +21,7 @@ const FavoriteCurrencies = () => {
       </div>
       <div className="price-progress">
         <p>
-          +$150.55 (15% <img className="arrow" src={Green} />)
+          +$150.55 (15% <img className="positive" src={Green} />)
         </p>
       </div>
     </div>
