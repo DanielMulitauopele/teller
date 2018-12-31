@@ -10,7 +10,7 @@ import Landing from "./Components/Landing/Landing";
 import RegisterForm from "./Components/RegisterForm/RegisterForm";
 import LoginForm from "./Components/LoginForm/LoginForm";
 import Login from "./Components/LoginForm/LoginForm";
-import { coinNames } from "./Components/Search/CoinNames"
+import { coinNames } from "./Components/Search/CoinNames";
 
 class App extends Component {
   constructor(props) {
@@ -33,11 +33,13 @@ class App extends Component {
 
   addToFavorites = favorite => {
     if (this.state.favorites.length < 5) {
-      this.setState({ favorites: [favorite, ...this.state.favorites] }); 
+      this.setState({ favorites: [favorite, ...this.state.favorites] });
     } else if (this.state.favorites.length >= 5) {
-      this.setState({ favorites: [favorite, ...this.state.favorites.slice(0, 4)]})
+      this.setState({
+        favorites: [favorite, ...this.state.favorites.slice(0, 4)]
+      });
     }
-    console.log(this.state.favorites)
+    console.log(this.state.favorites);
   };
 
   removeFromFavorites = id => {
@@ -52,28 +54,32 @@ class App extends Component {
   };
 
   displaySearch = async currency => {
-    const { abbrevCurrencies, expandedCurrencies } = this.state
+    const { abbrevCurrencies, expandedCurrencies } = this.state;
     if (currency === "") {
       const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
       const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
       this.setState({
         abbrevCurrencies,
         expandedCurrencies
-      })
+      });
     } else {
-      const abbCurr = abbrevCurrencies.find(curr => curr.name.toUpperCase() === currency.toUpperCase())
-      const expCurr = expandedCurrencies.find(curr => curr.name.toUpperCase() === currency.toUpperCase())
+      const abbCurr = abbrevCurrencies.find(
+        curr => curr.name.toUpperCase() === currency.toUpperCase()
+      );
+      const expCurr = expandedCurrencies.find(
+        curr => curr.name.toUpperCase() === currency.toUpperCase()
+      );
       this.setState({
         abbrevCurrencies: [abbCurr],
-        expandedCurrencies: [expCurr],
-      })
+        expandedCurrencies: [expCurr]
+      });
     }
-  }
+  };
 
   setFilter = filterCategory => {
-    const { abbrevCurrencies, expandedCurrencies } = this.state
-    let sortedAbbrev
-    let sortedExp
+    const { abbrevCurrencies, expandedCurrencies } = this.state;
+    let sortedAbbrev;
+    let sortedExp;
     if (filterCategory === "Rank") {
       sortedAbbrev = abbrevCurrencies.sort((a, b) => a.rank - b.rank);
       sortedExp = expandedCurrencies.sort((a, b) => a.rank - b.rank);
@@ -107,7 +113,7 @@ class App extends Component {
           <Switch>
             <Route
               exact
-              path="/a"
+              path="/"
               render={() => {
                 return (
                   <Landing
@@ -123,7 +129,7 @@ class App extends Component {
             )}}
             <Route
               exact
-              path="/"
+              path="/login"
               render={() => {
                 return <Login />;
               }}

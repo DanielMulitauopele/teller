@@ -8,15 +8,6 @@
   z-index: 2;
 }
 
-.bottom-gradient {
-  height: 6rem;
-  width: 100%;
-  bottom: 0;
-  filter: blur(10px);
-  position: fixed;
-  background: linear-gradient(to top, #303859, rgba(48, 56, 89, 0.379));
-}
-
 .sort-box {
   text-align: left;
 }
@@ -25,7 +16,6 @@
   text-align: right;
   position: sticky;
   top: 0rem;
-  padding: 0.5rem 0;
   background-color: var(--TellerBG);
   z-index: 55;
 }
@@ -46,13 +36,18 @@
   border-bottom: 3px solid #fc599f;
 }
 
+.bottom-gradient {
+  height: 6rem;
+  width: 100%;
+  bottom: 0;
+  filter: blur(10px);
+  position: fixed;
+  background: linear-gradient(to top, #303859, rgba(48, 56, 89, 0.379));
+}
+
 @media only screen and (min-width: 700px) {
   .currency-container {
     position: absolute;
     right: 0;
-  }
-
-  .sort-box {
-    margin-bottom: 2rem;
   }
 }

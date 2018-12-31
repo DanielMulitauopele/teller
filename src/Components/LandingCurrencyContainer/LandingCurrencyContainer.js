@@ -18,11 +18,14 @@ class LandingCurrencyContainer extends Component {
   render() {
     const { abbrevCurrencies } = this.props;
     const landingCurrencies = abbrevCurrencies.map((currency, i) => {
-      return <LandingCurrency 
-                key={i} 
-                index={i} 
-                currency={currency}
-                addToFavorites={this.props.addToFavorites} />;
+      return (
+        <LandingCurrency
+          key={i}
+          index={i}
+          currency={currency}
+          addToFavorites={this.props.addToFavorites}
+        />
+      );
     });
 
     return (
@@ -30,34 +33,30 @@ class LandingCurrencyContainer extends Component {
         <div className="currency-container">
           <div className="sort">
             {/* change this 'active' class to something more specific */}
-            <p className="active">
-              <a 
-                className="rank-link"
-                href="#" 
-                name="Rank" 
-                onClick={this.handleClick}>
-                Rank
-              </a>
-            </p>
-            <p>
-              <a 
-                className="price-link"
-                href="#"
-                name="Price"
-                onClick={this.handleClick}>
-                Price
-              </a>
-            </p>
-            <p>
-              <a
-                className="percent-change-link"
-                href="#"
-                name="%Change"
-                onClick={this.handleClick}>
-                %Change
-              </a>
-            </p>
-
+            <a
+              className="rank-link"
+              href="#"
+              name="Rank"
+              onClick={this.handleClick}
+            >
+              Rank
+            </a>
+            <a
+              className="price-link"
+              href="#"
+              name="Price"
+              onClick={this.handleClick}
+            >
+              Price
+            </a>
+            <a
+              className="percent-change-link"
+              href="#"
+              name="%Change"
+              onClick={this.handleClick}
+            >
+              %Change
+            </a>
           </div>
           {landingCurrencies}
           <div className="bottom-gradient" />
