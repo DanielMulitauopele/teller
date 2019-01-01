@@ -1,8 +1,7 @@
 .fave-currency {
   background: var(--MainGradient);
   height: 11rem;
-  width: 25rem;
-  border-radius: 5px;
+  width: 100%;
   position: relative;
   text-align: center;
   color: var(--AlmostWhite);

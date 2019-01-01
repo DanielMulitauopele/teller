@@ -1,11 +1,11 @@
 .currency-card {
-  margin: 0.8rem;
+  margin: 0.5rem;
   border-radius: 15px;
   background: linear-gradient(to right, #424b6e, #272e4e);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.459);
   color: var(--AlmostWhite);
   transition: 0.7s;
-  width: 23rem;
+  width: 90%;
 }
 
 .card-inside-text {
@@ -63,6 +63,7 @@
 
 .fave-this:hover {
   filter: brightness(1.5);
+  fill: red;
 }
 
 .cc-right {
