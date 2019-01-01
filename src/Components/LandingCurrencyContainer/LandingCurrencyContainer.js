@@ -58,7 +58,6 @@ class LandingCurrencyContainer extends Component {
             </a>
           </div>
           {landingCurrencies}
-          {/* <div className="bottom-gradient" /> */}
         </div>
       </div>
     );
