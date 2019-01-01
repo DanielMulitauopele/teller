@@ -10,7 +10,6 @@ import Landing from "./Components/Landing/Landing";
 import RegisterForm from "./Components/RegisterForm/RegisterForm";
 import LoginForm from "./Components/LoginForm/LoginForm";
 import Login from "./Components/LoginForm/LoginForm";
-import { coinNames } from "./Components/Search/CoinNames";
 import NotesContainer from "./Components/NotesContainer/NotesContainer"
 
 class App extends Component {
@@ -18,6 +17,7 @@ class App extends Component {
     super(props);
     this.state = {
       favorites: [{
+        id: 12345,
         name: "No favorites saved", 
         price: "0",
         percent_change: "0"
@@ -75,20 +75,20 @@ class App extends Component {
 
 
   displaySearch = async currency => {
-    const { abbrevCurrencies, expandedCurrencies } = this.state
     let abbCurr
     let expCurr
+    const { abbrevCurrencies, expandedCurrencies } = this.state
     if (currency === "") {
       abbCurr = await this.cleaner.getAbbrevCurrencies();
       expCurr = await this.cleaner.getExpandedCurrencies();
     } else {
       abbCurr = abbrevCurrencies.filter(curr => curr.name.toUpperCase().includes(currency.toUpperCase()) || curr.name.toUpperCase() === currency.toUpperCase())
       expCurr = expandedCurrencies.filter(curr => curr.name.toUpperCase().includes(currency.toUpperCase()) || curr.name.toUpperCase() === currency.toUpperCase())
-      this.setState({
-        abbrevCurrencies: abbCurr,
-        expandedCurrencies: expCurr
-      })
     }
+    this.setState({
+      abbrevCurrencies: abbCurr,
+      expandedCurrencies: expCurr
+    })
   };
 
   setFilter = filterCategory => {
