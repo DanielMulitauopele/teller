@@ -20,6 +20,7 @@ describe('App Component', () => {
     expect(wrapper.state().expandedCurrencies).toEqual([])
     expect(wrapper.state().userEmail).toEqual("")
     expect(wrapper.state().news).toEqual([])
+    expect(wrapper.state().notes).toEqual([])
   })
 
   describe('addToFavorites function', () => {
