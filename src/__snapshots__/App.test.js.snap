@@ -27,13 +27,13 @@ ShallowWrapper {
         <Switch>
           <Route
             exact={true}
-            path="/a"
+            path="/"
             render={[Function]}
           />
           )}}
           <Route
             exact={true}
-            path="/"
+            path="/login"
             render={[Function]}
           />
         </Switch>
@@ -53,13 +53,13 @@ ShallowWrapper {
           <Switch>
             <Route
               exact={true}
-              path="/a"
+              path="/"
               render={[Function]}
             />
             )}}
             <Route
               exact={true}
-              path="/"
+              path="/login"
               render={[Function]}
             />
           </Switch>,
@@ -96,13 +96,13 @@ ShallowWrapper {
             "children": Array [
               <Route
                 exact={true}
-                path="/a"
+                path="/"
                 render={[Function]}
               />,
               ")}}",
               <Route
                 exact={true}
-                path="/"
+                path="/login"
                 render={[Function]}
               />,
             ],
@@ -115,7 +115,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "exact": true,
-                "path": "/a",
+                "path": "/",
                 "render": [Function],
               },
               "ref": null,
@@ -129,7 +129,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "exact": true,
-                "path": "/",
+                "path": "/login",
                 "render": [Function],
               },
               "ref": null,
@@ -160,13 +160,13 @@ ShallowWrapper {
           <Switch>
             <Route
               exact={true}
-              path="/a"
+              path="/"
               render={[Function]}
             />
             )}}
             <Route
               exact={true}
-              path="/"
+              path="/login"
               render={[Function]}
             />
           </Switch>
@@ -186,13 +186,13 @@ ShallowWrapper {
             <Switch>
               <Route
                 exact={true}
-                path="/a"
+                path="/"
                 render={[Function]}
               />
               )}}
               <Route
                 exact={true}
-                path="/"
+                path="/login"
                 render={[Function]}
               />
             </Switch>,
@@ -229,13 +229,13 @@ ShallowWrapper {
               "children": Array [
                 <Route
                   exact={true}
-                  path="/a"
+                  path="/"
                   render={[Function]}
                 />,
                 ")}}",
                 <Route
                   exact={true}
-                  path="/"
+                  path="/login"
                   render={[Function]}
                 />,
               ],
@@ -248,7 +248,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "exact": true,
-                  "path": "/a",
+                  "path": "/",
                   "render": [Function],
                 },
                 "ref": null,
@@ -262,7 +262,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "exact": true,
-                  "path": "/",
+                  "path": "/login",
                   "render": [Function],
                 },
                 "ref": null,

@@ -88,54 +88,74 @@ ShallowWrapper {
           verticalSwiping={true}
         >
           <FavoriteCurrencies
-            market_cap_usd="62506159630.7222615731538755"
-            max_supply="21000000.0000000000000000"
-            name="Bitcoin"
-            percent_change_24_hr="0.8320854828625978"
-            price_usd="3586.1585871814097615"
-            rank="1"
-            supply="17429837.0000000000000000"
-            symbol="BTC"
+            favorite={
+              Object {
+                "market_cap_usd": "62506159630.7222615731538755",
+                "max_supply": "21000000.0000000000000000",
+                "name": "Bitcoin",
+                "percent_change_24_hr": "0.8320854828625978",
+                "price_usd": "3586.1585871814097615",
+                "rank": "1",
+                "supply": "17429837.0000000000000000",
+                "symbol": "BTC",
+              }
+            }
           />
           <FavoriteCurrencies
-            market_cap_usd="13612140064.7471135264064432"
-            max_supply="100000000000.0000000000000000"
-            name="XRP"
-            percent_change_24_hr="3.9433058589033265"
-            price_usd="0.3339389135808078"
-            rank="2"
-            supply="40762365544.0000000000000000"
-            symbol="XRP"
+            favorite={
+              Object {
+                "market_cap_usd": "13612140064.7471135264064432",
+                "max_supply": "100000000000.0000000000000000",
+                "name": "XRP",
+                "percent_change_24_hr": "3.9433058589033265",
+                "price_usd": "0.3339389135808078",
+                "rank": "2",
+                "supply": "40762365544.0000000000000000",
+                "symbol": "XRP",
+              }
+            }
           />
           <FavoriteCurrencies
-            market_cap_usd="9875418262.8035156239002594"
-            max_supply={null}
-            name="Ethereum"
-            percent_change_24_hr="0.2048869680495625"
-            price_usd="95.0699694086438060"
-            rank="3"
-            supply="103875264.9678000000000000"
-            symbol="ETH"
+            favorite={
+              Object {
+                "market_cap_usd": "9875418262.8035156239002594",
+                "max_supply": null,
+                "name": "Ethereum",
+                "percent_change_24_hr": "0.2048869680495625",
+                "price_usd": "95.0699694086438060",
+                "rank": "3",
+                "supply": "103875264.9678000000000000",
+                "symbol": "ETH",
+              }
+            }
           />
           <FavoriteCurrencies
-            market_cap_usd="2299890068.4280425642158096"
-            max_supply={null}
-            name="EOS"
-            percent_change_24_hr="6.8707627494412566"
-            price_usd="2.5378234031415460"
-            rank="4"
-            supply="906245117.6000000000000000"
-            symbol="EOS"
+            favorite={
+              Object {
+                "market_cap_usd": "2299890068.4280425642158096",
+                "max_supply": null,
+                "name": "EOS",
+                "percent_change_24_hr": "6.8707627494412566",
+                "price_usd": "2.5378234031415460",
+                "rank": "4",
+                "supply": "906245117.6000000000000000",
+                "symbol": "EOS",
+              }
+            }
           />
           <FavoriteCurrencies
-            market_cap_usd="2101330537.3210911914502786"
-            max_supply={null}
-            name="Stellar"
-            percent_change_24_hr="-0.5797575094501702"
-            price_usd="0.1096095384438811"
-            rank="5"
-            supply="19171055431.4299000000000000"
-            symbol="XLM"
+            favorite={
+              Object {
+                "market_cap_usd": "2101330537.3210911914502786",
+                "max_supply": null,
+                "name": "Stellar",
+                "percent_change_24_hr": "-0.5797575094501702",
+                "price_usd": "0.1096095384438811",
+                "rank": "5",
+                "supply": "19171055431.4299000000000000",
+                "symbol": "XLM",
+              }
+            }
           />
         </Slider>
       </div>,
@@ -160,54 +180,74 @@ ShallowWrapper {
           verticalSwiping={true}
         >
           <FavoriteCurrencies
-            market_cap_usd="62506159630.7222615731538755"
-            max_supply="21000000.0000000000000000"
-            name="Bitcoin"
-            percent_change_24_hr="0.8320854828625978"
-            price_usd="3586.1585871814097615"
-            rank="1"
-            supply="17429837.0000000000000000"
-            symbol="BTC"
+            favorite={
+              Object {
+                "market_cap_usd": "62506159630.7222615731538755",
+                "max_supply": "21000000.0000000000000000",
+                "name": "Bitcoin",
+                "percent_change_24_hr": "0.8320854828625978",
+                "price_usd": "3586.1585871814097615",
+                "rank": "1",
+                "supply": "17429837.0000000000000000",
+                "symbol": "BTC",
+              }
+            }
           />
           <FavoriteCurrencies
-            market_cap_usd="13612140064.7471135264064432"
-            max_supply="100000000000.0000000000000000"
-            name="XRP"
-            percent_change_24_hr="3.9433058589033265"
-            price_usd="0.3339389135808078"
-            rank="2"
-            supply="40762365544.0000000000000000"
-            symbol="XRP"
+            favorite={
+              Object {
+                "market_cap_usd": "13612140064.7471135264064432",
+                "max_supply": "100000000000.0000000000000000",
+                "name": "XRP",
+                "percent_change_24_hr": "3.9433058589033265",
+                "price_usd": "0.3339389135808078",
+                "rank": "2",
+                "supply": "40762365544.0000000000000000",
+                "symbol": "XRP",
+              }
+            }
           />
           <FavoriteCurrencies
-            market_cap_usd="9875418262.8035156239002594"
-            max_supply={null}
-            name="Ethereum"
-            percent_change_24_hr="0.2048869680495625"
-            price_usd="95.0699694086438060"
-            rank="3"
-            supply="103875264.9678000000000000"
-            symbol="ETH"
+            favorite={
+              Object {
+                "market_cap_usd": "9875418262.8035156239002594",
+                "max_supply": null,
+                "name": "Ethereum",
+                "percent_change_24_hr": "0.2048869680495625",
+                "price_usd": "95.0699694086438060",
+                "rank": "3",
+                "supply": "103875264.9678000000000000",
+                "symbol": "ETH",
+              }
+            }
           />
           <FavoriteCurrencies
-            market_cap_usd="2299890068.4280425642158096"
-            max_supply={null}
-            name="EOS"
-            percent_change_24_hr="6.8707627494412566"
-            price_usd="2.5378234031415460"
-            rank="4"
-            supply="906245117.6000000000000000"
-            symbol="EOS"
+            favorite={
+              Object {
+                "market_cap_usd": "2299890068.4280425642158096",
+                "max_supply": null,
+                "name": "EOS",
+                "percent_change_24_hr": "6.8707627494412566",
+                "price_usd": "2.5378234031415460",
+                "rank": "4",
+                "supply": "906245117.6000000000000000",
+                "symbol": "EOS",
+              }
+            }
           />
           <FavoriteCurrencies
-            market_cap_usd="2101330537.3210911914502786"
-            max_supply={null}
-            name="Stellar"
-            percent_change_24_hr="-0.5797575094501702"
-            price_usd="0.1096095384438811"
-            rank="5"
-            supply="19171055431.4299000000000000"
-            symbol="XLM"
+            favorite={
+              Object {
+                "market_cap_usd": "2101330537.3210911914502786",
+                "max_supply": null,
+                "name": "Stellar",
+                "percent_change_24_hr": "-0.5797575094501702",
+                "price_usd": "0.1096095384438811",
+                "rank": "5",
+                "supply": "19171055431.4299000000000000",
+                "symbol": "XLM",
+              }
+            }
           />
         </Slider>,
         "className": "container",
@@ -222,54 +262,74 @@ ShallowWrapper {
           "buttons": false,
           "children": Array [
             <FavoriteCurrencies
-              market_cap_usd="62506159630.7222615731538755"
-              max_supply="21000000.0000000000000000"
-              name="Bitcoin"
-              percent_change_24_hr="0.8320854828625978"
-              price_usd="3586.1585871814097615"
-              rank="1"
-              supply="17429837.0000000000000000"
-              symbol="BTC"
+              favorite={
+                Object {
+                  "market_cap_usd": "62506159630.7222615731538755",
+                  "max_supply": "21000000.0000000000000000",
+                  "name": "Bitcoin",
+                  "percent_change_24_hr": "0.8320854828625978",
+                  "price_usd": "3586.1585871814097615",
+                  "rank": "1",
+                  "supply": "17429837.0000000000000000",
+                  "symbol": "BTC",
+                }
+              }
             />,
             <FavoriteCurrencies
-              market_cap_usd="13612140064.7471135264064432"
-              max_supply="100000000000.0000000000000000"
-              name="XRP"
-              percent_change_24_hr="3.9433058589033265"
-              price_usd="0.3339389135808078"
-              rank="2"
-              supply="40762365544.0000000000000000"
-              symbol="XRP"
+              favorite={
+                Object {
+                  "market_cap_usd": "13612140064.7471135264064432",
+                  "max_supply": "100000000000.0000000000000000",
+                  "name": "XRP",
+                  "percent_change_24_hr": "3.9433058589033265",
+                  "price_usd": "0.3339389135808078",
+                  "rank": "2",
+                  "supply": "40762365544.0000000000000000",
+                  "symbol": "XRP",
+                }
+              }
             />,
             <FavoriteCurrencies
-              market_cap_usd="9875418262.8035156239002594"
-              max_supply={null}
-              name="Ethereum"
-              percent_change_24_hr="0.2048869680495625"
-              price_usd="95.0699694086438060"
-              rank="3"
-              supply="103875264.9678000000000000"
-              symbol="ETH"
+              favorite={
+                Object {
+                  "market_cap_usd": "9875418262.8035156239002594",
+                  "max_supply": null,
+                  "name": "Ethereum",
+                  "percent_change_24_hr": "0.2048869680495625",
+                  "price_usd": "95.0699694086438060",
+                  "rank": "3",
+                  "supply": "103875264.9678000000000000",
+                  "symbol": "ETH",
+                }
+              }
             />,
             <FavoriteCurrencies
-              market_cap_usd="2299890068.4280425642158096"
-              max_supply={null}
-              name="EOS"
-              percent_change_24_hr="6.8707627494412566"
-              price_usd="2.5378234031415460"
-              rank="4"
-              supply="906245117.6000000000000000"
-              symbol="EOS"
+              favorite={
+                Object {
+                  "market_cap_usd": "2299890068.4280425642158096",
+                  "max_supply": null,
+                  "name": "EOS",
+                  "percent_change_24_hr": "6.8707627494412566",
+                  "price_usd": "2.5378234031415460",
+                  "rank": "4",
+                  "supply": "906245117.6000000000000000",
+                  "symbol": "EOS",
+                }
+              }
             />,
             <FavoriteCurrencies
-              market_cap_usd="2101330537.3210911914502786"
-              max_supply={null}
-              name="Stellar"
-              percent_change_24_hr="-0.5797575094501702"
-              price_usd="0.1096095384438811"
-              rank="5"
-              supply="19171055431.4299000000000000"
-              symbol="XLM"
+              favorite={
+                Object {
+                  "market_cap_usd": "2101330537.3210911914502786",
+                  "max_supply": null,
+                  "name": "Stellar",
+                  "percent_change_24_hr": "-0.5797575094501702",
+                  "price_usd": "0.1096095384438811",
+                  "rank": "5",
+                  "supply": "19171055431.4299000000000000",
+                  "symbol": "XLM",
+                }
+              }
             />,
           ],
           "dots": true,
@@ -286,18 +346,20 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
-              "addFavorite": undefined,
-              "market_cap_usd": "62506159630.7222615731538755",
-              "max_supply": "21000000.0000000000000000",
-              "name": "Bitcoin",
-              "percent_change_24_hr": "0.8320854828625978",
-              "price_usd": "3586.1585871814097615",
-              "rank": "1",
-              "removeFavorite": undefined,
-              "supply": "17429837.0000000000000000",
-              "symbol": "BTC",
+              "addToFavorites": undefined,
+              "favorite": Object {
+                "market_cap_usd": "62506159630.7222615731538755",
+                "max_supply": "21000000.0000000000000000",
+                "name": "Bitcoin",
+                "percent_change_24_hr": "0.8320854828625978",
+                "price_usd": "3586.1585871814097615",
+                "rank": "1",
+                "supply": "17429837.0000000000000000",
+                "symbol": "BTC",
+              },
+              "removeFromFavorites": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -306,18 +368,20 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
-              "addFavorite": undefined,
-              "market_cap_usd": "13612140064.7471135264064432",
-              "max_supply": "100000000000.0000000000000000",
-              "name": "XRP",
-              "percent_change_24_hr": "3.9433058589033265",
-              "price_usd": "0.3339389135808078",
-              "rank": "2",
-              "removeFavorite": undefined,
-              "supply": "40762365544.0000000000000000",
-              "symbol": "XRP",
+              "addToFavorites": undefined,
+              "favorite": Object {
+                "market_cap_usd": "13612140064.7471135264064432",
+                "max_supply": "100000000000.0000000000000000",
+                "name": "XRP",
+                "percent_change_24_hr": "3.9433058589033265",
+                "price_usd": "0.3339389135808078",
+                "rank": "2",
+                "supply": "40762365544.0000000000000000",
+                "symbol": "XRP",
+              },
+              "removeFromFavorites": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -326,18 +390,20 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
-              "addFavorite": undefined,
-              "market_cap_usd": "9875418262.8035156239002594",
-              "max_supply": null,
-              "name": "Ethereum",
-              "percent_change_24_hr": "0.2048869680495625",
-              "price_usd": "95.0699694086438060",
-              "rank": "3",
-              "removeFavorite": undefined,
-              "supply": "103875264.9678000000000000",
-              "symbol": "ETH",
+              "addToFavorites": undefined,
+              "favorite": Object {
+                "market_cap_usd": "9875418262.8035156239002594",
+                "max_supply": null,
+                "name": "Ethereum",
+                "percent_change_24_hr": "0.2048869680495625",
+                "price_usd": "95.0699694086438060",
+                "rank": "3",
+                "supply": "103875264.9678000000000000",
+                "symbol": "ETH",
+              },
+              "removeFromFavorites": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -346,18 +412,20 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
-              "addFavorite": undefined,
-              "market_cap_usd": "2299890068.4280425642158096",
-              "max_supply": null,
-              "name": "EOS",
-              "percent_change_24_hr": "6.8707627494412566",
-              "price_usd": "2.5378234031415460",
-              "rank": "4",
-              "removeFavorite": undefined,
-              "supply": "906245117.6000000000000000",
-              "symbol": "EOS",
+              "addToFavorites": undefined,
+              "favorite": Object {
+                "market_cap_usd": "2299890068.4280425642158096",
+                "max_supply": null,
+                "name": "EOS",
+                "percent_change_24_hr": "6.8707627494412566",
+                "price_usd": "2.5378234031415460",
+                "rank": "4",
+                "supply": "906245117.6000000000000000",
+                "symbol": "EOS",
+              },
+              "removeFromFavorites": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -366,18 +434,20 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
-              "addFavorite": undefined,
-              "market_cap_usd": "2101330537.3210911914502786",
-              "max_supply": null,
-              "name": "Stellar",
-              "percent_change_24_hr": "-0.5797575094501702",
-              "price_usd": "0.1096095384438811",
-              "rank": "5",
-              "removeFavorite": undefined,
-              "supply": "19171055431.4299000000000000",
-              "symbol": "XLM",
+              "addToFavorites": undefined,
+              "favorite": Object {
+                "market_cap_usd": "2101330537.3210911914502786",
+                "max_supply": null,
+                "name": "Stellar",
+                "percent_change_24_hr": "-0.5797575094501702",
+                "price_usd": "0.1096095384438811",
+                "rank": "5",
+                "supply": "19171055431.4299000000000000",
+                "symbol": "XLM",
+              },
+              "removeFromFavorites": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -412,54 +482,74 @@ ShallowWrapper {
             verticalSwiping={true}
           >
             <FavoriteCurrencies
-              market_cap_usd="62506159630.7222615731538755"
-              max_supply="21000000.0000000000000000"
-              name="Bitcoin"
-              percent_change_24_hr="0.8320854828625978"
-              price_usd="3586.1585871814097615"
-              rank="1"
-              supply="17429837.0000000000000000"
-              symbol="BTC"
+              favorite={
+                Object {
+                  "market_cap_usd": "62506159630.7222615731538755",
+                  "max_supply": "21000000.0000000000000000",
+                  "name": "Bitcoin",
+                  "percent_change_24_hr": "0.8320854828625978",
+                  "price_usd": "3586.1585871814097615",
+                  "rank": "1",
+                  "supply": "17429837.0000000000000000",
+                  "symbol": "BTC",
+                }
+              }
             />
             <FavoriteCurrencies
-              market_cap_usd="13612140064.7471135264064432"
-              max_supply="100000000000.0000000000000000"
-              name="XRP"
-              percent_change_24_hr="3.9433058589033265"
-              price_usd="0.3339389135808078"
-              rank="2"
-              supply="40762365544.0000000000000000"
-              symbol="XRP"
+              favorite={
+                Object {
+                  "market_cap_usd": "13612140064.7471135264064432",
+                  "max_supply": "100000000000.0000000000000000",
+                  "name": "XRP",
+                  "percent_change_24_hr": "3.9433058589033265",
+                  "price_usd": "0.3339389135808078",
+                  "rank": "2",
+                  "supply": "40762365544.0000000000000000",
+                  "symbol": "XRP",
+                }
+              }
             />
             <FavoriteCurrencies
-              market_cap_usd="9875418262.8035156239002594"
-              max_supply={null}
-              name="Ethereum"
-              percent_change_24_hr="0.2048869680495625"
-              price_usd="95.0699694086438060"
-              rank="3"
-              supply="103875264.9678000000000000"
-              symbol="ETH"
+              favorite={
+                Object {
+                  "market_cap_usd": "9875418262.8035156239002594",
+                  "max_supply": null,
+                  "name": "Ethereum",
+                  "percent_change_24_hr": "0.2048869680495625",
+                  "price_usd": "95.0699694086438060",
+                  "rank": "3",
+                  "supply": "103875264.9678000000000000",
+                  "symbol": "ETH",
+                }
+              }
             />
             <FavoriteCurrencies
-              market_cap_usd="2299890068.4280425642158096"
-              max_supply={null}
-              name="EOS"
-              percent_change_24_hr="6.8707627494412566"
-              price_usd="2.5378234031415460"
-              rank="4"
-              supply="906245117.6000000000000000"
-              symbol="EOS"
+              favorite={
+                Object {
+                  "market_cap_usd": "2299890068.4280425642158096",
+                  "max_supply": null,
+                  "name": "EOS",
+                  "percent_change_24_hr": "6.8707627494412566",
+                  "price_usd": "2.5378234031415460",
+                  "rank": "4",
+                  "supply": "906245117.6000000000000000",
+                  "symbol": "EOS",
+                }
+              }
             />
             <FavoriteCurrencies
-              market_cap_usd="2101330537.3210911914502786"
-              max_supply={null}
-              name="Stellar"
-              percent_change_24_hr="-0.5797575094501702"
-              price_usd="0.1096095384438811"
-              rank="5"
-              supply="19171055431.4299000000000000"
-              symbol="XLM"
+              favorite={
+                Object {
+                  "market_cap_usd": "2101330537.3210911914502786",
+                  "max_supply": null,
+                  "name": "Stellar",
+                  "percent_change_24_hr": "-0.5797575094501702",
+                  "price_usd": "0.1096095384438811",
+                  "rank": "5",
+                  "supply": "19171055431.4299000000000000",
+                  "symbol": "XLM",
+                }
+              }
             />
           </Slider>
         </div>,
@@ -484,54 +574,74 @@ ShallowWrapper {
             verticalSwiping={true}
           >
             <FavoriteCurrencies
-              market_cap_usd="62506159630.7222615731538755"
-              max_supply="21000000.0000000000000000"
-              name="Bitcoin"
-              percent_change_24_hr="0.8320854828625978"
-              price_usd="3586.1585871814097615"
-              rank="1"
-              supply="17429837.0000000000000000"
-              symbol="BTC"
+              favorite={
+                Object {
+                  "market_cap_usd": "62506159630.7222615731538755",
+                  "max_supply": "21000000.0000000000000000",
+                  "name": "Bitcoin",
+                  "percent_change_24_hr": "0.8320854828625978",
+                  "price_usd": "3586.1585871814097615",
+                  "rank": "1",
+                  "supply": "17429837.0000000000000000",
+                  "symbol": "BTC",
+                }
+              }
             />
             <FavoriteCurrencies
-              market_cap_usd="13612140064.7471135264064432"
-              max_supply="100000000000.0000000000000000"
-              name="XRP"
-              percent_change_24_hr="3.9433058589033265"
-              price_usd="0.3339389135808078"
-              rank="2"
-              supply="40762365544.0000000000000000"
-              symbol="XRP"
+              favorite={
+                Object {
+                  "market_cap_usd": "13612140064.7471135264064432",
+                  "max_supply": "100000000000.0000000000000000",
+                  "name": "XRP",
+                  "percent_change_24_hr": "3.9433058589033265",
+                  "price_usd": "0.3339389135808078",
+                  "rank": "2",
+                  "supply": "40762365544.0000000000000000",
+                  "symbol": "XRP",
+                }
+              }
             />
             <FavoriteCurrencies
-              market_cap_usd="9875418262.8035156239002594"
-              max_supply={null}
-              name="Ethereum"
-              percent_change_24_hr="0.2048869680495625"
-              price_usd="95.0699694086438060"
-              rank="3"
-              supply="103875264.9678000000000000"
-              symbol="ETH"
+              favorite={
+                Object {
+                  "market_cap_usd": "9875418262.8035156239002594",
+                  "max_supply": null,
+                  "name": "Ethereum",
+                  "percent_change_24_hr": "0.2048869680495625",
+                  "price_usd": "95.0699694086438060",
+                  "rank": "3",
+                  "supply": "103875264.9678000000000000",
+                  "symbol": "ETH",
+                }
+              }
             />
             <FavoriteCurrencies
-              market_cap_usd="2299890068.4280425642158096"
-              max_supply={null}
-              name="EOS"
-              percent_change_24_hr="6.8707627494412566"
-              price_usd="2.5378234031415460"
-              rank="4"
-              supply="906245117.6000000000000000"
-              symbol="EOS"
+              favorite={
+                Object {
+                  "market_cap_usd": "2299890068.4280425642158096",
+                  "max_supply": null,
+                  "name": "EOS",
+                  "percent_change_24_hr": "6.8707627494412566",
+                  "price_usd": "2.5378234031415460",
+                  "rank": "4",
+                  "supply": "906245117.6000000000000000",
+                  "symbol": "EOS",
+                }
+              }
             />
             <FavoriteCurrencies
-              market_cap_usd="2101330537.3210911914502786"
-              max_supply={null}
-              name="Stellar"
-              percent_change_24_hr="-0.5797575094501702"
-              price_usd="0.1096095384438811"
-              rank="5"
-              supply="19171055431.4299000000000000"
-              symbol="XLM"
+              favorite={
+                Object {
+                  "market_cap_usd": "2101330537.3210911914502786",
+                  "max_supply": null,
+                  "name": "Stellar",
+                  "percent_change_24_hr": "-0.5797575094501702",
+                  "price_usd": "0.1096095384438811",
+                  "rank": "5",
+                  "supply": "19171055431.4299000000000000",
+                  "symbol": "XLM",
+                }
+              }
             />
           </Slider>,
           "className": "container",
@@ -546,54 +656,74 @@ ShallowWrapper {
             "buttons": false,
             "children": Array [
               <FavoriteCurrencies
-                market_cap_usd="62506159630.7222615731538755"
-                max_supply="21000000.0000000000000000"
-                name="Bitcoin"
-                percent_change_24_hr="0.8320854828625978"
-                price_usd="3586.1585871814097615"
-                rank="1"
-                supply="17429837.0000000000000000"
-                symbol="BTC"
+                favorite={
+                  Object {
+                    "market_cap_usd": "62506159630.7222615731538755",
+                    "max_supply": "21000000.0000000000000000",
+                    "name": "Bitcoin",
+                    "percent_change_24_hr": "0.8320854828625978",
+                    "price_usd": "3586.1585871814097615",
+                    "rank": "1",
+                    "supply": "17429837.0000000000000000",
+                    "symbol": "BTC",
+                  }
+                }
               />,
               <FavoriteCurrencies
-                market_cap_usd="13612140064.7471135264064432"
-                max_supply="100000000000.0000000000000000"
-                name="XRP"
-                percent_change_24_hr="3.9433058589033265"
-                price_usd="0.3339389135808078"
-                rank="2"
-                supply="40762365544.0000000000000000"
-                symbol="XRP"
+                favorite={
+                  Object {
+                    "market_cap_usd": "13612140064.7471135264064432",
+                    "max_supply": "100000000000.0000000000000000",
+                    "name": "XRP",
+                    "percent_change_24_hr": "3.9433058589033265",
+                    "price_usd": "0.3339389135808078",
+                    "rank": "2",
+                    "supply": "40762365544.0000000000000000",
+                    "symbol": "XRP",
+                  }
+                }
               />,
               <FavoriteCurrencies
-                market_cap_usd="9875418262.8035156239002594"
-                max_supply={null}
-                name="Ethereum"
-                percent_change_24_hr="0.2048869680495625"
-                price_usd="95.0699694086438060"
-                rank="3"
-                supply="103875264.9678000000000000"
-                symbol="ETH"
+                favorite={
+                  Object {
+                    "market_cap_usd": "9875418262.8035156239002594",
+                    "max_supply": null,
+                    "name": "Ethereum",
+                    "percent_change_24_hr": "0.2048869680495625",
+                    "price_usd": "95.0699694086438060",
+                    "rank": "3",
+                    "supply": "103875264.9678000000000000",
+                    "symbol": "ETH",
+                  }
+                }
               />,
               <FavoriteCurrencies
-                market_cap_usd="2299890068.4280425642158096"
-                max_supply={null}
-                name="EOS"
-                percent_change_24_hr="6.8707627494412566"
-                price_usd="2.5378234031415460"
-                rank="4"
-                supply="906245117.6000000000000000"
-                symbol="EOS"
+                favorite={
+                  Object {
+                    "market_cap_usd": "2299890068.4280425642158096",
+                    "max_supply": null,
+                    "name": "EOS",
+                    "percent_change_24_hr": "6.8707627494412566",
+                    "price_usd": "2.5378234031415460",
+                    "rank": "4",
+                    "supply": "906245117.6000000000000000",
+                    "symbol": "EOS",
+                  }
+                }
               />,
               <FavoriteCurrencies
-                market_cap_usd="2101330537.3210911914502786"
-                max_supply={null}
-                name="Stellar"
-                percent_change_24_hr="-0.5797575094501702"
-                price_usd="0.1096095384438811"
-                rank="5"
-                supply="19171055431.4299000000000000"
-                symbol="XLM"
+                favorite={
+                  Object {
+                    "market_cap_usd": "2101330537.3210911914502786",
+                    "max_supply": null,
+                    "name": "Stellar",
+                    "percent_change_24_hr": "-0.5797575094501702",
+                    "price_usd": "0.1096095384438811",
+                    "rank": "5",
+                    "supply": "19171055431.4299000000000000",
+                    "symbol": "XLM",
+                  }
+                }
               />,
             ],
             "dots": true,
@@ -610,18 +740,20 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
-                "addFavorite": undefined,
-                "market_cap_usd": "62506159630.7222615731538755",
-                "max_supply": "21000000.0000000000000000",
-                "name": "Bitcoin",
-                "percent_change_24_hr": "0.8320854828625978",
-                "price_usd": "3586.1585871814097615",
-                "rank": "1",
-                "removeFavorite": undefined,
-                "supply": "17429837.0000000000000000",
-                "symbol": "BTC",
+                "addToFavorites": undefined,
+                "favorite": Object {
+                  "market_cap_usd": "62506159630.7222615731538755",
+                  "max_supply": "21000000.0000000000000000",
+                  "name": "Bitcoin",
+                  "percent_change_24_hr": "0.8320854828625978",
+                  "price_usd": "3586.1585871814097615",
+                  "rank": "1",
+                  "supply": "17429837.0000000000000000",
+                  "symbol": "BTC",
+                },
+                "removeFromFavorites": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -630,18 +762,20 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
-                "addFavorite": undefined,
-                "market_cap_usd": "13612140064.7471135264064432",
-                "max_supply": "100000000000.0000000000000000",
-                "name": "XRP",
-                "percent_change_24_hr": "3.9433058589033265",
-                "price_usd": "0.3339389135808078",
-                "rank": "2",
-                "removeFavorite": undefined,
-                "supply": "40762365544.0000000000000000",
-                "symbol": "XRP",
+                "addToFavorites": undefined,
+                "favorite": Object {
+                  "market_cap_usd": "13612140064.7471135264064432",
+                  "max_supply": "100000000000.0000000000000000",
+                  "name": "XRP",
+                  "percent_change_24_hr": "3.9433058589033265",
+                  "price_usd": "0.3339389135808078",
+                  "rank": "2",
+                  "supply": "40762365544.0000000000000000",
+                  "symbol": "XRP",
+                },
+                "removeFromFavorites": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -650,18 +784,20 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
-                "addFavorite": undefined,
-                "market_cap_usd": "9875418262.8035156239002594",
-                "max_supply": null,
-                "name": "Ethereum",
-                "percent_change_24_hr": "0.2048869680495625",
-                "price_usd": "95.0699694086438060",
-                "rank": "3",
-                "removeFavorite": undefined,
-                "supply": "103875264.9678000000000000",
-                "symbol": "ETH",
+                "addToFavorites": undefined,
+                "favorite": Object {
+                  "market_cap_usd": "9875418262.8035156239002594",
+                  "max_supply": null,
+                  "name": "Ethereum",
+                  "percent_change_24_hr": "0.2048869680495625",
+                  "price_usd": "95.0699694086438060",
+                  "rank": "3",
+                  "supply": "103875264.9678000000000000",
+                  "symbol": "ETH",
+                },
+                "removeFromFavorites": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -670,18 +806,20 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
-                "addFavorite": undefined,
-                "market_cap_usd": "2299890068.4280425642158096",
-                "max_supply": null,
-                "name": "EOS",
-                "percent_change_24_hr": "6.8707627494412566",
-                "price_usd": "2.5378234031415460",
-                "rank": "4",
-                "removeFavorite": undefined,
-                "supply": "906245117.6000000000000000",
-                "symbol": "EOS",
+                "addToFavorites": undefined,
+                "favorite": Object {
+                  "market_cap_usd": "2299890068.4280425642158096",
+                  "max_supply": null,
+                  "name": "EOS",
+                  "percent_change_24_hr": "6.8707627494412566",
+                  "price_usd": "2.5378234031415460",
+                  "rank": "4",
+                  "supply": "906245117.6000000000000000",
+                  "symbol": "EOS",
+                },
+                "removeFromFavorites": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -690,18 +828,20 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
-                "addFavorite": undefined,
-                "market_cap_usd": "2101330537.3210911914502786",
-                "max_supply": null,
-                "name": "Stellar",
-                "percent_change_24_hr": "-0.5797575094501702",
-                "price_usd": "0.1096095384438811",
-                "rank": "5",
-                "removeFavorite": undefined,
-                "supply": "19171055431.4299000000000000",
-                "symbol": "XLM",
+                "addToFavorites": undefined,
+                "favorite": Object {
+                  "market_cap_usd": "2101330537.3210911914502786",
+                  "max_supply": null,
+                  "name": "Stellar",
+                  "percent_change_24_hr": "-0.5797575094501702",
+                  "price_usd": "0.1096095384438811",
+                  "rank": "5",
+                  "supply": "19171055431.4299000000000000",
+                  "symbol": "XLM",
+                },
+                "removeFromFavorites": undefined,
               },
               "ref": null,
               "rendered": null,

@@ -48,7 +48,6 @@ class DataCleaner {
     const url = 'https://cors-anywhere.herokuapp.com/https://guarded-reef-25579.herokuapp.com/api/v1/assets'
     const currencyData = await this.fetchData(url)
     const faveCurrency = currencyData.find(currency => currency.name === currencyName)
-    console.log(faveCurrency)
     return {
       name: faveCurrency.name,
       price: Math.round(faveCurrency.price_usd * 100)/100,

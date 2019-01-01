@@ -99,38 +99,30 @@ ShallowWrapper {
         <div
           className="sort"
         >
-          <p
-            className="active"
+          <a
+            className="rank-link"
+            href="#"
+            name="Rank"
+            onClick={[Function]}
           >
-            <a
-              className="rank-link"
-              href="#"
-              name="Rank"
-              onClick={[Function]}
-            >
-              Rank
-            </a>
-          </p>
-          <p>
-            <a
-              className="price-link"
-              href="#"
-              name="Price"
-              onClick={[Function]}
-            >
-              Price
-            </a>
-          </p>
-          <p>
-            <a
-              className="percent-change-link"
-              href="#"
-              name="%Change"
-              onClick={[Function]}
-            >
-              %Change
-            </a>
-          </p>
+            Rank
+          </a>
+          <a
+            className="price-link"
+            href="#"
+            name="Price"
+            onClick={[Function]}
+          >
+            Price
+          </a>
+          <a
+            className="percent-change-link"
+            href="#"
+            name="%Change"
+            onClick={[Function]}
+          >
+            %Change
+          </a>
         </div>
         <LandingCurrency
           currency={
@@ -268,38 +260,30 @@ ShallowWrapper {
           <div
             className="sort"
           >
-            <p
-              className="active"
+            <a
+              className="rank-link"
+              href="#"
+              name="Rank"
+              onClick={[Function]}
             >
-              <a
-                className="rank-link"
-                href="#"
-                name="Rank"
-                onClick={[Function]}
-              >
-                Rank
-              </a>
-            </p>
-            <p>
-              <a
-                className="price-link"
-                href="#"
-                name="Price"
-                onClick={[Function]}
-              >
-                Price
-              </a>
-            </p>
-            <p>
-              <a
-                className="percent-change-link"
-                href="#"
-                name="%Change"
-                onClick={[Function]}
-              >
-                %Change
-              </a>
-            </p>
+              Rank
+            </a>
+            <a
+              className="price-link"
+              href="#"
+              name="Price"
+              onClick={[Function]}
+            >
+              Price
+            </a>
+            <a
+              className="percent-change-link"
+              href="#"
+              name="%Change"
+              onClick={[Function]}
+            >
+              %Change
+            </a>
           </div>,
           Array [
             <LandingCurrency
@@ -437,38 +421,30 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <p
-                className="active"
+              <a
+                className="rank-link"
+                href="#"
+                name="Rank"
+                onClick={[Function]}
               >
-                <a
-                  className="rank-link"
-                  href="#"
-                  name="Rank"
-                  onClick={[Function]}
-                >
-                  Rank
-                </a>
-              </p>,
-              <p>
-                <a
-                  className="price-link"
-                  href="#"
-                  name="Price"
-                  onClick={[Function]}
-                >
-                  Price
-                </a>
-              </p>,
-              <p>
-                <a
-                  className="percent-change-link"
-                  href="#"
-                  name="%Change"
-                  onClick={[Function]}
-                >
-                  %Change
-                </a>
-              </p>,
+                Rank
+              </a>,
+              <a
+                className="price-link"
+                href="#"
+                name="Price"
+                onClick={[Function]}
+              >
+                Price
+              </a>,
+              <a
+                className="percent-change-link"
+                href="#"
+                name="%Change"
+                onClick={[Function]}
+              >
+                %Change
+              </a>,
             ],
             "className": "sort",
           },
@@ -479,97 +455,45 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <a
-                  className="rank-link"
-                  href="#"
-                  name="Rank"
-                  onClick={[Function]}
-                >
-                  Rank
-                </a>,
-                "className": "active",
+                "children": "Rank",
+                "className": "rank-link",
+                "href": "#",
+                "name": "Rank",
+                "onClick": [Function],
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Rank",
-                  "className": "rank-link",
-                  "href": "#",
-                  "name": "Rank",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "Rank",
-                "type": "a",
-              },
-              "type": "p",
+              "rendered": "Rank",
+              "type": "a",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <a
-                  className="price-link"
-                  href="#"
-                  name="Price"
-                  onClick={[Function]}
-                >
-                  Price
-                </a>,
+                "children": "Price",
+                "className": "price-link",
+                "href": "#",
+                "name": "Price",
+                "onClick": [Function],
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Price",
-                  "className": "price-link",
-                  "href": "#",
-                  "name": "Price",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "Price",
-                "type": "a",
-              },
-              "type": "p",
+              "rendered": "Price",
+              "type": "a",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <a
-                  className="percent-change-link"
-                  href="#"
-                  name="%Change"
-                  onClick={[Function]}
-                >
-                  %Change
-                </a>,
+                "children": "%Change",
+                "className": "percent-change-link",
+                "href": "#",
+                "name": "%Change",
+                "onClick": [Function],
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "%Change",
-                  "className": "percent-change-link",
-                  "href": "#",
-                  "name": "%Change",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "%Change",
-                "type": "a",
-              },
-              "type": "p",
+              "rendered": "%Change",
+              "type": "a",
             },
           ],
           "type": "div",
@@ -792,38 +716,30 @@ ShallowWrapper {
           <div
             className="sort"
           >
-            <p
-              className="active"
+            <a
+              className="rank-link"
+              href="#"
+              name="Rank"
+              onClick={[Function]}
             >
-              <a
-                className="rank-link"
-                href="#"
-                name="Rank"
-                onClick={[Function]}
-              >
-                Rank
-              </a>
-            </p>
-            <p>
-              <a
-                className="price-link"
-                href="#"
-                name="Price"
-                onClick={[Function]}
-              >
-                Price
-              </a>
-            </p>
-            <p>
-              <a
-                className="percent-change-link"
-                href="#"
-                name="%Change"
-                onClick={[Function]}
-              >
-                %Change
-              </a>
-            </p>
+              Rank
+            </a>
+            <a
+              className="price-link"
+              href="#"
+              name="Price"
+              onClick={[Function]}
+            >
+              Price
+            </a>
+            <a
+              className="percent-change-link"
+              href="#"
+              name="%Change"
+              onClick={[Function]}
+            >
+              %Change
+            </a>
           </div>
           <LandingCurrency
             currency={
@@ -961,38 +877,30 @@ ShallowWrapper {
             <div
               className="sort"
             >
-              <p
-                className="active"
+              <a
+                className="rank-link"
+                href="#"
+                name="Rank"
+                onClick={[Function]}
               >
-                <a
-                  className="rank-link"
-                  href="#"
-                  name="Rank"
-                  onClick={[Function]}
-                >
-                  Rank
-                </a>
-              </p>
-              <p>
-                <a
-                  className="price-link"
-                  href="#"
-                  name="Price"
-                  onClick={[Function]}
-                >
-                  Price
-                </a>
-              </p>
-              <p>
-                <a
-                  className="percent-change-link"
-                  href="#"
-                  name="%Change"
-                  onClick={[Function]}
-                >
-                  %Change
-                </a>
-              </p>
+                Rank
+              </a>
+              <a
+                className="price-link"
+                href="#"
+                name="Price"
+                onClick={[Function]}
+              >
+                Price
+              </a>
+              <a
+                className="percent-change-link"
+                href="#"
+                name="%Change"
+                onClick={[Function]}
+              >
+                %Change
+              </a>
             </div>,
             Array [
               <LandingCurrency
@@ -1130,38 +1038,30 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <p
-                  className="active"
+                <a
+                  className="rank-link"
+                  href="#"
+                  name="Rank"
+                  onClick={[Function]}
                 >
-                  <a
-                    className="rank-link"
-                    href="#"
-                    name="Rank"
-                    onClick={[Function]}
-                  >
-                    Rank
-                  </a>
-                </p>,
-                <p>
-                  <a
-                    className="price-link"
-                    href="#"
-                    name="Price"
-                    onClick={[Function]}
-                  >
-                    Price
-                  </a>
-                </p>,
-                <p>
-                  <a
-                    className="percent-change-link"
-                    href="#"
-                    name="%Change"
-                    onClick={[Function]}
-                  >
-                    %Change
-                  </a>
-                </p>,
+                  Rank
+                </a>,
+                <a
+                  className="price-link"
+                  href="#"
+                  name="Price"
+                  onClick={[Function]}
+                >
+                  Price
+                </a>,
+                <a
+                  className="percent-change-link"
+                  href="#"
+                  name="%Change"
+                  onClick={[Function]}
+                >
+                  %Change
+                </a>,
               ],
               "className": "sort",
             },
@@ -1172,97 +1072,45 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <a
-                    className="rank-link"
-                    href="#"
-                    name="Rank"
-                    onClick={[Function]}
-                  >
-                    Rank
-                  </a>,
-                  "className": "active",
+                  "children": "Rank",
+                  "className": "rank-link",
+                  "href": "#",
+                  "name": "Rank",
+                  "onClick": [Function],
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Rank",
-                    "className": "rank-link",
-                    "href": "#",
-                    "name": "Rank",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "Rank",
-                  "type": "a",
-                },
-                "type": "p",
+                "rendered": "Rank",
+                "type": "a",
               },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <a
-                    className="price-link"
-                    href="#"
-                    name="Price"
-                    onClick={[Function]}
-                  >
-                    Price
-                  </a>,
+                  "children": "Price",
+                  "className": "price-link",
+                  "href": "#",
+                  "name": "Price",
+                  "onClick": [Function],
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Price",
-                    "className": "price-link",
-                    "href": "#",
-                    "name": "Price",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "Price",
-                  "type": "a",
-                },
-                "type": "p",
+                "rendered": "Price",
+                "type": "a",
               },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <a
-                    className="percent-change-link"
-                    href="#"
-                    name="%Change"
-                    onClick={[Function]}
-                  >
-                    %Change
-                  </a>,
+                  "children": "%Change",
+                  "className": "percent-change-link",
+                  "href": "#",
+                  "name": "%Change",
+                  "onClick": [Function],
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "%Change",
-                    "className": "percent-change-link",
-                    "href": "#",
-                    "name": "%Change",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "%Change",
-                  "type": "a",
-                },
-                "type": "p",
+                "rendered": "%Change",
+                "type": "a",
               },
             ],
             "type": "div",

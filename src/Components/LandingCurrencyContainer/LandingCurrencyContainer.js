@@ -3,7 +3,12 @@ import "./LandingCurrencyContainer.css";
 import LandingCurrency from "../LandingCurrency/LandingCurrency";
 
 class LandingCurrencyContainer extends Component {
-  constructor(props) {
+  constructor({
+      props,
+      abbrevCurrencies,
+      setFilter,
+      addToFavorites
+    }) {
     super(props);
     this.state = {
       active: false
@@ -16,14 +21,14 @@ class LandingCurrencyContainer extends Component {
   };
 
   render() {
-    const { abbrevCurrencies } = this.props;
+    const { abbrevCurrencies, addToFavorites } = this.props;
     const landingCurrencies = abbrevCurrencies.map((currency, i) => {
       return (
-        <LandingCurrency
-          key={i}
-          index={i}
+        <LandingCurrency 
+          key={i} 
+          index={i} 
           currency={currency}
-          addToFavorites={this.props.addToFavorites}
+          addToFavorites={addToFavorites} 
         />
       );
     });

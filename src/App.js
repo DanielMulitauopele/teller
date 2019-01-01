@@ -16,7 +16,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      favorites: [1, 2, 3, 4, 5],
+      favorites: [{
+        name: "No favorites saved", 
+        price: "0",
+        percent_change: "0"
+      }],
       abbrevCurrencies: [],
       expandedCurrencies: [],
       userEmail: "",
@@ -54,25 +58,19 @@ class App extends Component {
   };
 
   displaySearch = async currency => {
-    const { abbrevCurrencies, expandedCurrencies } = this.state;
+    const { abbrevCurrencies, expandedCurrencies } = this.state
+    let abbCurr
+    let expCurr
     if (currency === "") {
-      const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
-      const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
-      this.setState({
-        abbrevCurrencies,
-        expandedCurrencies
-      });
+      abbCurr = await this.cleaner.getAbbrevCurrencies();
+      expCurr = await this.cleaner.getExpandedCurrencies();
     } else {
-      const abbCurr = abbrevCurrencies.find(
-        curr => curr.name.toUpperCase() === currency.toUpperCase()
-      );
-      const expCurr = expandedCurrencies.find(
-        curr => curr.name.toUpperCase() === currency.toUpperCase()
-      );
+      abbCurr = abbrevCurrencies.filter(curr => curr.name.toUpperCase().includes(currency.toUpperCase()) || curr.name.toUpperCase() === currency.toUpperCase())
+      expCurr = expandedCurrencies.filter(curr => curr.name.toUpperCase().includes(currency.toUpperCase()) || curr.name.toUpperCase() === currency.toUpperCase())
       this.setState({
-        abbrevCurrencies: [abbCurr],
-        expandedCurrencies: [expCurr]
-      });
+        abbrevCurrencies: abbCurr,
+        expandedCurrencies: expCurr
+      })
     }
   };
 
@@ -87,12 +85,8 @@ class App extends Component {
       sortedAbbrev = abbrevCurrencies.sort((a, b) => a.price - b.price);
       sortedExp = expandedCurrencies.sort((a, b) => a.price - b.price);
     } else if (filterCategory === "%Change") {
-      sortedAbbrev = abbrevCurrencies.sort(
-        (a, b) => a.percent_change - b.percent_change
-      );
-      sortedExp = expandedCurrencies.sort(
-        (a, b) => a.percent_change - b.percent_change
-      );
+      sortedAbbrev = abbrevCurrencies.sort((a, b) => a.percent_change - b.percent_change);
+      sortedExp = expandedCurrencies.sort((a, b) => a.percent_change - b.percent_change);
     }
     this.setState({
       abbrevCurrencies: sortedAbbrev,
