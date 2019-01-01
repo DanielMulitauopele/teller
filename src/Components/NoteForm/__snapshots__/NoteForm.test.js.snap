@@ -19,11 +19,13 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <input
+          className="title-input"
           name="title"
           onChange={[Function]}
           value=""
         />,
         <input
+          className="body-input"
           name="body"
           onChange={[Function]}
           value=""
@@ -39,6 +41,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "title-input",
           "name": "title",
           "onChange": [Function],
           "value": "",
@@ -52,6 +55,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "body-input",
           "name": "body",
           "onChange": [Function],
           "value": "",
@@ -80,11 +84,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <input
+            className="title-input"
             name="title"
             onChange={[Function]}
             value=""
           />,
           <input
+            className="body-input"
             name="body"
             onChange={[Function]}
             value=""
@@ -100,6 +106,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "title-input",
             "name": "title",
             "onChange": [Function],
             "value": "",
@@ -113,6 +120,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "body-input",
             "name": "body",
             "onChange": [Function],
             "value": "",
