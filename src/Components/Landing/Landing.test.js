@@ -22,4 +22,16 @@ describe('Landing Component', () => {
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should start with the correct default state', () => {
+    expect(wrapper.state().active).toEqual(false)
+    expect(wrapper.state().news).toEqual([])
+  })
+
+  describe('toggleActive function', () => {
+    it('should toggle the active property in state', () => {
+      wrapper.instance().toggleActive()
+      expect(wrapper.state().active).toEqual(true)
+    })
+  })
 })
