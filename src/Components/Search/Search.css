@@ -32,7 +32,7 @@
   position: fixed;
   right: 35px;
   transition: 0.1s;
-  width: 23rem;
+  /* width: 23rem; */
   z-index: 50;
 }
 
@@ -124,7 +124,7 @@
     width: 56px;
   }
   100% {
-    width: 20.7rem;
+    width: 21.7rem;
   }
 }
 
