@@ -3,12 +3,7 @@ import "./LandingCurrencyContainer.css";
 import LandingCurrency from "../LandingCurrency/LandingCurrency";
 
 class LandingCurrencyContainer extends Component {
-  constructor({
-      props,
-      abbrevCurrencies,
-      setFilter,
-      addToFavorites
-    }) {
+  constructor({ props, abbrevCurrencies, setFilter, addToFavorites }) {
     super(props);
     this.state = {
       active: false
@@ -24,11 +19,11 @@ class LandingCurrencyContainer extends Component {
     const { abbrevCurrencies, addToFavorites } = this.props;
     const landingCurrencies = abbrevCurrencies.map((currency, i) => {
       return (
-        <LandingCurrency 
-          key={i} 
-          index={i} 
+        <LandingCurrency
+          key={i}
+          index={i}
           currency={currency}
-          addToFavorites={addToFavorites} 
+          addToFavorites={addToFavorites}
         />
       );
     });
@@ -63,7 +58,7 @@ class LandingCurrencyContainer extends Component {
             </a>
           </div>
           {landingCurrencies}
-          <div className="bottom-gradient" />
+          {/* <div className="bottom-gradient" /> */}
         </div>
       </div>
     );
