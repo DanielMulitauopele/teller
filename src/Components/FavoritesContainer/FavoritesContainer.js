@@ -8,7 +8,14 @@ import "./FavoritesContainer.css";
 import TellerAI from "../tellerAI/tellerAI";
 
 class FavoritesContainer extends Component {
-  constructor(props) {
+  constructor({
+      props,
+      favorites,
+      addToFavorites,
+      removeFromFavorites,
+      abbrevCurrencies,
+      setFilter
+    }) {
     super(props);
     this.state = {
       expanded: false
@@ -16,14 +23,17 @@ class FavoritesContainer extends Component {
   }
 
   render() {
-    const { favorites } = this.props;
+    const { 
+      favorites, 
+      removeFromFavorites, 
+      addToFavorites } = this.props;
     const favoriteCurrencies = favorites.map(favorite => {
       return (
         <FavoriteCurrencies
           key={favorite.id}
-          {...favorite}
-          removeFavorite={this.props.removeFromFavorites}
-          addFavorite={this.props.addToFavorites}
+          favorite={favorite}
+          removeFromFavorites={removeFromFavorites}
+          addToFavorites={addToFavorites}
         />
       );
     });

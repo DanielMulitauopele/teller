@@ -21,13 +21,14 @@
 
 # Check the correct boxes
 
-- [_]This broke nothing
+- [_] This broke nothing
 - [_] This broke some stuff
 - [_] This broke everything
 
 # Testing Changes
 
 - [_] No Tests have been changed
+- [_] Tests have been added
 - [_] Some Tests have been changed
 - [_] All of the Tests have been changed(Please describe what in the world happened)
 

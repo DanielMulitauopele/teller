@@ -6,7 +6,7 @@ import Trie from './autocomplete'
 import { coinNames } from './CoinNames'
 
 class Search extends Component {
-  constructor(props) {
+  constructor({ props, displaySearch }) {
     super(props);
     this.state = {
       active: false,
