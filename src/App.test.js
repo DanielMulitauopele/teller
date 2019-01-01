@@ -4,6 +4,8 @@ import App from './App';
 import { shallow } from 'enzyme'
 import { mockFavorites } from './Utils/MockData/mockFavorites'
 import { mockNotes } from './Utils/MockData/mockNotes'
+import { mockAbbrevCurrencies } from './Utils/MockData/mockAbbrevCurrencies'
+import { mockExpandedCurrencies } from './Utils/MockData/mockExpandedCurrencies'
 
 let wrapper
 
@@ -23,6 +25,12 @@ describe('App Component', () => {
     expect(wrapper.state().userEmail).toEqual("")
     expect(wrapper.state().news).toEqual([])
     expect(wrapper.state().notes).toEqual([])
+  })
+
+  describe('componentDidMount function', () => {
+    xit('should set state with currencies', async () => {
+
+    })
   })
 
   describe('addToFavorites function', () => {
@@ -80,10 +88,32 @@ describe('App Component', () => {
   })
 
   describe('displaySearch function', () => {
+    xit('should set state with filtered coins that match the argument', () => {
 
+    })
+    
+    xit('should call getAbbrevCurrencies if search field is empty', () => {
+      wrapper.instance().displaySearch("")
+
+
+    })
+
+    xit('should call getExpandedCurrencies if search field is empty', () => {
+
+    })
   })
 
   describe('setFilter function', () => {
+    xit('should sort the currencies by rank if category is rank', () => {
 
+    })
+
+    xit('should sort the currencies by price if category is price', () => {
+
+    })
+
+    xit('should sort the currencies by %change if category is %change', () => {
+
+    })
   })
 })

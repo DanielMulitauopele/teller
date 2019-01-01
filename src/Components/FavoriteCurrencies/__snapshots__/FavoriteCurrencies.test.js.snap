@@ -45,10 +45,6 @@ ShallowWrapper {
         >
           $
           0
-          .
-          <span>
-            00
-          </span>
         </p>,
         <div
           className="bubbles bubbles-right"
@@ -143,10 +139,6 @@ ShallowWrapper {
           "children": Array [
             "$",
             0,
-            ".",
-            <span>
-              00
-            </span>,
           ],
           "className": "fave-price",
         },
@@ -154,18 +146,6 @@ ShallowWrapper {
         "rendered": Array [
           "$",
           0,
-          ".",
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "00",
-            },
-            "ref": null,
-            "rendered": "00",
-            "type": "span",
-          },
         ],
         "type": "p",
       },
@@ -306,10 +286,6 @@ ShallowWrapper {
           >
             $
             0
-            .
-            <span>
-              00
-            </span>
           </p>,
           <div
             className="bubbles bubbles-right"
@@ -404,10 +380,6 @@ ShallowWrapper {
             "children": Array [
               "$",
               0,
-              ".",
-              <span>
-                00
-              </span>,
             ],
             "className": "fave-price",
           },
@@ -415,18 +387,6 @@ ShallowWrapper {
           "rendered": Array [
             "$",
             0,
-            ".",
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "00",
-              },
-              "ref": null,
-              "rendered": "00",
-              "type": "span",
-            },
           ],
           "type": "p",
         },
