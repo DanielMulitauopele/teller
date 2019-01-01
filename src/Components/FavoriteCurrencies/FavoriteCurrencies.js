@@ -24,7 +24,7 @@ class FavoriteCurrencies extends Component {
         </div>
         <p className="fave-name">{favorite.name}</p>
         <p className="fave-price">$
-          {favorite.price}.<span>00</span>
+          {favorite.price}
         </p>
         <div className="bubbles bubbles-right">
           <div />
