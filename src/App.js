@@ -9,22 +9,25 @@ import { BrowserRouter, Route, withRouter, Switch } from "react-router-dom";
 import Landing from "./Components/Landing/Landing";
 import RegisterForm from "./Components/RegisterForm/RegisterForm";
 import LoginForm from "./Components/LoginForm/LoginForm";
-import Login from "./Components/LoginForm/LoginForm";
+import LoginContainer from "./Components/LoginContainer/LoginContainer";
 import { coinNames } from "./Components/Search/CoinNames";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      favorites: [{
-        name: "No favorites saved", 
-        price: "0",
-        percent_change: "0"
-      }],
+      favorites: [
+        {
+          name: "No favorites saved",
+          price: "0",
+          percent_change: "0"
+        }
+      ],
       abbrevCurrencies: [],
       expandedCurrencies: [],
       userEmail: "",
-      news: []
+      news: [],
+      loggedIn: false
     };
     this.cleaner = new DataCleaner();
   }
@@ -55,22 +58,31 @@ class App extends Component {
 
   logInUser = userEmail => {
     this.setState({ userEmail });
+    this.setState({ loggedIn: true });
   };
 
   displaySearch = async currency => {
-    const { abbrevCurrencies, expandedCurrencies } = this.state
-    let abbCurr
-    let expCurr
+    const { abbrevCurrencies, expandedCurrencies } = this.state;
+    let abbCurr;
+    let expCurr;
     if (currency === "") {
       abbCurr = await this.cleaner.getAbbrevCurrencies();
       expCurr = await this.cleaner.getExpandedCurrencies();
     } else {
-      abbCurr = abbrevCurrencies.filter(curr => curr.name.toUpperCase().includes(currency.toUpperCase()) || curr.name.toUpperCase() === currency.toUpperCase())
-      expCurr = expandedCurrencies.filter(curr => curr.name.toUpperCase().includes(currency.toUpperCase()) || curr.name.toUpperCase() === currency.toUpperCase())
+      abbCurr = abbrevCurrencies.filter(
+        curr =>
+          curr.name.toUpperCase().includes(currency.toUpperCase()) ||
+          curr.name.toUpperCase() === currency.toUpperCase()
+      );
+      expCurr = expandedCurrencies.filter(
+        curr =>
+          curr.name.toUpperCase().includes(currency.toUpperCase()) ||
+          curr.name.toUpperCase() === currency.toUpperCase()
+      );
       this.setState({
         abbrevCurrencies: abbCurr,
         expandedCurrencies: expCurr
-      })
+      });
     }
   };
 
@@ -85,8 +97,12 @@ class App extends Component {
       sortedAbbrev = abbrevCurrencies.sort((a, b) => a.price - b.price);
       sortedExp = expandedCurrencies.sort((a, b) => a.price - b.price);
     } else if (filterCategory === "%Change") {
-      sortedAbbrev = abbrevCurrencies.sort((a, b) => a.percent_change - b.percent_change);
-      sortedExp = expandedCurrencies.sort((a, b) => a.percent_change - b.percent_change);
+      sortedAbbrev = abbrevCurrencies.sort(
+        (a, b) => a.percent_change - b.percent_change
+      );
+      sortedExp = expandedCurrencies.sort(
+        (a, b) => a.percent_change - b.percent_change
+      );
     }
     this.setState({
       abbrevCurrencies: sortedAbbrev,
@@ -99,11 +115,8 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Hotdog />
-          {/* //         <LoginForm logInUser={this.logInUser}/>
-  //         <RegisterForm />
-  //         <LandingCurrencyContainer abbrevCurrencies={abbrevCurrencies} /> */}
-          <Search displaySearch={this.displaySearch} />
+          {this.state.loggedIn && <Hotdog />}
+          {this.state.loggedIn && <Search displaySearch={this.displaySearch} />}
           <Switch>
             <Route
               exact
@@ -125,7 +138,7 @@ class App extends Component {
               exact
               path="/login"
               render={() => {
-                return <Login />;
+                return <LoginContainer loggedIn={this.state.loggedIn} />;
               }}
             />
           </Switch>

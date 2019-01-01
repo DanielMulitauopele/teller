@@ -1,29 +1,30 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import "./LoginForm.css";
 
 export class LoginForm extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      email: '',
-      password: ''
-    }
+      email: "",
+      password: ""
+    };
   }
 
-  handleSubmit = async (e) => {
-    e.preventDefault()
+  handleSubmit = async e => {
+    e.preventDefault();
     //check password against password stored in db
     //if password doesn't match, display error
     //if password matches, call logInUser
-    this.props.logInUser(this.state.email)
-  }
+    this.props.logInUser(this.state.email);
+  };
 
-  handleChange = async (e) => {
-    const { name, value } = e.target
-    this.setState({ [name]: value })
-  }
+  handleChange = async e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
 
   render() {
-    const { email, password } = this.state
+    const { email, password } = this.state;
     return (
       <div className="form-wrapper">
         <form className="login-form" onSubmit={this.handleSubmit}>
@@ -32,7 +33,7 @@ export class LoginForm extends Component {
             name="email"
             value={email}
             onChange={this.handleChange}
-            placeholder="Enter Email Address"
+            placeholder="Email"
           />
           <input
             className="form-input user-password"
@@ -40,13 +41,13 @@ export class LoginForm extends Component {
             name="password"
             value={password}
             onChange={this.handleChange}
-            placeholder="Enter Password"
+            placeholder="Password"
           />
           <button className="login-button">Login</button>
         </form>
       </div>
-    )
+    );
   }
 }
 
-export default LoginForm
+export default LoginForm;
