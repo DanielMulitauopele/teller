@@ -12,6 +12,7 @@
   letter-spacing: 0.9px;
   text-decoration: none;
   text-transform: uppercase;
+  display: block;
 }
 
 .login-container {
@@ -29,6 +30,7 @@
   width: 15rem;
   transition: 0.5s;
   position: relative;
+  cursor: pointer;
 }
 
 .login-container button:hover {
@@ -42,7 +44,7 @@
 }
 
 .button-box {
-  width: 18rem;
+  width: 25rem;
   position: absolute;
   margin-left: auto;
   margin-right: auto;

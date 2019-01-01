@@ -22,12 +22,14 @@ class LoginContainer extends Component {
       <div className="login-container">
         <h1 className="app-title"> teller. </h1>
         <p>Your Personal Crypto Analyst</p>
-        <div className="button-box">
-          <button className="login"> Log in </button>
-          <button className="register"> Register </button>
-          <NavLink to="/" className="skip" onClick={this.props.loggedIn}>
-            Skip
-          </NavLink>
+        <div className="form-box">
+          <div className="button-box">
+            <button className="login"> Log in </button>
+            <button className="register"> Register </button>
+            <NavLink to="/" className="skip" onClick={this.props.loggedIn}>
+              Skip
+            </NavLink>
+          </div>
         </div>
       </div>
     );

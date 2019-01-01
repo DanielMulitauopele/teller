@@ -1,7 +1,6 @@
 .currency-container {
   margin-top: 10rem;
-  width: ;
-  height: 80%;
+  width: 95%;
   overflow: scroll;
   position: absolute;
   right: 0;
@@ -49,4 +48,10 @@
   filter: blur(10px);
   position: fixed;
   background: linear-gradient(to top, #303859, rgba(48, 56, 89, 0.379));
+}
+
+@media only screen and (min-width: 700px) {
+  .currency-container {
+    width: 25rem;
+  }
 }
