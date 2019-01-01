@@ -5,10 +5,13 @@
   margin-top: 10rem;
 }
 
-.login-container p {
+.login-container p,
+.login-container a {
   color: rgba(255, 255, 255, 0.842);
-  font-size: 1.5rem;
+  font-size: 1rem;
   letter-spacing: 0.9px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .login-container {
@@ -46,4 +49,16 @@
   left: 0;
   right: 0;
   bottom: 5rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .login-container {
+    width: 30rem;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    height: 95%;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #3d476d;
+  }
 }

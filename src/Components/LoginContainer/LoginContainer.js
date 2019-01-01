@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./LoginContainer.css";
 import LoginForm from "../LoginForm/LoginForm";
+import { NavLink } from "react-router-dom";
 
 class LoginContainer extends Component {
   constructor({ props, loggedIn }) {
@@ -17,7 +18,6 @@ class LoginContainer extends Component {
   };
 
   render() {
-    // const loggedIn = this.props;
     return (
       <div className="login-container">
         <h1 className="app-title"> teller. </h1>
@@ -25,9 +25,9 @@ class LoginContainer extends Component {
         <div className="button-box">
           <button className="login"> Log in </button>
           <button className="register"> Register </button>
-          <p className="skip" onClick={this.props.loggedIn}>
+          <NavLink to="/" className="skip" onClick={this.props.loggedIn}>
             Skip
-          </p>
+          </NavLink>
         </div>
       </div>
     );
