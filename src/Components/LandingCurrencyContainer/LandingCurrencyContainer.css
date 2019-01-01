@@ -1,11 +1,12 @@
 .currency-container {
   margin-top: 10rem;
   width: 25rem;
-  height: 36rem;
+  height: 33rem;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   bottom: 0;
   z-index: 2;
+  border-bottom: 1px soliod red;
 }
 
 .sort-box {
@@ -30,6 +31,7 @@
   display: inline-block;
   border-bottom: 3px solid transparent;
   transition: 0.3s;
+  margin: 1rem;
 }
 
 .sort-box a:hover {
@@ -49,5 +51,6 @@
   .currency-container {
     position: absolute;
     right: 0;
+    top: 1rem;
   }
 }
