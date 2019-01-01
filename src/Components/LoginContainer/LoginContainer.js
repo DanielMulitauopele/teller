@@ -3,8 +3,8 @@ import "./LoginContainer.css";
 import LoginForm from "../LoginForm/LoginForm";
 
 class LoginContainer extends Component {
-  constructor() {
-    super();
+  constructor({ props, loggedIn }) {
+    super(props);
     this.state = {
       expanded: false
     };
@@ -17,6 +17,7 @@ class LoginContainer extends Component {
   };
 
   render() {
+    // const loggedIn = this.props;
     return (
       <div className="login-container">
         <h1 className="app-title"> teller. </h1>

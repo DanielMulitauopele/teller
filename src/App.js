@@ -61,6 +61,12 @@ class App extends Component {
     this.setState({ loggedIn: true });
   };
 
+  setLoginState = () => {
+    this.setState({
+      loggedIn: !this.state.loggedIn
+    });
+  };
+
   displaySearch = async currency => {
     const { abbrevCurrencies, expandedCurrencies } = this.state;
     let abbCurr;
