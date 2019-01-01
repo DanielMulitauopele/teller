@@ -144,7 +144,7 @@ class App extends Component {
               exact
               path="/login"
               render={() => {
-                return <LoginContainer loggedIn={this.state.loggedIn} />;
+                return <LoginContainer loggedIn={this.setLoginState} />;
               }}
             />
           </Switch>
