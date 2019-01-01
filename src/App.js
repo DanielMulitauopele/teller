@@ -39,11 +39,12 @@ class App extends Component {
 
   addToFavorites = favorite => {
     const { favorites } = this.state
+    const newFave = {id: Date.now(), ...favorite}
     if (favorites.length < 5) {
-      this.setState({ favorites: [favorite, ...favorites] });
+      this.setState({ favorites: [newFave, ...favorites] });
     } else if (favorites.length >= 5) {
       this.setState({
-        favorites: [favorite, ...favorites.slice(0, 4)]
+        favorites: [newFave, ...favorites.slice(0, 4)]
       });
     }
   };
