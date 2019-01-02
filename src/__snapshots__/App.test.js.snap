@@ -20,20 +20,31 @@ ShallowWrapper {
       "children": <div
         className="App"
       >
-        <Hotdog />
-        <Search
-          displaySearch={[Function]}
-        />
         <Switch>
           <Route
             exact={true}
-            path="/"
+            path="/home"
             render={[Function]}
           />
           )}}
           <Route
             exact={true}
-            path="/login"
+            path="/"
+            render={[Function]}
+          />
+          <Route
+            exact={true}
+            path="/onboarding"
+            render={[Function]}
+          />
+          <Route
+            exact={true}
+            path="/notes"
+            render={[Function]}
+          />
+          <Route
+            exact={true}
+            path="/about"
             render={[Function]}
           />
           <Route
@@ -51,20 +62,34 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Hotdog />,
-          <Search
-            displaySearch={[Function]}
-          />,
+          false,
+          false,
+          false,
           <Switch>
             <Route
               exact={true}
-              path="/"
+              path="/home"
               render={[Function]}
             />
             )}}
             <Route
               exact={true}
-              path="/login"
+              path="/"
+              render={[Function]}
+            />
+            <Route
+              exact={true}
+              path="/onboarding"
+              render={[Function]}
+            />
+            <Route
+              exact={true}
+              path="/notes"
+              render={[Function]}
+            />
+            <Route
+              exact={true}
+              path="/about"
               render={[Function]}
             />
             <Route
@@ -78,26 +103,9 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "displaySearch": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+        false,
+        false,
+        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -106,13 +114,28 @@ ShallowWrapper {
             "children": Array [
               <Route
                 exact={true}
-                path="/"
+                path="/home"
                 render={[Function]}
               />,
               ")}}",
               <Route
                 exact={true}
-                path="/login"
+                path="/"
+                render={[Function]}
+              />,
+              <Route
+                exact={true}
+                path="/onboarding"
+                render={[Function]}
+              />,
+              <Route
+                exact={true}
+                path="/notes"
+                render={[Function]}
+              />,
+              <Route
+                exact={true}
+                path="/about"
                 render={[Function]}
               />,
               <Route
@@ -130,7 +153,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "exact": true,
-                "path": "/",
+                "path": "/home",
                 "render": [Function],
               },
               "ref": null,
@@ -144,7 +167,46 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "exact": true,
-                "path": "/login",
+                "path": "/",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "exact": true,
+                "path": "/onboarding",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "exact": true,
+                "path": "/notes",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "exact": true,
+                "path": "/about",
                 "render": [Function],
               },
               "ref": null,
@@ -181,20 +243,31 @@ ShallowWrapper {
         "children": <div
           className="App"
         >
-          <Hotdog />
-          <Search
-            displaySearch={[Function]}
-          />
           <Switch>
             <Route
               exact={true}
-              path="/"
+              path="/home"
               render={[Function]}
             />
             )}}
             <Route
               exact={true}
-              path="/login"
+              path="/"
+              render={[Function]}
+            />
+            <Route
+              exact={true}
+              path="/onboarding"
+              render={[Function]}
+            />
+            <Route
+              exact={true}
+              path="/notes"
+              render={[Function]}
+            />
+            <Route
+              exact={true}
+              path="/about"
               render={[Function]}
             />
             <Route
@@ -212,20 +285,34 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <Hotdog />,
-            <Search
-              displaySearch={[Function]}
-            />,
+            false,
+            false,
+            false,
             <Switch>
               <Route
                 exact={true}
-                path="/"
+                path="/home"
                 render={[Function]}
               />
               )}}
               <Route
                 exact={true}
-                path="/login"
+                path="/"
+                render={[Function]}
+              />
+              <Route
+                exact={true}
+                path="/onboarding"
+                render={[Function]}
+              />
+              <Route
+                exact={true}
+                path="/notes"
+                render={[Function]}
+              />
+              <Route
+                exact={true}
+                path="/about"
                 render={[Function]}
               />
               <Route
@@ -239,26 +326,9 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "displaySearch": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+          false,
+          false,
+          false,
           Object {
             "instance": null,
             "key": undefined,
@@ -267,13 +337,28 @@ ShallowWrapper {
               "children": Array [
                 <Route
                   exact={true}
-                  path="/"
+                  path="/home"
                   render={[Function]}
                 />,
                 ")}}",
                 <Route
                   exact={true}
-                  path="/login"
+                  path="/"
+                  render={[Function]}
+                />,
+                <Route
+                  exact={true}
+                  path="/onboarding"
+                  render={[Function]}
+                />,
+                <Route
+                  exact={true}
+                  path="/notes"
+                  render={[Function]}
+                />,
+                <Route
+                  exact={true}
+                  path="/about"
                   render={[Function]}
                 />,
                 <Route
@@ -291,7 +376,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "exact": true,
-                  "path": "/",
+                  "path": "/home",
                   "render": [Function],
                 },
                 "ref": null,
@@ -305,7 +390,46 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "exact": true,
-                  "path": "/login",
+                  "path": "/",
+                  "render": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "exact": true,
+                  "path": "/onboarding",
+                  "render": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "exact": true,
+                  "path": "/notes",
+                  "render": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "exact": true,
+                  "path": "/about",
                   "render": [Function],
                 },
                 "ref": null,

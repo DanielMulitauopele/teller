@@ -1,4 +1,4 @@
-import { Key } from "../../Key";
+const newsKey = process.env.newsKey
 import { fetchRequest } from "./NewsApi";
 
 export const fetchNews = async type => {
@@ -25,6 +25,6 @@ export const fetchNews = async type => {
   }
   console.log('fetchRequest should be called...right...about...')
   return await fetchRequest(
-    `https://newsapi.org/v2/everything?${path}&from=2018-11-28&sortBy=publishedAt&apiKey=${Key}`
+    `https://newsapi.org/v2/everything?${path}&from=2018-11-28&sortBy=publishedAt&apiKey=${newsKey}`
   );
 };

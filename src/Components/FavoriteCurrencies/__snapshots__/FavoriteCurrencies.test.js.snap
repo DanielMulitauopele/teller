@@ -32,13 +32,13 @@ ShallowWrapper {
           className="bubbles bubbles-left"
         >
           <div
-            className={[Function]}
+            className="speed-up-3"
           />
           <div
-            className={[Function]}
+            className="speed-up-3"
           />
           <div
-            className={[Function]}
+            className="speed-up-3"
           />
         </div>,
         <p
@@ -56,13 +56,13 @@ ShallowWrapper {
           className="bubbles bubbles-right"
         >
           <div
-            className={[Function]}
+            className="speed-up-3"
           />
           <div
-            className={[Function]}
+            className="speed-up-3"
           />
           <div
-            className={[Function]}
+            className="speed-up-3"
           />
         </div>,
         <div
@@ -71,8 +71,9 @@ ShallowWrapper {
           <p>
             +
             $
-            -0
-             (
+            0
+             
+            (
             1
             % 
             <img
@@ -94,13 +95,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className={[Function]}
+              className="speed-up-3"
             />,
             <div
-              className={[Function]}
+              className="speed-up-3"
             />,
             <div
-              className={[Function]}
+              className="speed-up-3"
             />,
           ],
           "className": "bubbles bubbles-left",
@@ -112,7 +113,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": [Function],
+              "className": "speed-up-3",
             },
             "ref": null,
             "rendered": null,
@@ -123,7 +124,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": [Function],
+              "className": "speed-up-3",
             },
             "ref": null,
             "rendered": null,
@@ -134,7 +135,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": [Function],
+              "className": "speed-up-3",
             },
             "ref": null,
             "rendered": null,
@@ -180,13 +181,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className={[Function]}
+              className="speed-up-3"
             />,
             <div
-              className={[Function]}
+              className="speed-up-3"
             />,
             <div
-              className={[Function]}
+              className="speed-up-3"
             />,
           ],
           "className": "bubbles bubbles-right",
@@ -198,7 +199,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": [Function],
+              "className": "speed-up-3",
             },
             "ref": null,
             "rendered": null,
@@ -209,7 +210,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": [Function],
+              "className": "speed-up-3",
             },
             "ref": null,
             "rendered": null,
@@ -220,7 +221,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": [Function],
+              "className": "speed-up-3",
             },
             "ref": null,
             "rendered": null,
@@ -237,8 +238,9 @@ ShallowWrapper {
           "children": <p>
             +
             $
-            -0
-             (
+            0
+             
+            (
             1
             % 
             <img
@@ -258,8 +260,9 @@ ShallowWrapper {
             "children": Array [
               "+",
               "$",
-              -0,
-              " (",
+              0,
+              " ",
+              "(",
               1,
               "% ",
               <img
@@ -273,8 +276,9 @@ ShallowWrapper {
           "rendered": Array [
             "+",
             "$",
-            -0,
-            " (",
+            0,
+            " ",
+            "(",
             1,
             "% ",
             Object {
@@ -309,13 +313,13 @@ ShallowWrapper {
             className="bubbles bubbles-left"
           >
             <div
-              className={[Function]}
+              className="speed-up-3"
             />
             <div
-              className={[Function]}
+              className="speed-up-3"
             />
             <div
-              className={[Function]}
+              className="speed-up-3"
             />
           </div>,
           <p
@@ -333,13 +337,13 @@ ShallowWrapper {
             className="bubbles bubbles-right"
           >
             <div
-              className={[Function]}
+              className="speed-up-3"
             />
             <div
-              className={[Function]}
+              className="speed-up-3"
             />
             <div
-              className={[Function]}
+              className="speed-up-3"
             />
           </div>,
           <div
@@ -348,8 +352,9 @@ ShallowWrapper {
             <p>
               +
               $
-              -0
-               (
+              0
+               
+              (
               1
               % 
               <img
@@ -371,13 +376,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className={[Function]}
+                className="speed-up-3"
               />,
               <div
-                className={[Function]}
+                className="speed-up-3"
               />,
               <div
-                className={[Function]}
+                className="speed-up-3"
               />,
             ],
             "className": "bubbles bubbles-left",
@@ -389,7 +394,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": [Function],
+                "className": "speed-up-3",
               },
               "ref": null,
               "rendered": null,
@@ -400,7 +405,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": [Function],
+                "className": "speed-up-3",
               },
               "ref": null,
               "rendered": null,
@@ -411,7 +416,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": [Function],
+                "className": "speed-up-3",
               },
               "ref": null,
               "rendered": null,
@@ -457,13 +462,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className={[Function]}
+                className="speed-up-3"
               />,
               <div
-                className={[Function]}
+                className="speed-up-3"
               />,
               <div
-                className={[Function]}
+                className="speed-up-3"
               />,
             ],
             "className": "bubbles bubbles-right",
@@ -475,7 +480,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": [Function],
+                "className": "speed-up-3",
               },
               "ref": null,
               "rendered": null,
@@ -486,7 +491,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": [Function],
+                "className": "speed-up-3",
               },
               "ref": null,
               "rendered": null,
@@ -497,7 +502,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": [Function],
+                "className": "speed-up-3",
               },
               "ref": null,
               "rendered": null,
@@ -514,8 +519,9 @@ ShallowWrapper {
             "children": <p>
               +
               $
-              -0
-               (
+              0
+               
+              (
               1
               % 
               <img
@@ -535,8 +541,9 @@ ShallowWrapper {
               "children": Array [
                 "+",
                 "$",
-                -0,
-                " (",
+                0,
+                " ",
+                "(",
                 1,
                 "% ",
                 <img
@@ -550,8 +557,9 @@ ShallowWrapper {
             "rendered": Array [
               "+",
               "$",
-              -0,
-              " (",
+              0,
+              " ",
+              "(",
               1,
               "% ",
               Object {

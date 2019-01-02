@@ -43,49 +43,81 @@ ShallowWrapper {
               <li
                 className="home-li"
               >
-                <img
-                  alt="home-icon"
-                  src="home.svg"
-                />
-                <span>
-                  Home
-                </span>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/home"
+                >
+                  <img
+                    alt="home-icon"
+                    src="home.svg"
+                  />
+                  <span>
+                    Home
+                  </span>
+                </NavLink>
               </li>
               <li>
-                <img
-                  alt="blog-icon"
-                  src="newspaper.svg"
-                />
-                <span>
-                  Blog
-                </span>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/blogs"
+                >
+                  <img
+                    alt="blog-icon"
+                    src="newspaper.svg"
+                  />
+                  <span>
+                    Blog
+                  </span>
+                </NavLink>
               </li>
               <li>
-                <img
-                  alt="notes-icon"
-                  src="blogging.svg"
-                />
-                <span>
-                  Notes
-                </span>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/notes"
+                >
+                  <img
+                    alt="notes-icon"
+                    src="blogging.svg"
+                  />
+                  <span>
+                    Notes
+                  </span>
+                </NavLink>
               </li>
               <li>
-                <img
-                  alt="about-us-icon"
-                  src="code.svg"
-                />
-                <span>
-                  About
-                </span>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/AboutUs"
+                >
+                  <img
+                    alt="about-us-icon"
+                    src="code.svg"
+                  />
+                  <span>
+                    About
+                  </span>
+                </NavLink>
               </li>
               <li>
-                <img
-                  alt="exit-icon"
-                  src="exit.svg"
-                />
-                <span>
-                  Quit
-                </span>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/"
+                >
+                  <img
+                    alt="exit-icon"
+                    src="exit.svg"
+                  />
+                  <span
+                    className="logout"
+                  >
+                    Quit
+                  </span>
+                </NavLink>
               </li>
             </ul>
             <div
@@ -174,49 +206,81 @@ ShallowWrapper {
               <li
                 className="home-li"
               >
-                <img
-                  alt="home-icon"
-                  src="home.svg"
-                />
-                <span>
-                  Home
-                </span>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/home"
+                >
+                  <img
+                    alt="home-icon"
+                    src="home.svg"
+                  />
+                  <span>
+                    Home
+                  </span>
+                </NavLink>
               </li>
               <li>
-                <img
-                  alt="blog-icon"
-                  src="newspaper.svg"
-                />
-                <span>
-                  Blog
-                </span>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/blogs"
+                >
+                  <img
+                    alt="blog-icon"
+                    src="newspaper.svg"
+                  />
+                  <span>
+                    Blog
+                  </span>
+                </NavLink>
               </li>
               <li>
-                <img
-                  alt="notes-icon"
-                  src="blogging.svg"
-                />
-                <span>
-                  Notes
-                </span>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/notes"
+                >
+                  <img
+                    alt="notes-icon"
+                    src="blogging.svg"
+                  />
+                  <span>
+                    Notes
+                  </span>
+                </NavLink>
               </li>
               <li>
-                <img
-                  alt="about-us-icon"
-                  src="code.svg"
-                />
-                <span>
-                  About
-                </span>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/AboutUs"
+                >
+                  <img
+                    alt="about-us-icon"
+                    src="code.svg"
+                  />
+                  <span>
+                    About
+                  </span>
+                </NavLink>
               </li>
               <li>
-                <img
-                  alt="exit-icon"
-                  src="exit.svg"
-                />
-                <span>
-                  Quit
-                </span>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/"
+                >
+                  <img
+                    alt="exit-icon"
+                    src="exit.svg"
+                  />
+                  <span
+                    className="logout"
+                  >
+                    Quit
+                  </span>
+                </NavLink>
               </li>
             </ul>
             <div
@@ -256,49 +320,81 @@ ShallowWrapper {
                 <li
                   className="home-li"
                 >
-                  <img
-                    alt="home-icon"
-                    src="home.svg"
-                  />
-                  <span>
-                    Home
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/home"
+                  >
+                    <img
+                      alt="home-icon"
+                      src="home.svg"
+                    />
+                    <span>
+                      Home
+                    </span>
+                  </NavLink>
                 </li>
                 <li>
-                  <img
-                    alt="blog-icon"
-                    src="newspaper.svg"
-                  />
-                  <span>
-                    Blog
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/blogs"
+                  >
+                    <img
+                      alt="blog-icon"
+                      src="newspaper.svg"
+                    />
+                    <span>
+                      Blog
+                    </span>
+                  </NavLink>
                 </li>
                 <li>
-                  <img
-                    alt="notes-icon"
-                    src="blogging.svg"
-                  />
-                  <span>
-                    Notes
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/notes"
+                  >
+                    <img
+                      alt="notes-icon"
+                      src="blogging.svg"
+                    />
+                    <span>
+                      Notes
+                    </span>
+                  </NavLink>
                 </li>
                 <li>
-                  <img
-                    alt="about-us-icon"
-                    src="code.svg"
-                  />
-                  <span>
-                    About
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/AboutUs"
+                  >
+                    <img
+                      alt="about-us-icon"
+                      src="code.svg"
+                    />
+                    <span>
+                      About
+                    </span>
+                  </NavLink>
                 </li>
                 <li>
-                  <img
-                    alt="exit-icon"
-                    src="exit.svg"
-                  />
-                  <span>
-                    Quit
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/"
+                  >
+                    <img
+                      alt="exit-icon"
+                      src="exit.svg"
+                    />
+                    <span
+                      className="logout"
+                    >
+                      Quit
+                    </span>
+                  </NavLink>
                 </li>
               </ul>,
               <div
@@ -362,49 +458,81 @@ ShallowWrapper {
                   <li
                     className="home-li"
                   >
-                    <img
-                      alt="home-icon"
-                      src="home.svg"
-                    />
-                    <span>
-                      Home
-                    </span>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/home"
+                    >
+                      <img
+                        alt="home-icon"
+                        src="home.svg"
+                      />
+                      <span>
+                        Home
+                      </span>
+                    </NavLink>
                   </li>,
                   <li>
-                    <img
-                      alt="blog-icon"
-                      src="newspaper.svg"
-                    />
-                    <span>
-                      Blog
-                    </span>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/blogs"
+                    >
+                      <img
+                        alt="blog-icon"
+                        src="newspaper.svg"
+                      />
+                      <span>
+                        Blog
+                      </span>
+                    </NavLink>
                   </li>,
                   <li>
-                    <img
-                      alt="notes-icon"
-                      src="blogging.svg"
-                    />
-                    <span>
-                      Notes
-                    </span>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/notes"
+                    >
+                      <img
+                        alt="notes-icon"
+                        src="blogging.svg"
+                      />
+                      <span>
+                        Notes
+                      </span>
+                    </NavLink>
                   </li>,
                   <li>
-                    <img
-                      alt="about-us-icon"
-                      src="code.svg"
-                    />
-                    <span>
-                      About
-                    </span>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/AboutUs"
+                    >
+                      <img
+                        alt="about-us-icon"
+                        src="code.svg"
+                      />
+                      <span>
+                        About
+                      </span>
+                    </NavLink>
                   </li>,
                   <li>
-                    <img
-                      alt="exit-icon"
-                      src="exit.svg"
-                    />
-                    <span>
-                      Quit
-                    </span>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/"
+                    >
+                      <img
+                        alt="exit-icon"
+                        src="exit.svg"
+                      />
+                      <span
+                        className="logout"
+                      >
+                        Quit
+                      </span>
+                    </NavLink>
                   </li>,
                 ],
               },
@@ -415,44 +543,69 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": Array [
+                    "children": <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/home"
+                    >
                       <img
                         alt="home-icon"
                         src="home.svg"
-                      />,
+                      />
                       <span>
                         Home
-                      </span>,
-                    ],
+                      </span>
+                    </NavLink>,
                     "className": "home-li",
                     "onClick": undefined,
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "alt": "home-icon",
-                        "src": "home.svg",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "img",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "aria-current": "page",
+                      "children": Array [
+                        <img
+                          alt="home-icon"
+                          src="home.svg"
+                        />,
+                        <span>
+                          Home
+                        </span>,
+                      ],
+                      "to": "/home",
                     },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Home",
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "home-icon",
+                          "src": "home.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
                       },
-                      "ref": null,
-                      "rendered": "Home",
-                      "type": "span",
-                    },
-                  ],
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Home",
+                        },
+                        "ref": null,
+                        "rendered": "Home",
+                        "type": "span",
+                      },
+                    ],
+                    "type": [Function],
+                  },
                   "type": "li",
                 },
                 Object {
@@ -460,42 +613,67 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": Array [
+                    "children": <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/blogs"
+                    >
                       <img
                         alt="blog-icon"
                         src="newspaper.svg"
-                      />,
+                      />
                       <span>
                         Blog
-                      </span>,
-                    ],
+                      </span>
+                    </NavLink>,
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "alt": "blog-icon",
-                        "src": "newspaper.svg",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "img",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "aria-current": "page",
+                      "children": Array [
+                        <img
+                          alt="blog-icon"
+                          src="newspaper.svg"
+                        />,
+                        <span>
+                          Blog
+                        </span>,
+                      ],
+                      "to": "/blogs",
                     },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Blog",
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "blog-icon",
+                          "src": "newspaper.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
                       },
-                      "ref": null,
-                      "rendered": "Blog",
-                      "type": "span",
-                    },
-                  ],
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Blog",
+                        },
+                        "ref": null,
+                        "rendered": "Blog",
+                        "type": "span",
+                      },
+                    ],
+                    "type": [Function],
+                  },
                   "type": "li",
                 },
                 Object {
@@ -503,42 +681,67 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": Array [
+                    "children": <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/notes"
+                    >
                       <img
                         alt="notes-icon"
                         src="blogging.svg"
-                      />,
+                      />
                       <span>
                         Notes
-                      </span>,
-                    ],
+                      </span>
+                    </NavLink>,
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "alt": "notes-icon",
-                        "src": "blogging.svg",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "img",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "aria-current": "page",
+                      "children": Array [
+                        <img
+                          alt="notes-icon"
+                          src="blogging.svg"
+                        />,
+                        <span>
+                          Notes
+                        </span>,
+                      ],
+                      "to": "/notes",
                     },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Notes",
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "notes-icon",
+                          "src": "blogging.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
                       },
-                      "ref": null,
-                      "rendered": "Notes",
-                      "type": "span",
-                    },
-                  ],
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Notes",
+                        },
+                        "ref": null,
+                        "rendered": "Notes",
+                        "type": "span",
+                      },
+                    ],
+                    "type": [Function],
+                  },
                   "type": "li",
                 },
                 Object {
@@ -546,42 +749,67 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": Array [
+                    "children": <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/AboutUs"
+                    >
                       <img
                         alt="about-us-icon"
                         src="code.svg"
-                      />,
+                      />
                       <span>
                         About
-                      </span>,
-                    ],
+                      </span>
+                    </NavLink>,
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "alt": "about-us-icon",
-                        "src": "code.svg",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "img",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "aria-current": "page",
+                      "children": Array [
+                        <img
+                          alt="about-us-icon"
+                          src="code.svg"
+                        />,
+                        <span>
+                          About
+                        </span>,
+                      ],
+                      "to": "/AboutUs",
                     },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "About",
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "about-us-icon",
+                          "src": "code.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
                       },
-                      "ref": null,
-                      "rendered": "About",
-                      "type": "span",
-                    },
-                  ],
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "About",
+                        },
+                        "ref": null,
+                        "rendered": "About",
+                        "type": "span",
+                      },
+                    ],
+                    "type": [Function],
+                  },
                   "type": "li",
                 },
                 Object {
@@ -589,42 +817,73 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": Array [
+                    "children": <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/"
+                    >
                       <img
                         alt="exit-icon"
                         src="exit.svg"
-                      />,
-                      <span>
+                      />
+                      <span
+                        className="logout"
+                      >
                         Quit
-                      </span>,
-                    ],
+                      </span>
+                    </NavLink>,
+                    "onClick": undefined,
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "alt": "exit-icon",
-                        "src": "exit.svg",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "img",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "aria-current": "page",
+                      "children": Array [
+                        <img
+                          alt="exit-icon"
+                          src="exit.svg"
+                        />,
+                        <span
+                          className="logout"
+                        >
+                          Quit
+                        </span>,
+                      ],
+                      "to": "/",
                     },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Quit",
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "exit-icon",
+                          "src": "exit.svg",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
                       },
-                      "ref": null,
-                      "rendered": "Quit",
-                      "type": "span",
-                    },
-                  ],
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Quit",
+                          "className": "logout",
+                        },
+                        "ref": null,
+                        "rendered": "Quit",
+                        "type": "span",
+                      },
+                    ],
+                    "type": [Function],
+                  },
                   "type": "li",
                 },
               ],
@@ -731,49 +990,81 @@ ShallowWrapper {
                 <li
                   className="home-li"
                 >
-                  <img
-                    alt="home-icon"
-                    src="home.svg"
-                  />
-                  <span>
-                    Home
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/home"
+                  >
+                    <img
+                      alt="home-icon"
+                      src="home.svg"
+                    />
+                    <span>
+                      Home
+                    </span>
+                  </NavLink>
                 </li>
                 <li>
-                  <img
-                    alt="blog-icon"
-                    src="newspaper.svg"
-                  />
-                  <span>
-                    Blog
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/blogs"
+                  >
+                    <img
+                      alt="blog-icon"
+                      src="newspaper.svg"
+                    />
+                    <span>
+                      Blog
+                    </span>
+                  </NavLink>
                 </li>
                 <li>
-                  <img
-                    alt="notes-icon"
-                    src="blogging.svg"
-                  />
-                  <span>
-                    Notes
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/notes"
+                  >
+                    <img
+                      alt="notes-icon"
+                      src="blogging.svg"
+                    />
+                    <span>
+                      Notes
+                    </span>
+                  </NavLink>
                 </li>
                 <li>
-                  <img
-                    alt="about-us-icon"
-                    src="code.svg"
-                  />
-                  <span>
-                    About
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/AboutUs"
+                  >
+                    <img
+                      alt="about-us-icon"
+                      src="code.svg"
+                    />
+                    <span>
+                      About
+                    </span>
+                  </NavLink>
                 </li>
                 <li>
-                  <img
-                    alt="exit-icon"
-                    src="exit.svg"
-                  />
-                  <span>
-                    Quit
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/"
+                  >
+                    <img
+                      alt="exit-icon"
+                      src="exit.svg"
+                    />
+                    <span
+                      className="logout"
+                    >
+                      Quit
+                    </span>
+                  </NavLink>
                 </li>
               </ul>
               <div
@@ -862,49 +1153,81 @@ ShallowWrapper {
                 <li
                   className="home-li"
                 >
-                  <img
-                    alt="home-icon"
-                    src="home.svg"
-                  />
-                  <span>
-                    Home
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/home"
+                  >
+                    <img
+                      alt="home-icon"
+                      src="home.svg"
+                    />
+                    <span>
+                      Home
+                    </span>
+                  </NavLink>
                 </li>
                 <li>
-                  <img
-                    alt="blog-icon"
-                    src="newspaper.svg"
-                  />
-                  <span>
-                    Blog
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/blogs"
+                  >
+                    <img
+                      alt="blog-icon"
+                      src="newspaper.svg"
+                    />
+                    <span>
+                      Blog
+                    </span>
+                  </NavLink>
                 </li>
                 <li>
-                  <img
-                    alt="notes-icon"
-                    src="blogging.svg"
-                  />
-                  <span>
-                    Notes
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/notes"
+                  >
+                    <img
+                      alt="notes-icon"
+                      src="blogging.svg"
+                    />
+                    <span>
+                      Notes
+                    </span>
+                  </NavLink>
                 </li>
                 <li>
-                  <img
-                    alt="about-us-icon"
-                    src="code.svg"
-                  />
-                  <span>
-                    About
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/AboutUs"
+                  >
+                    <img
+                      alt="about-us-icon"
+                      src="code.svg"
+                    />
+                    <span>
+                      About
+                    </span>
+                  </NavLink>
                 </li>
                 <li>
-                  <img
-                    alt="exit-icon"
-                    src="exit.svg"
-                  />
-                  <span>
-                    Quit
-                  </span>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/"
+                  >
+                    <img
+                      alt="exit-icon"
+                      src="exit.svg"
+                    />
+                    <span
+                      className="logout"
+                    >
+                      Quit
+                    </span>
+                  </NavLink>
                 </li>
               </ul>
               <div
@@ -944,49 +1267,81 @@ ShallowWrapper {
                   <li
                     className="home-li"
                   >
-                    <img
-                      alt="home-icon"
-                      src="home.svg"
-                    />
-                    <span>
-                      Home
-                    </span>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/home"
+                    >
+                      <img
+                        alt="home-icon"
+                        src="home.svg"
+                      />
+                      <span>
+                        Home
+                      </span>
+                    </NavLink>
                   </li>
                   <li>
-                    <img
-                      alt="blog-icon"
-                      src="newspaper.svg"
-                    />
-                    <span>
-                      Blog
-                    </span>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/blogs"
+                    >
+                      <img
+                        alt="blog-icon"
+                        src="newspaper.svg"
+                      />
+                      <span>
+                        Blog
+                      </span>
+                    </NavLink>
                   </li>
                   <li>
-                    <img
-                      alt="notes-icon"
-                      src="blogging.svg"
-                    />
-                    <span>
-                      Notes
-                    </span>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/notes"
+                    >
+                      <img
+                        alt="notes-icon"
+                        src="blogging.svg"
+                      />
+                      <span>
+                        Notes
+                      </span>
+                    </NavLink>
                   </li>
                   <li>
-                    <img
-                      alt="about-us-icon"
-                      src="code.svg"
-                    />
-                    <span>
-                      About
-                    </span>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/AboutUs"
+                    >
+                      <img
+                        alt="about-us-icon"
+                        src="code.svg"
+                      />
+                      <span>
+                        About
+                      </span>
+                    </NavLink>
                   </li>
                   <li>
-                    <img
-                      alt="exit-icon"
-                      src="exit.svg"
-                    />
-                    <span>
-                      Quit
-                    </span>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      to="/"
+                    >
+                      <img
+                        alt="exit-icon"
+                        src="exit.svg"
+                      />
+                      <span
+                        className="logout"
+                      >
+                        Quit
+                      </span>
+                    </NavLink>
                   </li>
                 </ul>,
                 <div
@@ -1050,49 +1405,81 @@ ShallowWrapper {
                     <li
                       className="home-li"
                     >
-                      <img
-                        alt="home-icon"
-                        src="home.svg"
-                      />
-                      <span>
-                        Home
-                      </span>
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        to="/home"
+                      >
+                        <img
+                          alt="home-icon"
+                          src="home.svg"
+                        />
+                        <span>
+                          Home
+                        </span>
+                      </NavLink>
                     </li>,
                     <li>
-                      <img
-                        alt="blog-icon"
-                        src="newspaper.svg"
-                      />
-                      <span>
-                        Blog
-                      </span>
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        to="/blogs"
+                      >
+                        <img
+                          alt="blog-icon"
+                          src="newspaper.svg"
+                        />
+                        <span>
+                          Blog
+                        </span>
+                      </NavLink>
                     </li>,
                     <li>
-                      <img
-                        alt="notes-icon"
-                        src="blogging.svg"
-                      />
-                      <span>
-                        Notes
-                      </span>
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        to="/notes"
+                      >
+                        <img
+                          alt="notes-icon"
+                          src="blogging.svg"
+                        />
+                        <span>
+                          Notes
+                        </span>
+                      </NavLink>
                     </li>,
                     <li>
-                      <img
-                        alt="about-us-icon"
-                        src="code.svg"
-                      />
-                      <span>
-                        About
-                      </span>
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        to="/AboutUs"
+                      >
+                        <img
+                          alt="about-us-icon"
+                          src="code.svg"
+                        />
+                        <span>
+                          About
+                        </span>
+                      </NavLink>
                     </li>,
                     <li>
-                      <img
-                        alt="exit-icon"
-                        src="exit.svg"
-                      />
-                      <span>
-                        Quit
-                      </span>
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        to="/"
+                      >
+                        <img
+                          alt="exit-icon"
+                          src="exit.svg"
+                        />
+                        <span
+                          className="logout"
+                        >
+                          Quit
+                        </span>
+                      </NavLink>
                     </li>,
                   ],
                 },
@@ -1103,44 +1490,69 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": Array [
+                      "children": <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        to="/home"
+                      >
                         <img
                           alt="home-icon"
                           src="home.svg"
-                        />,
+                        />
                         <span>
                           Home
-                        </span>,
-                      ],
+                        </span>
+                      </NavLink>,
                       "className": "home-li",
                       "onClick": undefined,
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "alt": "home-icon",
-                          "src": "home.svg",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "img",
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "activeClassName": "active",
+                        "aria-current": "page",
+                        "children": Array [
+                          <img
+                            alt="home-icon"
+                            src="home.svg"
+                          />,
+                          <span>
+                            Home
+                          </span>,
+                        ],
+                        "to": "/home",
                       },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Home",
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "alt": "home-icon",
+                            "src": "home.svg",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "img",
                         },
-                        "ref": null,
-                        "rendered": "Home",
-                        "type": "span",
-                      },
-                    ],
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Home",
+                          },
+                          "ref": null,
+                          "rendered": "Home",
+                          "type": "span",
+                        },
+                      ],
+                      "type": [Function],
+                    },
                     "type": "li",
                   },
                   Object {
@@ -1148,42 +1560,67 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": Array [
+                      "children": <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        to="/blogs"
+                      >
                         <img
                           alt="blog-icon"
                           src="newspaper.svg"
-                        />,
+                        />
                         <span>
                           Blog
-                        </span>,
-                      ],
+                        </span>
+                      </NavLink>,
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "alt": "blog-icon",
-                          "src": "newspaper.svg",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "img",
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "activeClassName": "active",
+                        "aria-current": "page",
+                        "children": Array [
+                          <img
+                            alt="blog-icon"
+                            src="newspaper.svg"
+                          />,
+                          <span>
+                            Blog
+                          </span>,
+                        ],
+                        "to": "/blogs",
                       },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Blog",
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "alt": "blog-icon",
+                            "src": "newspaper.svg",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "img",
                         },
-                        "ref": null,
-                        "rendered": "Blog",
-                        "type": "span",
-                      },
-                    ],
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Blog",
+                          },
+                          "ref": null,
+                          "rendered": "Blog",
+                          "type": "span",
+                        },
+                      ],
+                      "type": [Function],
+                    },
                     "type": "li",
                   },
                   Object {
@@ -1191,42 +1628,67 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": Array [
+                      "children": <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        to="/notes"
+                      >
                         <img
                           alt="notes-icon"
                           src="blogging.svg"
-                        />,
+                        />
                         <span>
                           Notes
-                        </span>,
-                      ],
+                        </span>
+                      </NavLink>,
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "alt": "notes-icon",
-                          "src": "blogging.svg",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "img",
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "activeClassName": "active",
+                        "aria-current": "page",
+                        "children": Array [
+                          <img
+                            alt="notes-icon"
+                            src="blogging.svg"
+                          />,
+                          <span>
+                            Notes
+                          </span>,
+                        ],
+                        "to": "/notes",
                       },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Notes",
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "alt": "notes-icon",
+                            "src": "blogging.svg",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "img",
                         },
-                        "ref": null,
-                        "rendered": "Notes",
-                        "type": "span",
-                      },
-                    ],
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Notes",
+                          },
+                          "ref": null,
+                          "rendered": "Notes",
+                          "type": "span",
+                        },
+                      ],
+                      "type": [Function],
+                    },
                     "type": "li",
                   },
                   Object {
@@ -1234,42 +1696,67 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": Array [
+                      "children": <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        to="/AboutUs"
+                      >
                         <img
                           alt="about-us-icon"
                           src="code.svg"
-                        />,
+                        />
                         <span>
                           About
-                        </span>,
-                      ],
+                        </span>
+                      </NavLink>,
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "alt": "about-us-icon",
-                          "src": "code.svg",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "img",
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "activeClassName": "active",
+                        "aria-current": "page",
+                        "children": Array [
+                          <img
+                            alt="about-us-icon"
+                            src="code.svg"
+                          />,
+                          <span>
+                            About
+                          </span>,
+                        ],
+                        "to": "/AboutUs",
                       },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "About",
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "alt": "about-us-icon",
+                            "src": "code.svg",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "img",
                         },
-                        "ref": null,
-                        "rendered": "About",
-                        "type": "span",
-                      },
-                    ],
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "About",
+                          },
+                          "ref": null,
+                          "rendered": "About",
+                          "type": "span",
+                        },
+                      ],
+                      "type": [Function],
+                    },
                     "type": "li",
                   },
                   Object {
@@ -1277,42 +1764,73 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": Array [
+                      "children": <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        to="/"
+                      >
                         <img
                           alt="exit-icon"
                           src="exit.svg"
-                        />,
-                        <span>
+                        />
+                        <span
+                          className="logout"
+                        >
                           Quit
-                        </span>,
-                      ],
+                        </span>
+                      </NavLink>,
+                      "onClick": undefined,
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "alt": "exit-icon",
-                          "src": "exit.svg",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "img",
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "activeClassName": "active",
+                        "aria-current": "page",
+                        "children": Array [
+                          <img
+                            alt="exit-icon"
+                            src="exit.svg"
+                          />,
+                          <span
+                            className="logout"
+                          >
+                            Quit
+                          </span>,
+                        ],
+                        "to": "/",
                       },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Quit",
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "alt": "exit-icon",
+                            "src": "exit.svg",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "img",
                         },
-                        "ref": null,
-                        "rendered": "Quit",
-                        "type": "span",
-                      },
-                    ],
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Quit",
+                            "className": "logout",
+                          },
+                          "ref": null,
+                          "rendered": "Quit",
+                          "type": "span",
+                        },
+                      ],
+                      "type": [Function],
+                    },
                     "type": "li",
                   },
                 ],

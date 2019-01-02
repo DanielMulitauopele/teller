@@ -17,3 +17,6 @@ deploy:
 env:
   COINCAP_PATH: https://api.coincap.io
   SHAPESHIFT_PATH: https://shapeshift.io
+
+notifications:
+  email: false
