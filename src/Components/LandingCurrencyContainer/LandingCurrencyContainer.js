@@ -32,30 +32,30 @@ class LandingCurrencyContainer extends Component {
       <div className="sort-box">
         <div className="currency-container">
           <div className="sort">
-            <a
+            <button
               className="rank-link"
-              href="#"
+              // href="javascript:void(0)"
               name="Rank"
               onClick={this.handleClick}
             >
               Rank
-            </a>
-            <a
+            </button>
+            <button
               className="price-link"
-              href="#"
+              // href="javascript:void(0)"
               name="Price"
               onClick={this.handleClick}
             >
               Price
-            </a>
-            <a
+            </button>
+            <button
               className="percent-change-link"
-              href="#"
+              // href="javascript:void(0)"
               name="%Change"
               onClick={this.handleClick}
             >
               %Change
-            </a>
+            </button>
           </div>
           {landingCurrencies}
         </div>

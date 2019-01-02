@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
-import { FavoritesContainer } from "./Components/FavoritesContainer/FavoritesContainer";
+// import { FavoritesContainer } from "./Components/FavoritesContainer/FavoritesContainer";
 import Hotdog from "./Components/Hotdog/Hotdog";
-import LandingCurrencyContainer from "./Components/LandingCurrencyContainer/LandingCurrencyContainer";
+// import LandingCurrencyContainer from "./Components/LandingCurrencyContainer/LandingCurrencyContainer";
 import DataCleaner from "./Utils/Cleaners/";
 import Search from "./Components/Search/Search";
-import { BrowserRouter, Route, withRouter, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Landing from "./Components/Landing/Landing";
-import RegisterForm from "./Components/RegisterForm/RegisterForm";
-import LoginForm from "./Components/LoginForm/LoginForm";
-import Login from "./Components/LoginForm/LoginForm";
+// import RegisterForm from "./Components/RegisterForm/RegisterForm";
+// import LoginForm from "./Components/LoginForm/LoginForm";
+// import Login from "./Components/LoginForm/LoginForm";
 import NotesContainer from "./Components/NotesContainer/NotesContainer"
 import LoginContainer from "./Components/LoginContainer/LoginContainer";
 import Onboarding from "./Components/Onboarding/Onboarding";

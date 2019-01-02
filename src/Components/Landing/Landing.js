@@ -27,7 +27,6 @@ class Landing extends Component {
   };
 
   render() {
-    const { active } = this.state;
     const {
       favorites,
       addToFavorites,

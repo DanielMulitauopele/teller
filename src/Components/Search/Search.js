@@ -41,6 +41,7 @@ class Search extends Component {
             className="search-image"
             src={active ? Cancel : SearchGlass}
             onClick={this.toggleSearchBtn}
+            alt=""
           />
           <form 
             className="search-form"
