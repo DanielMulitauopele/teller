@@ -6,6 +6,7 @@ import Notes from "../../Assets/blogging.svg";
 import Code from "../../Assets/code.svg";
 import Exit from "../../Assets/exit.svg";
 import Donate from "../../Assets/donate.svg";
+import { NavLink } from "react-router-dom";
 
 class Hotdog extends Component {
   constructor() {
@@ -42,24 +43,34 @@ class Hotdog extends Component {
             </h1>
             <ul>
               <li className="home-li" onClick={this.changeActiveRoute}>
-                <img src={Home} alt="home-icon" />
-                <span>Home</span>
+                <NavLink to="/home">
+                  <img src={Home} alt="home-icon" />
+                  <span>Home</span>
+                </NavLink>
               </li>
               <li>
-                <img src={Blog} alt="blog-icon" />
-                <span>Blog</span>
+                <NavLink to="/blogs">
+                  <img src={Blog} alt="blog-icon" />
+                  <span>Blog</span>
+                </NavLink>
               </li>
               <li>
-                <img src={Notes} alt="notes-icon" />
-                <span>Notes</span>
+                <NavLink to="/notes">
+                  <img src={Notes} alt="notes-icon" />
+                  <span>Notes</span>
+                </NavLink>
               </li>
               <li>
-                <img src={Code} alt="about-us-icon" />
-                <span>About</span>
+                <NavLink to="/AboutUs">
+                  <img src={Code} alt="about-us-icon" />
+                  <span>About</span>
+                </NavLink>
               </li>
-              <li>
-                <img src={Exit} alt="exit-icon" />
-                <span>Quit</span>
+              <li onClick={this.props.setLoginState}>
+                <NavLink to="/">
+                  <img src={Exit} alt="exit-icon" />
+                  <span className="logout">Quit</span>
+                </NavLink>
               </li>
             </ul>
             <div className="donate">

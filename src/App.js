@@ -13,17 +13,21 @@ import Login from "./Components/LoginForm/LoginForm";
 import NotesContainer from "./Components/NotesContainer/NotesContainer"
 import LoginContainer from "./Components/LoginContainer/LoginContainer";
 import Onboarding from "./Components/Onboarding/Onboarding";
+import NotesContainer from "./Components/NotesContainer/NotesContainer";
+import AboutUs from "./Components/AboutUs/AboutUs";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      favorites: [{
-        id: 12345,
-        name: "No favorites saved", 
-        price: "0",
-        percent_change: "0"
-      }],
+      favorites: [
+        {
+          id: 12345,
+          name: "No favorites saved",
+          price: "0",
+          percent_change: "0"
+        }
+      ],
       abbrevCurrencies: [],
       expandedCurrencies: [],
       userEmail: "",
@@ -41,8 +45,8 @@ class App extends Component {
   }
 
   addToFavorites = favorite => {
-    const { favorites } = this.state
-    const newFave = {id: Date.now(), ...favorite}
+    const { favorites } = this.state;
+    const newFave = { id: Date.now(), ...favorite };
     if (favorites.length < 5) {
       this.setState({ favorites: [newFave, ...favorites] });
     } else if (favorites.length >= 5) {
@@ -60,17 +64,17 @@ class App extends Component {
   };
 
   addToNotes = note => {
-    const { notes } = this.state
-    const newNote = {id: Date.now(), ...note}
+    const { notes } = this.state;
+    const newNote = { id: Date.now(), ...note };
     this.setState({
       notes: [newNote, ...notes]
-    })
-  }
+    });
+  };
 
   removeFromNotes = id => {
-    const filteredNotes = this.state.notes.filter(note => note.id !== id)
-    this.setState({ notes: filteredNotes })
-  }
+    const filteredNotes = this.state.notes.filter(note => note.id !== id);
+    this.setState({ notes: filteredNotes });
+  };
 
   logInUser = userEmail => {
     this.setState({ userEmail });
@@ -84,9 +88,9 @@ class App extends Component {
   };
 
   displaySearch = async currency => {
-    let abbCurr
-    let expCurr
-    const { abbrevCurrencies, expandedCurrencies } = this.state
+    let abbCurr;
+    let expCurr;
+    const { abbrevCurrencies, expandedCurrencies } = this.state;
     if (currency === "") {
       abbCurr = await this.cleaner.getAbbrevCurrencies();
       expCurr = await this.cleaner.getExpandedCurrencies();
@@ -105,7 +109,7 @@ class App extends Component {
     this.setState({
       abbrevCurrencies: abbCurr,
       expandedCurrencies: expCurr
-    })
+    });
   };
 
   setFilter = filterCategory => {
@@ -137,12 +141,18 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          {this.state.loggedIn && <Hotdog />}
+          {this.state.loggedIn && <Hotdog setLoginState={this.setLoginState} />}
           {this.state.loggedIn && <Search displaySearch={this.displaySearch} />}
+          {this.state.loggedIn && (
+            <div className="app-subtle-bg">
+              <h1>teller.</h1>
+              <p> Your Personal Crpyto Analyst </p>
+            </div>
+          )}
           <Switch>
             <Route
               exact
-              path="/"
+              path="/home"
               render={() => {
                 return (
                   <Landing
@@ -158,7 +168,7 @@ class App extends Component {
             )}}
             <Route
               exact
-              path="/login"
+              path="/"
               render={() => {
                 return <LoginContainer loggedIn={this.setLoginState} />;
               }}
@@ -170,17 +180,24 @@ class App extends Component {
                 return <Onboarding />;
               }}
             />
-            <Route 
+            <Route
               exact
               path="/notes"
               render={() => {
                 return (
-                  <NotesContainer 
+                  <NotesContainer
                     notes={notes}
                     addToNotes={this.addToNotes}
                     removeFromNotes={this.removeFromNotes}
                   />
-                )
+                );
+              }}
+            />
+            <Route
+              exact
+              path="/about"
+              render={() => {
+                return <AboutUs />;
               }}
             />
             <Route 

@@ -45,7 +45,7 @@ class LoginContainer extends Component {
                 <button className="register">Register</button>
               </NavLink>
             </div>
-            <NavLink to="/" className="skip" onClick={this.props.loggedIn}>
+            <NavLink to="/home" className="skip" onClick={this.props.loggedIn}>
               Skip
             </NavLink>
           </div>
