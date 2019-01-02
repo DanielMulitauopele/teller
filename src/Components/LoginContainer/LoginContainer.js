@@ -7,7 +7,8 @@ class LoginContainer extends Component {
   constructor({ props, loggedIn }) {
     super(props);
     this.state = {
-      expandedLogIn: false
+      expandedLogIn: false,
+      expandedRegister: false
     };
   }
 
@@ -17,8 +18,14 @@ class LoginContainer extends Component {
     });
   };
 
+  expandRegister = () => {
+    this.setState({
+      expandedRegister: !this.state.expandedRegister
+    });
+  };
+
   render() {
-    const { expandedLogIn } = this.state;
+    const { expandedLogIn, expandedRegister } = this.state;
     return (
       <div className="login-container">
         <h1 className="app-title"> teller. </h1>
@@ -29,7 +36,15 @@ class LoginContainer extends Component {
               Log in
             </button>
             <LoginForm />
-            <button className="register"> Register </button>
+            <div
+              className={
+                !expandedRegister ? "register-box-expanded" : "register-box"
+              }
+            >
+              <NavLink to="/onboarding">
+                <button className="register">Register</button>
+              </NavLink>
+            </div>
             <NavLink to="/" className="skip" onClick={this.props.loggedIn}>
               Skip
             </NavLink>

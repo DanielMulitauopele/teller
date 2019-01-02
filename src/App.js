@@ -11,6 +11,7 @@ import RegisterForm from "./Components/RegisterForm/RegisterForm";
 import LoginForm from "./Components/LoginForm/LoginForm";
 import LoginContainer from "./Components/LoginContainer/LoginContainer";
 import { coinNames } from "./Components/Search/CoinNames";
+import Onboarding from "./Components/Onboarding/Onboarding";
 
 class App extends Component {
   constructor(props) {
@@ -145,6 +146,13 @@ class App extends Component {
               path="/login"
               render={() => {
                 return <LoginContainer loggedIn={this.setLoginState} />;
+              }}
+            />
+            <Route
+              exact
+              path="/onboarding"
+              render={() => {
+                return <Onboarding />;
               }}
             />
           </Switch>
