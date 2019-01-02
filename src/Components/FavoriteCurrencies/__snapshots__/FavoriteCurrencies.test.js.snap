@@ -31,9 +31,15 @@ ShallowWrapper {
         <div
           className="bubbles bubbles-left"
         >
-          <div />
-          <div />
-          <div />
+          <div
+            className={[Function]}
+          />
+          <div
+            className={[Function]}
+          />
+          <div
+            className={[Function]}
+          />
         </div>,
         <p
           className="fave-name"
@@ -45,17 +51,19 @@ ShallowWrapper {
         >
           $
           0
-          .
-          <span>
-            00
-          </span>
         </p>,
         <div
           className="bubbles bubbles-right"
         >
-          <div />
-          <div />
-          <div />
+          <div
+            className={[Function]}
+          />
+          <div
+            className={[Function]}
+          />
+          <div
+            className={[Function]}
+          />
         </div>,
         <div
           className="price-progress"
@@ -85,9 +93,15 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <div />,
-            <div />,
-            <div />,
+            <div
+              className={[Function]}
+            />,
+            <div
+              className={[Function]}
+            />,
+            <div
+              className={[Function]}
+            />,
           ],
           "className": "bubbles bubbles-left",
         },
@@ -97,7 +111,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
-            "props": Object {},
+            "props": Object {
+              "className": [Function],
+            },
             "ref": null,
             "rendered": null,
             "type": "div",
@@ -106,7 +122,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
-            "props": Object {},
+            "props": Object {
+              "className": [Function],
+            },
             "ref": null,
             "rendered": null,
             "type": "div",
@@ -115,7 +133,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
-            "props": Object {},
+            "props": Object {
+              "className": [Function],
+            },
             "ref": null,
             "rendered": null,
             "type": "div",
@@ -143,10 +163,6 @@ ShallowWrapper {
           "children": Array [
             "$",
             0,
-            ".",
-            <span>
-              00
-            </span>,
           ],
           "className": "fave-price",
         },
@@ -154,18 +170,6 @@ ShallowWrapper {
         "rendered": Array [
           "$",
           0,
-          ".",
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "00",
-            },
-            "ref": null,
-            "rendered": "00",
-            "type": "span",
-          },
         ],
         "type": "p",
       },
@@ -175,9 +179,15 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <div />,
-            <div />,
-            <div />,
+            <div
+              className={[Function]}
+            />,
+            <div
+              className={[Function]}
+            />,
+            <div
+              className={[Function]}
+            />,
           ],
           "className": "bubbles bubbles-right",
         },
@@ -187,7 +197,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
-            "props": Object {},
+            "props": Object {
+              "className": [Function],
+            },
             "ref": null,
             "rendered": null,
             "type": "div",
@@ -196,7 +208,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
-            "props": Object {},
+            "props": Object {
+              "className": [Function],
+            },
             "ref": null,
             "rendered": null,
             "type": "div",
@@ -205,7 +219,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
-            "props": Object {},
+            "props": Object {
+              "className": [Function],
+            },
             "ref": null,
             "rendered": null,
             "type": "div",
@@ -292,9 +308,15 @@ ShallowWrapper {
           <div
             className="bubbles bubbles-left"
           >
-            <div />
-            <div />
-            <div />
+            <div
+              className={[Function]}
+            />
+            <div
+              className={[Function]}
+            />
+            <div
+              className={[Function]}
+            />
           </div>,
           <p
             className="fave-name"
@@ -306,17 +328,19 @@ ShallowWrapper {
           >
             $
             0
-            .
-            <span>
-              00
-            </span>
           </p>,
           <div
             className="bubbles bubbles-right"
           >
-            <div />
-            <div />
-            <div />
+            <div
+              className={[Function]}
+            />
+            <div
+              className={[Function]}
+            />
+            <div
+              className={[Function]}
+            />
           </div>,
           <div
             className="price-progress"
@@ -346,9 +370,15 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <div />,
-              <div />,
-              <div />,
+              <div
+                className={[Function]}
+              />,
+              <div
+                className={[Function]}
+              />,
+              <div
+                className={[Function]}
+              />,
             ],
             "className": "bubbles bubbles-left",
           },
@@ -358,7 +388,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
-              "props": Object {},
+              "props": Object {
+                "className": [Function],
+              },
               "ref": null,
               "rendered": null,
               "type": "div",
@@ -367,7 +399,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
-              "props": Object {},
+              "props": Object {
+                "className": [Function],
+              },
               "ref": null,
               "rendered": null,
               "type": "div",
@@ -376,7 +410,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
-              "props": Object {},
+              "props": Object {
+                "className": [Function],
+              },
               "ref": null,
               "rendered": null,
               "type": "div",
@@ -404,10 +440,6 @@ ShallowWrapper {
             "children": Array [
               "$",
               0,
-              ".",
-              <span>
-                00
-              </span>,
             ],
             "className": "fave-price",
           },
@@ -415,18 +447,6 @@ ShallowWrapper {
           "rendered": Array [
             "$",
             0,
-            ".",
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "00",
-              },
-              "ref": null,
-              "rendered": "00",
-              "type": "span",
-            },
           ],
           "type": "p",
         },
@@ -436,9 +456,15 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <div />,
-              <div />,
-              <div />,
+              <div
+                className={[Function]}
+              />,
+              <div
+                className={[Function]}
+              />,
+              <div
+                className={[Function]}
+              />,
             ],
             "className": "bubbles bubbles-right",
           },
@@ -448,7 +474,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
-              "props": Object {},
+              "props": Object {
+                "className": [Function],
+              },
               "ref": null,
               "rendered": null,
               "type": "div",
@@ -457,7 +485,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
-              "props": Object {},
+              "props": Object {
+                "className": [Function],
+              },
               "ref": null,
               "rendered": null,
               "type": "div",
@@ -466,7 +496,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
-              "props": Object {},
+              "props": Object {
+                "className": [Function],
+              },
               "ref": null,
               "rendered": null,
               "type": "div",

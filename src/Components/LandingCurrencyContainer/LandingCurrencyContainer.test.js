@@ -6,11 +6,13 @@ import { mockAbbrevCurrencies } from '../../Utils/Mockdata/mockAbbrevCurrencies'
 describe('LandingCurrencyContainer Component', () => {
   let wrapper
   const mockSetFilter = jest.fn()
+  const mockAddToFavorites = jest.fn()
 
   beforeEach(() => {
     wrapper = shallow(<LandingCurrencyContainer
                         abbrevCurrencies={mockAbbrevCurrencies}
                         setFilter={mockSetFilter}
+                        addToFavorites={mockAddToFavorites}
                       />)
   })
 

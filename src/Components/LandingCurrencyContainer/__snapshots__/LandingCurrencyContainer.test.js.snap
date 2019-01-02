@@ -78,6 +78,7 @@ ShallowWrapper {
         },
       ]
     }
+    addToFavorites={[MockFunction]}
     setFilter={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -125,6 +126,7 @@ ShallowWrapper {
           </a>
         </div>
         <LandingCurrency
+          addToFavorites={[MockFunction]}
           currency={
             Object {
               "name": "Bitcoin",
@@ -137,6 +139,7 @@ ShallowWrapper {
           index={0}
         />
         <LandingCurrency
+          addToFavorites={[MockFunction]}
           currency={
             Object {
               "name": "XRP",
@@ -149,6 +152,7 @@ ShallowWrapper {
           index={1}
         />
         <LandingCurrency
+          addToFavorites={[MockFunction]}
           currency={
             Object {
               "name": "Ethereum",
@@ -161,6 +165,7 @@ ShallowWrapper {
           index={2}
         />
         <LandingCurrency
+          addToFavorites={[MockFunction]}
           currency={
             Object {
               "name": "EOS",
@@ -173,6 +178,7 @@ ShallowWrapper {
           index={3}
         />
         <LandingCurrency
+          addToFavorites={[MockFunction]}
           currency={
             Object {
               "name": "Stellar",
@@ -185,6 +191,7 @@ ShallowWrapper {
           index={4}
         />
         <LandingCurrency
+          addToFavorites={[MockFunction]}
           currency={
             Object {
               "name": "Tether",
@@ -197,6 +204,7 @@ ShallowWrapper {
           index={5}
         />
         <LandingCurrency
+          addToFavorites={[MockFunction]}
           currency={
             Object {
               "name": "Bitcoin Cash",
@@ -209,6 +217,7 @@ ShallowWrapper {
           index={6}
         />
         <LandingCurrency
+          addToFavorites={[MockFunction]}
           currency={
             Object {
               "name": "Litecoin",
@@ -221,6 +230,7 @@ ShallowWrapper {
           index={7}
         />
         <LandingCurrency
+          addToFavorites={[MockFunction]}
           currency={
             Object {
               "name": "Bitcoin SV",
@@ -233,6 +243,7 @@ ShallowWrapper {
           index={8}
         />
         <LandingCurrency
+          addToFavorites={[MockFunction]}
           currency={
             Object {
               "name": "TRON",
@@ -287,6 +298,7 @@ ShallowWrapper {
           </div>,
           Array [
             <LandingCurrency
+              addToFavorites={[MockFunction]}
               currency={
                 Object {
                   "name": "Bitcoin",
@@ -299,6 +311,7 @@ ShallowWrapper {
               index={0}
             />,
             <LandingCurrency
+              addToFavorites={[MockFunction]}
               currency={
                 Object {
                   "name": "XRP",
@@ -311,6 +324,7 @@ ShallowWrapper {
               index={1}
             />,
             <LandingCurrency
+              addToFavorites={[MockFunction]}
               currency={
                 Object {
                   "name": "Ethereum",
@@ -323,6 +337,7 @@ ShallowWrapper {
               index={2}
             />,
             <LandingCurrency
+              addToFavorites={[MockFunction]}
               currency={
                 Object {
                   "name": "EOS",
@@ -335,6 +350,7 @@ ShallowWrapper {
               index={3}
             />,
             <LandingCurrency
+              addToFavorites={[MockFunction]}
               currency={
                 Object {
                   "name": "Stellar",
@@ -347,6 +363,7 @@ ShallowWrapper {
               index={4}
             />,
             <LandingCurrency
+              addToFavorites={[MockFunction]}
               currency={
                 Object {
                   "name": "Tether",
@@ -359,6 +376,7 @@ ShallowWrapper {
               index={5}
             />,
             <LandingCurrency
+              addToFavorites={[MockFunction]}
               currency={
                 Object {
                   "name": "Bitcoin Cash",
@@ -371,6 +389,7 @@ ShallowWrapper {
               index={6}
             />,
             <LandingCurrency
+              addToFavorites={[MockFunction]}
               currency={
                 Object {
                   "name": "Litecoin",
@@ -383,6 +402,7 @@ ShallowWrapper {
               index={7}
             />,
             <LandingCurrency
+              addToFavorites={[MockFunction]}
               currency={
                 Object {
                   "name": "Bitcoin SV",
@@ -395,6 +415,7 @@ ShallowWrapper {
               index={8}
             />,
             <LandingCurrency
+              addToFavorites={[MockFunction]}
               currency={
                 Object {
                   "name": "TRON",
@@ -503,7 +524,7 @@ ShallowWrapper {
           "key": "0",
           "nodeType": "class",
           "props": Object {
-            "addToFavorites": undefined,
+            "addToFavorites": [MockFunction],
             "currency": Object {
               "name": "Bitcoin",
               "percent_change": 0.83,
@@ -522,7 +543,7 @@ ShallowWrapper {
           "key": "1",
           "nodeType": "class",
           "props": Object {
-            "addToFavorites": undefined,
+            "addToFavorites": [MockFunction],
             "currency": Object {
               "name": "XRP",
               "percent_change": 3.94,
@@ -541,7 +562,7 @@ ShallowWrapper {
           "key": "2",
           "nodeType": "class",
           "props": Object {
-            "addToFavorites": undefined,
+            "addToFavorites": [MockFunction],
             "currency": Object {
               "name": "Ethereum",
               "percent_change": 0.2,
@@ -560,7 +581,7 @@ ShallowWrapper {
           "key": "3",
           "nodeType": "class",
           "props": Object {
-            "addToFavorites": undefined,
+            "addToFavorites": [MockFunction],
             "currency": Object {
               "name": "EOS",
               "percent_change": 6.87,
@@ -579,7 +600,7 @@ ShallowWrapper {
           "key": "4",
           "nodeType": "class",
           "props": Object {
-            "addToFavorites": undefined,
+            "addToFavorites": [MockFunction],
             "currency": Object {
               "name": "Stellar",
               "percent_change": -0.58,
@@ -598,7 +619,7 @@ ShallowWrapper {
           "key": "5",
           "nodeType": "class",
           "props": Object {
-            "addToFavorites": undefined,
+            "addToFavorites": [MockFunction],
             "currency": Object {
               "name": "Tether",
               "percent_change": -0.37,
@@ -617,7 +638,7 @@ ShallowWrapper {
           "key": "6",
           "nodeType": "class",
           "props": Object {
-            "addToFavorites": undefined,
+            "addToFavorites": [MockFunction],
             "currency": Object {
               "name": "Bitcoin Cash",
               "percent_change": 12.32,
@@ -636,7 +657,7 @@ ShallowWrapper {
           "key": "7",
           "nodeType": "class",
           "props": Object {
-            "addToFavorites": undefined,
+            "addToFavorites": [MockFunction],
             "currency": Object {
               "name": "Litecoin",
               "percent_change": -1.97,
@@ -655,7 +676,7 @@ ShallowWrapper {
           "key": "8",
           "nodeType": "class",
           "props": Object {
-            "addToFavorites": undefined,
+            "addToFavorites": [MockFunction],
             "currency": Object {
               "name": "Bitcoin SV",
               "percent_change": -1.04,
@@ -674,7 +695,7 @@ ShallowWrapper {
           "key": "9",
           "nodeType": "class",
           "props": Object {
-            "addToFavorites": undefined,
+            "addToFavorites": [MockFunction],
             "currency": Object {
               "name": "TRON",
               "percent_change": 0.17,
@@ -742,6 +763,7 @@ ShallowWrapper {
             </a>
           </div>
           <LandingCurrency
+            addToFavorites={[MockFunction]}
             currency={
               Object {
                 "name": "Bitcoin",
@@ -754,6 +776,7 @@ ShallowWrapper {
             index={0}
           />
           <LandingCurrency
+            addToFavorites={[MockFunction]}
             currency={
               Object {
                 "name": "XRP",
@@ -766,6 +789,7 @@ ShallowWrapper {
             index={1}
           />
           <LandingCurrency
+            addToFavorites={[MockFunction]}
             currency={
               Object {
                 "name": "Ethereum",
@@ -778,6 +802,7 @@ ShallowWrapper {
             index={2}
           />
           <LandingCurrency
+            addToFavorites={[MockFunction]}
             currency={
               Object {
                 "name": "EOS",
@@ -790,6 +815,7 @@ ShallowWrapper {
             index={3}
           />
           <LandingCurrency
+            addToFavorites={[MockFunction]}
             currency={
               Object {
                 "name": "Stellar",
@@ -802,6 +828,7 @@ ShallowWrapper {
             index={4}
           />
           <LandingCurrency
+            addToFavorites={[MockFunction]}
             currency={
               Object {
                 "name": "Tether",
@@ -814,6 +841,7 @@ ShallowWrapper {
             index={5}
           />
           <LandingCurrency
+            addToFavorites={[MockFunction]}
             currency={
               Object {
                 "name": "Bitcoin Cash",
@@ -826,6 +854,7 @@ ShallowWrapper {
             index={6}
           />
           <LandingCurrency
+            addToFavorites={[MockFunction]}
             currency={
               Object {
                 "name": "Litecoin",
@@ -838,6 +867,7 @@ ShallowWrapper {
             index={7}
           />
           <LandingCurrency
+            addToFavorites={[MockFunction]}
             currency={
               Object {
                 "name": "Bitcoin SV",
@@ -850,6 +880,7 @@ ShallowWrapper {
             index={8}
           />
           <LandingCurrency
+            addToFavorites={[MockFunction]}
             currency={
               Object {
                 "name": "TRON",
@@ -904,6 +935,7 @@ ShallowWrapper {
             </div>,
             Array [
               <LandingCurrency
+                addToFavorites={[MockFunction]}
                 currency={
                   Object {
                     "name": "Bitcoin",
@@ -916,6 +948,7 @@ ShallowWrapper {
                 index={0}
               />,
               <LandingCurrency
+                addToFavorites={[MockFunction]}
                 currency={
                   Object {
                     "name": "XRP",
@@ -928,6 +961,7 @@ ShallowWrapper {
                 index={1}
               />,
               <LandingCurrency
+                addToFavorites={[MockFunction]}
                 currency={
                   Object {
                     "name": "Ethereum",
@@ -940,6 +974,7 @@ ShallowWrapper {
                 index={2}
               />,
               <LandingCurrency
+                addToFavorites={[MockFunction]}
                 currency={
                   Object {
                     "name": "EOS",
@@ -952,6 +987,7 @@ ShallowWrapper {
                 index={3}
               />,
               <LandingCurrency
+                addToFavorites={[MockFunction]}
                 currency={
                   Object {
                     "name": "Stellar",
@@ -964,6 +1000,7 @@ ShallowWrapper {
                 index={4}
               />,
               <LandingCurrency
+                addToFavorites={[MockFunction]}
                 currency={
                   Object {
                     "name": "Tether",
@@ -976,6 +1013,7 @@ ShallowWrapper {
                 index={5}
               />,
               <LandingCurrency
+                addToFavorites={[MockFunction]}
                 currency={
                   Object {
                     "name": "Bitcoin Cash",
@@ -988,6 +1026,7 @@ ShallowWrapper {
                 index={6}
               />,
               <LandingCurrency
+                addToFavorites={[MockFunction]}
                 currency={
                   Object {
                     "name": "Litecoin",
@@ -1000,6 +1039,7 @@ ShallowWrapper {
                 index={7}
               />,
               <LandingCurrency
+                addToFavorites={[MockFunction]}
                 currency={
                   Object {
                     "name": "Bitcoin SV",
@@ -1012,6 +1052,7 @@ ShallowWrapper {
                 index={8}
               />,
               <LandingCurrency
+                addToFavorites={[MockFunction]}
                 currency={
                   Object {
                     "name": "TRON",
@@ -1120,7 +1161,7 @@ ShallowWrapper {
             "key": "0",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
+              "addToFavorites": [MockFunction],
               "currency": Object {
                 "name": "Bitcoin",
                 "percent_change": 0.83,
@@ -1139,7 +1180,7 @@ ShallowWrapper {
             "key": "1",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
+              "addToFavorites": [MockFunction],
               "currency": Object {
                 "name": "XRP",
                 "percent_change": 3.94,
@@ -1158,7 +1199,7 @@ ShallowWrapper {
             "key": "2",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
+              "addToFavorites": [MockFunction],
               "currency": Object {
                 "name": "Ethereum",
                 "percent_change": 0.2,
@@ -1177,7 +1218,7 @@ ShallowWrapper {
             "key": "3",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
+              "addToFavorites": [MockFunction],
               "currency": Object {
                 "name": "EOS",
                 "percent_change": 6.87,
@@ -1196,7 +1237,7 @@ ShallowWrapper {
             "key": "4",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
+              "addToFavorites": [MockFunction],
               "currency": Object {
                 "name": "Stellar",
                 "percent_change": -0.58,
@@ -1215,7 +1256,7 @@ ShallowWrapper {
             "key": "5",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
+              "addToFavorites": [MockFunction],
               "currency": Object {
                 "name": "Tether",
                 "percent_change": -0.37,
@@ -1234,7 +1275,7 @@ ShallowWrapper {
             "key": "6",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
+              "addToFavorites": [MockFunction],
               "currency": Object {
                 "name": "Bitcoin Cash",
                 "percent_change": 12.32,
@@ -1253,7 +1294,7 @@ ShallowWrapper {
             "key": "7",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
+              "addToFavorites": [MockFunction],
               "currency": Object {
                 "name": "Litecoin",
                 "percent_change": -1.97,
@@ -1272,7 +1313,7 @@ ShallowWrapper {
             "key": "8",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
+              "addToFavorites": [MockFunction],
               "currency": Object {
                 "name": "Bitcoin SV",
                 "percent_change": -1.04,
@@ -1291,7 +1332,7 @@ ShallowWrapper {
             "key": "9",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
+              "addToFavorites": [MockFunction],
               "currency": Object {
                 "name": "TRON",
                 "percent_change": 0.17,

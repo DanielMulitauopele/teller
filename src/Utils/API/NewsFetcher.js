@@ -6,7 +6,6 @@ export const fetchNews = async type => {
   let path = "";
   switch (type) {
     case "tech":
-    console.log('the case is tech!')
       path = "q=water";
       break;
     case "memes":
@@ -28,5 +27,4 @@ export const fetchNews = async type => {
   return await fetchRequest(
     `https://newsapi.org/v2/everything?${path}&from=2018-11-28&sortBy=publishedAt&apiKey=${Key}`
   );
-    console.log('it did not get called')
 };

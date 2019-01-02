@@ -82,6 +82,7 @@ ShallowWrapper {
     favorites={
       Array [
         Object {
+          "id": 123,
           "market_cap_usd": "62506159630.7222615731538755",
           "max_supply": "21000000.0000000000000000",
           "name": "Bitcoin",
@@ -92,6 +93,7 @@ ShallowWrapper {
           "symbol": "BTC",
         },
         Object {
+          "id": 234,
           "market_cap_usd": "13612140064.7471135264064432",
           "max_supply": "100000000000.0000000000000000",
           "name": "XRP",
@@ -102,6 +104,7 @@ ShallowWrapper {
           "symbol": "XRP",
         },
         Object {
+          "id": 345,
           "market_cap_usd": "9875418262.8035156239002594",
           "max_supply": null,
           "name": "Ethereum",
@@ -112,6 +115,7 @@ ShallowWrapper {
           "symbol": "ETH",
         },
         Object {
+          "id": 456,
           "market_cap_usd": "2299890068.4280425642158096",
           "max_supply": null,
           "name": "EOS",
@@ -122,6 +126,7 @@ ShallowWrapper {
           "symbol": "EOS",
         },
         Object {
+          "id": 567,
           "market_cap_usd": "2101330537.3210911914502786",
           "max_supply": null,
           "name": "Stellar",
@@ -151,84 +156,10 @@ ShallowWrapper {
       "children": Array [
         <NewsContainer />,
         <FavoritesContainer
-          abbrevCurrencies={
-            Array [
-              Object {
-                "name": "Bitcoin",
-                "percent_change": 0.83,
-                "price": 3586.16,
-                "rank": "1",
-                "symbol": "BTC",
-              },
-              Object {
-                "name": "XRP",
-                "percent_change": 3.94,
-                "price": 0.33,
-                "rank": "2",
-                "symbol": "XRP",
-              },
-              Object {
-                "name": "Ethereum",
-                "percent_change": 0.2,
-                "price": 95.07,
-                "rank": "3",
-                "symbol": "ETH",
-              },
-              Object {
-                "name": "EOS",
-                "percent_change": 6.87,
-                "price": 2.54,
-                "rank": "4",
-                "symbol": "EOS",
-              },
-              Object {
-                "name": "Stellar",
-                "percent_change": -0.58,
-                "price": 0.11,
-                "rank": "5",
-                "symbol": "XLM",
-              },
-              Object {
-                "name": "Tether",
-                "percent_change": -0.37,
-                "price": 1.02,
-                "rank": "6",
-                "symbol": "USDT",
-              },
-              Object {
-                "name": "Bitcoin Cash",
-                "percent_change": 12.32,
-                "price": 100.65,
-                "rank": "7",
-                "symbol": "BCH",
-              },
-              Object {
-                "name": "Litecoin",
-                "percent_change": -1.97,
-                "price": 28.99,
-                "rank": "8",
-                "symbol": "LTC",
-              },
-              Object {
-                "name": "Bitcoin SV",
-                "percent_change": -1.04,
-                "price": 81.84,
-                "rank": "9",
-                "symbol": "BSV",
-              },
-              Object {
-                "name": "TRON",
-                "percent_change": 0.17,
-                "price": 0.01,
-                "rank": "10",
-                "symbol": "TRX",
-              },
-            ]
-          }
-          addToFavorites={[MockFunction]}
           favorites={
             Array [
               Object {
+                "id": 123,
                 "market_cap_usd": "62506159630.7222615731538755",
                 "max_supply": "21000000.0000000000000000",
                 "name": "Bitcoin",
@@ -239,6 +170,7 @@ ShallowWrapper {
                 "symbol": "BTC",
               },
               Object {
+                "id": 234,
                 "market_cap_usd": "13612140064.7471135264064432",
                 "max_supply": "100000000000.0000000000000000",
                 "name": "XRP",
@@ -249,6 +181,7 @@ ShallowWrapper {
                 "symbol": "XRP",
               },
               Object {
+                "id": 345,
                 "market_cap_usd": "9875418262.8035156239002594",
                 "max_supply": null,
                 "name": "Ethereum",
@@ -259,6 +192,7 @@ ShallowWrapper {
                 "symbol": "ETH",
               },
               Object {
+                "id": 456,
                 "market_cap_usd": "2299890068.4280425642158096",
                 "max_supply": null,
                 "name": "EOS",
@@ -269,6 +203,7 @@ ShallowWrapper {
                 "symbol": "EOS",
               },
               Object {
+                "id": 567,
                 "market_cap_usd": "2101330537.3210911914502786",
                 "max_supply": null,
                 "name": "Stellar",
@@ -378,81 +313,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "abbrevCurrencies": Array [
-            Object {
-              "name": "Bitcoin",
-              "percent_change": 0.83,
-              "price": 3586.16,
-              "rank": "1",
-              "symbol": "BTC",
-            },
-            Object {
-              "name": "XRP",
-              "percent_change": 3.94,
-              "price": 0.33,
-              "rank": "2",
-              "symbol": "XRP",
-            },
-            Object {
-              "name": "Ethereum",
-              "percent_change": 0.2,
-              "price": 95.07,
-              "rank": "3",
-              "symbol": "ETH",
-            },
-            Object {
-              "name": "EOS",
-              "percent_change": 6.87,
-              "price": 2.54,
-              "rank": "4",
-              "symbol": "EOS",
-            },
-            Object {
-              "name": "Stellar",
-              "percent_change": -0.58,
-              "price": 0.11,
-              "rank": "5",
-              "symbol": "XLM",
-            },
-            Object {
-              "name": "Tether",
-              "percent_change": -0.37,
-              "price": 1.02,
-              "rank": "6",
-              "symbol": "USDT",
-            },
-            Object {
-              "name": "Bitcoin Cash",
-              "percent_change": 12.32,
-              "price": 100.65,
-              "rank": "7",
-              "symbol": "BCH",
-            },
-            Object {
-              "name": "Litecoin",
-              "percent_change": -1.97,
-              "price": 28.99,
-              "rank": "8",
-              "symbol": "LTC",
-            },
-            Object {
-              "name": "Bitcoin SV",
-              "percent_change": -1.04,
-              "price": 81.84,
-              "rank": "9",
-              "symbol": "BSV",
-            },
-            Object {
-              "name": "TRON",
-              "percent_change": 0.17,
-              "price": 0.01,
-              "rank": "10",
-              "symbol": "TRX",
-            },
-          ],
-          "addToFavorites": [MockFunction],
           "favorites": Array [
             Object {
+              "id": 123,
               "market_cap_usd": "62506159630.7222615731538755",
               "max_supply": "21000000.0000000000000000",
               "name": "Bitcoin",
@@ -463,6 +326,7 @@ ShallowWrapper {
               "symbol": "BTC",
             },
             Object {
+              "id": 234,
               "market_cap_usd": "13612140064.7471135264064432",
               "max_supply": "100000000000.0000000000000000",
               "name": "XRP",
@@ -473,6 +337,7 @@ ShallowWrapper {
               "symbol": "XRP",
             },
             Object {
+              "id": 345,
               "market_cap_usd": "9875418262.8035156239002594",
               "max_supply": null,
               "name": "Ethereum",
@@ -483,6 +348,7 @@ ShallowWrapper {
               "symbol": "ETH",
             },
             Object {
+              "id": 456,
               "market_cap_usd": "2299890068.4280425642158096",
               "max_supply": null,
               "name": "EOS",
@@ -493,6 +359,7 @@ ShallowWrapper {
               "symbol": "EOS",
             },
             Object {
+              "id": 567,
               "market_cap_usd": "2101330537.3210911914502786",
               "max_supply": null,
               "name": "Stellar",
@@ -605,84 +472,10 @@ ShallowWrapper {
         "children": Array [
           <NewsContainer />,
           <FavoritesContainer
-            abbrevCurrencies={
-              Array [
-                Object {
-                  "name": "Bitcoin",
-                  "percent_change": 0.83,
-                  "price": 3586.16,
-                  "rank": "1",
-                  "symbol": "BTC",
-                },
-                Object {
-                  "name": "XRP",
-                  "percent_change": 3.94,
-                  "price": 0.33,
-                  "rank": "2",
-                  "symbol": "XRP",
-                },
-                Object {
-                  "name": "Ethereum",
-                  "percent_change": 0.2,
-                  "price": 95.07,
-                  "rank": "3",
-                  "symbol": "ETH",
-                },
-                Object {
-                  "name": "EOS",
-                  "percent_change": 6.87,
-                  "price": 2.54,
-                  "rank": "4",
-                  "symbol": "EOS",
-                },
-                Object {
-                  "name": "Stellar",
-                  "percent_change": -0.58,
-                  "price": 0.11,
-                  "rank": "5",
-                  "symbol": "XLM",
-                },
-                Object {
-                  "name": "Tether",
-                  "percent_change": -0.37,
-                  "price": 1.02,
-                  "rank": "6",
-                  "symbol": "USDT",
-                },
-                Object {
-                  "name": "Bitcoin Cash",
-                  "percent_change": 12.32,
-                  "price": 100.65,
-                  "rank": "7",
-                  "symbol": "BCH",
-                },
-                Object {
-                  "name": "Litecoin",
-                  "percent_change": -1.97,
-                  "price": 28.99,
-                  "rank": "8",
-                  "symbol": "LTC",
-                },
-                Object {
-                  "name": "Bitcoin SV",
-                  "percent_change": -1.04,
-                  "price": 81.84,
-                  "rank": "9",
-                  "symbol": "BSV",
-                },
-                Object {
-                  "name": "TRON",
-                  "percent_change": 0.17,
-                  "price": 0.01,
-                  "rank": "10",
-                  "symbol": "TRX",
-                },
-              ]
-            }
-            addToFavorites={[MockFunction]}
             favorites={
               Array [
                 Object {
+                  "id": 123,
                   "market_cap_usd": "62506159630.7222615731538755",
                   "max_supply": "21000000.0000000000000000",
                   "name": "Bitcoin",
@@ -693,6 +486,7 @@ ShallowWrapper {
                   "symbol": "BTC",
                 },
                 Object {
+                  "id": 234,
                   "market_cap_usd": "13612140064.7471135264064432",
                   "max_supply": "100000000000.0000000000000000",
                   "name": "XRP",
@@ -703,6 +497,7 @@ ShallowWrapper {
                   "symbol": "XRP",
                 },
                 Object {
+                  "id": 345,
                   "market_cap_usd": "9875418262.8035156239002594",
                   "max_supply": null,
                   "name": "Ethereum",
@@ -713,6 +508,7 @@ ShallowWrapper {
                   "symbol": "ETH",
                 },
                 Object {
+                  "id": 456,
                   "market_cap_usd": "2299890068.4280425642158096",
                   "max_supply": null,
                   "name": "EOS",
@@ -723,6 +519,7 @@ ShallowWrapper {
                   "symbol": "EOS",
                 },
                 Object {
+                  "id": 567,
                   "market_cap_usd": "2101330537.3210911914502786",
                   "max_supply": null,
                   "name": "Stellar",
@@ -832,81 +629,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "abbrevCurrencies": Array [
-              Object {
-                "name": "Bitcoin",
-                "percent_change": 0.83,
-                "price": 3586.16,
-                "rank": "1",
-                "symbol": "BTC",
-              },
-              Object {
-                "name": "XRP",
-                "percent_change": 3.94,
-                "price": 0.33,
-                "rank": "2",
-                "symbol": "XRP",
-              },
-              Object {
-                "name": "Ethereum",
-                "percent_change": 0.2,
-                "price": 95.07,
-                "rank": "3",
-                "symbol": "ETH",
-              },
-              Object {
-                "name": "EOS",
-                "percent_change": 6.87,
-                "price": 2.54,
-                "rank": "4",
-                "symbol": "EOS",
-              },
-              Object {
-                "name": "Stellar",
-                "percent_change": -0.58,
-                "price": 0.11,
-                "rank": "5",
-                "symbol": "XLM",
-              },
-              Object {
-                "name": "Tether",
-                "percent_change": -0.37,
-                "price": 1.02,
-                "rank": "6",
-                "symbol": "USDT",
-              },
-              Object {
-                "name": "Bitcoin Cash",
-                "percent_change": 12.32,
-                "price": 100.65,
-                "rank": "7",
-                "symbol": "BCH",
-              },
-              Object {
-                "name": "Litecoin",
-                "percent_change": -1.97,
-                "price": 28.99,
-                "rank": "8",
-                "symbol": "LTC",
-              },
-              Object {
-                "name": "Bitcoin SV",
-                "percent_change": -1.04,
-                "price": 81.84,
-                "rank": "9",
-                "symbol": "BSV",
-              },
-              Object {
-                "name": "TRON",
-                "percent_change": 0.17,
-                "price": 0.01,
-                "rank": "10",
-                "symbol": "TRX",
-              },
-            ],
-            "addToFavorites": [MockFunction],
             "favorites": Array [
               Object {
+                "id": 123,
                 "market_cap_usd": "62506159630.7222615731538755",
                 "max_supply": "21000000.0000000000000000",
                 "name": "Bitcoin",
@@ -917,6 +642,7 @@ ShallowWrapper {
                 "symbol": "BTC",
               },
               Object {
+                "id": 234,
                 "market_cap_usd": "13612140064.7471135264064432",
                 "max_supply": "100000000000.0000000000000000",
                 "name": "XRP",
@@ -927,6 +653,7 @@ ShallowWrapper {
                 "symbol": "XRP",
               },
               Object {
+                "id": 345,
                 "market_cap_usd": "9875418262.8035156239002594",
                 "max_supply": null,
                 "name": "Ethereum",
@@ -937,6 +664,7 @@ ShallowWrapper {
                 "symbol": "ETH",
               },
               Object {
+                "id": 456,
                 "market_cap_usd": "2299890068.4280425642158096",
                 "max_supply": null,
                 "name": "EOS",
@@ -947,6 +675,7 @@ ShallowWrapper {
                 "symbol": "EOS",
               },
               Object {
+                "id": 567,
                 "market_cap_usd": "2101330537.3210911914502786",
                 "max_supply": null,
                 "name": "Stellar",

@@ -10,13 +10,14 @@ import Landing from "./Components/Landing/Landing";
 import RegisterForm from "./Components/RegisterForm/RegisterForm";
 import LoginForm from "./Components/LoginForm/LoginForm";
 import Login from "./Components/LoginForm/LoginForm";
-import { coinNames } from "./Components/Search/CoinNames";
+import NotesContainer from "./Components/NotesContainer/NotesContainer"
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       favorites: [{
+        id: 12345,
         name: "No favorites saved", 
         price: "0",
         percent_change: "0"
@@ -24,7 +25,8 @@ class App extends Component {
       abbrevCurrencies: [],
       expandedCurrencies: [],
       userEmail: "",
-      news: []
+      news: [],
+      notes: []
     };
     this.cleaner = new DataCleaner();
   }
@@ -36,14 +38,15 @@ class App extends Component {
   }
 
   addToFavorites = favorite => {
-    if (this.state.favorites.length < 5) {
-      this.setState({ favorites: [favorite, ...this.state.favorites] });
-    } else if (this.state.favorites.length >= 5) {
+    const { favorites } = this.state
+    const newFave = {id: Date.now(), ...favorite}
+    if (favorites.length < 5) {
+      this.setState({ favorites: [newFave, ...favorites] });
+    } else if (favorites.length >= 5) {
       this.setState({
-        favorites: [favorite, ...this.state.favorites.slice(0, 4)]
+        favorites: [newFave, ...favorites.slice(0, 4)]
       });
     }
-    console.log(this.state.favorites);
   };
 
   removeFromFavorites = id => {
@@ -53,25 +56,39 @@ class App extends Component {
     this.setState({ favorites: filteredFavorites });
   };
 
+  addToNotes = note => {
+    const { notes } = this.state
+    const newNote = {id: Date.now(), ...note}
+    this.setState({
+      notes: [newNote, ...notes]
+    })
+  }
+
+  removeFromNotes = id => {
+    const filteredNotes = this.state.notes.filter(note => note.id !== id)
+    this.setState({ notes: filteredNotes })
+  }
+
   logInUser = userEmail => {
     this.setState({ userEmail });
   };
 
+
   displaySearch = async currency => {
-    const { abbrevCurrencies, expandedCurrencies } = this.state
     let abbCurr
     let expCurr
+    const { abbrevCurrencies, expandedCurrencies } = this.state
     if (currency === "") {
       abbCurr = await this.cleaner.getAbbrevCurrencies();
       expCurr = await this.cleaner.getExpandedCurrencies();
     } else {
       abbCurr = abbrevCurrencies.filter(curr => curr.name.toUpperCase().includes(currency.toUpperCase()) || curr.name.toUpperCase() === currency.toUpperCase())
       expCurr = expandedCurrencies.filter(curr => curr.name.toUpperCase().includes(currency.toUpperCase()) || curr.name.toUpperCase() === currency.toUpperCase())
-      this.setState({
-        abbrevCurrencies: abbCurr,
-        expandedCurrencies: expCurr
-      })
     }
+    this.setState({
+      abbrevCurrencies: abbCurr,
+      expandedCurrencies: expCurr
+    })
   };
 
   setFilter = filterCategory => {
@@ -95,7 +112,7 @@ class App extends Component {
   };
 
   render() {
-    const { abbrevCurrencies, favorites } = this.state;
+    const { abbrevCurrencies, favorites, notes } = this.state;
     return (
       <BrowserRouter>
         <div className="App">
@@ -126,6 +143,19 @@ class App extends Component {
               path="/login"
               render={() => {
                 return <Login />;
+              }}
+            />
+            <Route 
+              exact
+              path="/notes"
+              render={() => {
+                return (
+                  <NotesContainer 
+                    notes={notes}
+                    addToNotes={this.addToNotes}
+                    removeFromNotes={this.removeFromNotes}
+                  />
+                )
               }}
             />
           </Switch>

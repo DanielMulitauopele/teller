@@ -11,10 +11,7 @@ class FavoritesContainer extends Component {
   constructor({
       props,
       favorites,
-      addToFavorites,
       removeFromFavorites,
-      abbrevCurrencies,
-      setFilter
     }) {
     super(props);
     this.state = {
@@ -33,7 +30,6 @@ class FavoritesContainer extends Component {
           key={favorite.id}
           favorite={favorite}
           removeFromFavorites={removeFromFavorites}
-          addToFavorites={addToFavorites}
         />
       );
     });
