@@ -1,0 +1,32 @@
+.form-wrapper {
+  text-align: center;
+}
+
+.form-wrapper input {
+  display: block;
+  /* padding: 0.5rem 1rem; */
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.form-wrapper input:first-child {
+  border-bottom: 1px solid var(--TellerPink);
+}
+
+.login-form input {
+  padding: 0.5rem 1rem;
+}
+
+.form-wrapper .login-button {
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+
+.play-button {
+  width: 15px;
+  height: 15px;
+}
