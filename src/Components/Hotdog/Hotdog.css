@@ -82,6 +82,7 @@
   height: 100%;
   opacity: 1;
   text-align: center;
+  overflow: scroll;
   width: 100%;
   z-index: 60;
   background-color: var(--TellerBG);
@@ -120,8 +121,8 @@
   transition: 0.4s;
 }
 
-.hotdog-menu li:hover,
-.hotdog-menu-expanded li:hover {
+.hotdog-menu li:hover span,
+.hotdog-menu-expanded li:hover span {
   color: #fc599f;
   cursor: pointer;
   text-shadow: 0px 0px 10px #fc59a02a;
@@ -129,11 +130,14 @@
 
 .donate {
   color: rgb(206, 206, 206);
-  position: absolute;
-  bottom: 1rem;
   left: 0;
   right: 0;
   margin: 0 auto;
+}
+
+.menu-card a {
+  color: white !important;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 700px) {
