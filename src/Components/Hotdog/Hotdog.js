@@ -43,14 +43,16 @@ class Hotdog extends Component {
             </h1>
             <ul>
               <li className="home-li" onClick={this.changeActiveRoute}>
-                <NavLink to="/">
+                <NavLink to="/home">
                   <img src={Home} alt="home-icon" />
                   <span>Home</span>
                 </NavLink>
               </li>
               <li>
-                <img src={Blog} alt="blog-icon" />
-                <span>Blog</span>
+                <NavLink to="/blogs">
+                  <img src={Blog} alt="blog-icon" />
+                  <span>Blog</span>
+                </NavLink>
               </li>
               <li>
                 <NavLink to="/notes">
