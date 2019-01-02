@@ -6,6 +6,7 @@ import Notes from "../../Assets/blogging.svg";
 import Code from "../../Assets/code.svg";
 import Exit from "../../Assets/exit.svg";
 import Donate from "../../Assets/donate.svg";
+import { NavLink } from "react-router-dom";
 
 class Hotdog extends Component {
   constructor() {
@@ -42,8 +43,10 @@ class Hotdog extends Component {
             </h1>
             <ul>
               <li className="home-li" onClick={this.changeActiveRoute}>
-                <img src={Home} alt="home-icon" />
-                <span>Home</span>
+                <NavLink to="/">
+                  <img src={Home} alt="home-icon" />
+                  <span>Home</span>
+                </NavLink>
               </li>
               <li>
                 <img src={Blog} alt="blog-icon" />
@@ -57,9 +60,11 @@ class Hotdog extends Component {
                 <img src={Code} alt="about-us-icon" />
                 <span>About</span>
               </li>
-              <li>
-                <img src={Exit} alt="exit-icon" />
-                <span>Quit</span>
+              <li onClick={this.props.setLoginState}>
+                <NavLink to="/login">
+                  <img src={Exit} alt="exit-icon" />
+                  <span className="logout">Quit</span>
+                </NavLink>
               </li>
             </ul>
             <div className="donate">

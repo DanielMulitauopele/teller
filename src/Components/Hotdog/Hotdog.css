@@ -136,6 +136,11 @@
   margin: 0 auto;
 }
 
+.menu-card a {
+  color: white !important;
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 700px) {
   .hotdog-menu {
     left: -5rem;
