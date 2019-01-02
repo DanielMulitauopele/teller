@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import LandingCurrencyContainer from './LandingCurrencyContainer'
-import { mockAbbrevCurrencies } from '../../Utils/Mockdata/mockAbbrevCurrencies'
+import { mockAbbrevCurrencies } from '../../Utils/MockData/mockAbbrevCurrencies'
 
 describe('LandingCurrencyContainer Component', () => {
   let wrapper
