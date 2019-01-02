@@ -1,0 +1,13 @@
+.title-block {
+  text-align: center;
+  font-family: teller;
+  margin-top: 2rem;
+  color: var(--TellerPink);
+}
+
+.no-notes-saved {
+  text-align: center;
+  font-size: 0.8rem;
+  color: white;
+  text-transform: capitalize;
+}

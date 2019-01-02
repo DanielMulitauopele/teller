@@ -144,7 +144,7 @@ class App extends Component {
           {this.state.loggedIn && (
             <div className="app-subtle-bg">
               <h1>teller.</h1>
-              <p> Your Personal Crpyto Analyst </p>
+              <p> Your Personal Crypto Analyst </p>
             </div>
           )}
           <Switch>
