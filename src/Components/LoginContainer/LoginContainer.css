@@ -26,7 +26,7 @@
   background-color: transparent;
   color: white;
   font-size: 1.5rem;
-  margin: 0.5rem;
+  margin: 0.2rem;
   width: 15rem;
   transition: 0.5s;
   position: relative;
@@ -35,6 +35,15 @@
 
 .login-container button:hover {
   box-shadow: 0px 0px 5px 5px #fc59a081;
+}
+
+.login-button {
+  transition: 0.5s;
+  font-size: 1.5rem;
+}
+.login-button:hover {
+  color: var(--TellerPink);
+  cursor: pointer;
 }
 
 .login-container .register {
@@ -65,16 +74,20 @@
   width: 15rem;
 }
 
+.login-form .login-button {
+  margin: 1rem auto;
+}
+
 .button-box .login-form {
   opacity: 1;
-  transition: 0.5s;
+  transition: 0s;
   height: 50px;
 }
 
 .button-box-expanded .login-form {
   height: 0px;
   opacity: 0;
-  transition: 0.5s;
+  transition: 0s;
 }
 
 .form-wrapper input {
@@ -82,8 +95,9 @@
 }
 
 .button-box .form-wrapper {
-  height: 5rem;
+  height: 8rem;
   opacity: 1;
+  transition: 0.5s;
 }
 
 @media only screen and (min-width: 700px) {

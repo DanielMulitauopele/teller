@@ -44,9 +44,7 @@ export class LoginForm extends Component {
             onChange={this.handleChange}
             placeholder="Password"
           />
-          {/* <button className="login-button">
-            <img className="play-button" src={Play} alt="go to next" />
-          </button> */}
+          <p className="login-button">Go</p>
         </form>
       </div>
     );
