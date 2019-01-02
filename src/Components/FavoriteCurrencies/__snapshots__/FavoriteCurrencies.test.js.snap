@@ -72,7 +72,8 @@ ShallowWrapper {
             +
             $
             0
-             (
+             
+            (
             1
             % 
             <img
@@ -238,7 +239,8 @@ ShallowWrapper {
             +
             $
             0
-             (
+             
+            (
             1
             % 
             <img
@@ -259,7 +261,8 @@ ShallowWrapper {
               "+",
               "$",
               0,
-              " (",
+              " ",
+              "(",
               1,
               "% ",
               <img
@@ -274,7 +277,8 @@ ShallowWrapper {
             "+",
             "$",
             0,
-            " (",
+            " ",
+            "(",
             1,
             "% ",
             Object {
@@ -349,7 +353,8 @@ ShallowWrapper {
               +
               $
               0
-               (
+               
+              (
               1
               % 
               <img
@@ -515,7 +520,8 @@ ShallowWrapper {
               +
               $
               0
-               (
+               
+              (
               1
               % 
               <img
@@ -536,7 +542,8 @@ ShallowWrapper {
                 "+",
                 "$",
                 0,
-                " (",
+                " ",
+                "(",
                 1,
                 "% ",
                 <img
@@ -551,7 +558,8 @@ ShallowWrapper {
               "+",
               "$",
               0,
-              " (",
+              " ",
+              "(",
               1,
               "% ",
               Object {

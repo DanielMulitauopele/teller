@@ -13,7 +13,6 @@ import Login from "./Components/LoginForm/LoginForm";
 import NotesContainer from "./Components/NotesContainer/NotesContainer"
 import LoginContainer from "./Components/LoginContainer/LoginContainer";
 import Onboarding from "./Components/Onboarding/Onboarding";
-import NotesContainer from "./Components/NotesContainer/NotesContainer";
 import AboutUs from "./Components/AboutUs/AboutUs";
 
 class App extends Component {
