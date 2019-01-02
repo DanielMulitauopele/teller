@@ -1,4 +1,4 @@
-import { Key } from "../../Key";
+import { newsKey } from "../../Key";
 import { fetchRequest } from "./NewsApi";
 
 export const fetchNews = async type => {
