@@ -122,4 +122,7 @@
   .currency-card {
     width: 95%;
   }
+  .currency-container {
+    width: 25rem;
+  }
 }

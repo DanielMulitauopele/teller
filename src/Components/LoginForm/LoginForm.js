@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./LoginForm.css";
+import Play from "../../Assets/play.svg";
 
 export class LoginForm extends Component {
   constructor(props) {
@@ -43,7 +44,9 @@ export class LoginForm extends Component {
             onChange={this.handleChange}
             placeholder="Password"
           />
-          <button className="login-button">Login</button>
+          {/* <button className="login-button">
+            <img className="play-button" src={Play} alt="go to next" />
+          </button> */}
         </form>
       </div>
     );

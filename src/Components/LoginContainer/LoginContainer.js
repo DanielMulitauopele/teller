@@ -7,24 +7,28 @@ class LoginContainer extends Component {
   constructor({ props, loggedIn }) {
     super(props);
     this.state = {
-      expanded: false
+      expandedLogIn: false
     };
   }
 
-  expand = () => {
+  expandLogIn = () => {
     this.setState({
-      expanded: !this.state.expanded
+      expandedLogIn: !this.state.expandedLogIn
     });
   };
 
   render() {
+    const { expandedLogIn } = this.state;
     return (
       <div className="login-container">
         <h1 className="app-title"> teller. </h1>
         <p>Your Personal Crypto Analyst</p>
         <div className="form-box">
-          <div className="button-box">
-            <button className="login"> Log in </button>
+          <div className={expandedLogIn ? "button-box" : "button-box-expanded"}>
+            <button onClick={this.expandLogIn} className="login">
+              Log in
+            </button>
+            <LoginForm />
             <button className="register"> Register </button>
             <NavLink to="/" className="skip" onClick={this.props.loggedIn}>
               Skip
