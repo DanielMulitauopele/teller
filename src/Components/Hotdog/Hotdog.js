@@ -53,8 +53,10 @@ class Hotdog extends Component {
                 <span>Blog</span>
               </li>
               <li>
-                <img src={Notes} alt="notes-icon" />
-                <span>Notes</span>
+                <NavLink to="/notes">
+                  <img src={Notes} alt="notes-icon" />
+                  <span>Notes</span>
+                </NavLink>
               </li>
               <li>
                 <NavLink to="/AboutUs">
@@ -63,7 +65,7 @@ class Hotdog extends Component {
                 </NavLink>
               </li>
               <li onClick={this.props.setLoginState}>
-                <NavLink to="/login">
+                <NavLink to="/">
                   <img src={Exit} alt="exit-icon" />
                   <span className="logout">Quit</span>
                 </NavLink>

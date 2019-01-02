@@ -150,7 +150,7 @@ class App extends Component {
           <Switch>
             <Route
               exact
-              path="/"
+              path="/home"
               render={() => {
                 return (
                   <Landing
@@ -166,7 +166,7 @@ class App extends Component {
             )}}
             <Route
               exact
-              path="/login"
+              path="/"
               render={() => {
                 return <LoginContainer loggedIn={this.setLoginState} />;
               }}
