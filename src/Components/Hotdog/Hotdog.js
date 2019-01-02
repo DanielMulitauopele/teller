@@ -57,8 +57,10 @@ class Hotdog extends Component {
                 <span>Notes</span>
               </li>
               <li>
-                <img src={Code} alt="about-us-icon" />
-                <span>About</span>
+                <NavLink to="/AboutUs">
+                  <img src={Code} alt="about-us-icon" />
+                  <span>About</span>
+                </NavLink>
               </li>
               <li onClick={this.props.setLoginState}>
                 <NavLink to="/login">

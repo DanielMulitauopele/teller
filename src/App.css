@@ -32,3 +32,21 @@
   background-color: var(--TellerBG);
   overflow: hidden;
 }
+
+.app-subtle-bg {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #232941d5;
+}
+
+.app-subtle-bg h1 {
+  font-size: 4rem;
+  font-family: teller;
+}
+
+.app-subtle-bg p {
+  font-size: 1.5rem;
+}

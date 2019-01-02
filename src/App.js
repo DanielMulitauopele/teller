@@ -12,6 +12,8 @@ import LoginForm from "./Components/LoginForm/LoginForm";
 import LoginContainer from "./Components/LoginContainer/LoginContainer";
 import Onboarding from "./Components/Onboarding/Onboarding";
 import NotesContainer from "./Components/NotesContainer/NotesContainer";
+import AboutUs from "./Components/AboutUs/AboutUs";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -139,6 +141,12 @@ class App extends Component {
         <div className="App">
           {this.state.loggedIn && <Hotdog setLoginState={this.setLoginState} />}
           {this.state.loggedIn && <Search displaySearch={this.displaySearch} />}
+          {this.state.loggedIn && (
+            <div className="app-subtle-bg">
+              <h1>teller.</h1>
+              <p> Your Personal Crpyto Analyst </p>
+            </div>
+          )}
           <Switch>
             <Route
               exact
@@ -181,6 +189,13 @@ class App extends Component {
                     removeFromNotes={this.removeFromNotes}
                   />
                 );
+              }}
+            />
+            <Route
+              exact
+              path="/about"
+              render={() => {
+                return <AboutUs />;
               }}
             />
           </Switch>
