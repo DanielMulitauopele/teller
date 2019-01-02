@@ -6,13 +6,13 @@ import NewsContainer from "../../Components/NewsContainer/NewsContainer";
 
 class Landing extends Component {
   constructor({
-      props,
-      favorites,
-      addToFavorites,
-      removeFromFavorites,
-      abbrevCurrencies,
-      setFilter
-    }) {
+    props,
+    favorites,
+    addToFavorites,
+    removeFromFavorites,
+    abbrevCurrencies,
+    setFilter
+  }) {
     super(props);
     this.state = {
       active: false,
@@ -45,7 +45,8 @@ class Landing extends Component {
         <LandingCurrencyContainer 
           abbrevCurrencies={abbrevCurrencies}
           setFilter={setFilter}
-          addToFavorites={addToFavorites} />
+          addToFavorites={addToFavorites}
+        />
       </div>
     );
   }

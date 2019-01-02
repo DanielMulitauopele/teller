@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import "./LandingCurrency.css";
 import Heart from "../../Assets/heart.svg";
+import HeartP from "../../Assets/heartpink.svg";
 import { Icons } from "../../Assets/cryptoIcons/cryptoIcons";
-import DataCleaner from "../../Utils/Cleaners/"; 
+import DataCleaner from "../../Utils/Cleaners/";
 
 class LandingCurrency extends Component {
   constructor({ props, currency, addToFavorites }) {
     super(props);
     this.state = {
-      expanded: false
+      expanded: false,
+      faved: false
     };
-    this.cleaner = new DataCleaner()
+    this.cleaner = new DataCleaner();
   }
 
   expand = () => {
@@ -19,11 +21,18 @@ class LandingCurrency extends Component {
     });
   };
 
+  faved = () => {
+    this.setState({
+      faved: !this.state.faved
+    });
+  };
+
   handleClick = async e => {
-    const { name } = e.target
-    const fave = await this.cleaner.formatFavorite(name)
-    this.props.addToFavorites(fave)
-  }
+    const { name } = e.target;
+    const fave = await this.cleaner.formatFavorite(name);
+    this.props.addToFavorites(fave);
+    this.faved();
+  };
 
   render() {
     const { symbol, name, price, percent_change, rank } = this.props.currency;
@@ -60,10 +69,11 @@ class LandingCurrency extends Component {
               <p>{rank}</p>
             </div>
             <img
-              name={name} 
-              src={Heart} 
+              name={name}
+              src={this.state.faved ? HeartP : Heart}
               className="fave-this"
-              onClick={this.handleClick} />
+              onClick={this.handleClick}
+            />
           </div>
         )}
       </div>

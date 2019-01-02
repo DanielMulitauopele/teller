@@ -1,0 +1,33 @@
+.onboarding-slider {
+  width: 90%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  /* overflow: hidden; */
+  height: 90%;
+  position: fixed;
+  background-color: var(--TellerBG);
+  top: 0;
+}
+
+.slick-arrow .slick-prev {
+  display: none;
+}
+
+.onboarding-slider button {
+  display: none;
+}
+
+.onboarding-slider div {
+  border: 1px solid blue;
+}
+
+.onboarding-slider .slide {
+  border: 1px solid red;
+  height: 20rem;
+}
+
+.onboarding-slider button {
+  display: none;
+  border: 1px solid white;
+}

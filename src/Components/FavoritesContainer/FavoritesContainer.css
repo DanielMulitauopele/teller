@@ -1,8 +1,7 @@
 .container-box {
   overflow: hidden;
   height: 11rem;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.774);
-  width: 25rem;
+  width: 100%;
   position: absolute;
   right: 0;
   top: 0;
@@ -14,5 +13,6 @@
   .container-box {
     position: absolute;
     right: 0;
+    width: 25rem;
   }
 }

@@ -20,10 +20,7 @@ class FavoritesContainer extends Component {
   }
 
   render() {
-    const { 
-      favorites, 
-      removeFromFavorites, 
-      addToFavorites } = this.props;
+    const { favorites, removeFromFavorites, addToFavorites } = this.props;
     const favoriteCurrencies = favorites.map(favorite => {
       return (
         <FavoriteCurrencies
@@ -39,7 +36,6 @@ class FavoritesContainer extends Component {
         <div className="container">
           <Slider {...settings}>{favoriteCurrencies}</Slider>
         </div>
-        {/* <TellerAI /> */}
       </div>
     );
   }

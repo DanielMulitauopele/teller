@@ -1,16 +1,11 @@
 import React, { Component } from "react";
 import "./FavoriteCurrencies.css";
 import Green from "../../Assets/green.svg";
-import Red from "../../Assets/red.svg"
+import Red from "../../Assets/red.svg";
 
 class FavoriteCurrencies extends Component {
-  constructor({
-      props,
-      favorite, 
-      removeFromFavorites, 
-      addToFavorites
-    }) {
-    super(props)
+  constructor({ props, favorite, removeFromFavorites, addToFavorites }) {
+    super(props);
   }
 
   controlBubbleSpeed = (percent_change) => {
@@ -61,7 +56,7 @@ class FavoriteCurrencies extends Component {
   }
 
   render() {
-    const { favorite, removeFromFavorites } = this.props
+    const { favorite, removeFromFavorites } = this.props;
     return (
       <div className="fave-currency">
         <div className="bubbles bubbles-left">
@@ -86,6 +81,6 @@ class FavoriteCurrencies extends Component {
       </div>
     );
   }
-};
+}
 
 export default FavoriteCurrencies;
