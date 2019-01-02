@@ -5,8 +5,8 @@ class NoteForm extends Component {
   constructor(props){
     super(props)
     this.state = {
-      title: '',
-      body: '',
+      title: "",
+      body: ""
     }
   }
 
@@ -25,11 +25,13 @@ class NoteForm extends Component {
     return(
       <form onSubmit={this.handleSubmit}>
         <input
-          name='title'
+          className="title-input"
+          name="title"
           value={title}
           onChange={this.handleChange} />
         <input
-          name='body'
+          className="body-input"
+          name="body"
           value={body}
           onChange={this.handleChange} />
         <button></button>

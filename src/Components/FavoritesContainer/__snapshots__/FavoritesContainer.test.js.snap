@@ -7,6 +7,7 @@ ShallowWrapper {
     favorites={
       Array [
         Object {
+          "id": 123,
           "market_cap_usd": "62506159630.7222615731538755",
           "max_supply": "21000000.0000000000000000",
           "name": "Bitcoin",
@@ -17,6 +18,7 @@ ShallowWrapper {
           "symbol": "BTC",
         },
         Object {
+          "id": 234,
           "market_cap_usd": "13612140064.7471135264064432",
           "max_supply": "100000000000.0000000000000000",
           "name": "XRP",
@@ -27,6 +29,7 @@ ShallowWrapper {
           "symbol": "XRP",
         },
         Object {
+          "id": 345,
           "market_cap_usd": "9875418262.8035156239002594",
           "max_supply": null,
           "name": "Ethereum",
@@ -37,6 +40,7 @@ ShallowWrapper {
           "symbol": "ETH",
         },
         Object {
+          "id": 456,
           "market_cap_usd": "2299890068.4280425642158096",
           "max_supply": null,
           "name": "EOS",
@@ -47,6 +51,7 @@ ShallowWrapper {
           "symbol": "EOS",
         },
         Object {
+          "id": 567,
           "market_cap_usd": "2101330537.3210911914502786",
           "max_supply": null,
           "name": "Stellar",
@@ -58,6 +63,7 @@ ShallowWrapper {
         },
       ]
     }
+    removeFromFavorites={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -90,6 +96,7 @@ ShallowWrapper {
           <FavoriteCurrencies
             favorite={
               Object {
+                "id": 123,
                 "market_cap_usd": "62506159630.7222615731538755",
                 "max_supply": "21000000.0000000000000000",
                 "name": "Bitcoin",
@@ -100,10 +107,12 @@ ShallowWrapper {
                 "symbol": "BTC",
               }
             }
+            removeFromFavorites={[MockFunction]}
           />
           <FavoriteCurrencies
             favorite={
               Object {
+                "id": 234,
                 "market_cap_usd": "13612140064.7471135264064432",
                 "max_supply": "100000000000.0000000000000000",
                 "name": "XRP",
@@ -114,10 +123,12 @@ ShallowWrapper {
                 "symbol": "XRP",
               }
             }
+            removeFromFavorites={[MockFunction]}
           />
           <FavoriteCurrencies
             favorite={
               Object {
+                "id": 345,
                 "market_cap_usd": "9875418262.8035156239002594",
                 "max_supply": null,
                 "name": "Ethereum",
@@ -128,10 +139,12 @@ ShallowWrapper {
                 "symbol": "ETH",
               }
             }
+            removeFromFavorites={[MockFunction]}
           />
           <FavoriteCurrencies
             favorite={
               Object {
+                "id": 456,
                 "market_cap_usd": "2299890068.4280425642158096",
                 "max_supply": null,
                 "name": "EOS",
@@ -142,10 +155,12 @@ ShallowWrapper {
                 "symbol": "EOS",
               }
             }
+            removeFromFavorites={[MockFunction]}
           />
           <FavoriteCurrencies
             favorite={
               Object {
+                "id": 567,
                 "market_cap_usd": "2101330537.3210911914502786",
                 "max_supply": null,
                 "name": "Stellar",
@@ -156,6 +171,7 @@ ShallowWrapper {
                 "symbol": "XLM",
               }
             }
+            removeFromFavorites={[MockFunction]}
           />
         </Slider>
       </div>,
@@ -182,6 +198,7 @@ ShallowWrapper {
           <FavoriteCurrencies
             favorite={
               Object {
+                "id": 123,
                 "market_cap_usd": "62506159630.7222615731538755",
                 "max_supply": "21000000.0000000000000000",
                 "name": "Bitcoin",
@@ -192,10 +209,12 @@ ShallowWrapper {
                 "symbol": "BTC",
               }
             }
+            removeFromFavorites={[MockFunction]}
           />
           <FavoriteCurrencies
             favorite={
               Object {
+                "id": 234,
                 "market_cap_usd": "13612140064.7471135264064432",
                 "max_supply": "100000000000.0000000000000000",
                 "name": "XRP",
@@ -206,10 +225,12 @@ ShallowWrapper {
                 "symbol": "XRP",
               }
             }
+            removeFromFavorites={[MockFunction]}
           />
           <FavoriteCurrencies
             favorite={
               Object {
+                "id": 345,
                 "market_cap_usd": "9875418262.8035156239002594",
                 "max_supply": null,
                 "name": "Ethereum",
@@ -220,10 +241,12 @@ ShallowWrapper {
                 "symbol": "ETH",
               }
             }
+            removeFromFavorites={[MockFunction]}
           />
           <FavoriteCurrencies
             favorite={
               Object {
+                "id": 456,
                 "market_cap_usd": "2299890068.4280425642158096",
                 "max_supply": null,
                 "name": "EOS",
@@ -234,10 +257,12 @@ ShallowWrapper {
                 "symbol": "EOS",
               }
             }
+            removeFromFavorites={[MockFunction]}
           />
           <FavoriteCurrencies
             favorite={
               Object {
+                "id": 567,
                 "market_cap_usd": "2101330537.3210911914502786",
                 "max_supply": null,
                 "name": "Stellar",
@@ -248,6 +273,7 @@ ShallowWrapper {
                 "symbol": "XLM",
               }
             }
+            removeFromFavorites={[MockFunction]}
           />
         </Slider>,
         "className": "container",
@@ -264,6 +290,7 @@ ShallowWrapper {
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 123,
                   "market_cap_usd": "62506159630.7222615731538755",
                   "max_supply": "21000000.0000000000000000",
                   "name": "Bitcoin",
@@ -274,10 +301,12 @@ ShallowWrapper {
                   "symbol": "BTC",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />,
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 234,
                   "market_cap_usd": "13612140064.7471135264064432",
                   "max_supply": "100000000000.0000000000000000",
                   "name": "XRP",
@@ -288,10 +317,12 @@ ShallowWrapper {
                   "symbol": "XRP",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />,
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 345,
                   "market_cap_usd": "9875418262.8035156239002594",
                   "max_supply": null,
                   "name": "Ethereum",
@@ -302,10 +333,12 @@ ShallowWrapper {
                   "symbol": "ETH",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />,
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 456,
                   "market_cap_usd": "2299890068.4280425642158096",
                   "max_supply": null,
                   "name": "EOS",
@@ -316,10 +349,12 @@ ShallowWrapper {
                   "symbol": "EOS",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />,
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 567,
                   "market_cap_usd": "2101330537.3210911914502786",
                   "max_supply": null,
                   "name": "Stellar",
@@ -330,6 +365,7 @@ ShallowWrapper {
                   "symbol": "XLM",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />,
           ],
           "dots": true,
@@ -345,11 +381,11 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "123",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
               "favorite": Object {
+                "id": 123,
                 "market_cap_usd": "62506159630.7222615731538755",
                 "max_supply": "21000000.0000000000000000",
                 "name": "Bitcoin",
@@ -359,7 +395,7 @@ ShallowWrapper {
                 "supply": "17429837.0000000000000000",
                 "symbol": "BTC",
               },
-              "removeFromFavorites": undefined,
+              "removeFromFavorites": [MockFunction],
             },
             "ref": null,
             "rendered": null,
@@ -367,11 +403,11 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "234",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
               "favorite": Object {
+                "id": 234,
                 "market_cap_usd": "13612140064.7471135264064432",
                 "max_supply": "100000000000.0000000000000000",
                 "name": "XRP",
@@ -381,7 +417,7 @@ ShallowWrapper {
                 "supply": "40762365544.0000000000000000",
                 "symbol": "XRP",
               },
-              "removeFromFavorites": undefined,
+              "removeFromFavorites": [MockFunction],
             },
             "ref": null,
             "rendered": null,
@@ -389,11 +425,11 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "345",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
               "favorite": Object {
+                "id": 345,
                 "market_cap_usd": "9875418262.8035156239002594",
                 "max_supply": null,
                 "name": "Ethereum",
@@ -403,7 +439,7 @@ ShallowWrapper {
                 "supply": "103875264.9678000000000000",
                 "symbol": "ETH",
               },
-              "removeFromFavorites": undefined,
+              "removeFromFavorites": [MockFunction],
             },
             "ref": null,
             "rendered": null,
@@ -411,11 +447,11 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "456",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
               "favorite": Object {
+                "id": 456,
                 "market_cap_usd": "2299890068.4280425642158096",
                 "max_supply": null,
                 "name": "EOS",
@@ -425,7 +461,7 @@ ShallowWrapper {
                 "supply": "906245117.6000000000000000",
                 "symbol": "EOS",
               },
-              "removeFromFavorites": undefined,
+              "removeFromFavorites": [MockFunction],
             },
             "ref": null,
             "rendered": null,
@@ -433,11 +469,11 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "567",
             "nodeType": "class",
             "props": Object {
-              "addToFavorites": undefined,
               "favorite": Object {
+                "id": 567,
                 "market_cap_usd": "2101330537.3210911914502786",
                 "max_supply": null,
                 "name": "Stellar",
@@ -447,7 +483,7 @@ ShallowWrapper {
                 "supply": "19171055431.4299000000000000",
                 "symbol": "XLM",
               },
-              "removeFromFavorites": undefined,
+              "removeFromFavorites": [MockFunction],
             },
             "ref": null,
             "rendered": null,
@@ -484,6 +520,7 @@ ShallowWrapper {
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 123,
                   "market_cap_usd": "62506159630.7222615731538755",
                   "max_supply": "21000000.0000000000000000",
                   "name": "Bitcoin",
@@ -494,10 +531,12 @@ ShallowWrapper {
                   "symbol": "BTC",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 234,
                   "market_cap_usd": "13612140064.7471135264064432",
                   "max_supply": "100000000000.0000000000000000",
                   "name": "XRP",
@@ -508,10 +547,12 @@ ShallowWrapper {
                   "symbol": "XRP",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 345,
                   "market_cap_usd": "9875418262.8035156239002594",
                   "max_supply": null,
                   "name": "Ethereum",
@@ -522,10 +563,12 @@ ShallowWrapper {
                   "symbol": "ETH",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 456,
                   "market_cap_usd": "2299890068.4280425642158096",
                   "max_supply": null,
                   "name": "EOS",
@@ -536,10 +579,12 @@ ShallowWrapper {
                   "symbol": "EOS",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 567,
                   "market_cap_usd": "2101330537.3210911914502786",
                   "max_supply": null,
                   "name": "Stellar",
@@ -550,6 +595,7 @@ ShallowWrapper {
                   "symbol": "XLM",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />
           </Slider>
         </div>,
@@ -576,6 +622,7 @@ ShallowWrapper {
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 123,
                   "market_cap_usd": "62506159630.7222615731538755",
                   "max_supply": "21000000.0000000000000000",
                   "name": "Bitcoin",
@@ -586,10 +633,12 @@ ShallowWrapper {
                   "symbol": "BTC",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 234,
                   "market_cap_usd": "13612140064.7471135264064432",
                   "max_supply": "100000000000.0000000000000000",
                   "name": "XRP",
@@ -600,10 +649,12 @@ ShallowWrapper {
                   "symbol": "XRP",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 345,
                   "market_cap_usd": "9875418262.8035156239002594",
                   "max_supply": null,
                   "name": "Ethereum",
@@ -614,10 +665,12 @@ ShallowWrapper {
                   "symbol": "ETH",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 456,
                   "market_cap_usd": "2299890068.4280425642158096",
                   "max_supply": null,
                   "name": "EOS",
@@ -628,10 +681,12 @@ ShallowWrapper {
                   "symbol": "EOS",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />
             <FavoriteCurrencies
               favorite={
                 Object {
+                  "id": 567,
                   "market_cap_usd": "2101330537.3210911914502786",
                   "max_supply": null,
                   "name": "Stellar",
@@ -642,6 +697,7 @@ ShallowWrapper {
                   "symbol": "XLM",
                 }
               }
+              removeFromFavorites={[MockFunction]}
             />
           </Slider>,
           "className": "container",
@@ -658,6 +714,7 @@ ShallowWrapper {
               <FavoriteCurrencies
                 favorite={
                   Object {
+                    "id": 123,
                     "market_cap_usd": "62506159630.7222615731538755",
                     "max_supply": "21000000.0000000000000000",
                     "name": "Bitcoin",
@@ -668,10 +725,12 @@ ShallowWrapper {
                     "symbol": "BTC",
                   }
                 }
+                removeFromFavorites={[MockFunction]}
               />,
               <FavoriteCurrencies
                 favorite={
                   Object {
+                    "id": 234,
                     "market_cap_usd": "13612140064.7471135264064432",
                     "max_supply": "100000000000.0000000000000000",
                     "name": "XRP",
@@ -682,10 +741,12 @@ ShallowWrapper {
                     "symbol": "XRP",
                   }
                 }
+                removeFromFavorites={[MockFunction]}
               />,
               <FavoriteCurrencies
                 favorite={
                   Object {
+                    "id": 345,
                     "market_cap_usd": "9875418262.8035156239002594",
                     "max_supply": null,
                     "name": "Ethereum",
@@ -696,10 +757,12 @@ ShallowWrapper {
                     "symbol": "ETH",
                   }
                 }
+                removeFromFavorites={[MockFunction]}
               />,
               <FavoriteCurrencies
                 favorite={
                   Object {
+                    "id": 456,
                     "market_cap_usd": "2299890068.4280425642158096",
                     "max_supply": null,
                     "name": "EOS",
@@ -710,10 +773,12 @@ ShallowWrapper {
                     "symbol": "EOS",
                   }
                 }
+                removeFromFavorites={[MockFunction]}
               />,
               <FavoriteCurrencies
                 favorite={
                   Object {
+                    "id": 567,
                     "market_cap_usd": "2101330537.3210911914502786",
                     "max_supply": null,
                     "name": "Stellar",
@@ -724,6 +789,7 @@ ShallowWrapper {
                     "symbol": "XLM",
                   }
                 }
+                removeFromFavorites={[MockFunction]}
               />,
             ],
             "dots": true,
@@ -739,11 +805,11 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "123",
               "nodeType": "class",
               "props": Object {
-                "addToFavorites": undefined,
                 "favorite": Object {
+                  "id": 123,
                   "market_cap_usd": "62506159630.7222615731538755",
                   "max_supply": "21000000.0000000000000000",
                   "name": "Bitcoin",
@@ -753,7 +819,7 @@ ShallowWrapper {
                   "supply": "17429837.0000000000000000",
                   "symbol": "BTC",
                 },
-                "removeFromFavorites": undefined,
+                "removeFromFavorites": [MockFunction],
               },
               "ref": null,
               "rendered": null,
@@ -761,11 +827,11 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "234",
               "nodeType": "class",
               "props": Object {
-                "addToFavorites": undefined,
                 "favorite": Object {
+                  "id": 234,
                   "market_cap_usd": "13612140064.7471135264064432",
                   "max_supply": "100000000000.0000000000000000",
                   "name": "XRP",
@@ -775,7 +841,7 @@ ShallowWrapper {
                   "supply": "40762365544.0000000000000000",
                   "symbol": "XRP",
                 },
-                "removeFromFavorites": undefined,
+                "removeFromFavorites": [MockFunction],
               },
               "ref": null,
               "rendered": null,
@@ -783,11 +849,11 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "345",
               "nodeType": "class",
               "props": Object {
-                "addToFavorites": undefined,
                 "favorite": Object {
+                  "id": 345,
                   "market_cap_usd": "9875418262.8035156239002594",
                   "max_supply": null,
                   "name": "Ethereum",
@@ -797,7 +863,7 @@ ShallowWrapper {
                   "supply": "103875264.9678000000000000",
                   "symbol": "ETH",
                 },
-                "removeFromFavorites": undefined,
+                "removeFromFavorites": [MockFunction],
               },
               "ref": null,
               "rendered": null,
@@ -805,11 +871,11 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "456",
               "nodeType": "class",
               "props": Object {
-                "addToFavorites": undefined,
                 "favorite": Object {
+                  "id": 456,
                   "market_cap_usd": "2299890068.4280425642158096",
                   "max_supply": null,
                   "name": "EOS",
@@ -819,7 +885,7 @@ ShallowWrapper {
                   "supply": "906245117.6000000000000000",
                   "symbol": "EOS",
                 },
-                "removeFromFavorites": undefined,
+                "removeFromFavorites": [MockFunction],
               },
               "ref": null,
               "rendered": null,
@@ -827,11 +893,11 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "567",
               "nodeType": "class",
               "props": Object {
-                "addToFavorites": undefined,
                 "favorite": Object {
+                  "id": 567,
                   "market_cap_usd": "2101330537.3210911914502786",
                   "max_supply": null,
                   "name": "Stellar",
@@ -841,7 +907,7 @@ ShallowWrapper {
                   "supply": "19171055431.4299000000000000",
                   "symbol": "XLM",
                 },
-                "removeFromFavorites": undefined,
+                "removeFromFavorites": [MockFunction],
               },
               "ref": null,
               "rendered": null,

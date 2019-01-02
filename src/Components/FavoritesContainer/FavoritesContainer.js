@@ -9,13 +9,10 @@ import TellerAI from "../tellerAI/tellerAI";
 
 class FavoritesContainer extends Component {
   constructor({
-    props,
-    favorites,
-    addToFavorites,
-    removeFromFavorites,
-    abbrevCurrencies,
-    setFilter
-  }) {
+      props,
+      favorites,
+      removeFromFavorites,
+    }) {
     super(props);
     this.state = {
       expanded: false
@@ -30,7 +27,6 @@ class FavoritesContainer extends Component {
           key={favorite.id}
           favorite={favorite}
           removeFromFavorites={removeFromFavorites}
-          addToFavorites={addToFavorites}
         />
       );
     });

@@ -39,8 +39,10 @@ class Landing extends Component {
     return (
       <div className="landing-literal">
         <NewsContainer />
-        <FavoritesContainer {...this.props} />
-        <LandingCurrencyContainer
+        <FavoritesContainer 
+          favorites={favorites}
+          removeFromFavorites={removeFromFavorites}/>
+        <LandingCurrencyContainer 
           abbrevCurrencies={abbrevCurrencies}
           setFilter={setFilter}
           addToFavorites={addToFavorites}

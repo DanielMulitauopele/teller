@@ -1,5 +1,6 @@
 export const mockCurrencies = [
     {
+        "id": 123,
         "name": "Bitcoin",
         "rank": "1",
         "symbol": "BTC",
@@ -10,6 +11,7 @@ export const mockCurrencies = [
         "percent_change_24_hr": "0.8320854828625978"
     },
     {
+        "id": 234,
         "name": "XRP",
         "rank": "2",
         "symbol": "XRP",
@@ -20,6 +22,7 @@ export const mockCurrencies = [
         "percent_change_24_hr": "3.9433058589033265"
     },
     {
+        "id": 345,
         "name": "Ethereum",
         "rank": "3",
         "symbol": "ETH",
@@ -30,6 +33,7 @@ export const mockCurrencies = [
         "percent_change_24_hr": "0.2048869680495625"
     },
     {
+        "id": 456,
         "name": "EOS",
         "rank": "4",
         "symbol": "EOS",
@@ -40,6 +44,7 @@ export const mockCurrencies = [
         "percent_change_24_hr": "6.8707627494412566"
     },
     {
+        "id": 567,
         "name": "Stellar",
         "rank": "5",
         "symbol": "XLM",
@@ -50,6 +55,7 @@ export const mockCurrencies = [
         "percent_change_24_hr": "-0.5797575094501702"
     },
     {
+        "id": 678,
         "name": "Tether",
         "rank": "6",
         "symbol": "USDT",
@@ -60,6 +66,7 @@ export const mockCurrencies = [
         "percent_change_24_hr": "-0.3651083419428809"
     },
     {
+        "id": 789,
         "name": "Bitcoin Cash",
         "rank": "7",
         "symbol": "BCH",
@@ -70,6 +77,7 @@ export const mockCurrencies = [
         "percent_change_24_hr": "12.3155563878749772"
     },
     {
+        "id": 8910,
         "name": "Litecoin",
         "rank": "8",
         "symbol": "LTC",
@@ -80,6 +88,7 @@ export const mockCurrencies = [
         "percent_change_24_hr": "-1.9677676853163809"
     },
     {
+        "id": 91011,
         "name": "Bitcoin SV",
         "rank": "9",
         "symbol": "BSV",
@@ -90,6 +99,7 @@ export const mockCurrencies = [
         "percent_change_24_hr": "-1.0371279758483539"
     },
     {
+        "id": 101112,
         "name": "TRON",
         "rank": "10",
         "symbol": "TRX",

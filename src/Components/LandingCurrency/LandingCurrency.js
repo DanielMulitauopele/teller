@@ -6,7 +6,7 @@ import { Icons } from "../../Assets/cryptoIcons/cryptoIcons";
 import DataCleaner from "../../Utils/Cleaners/";
 
 class LandingCurrency extends Component {
-  constructor(props) {
+  constructor({ props, currency, addToFavorites }) {
     super(props);
     this.state = {
       expanded: false,

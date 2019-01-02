@@ -1,9 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NoteForm Component should match the snapshot 1`] = `
+exports[`Notes Component should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <NoteForm />,
+  Symbol(enzyme.__unrendered__): <Note
+    addToNotes={[MockFunction]}
+    note={
+      Object {
+        "body": "I really need to invest in some bitcoins while the price is down. That way, once it goes back up, I'll be RICH!",
+        "title": "Buy some bitcoins!",
+      }
+    }
+    removeFromNotes={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,21 +27,13 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <input
-          className="title-input"
-          name="title"
-          onChange={[Function]}
-          value=""
-        />,
-        <input
-          className="body-input"
-          name="body"
-          onChange={[Function]}
-          value=""
-        />,
-        <button />,
+        <h2>
+          Buy some bitcoins!
+        </h2>,
+        <p>
+          I really need to invest in some bitcoins while the price is down. That way, once it goes back up, I'll be RICH!
+        </p>,
       ],
-      "onSubmit": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -41,40 +42,25 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "title-input",
-          "name": "title",
-          "onChange": [Function],
-          "value": "",
+          "children": "Buy some bitcoins!",
         },
         "ref": null,
-        "rendered": null,
-        "type": "input",
+        "rendered": "Buy some bitcoins!",
+        "type": "h2",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "body-input",
-          "name": "body",
-          "onChange": [Function],
-          "value": "",
+          "children": "I really need to invest in some bitcoins while the price is down. That way, once it goes back up, I'll be RICH!",
         },
         "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": "button",
+        "rendered": "I really need to invest in some bitcoins while the price is down. That way, once it goes back up, I'll be RICH!",
+        "type": "p",
       },
     ],
-    "type": "form",
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -83,21 +69,13 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <input
-            className="title-input"
-            name="title"
-            onChange={[Function]}
-            value=""
-          />,
-          <input
-            className="body-input"
-            name="body"
-            onChange={[Function]}
-            value=""
-          />,
-          <button />,
+          <h2>
+            Buy some bitcoins!
+          </h2>,
+          <p>
+            I really need to invest in some bitcoins while the price is down. That way, once it goes back up, I'll be RICH!
+          </p>,
         ],
-        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -106,40 +84,25 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "title-input",
-            "name": "title",
-            "onChange": [Function],
-            "value": "",
+            "children": "Buy some bitcoins!",
           },
           "ref": null,
-          "rendered": null,
-          "type": "input",
+          "rendered": "Buy some bitcoins!",
+          "type": "h2",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "body-input",
-            "name": "body",
-            "onChange": [Function],
-            "value": "",
+            "children": "I really need to invest in some bitcoins while the price is down. That way, once it goes back up, I'll be RICH!",
           },
           "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": "button",
+          "rendered": "I really need to invest in some bitcoins while the price is down. That way, once it goes back up, I'll be RICH!",
+          "type": "p",
         },
       ],
-      "type": "form",
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
