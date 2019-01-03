@@ -17,7 +17,6 @@ class NoteForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    //submit note to backend
   };
 
   render() {
@@ -41,7 +40,9 @@ class NoteForm extends Component {
             onChange={this.handleChange}
             autoComplete="off"
           />
-          <button onClick={this.handleSubmit} className="submit-note" />
+          <button onClick={this.handleSubmit} className="submit-note">
+            Submit
+          </button>
         </form>
       </div>
     );

@@ -25,7 +25,7 @@ class NotesContainer extends Component {
         <div className="title-block">
           <h1> Notes </h1>
         </div>
-        <NoteForm />
+        <NoteForm notes={notes} addToNotes={addToNotes} />
         {notes.length ? (
           displayedNotes
         ) : (
