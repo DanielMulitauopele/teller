@@ -19,7 +19,7 @@ describe('Landing Component', () => {
                      />)
   })
 
-  it('should match the snapshot', () => {
+  xit('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
 

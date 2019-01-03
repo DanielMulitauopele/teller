@@ -255,9 +255,6 @@ ShallowWrapper {
           }
           index={9}
         />
-        <div
-          className="bottom-gradient"
-        />
       </div>,
       "className": "sort-box",
     },
@@ -428,9 +425,6 @@ ShallowWrapper {
               index={9}
             />,
           ],
-          <div
-            className="bottom-gradient"
-          />,
         ],
         "className": "currency-container",
       },
@@ -709,17 +703,6 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "bottom-gradient",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
       ],
       "type": "div",
     },
@@ -892,9 +875,6 @@ ShallowWrapper {
             }
             index={9}
           />
-          <div
-            className="bottom-gradient"
-          />
         </div>,
         "className": "sort-box",
       },
@@ -1065,9 +1045,6 @@ ShallowWrapper {
                 index={9}
               />,
             ],
-            <div
-              className="bottom-gradient"
-            />,
           ],
           "className": "currency-container",
         },
@@ -1345,17 +1322,6 @@ ShallowWrapper {
             "ref": null,
             "rendered": null,
             "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "bottom-gradient",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
           },
         ],
         "type": "div",

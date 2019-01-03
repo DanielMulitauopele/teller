@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./LoginForm.css";
-import Play from "../../Assets/play.svg";
 
 export class LoginForm extends Component {
   constructor(props) {

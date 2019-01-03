@@ -1,8 +1,8 @@
-import API from "../API/";
+import { retrieve } from '../API/'
 
 class DataCleaner {
   constructor() {
-    this.fetchData = API;
+    this.fetchData = retrieve
   }
 
   getAbbrevCurrencies = async () => {

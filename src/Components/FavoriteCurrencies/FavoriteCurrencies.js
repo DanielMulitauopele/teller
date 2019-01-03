@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./FavoriteCurrencies.css";
 import Green from "../../Assets/green.svg";
-import Red from "../../Assets/red.svg";
 
 class FavoriteCurrencies extends Component {
   constructor({ props, favorite, removeFromFavorites, addToFavorites }) {
@@ -11,40 +10,40 @@ class FavoriteCurrencies extends Component {
   controlBubbleSpeed = percent_change => {
     let className = "";
     switch (true) {
-      case percent_change >= 3:
+      case percent_change >= 6:
         className = "speed-up-4";
         //direction up
         //all speeds divided by 4
         break;
-      case 2 <= percent_change < 3:
+      case 4 <= percent_change && percent_change < 6:
         className = "speed-up-3";
         //direction up
         //all speeds divided by 3
         break;
-      case 1 <= percent_change < 2:
+      case 2 <= percent_change && percent_change < 4:
         className = "speed-up-2";
         //direction up
         //all speeds divided by 2
         break;
-      case 0 <= percent_change < 1:
+      case 0 <= percent_change && percent_change < 2:
         className = "up";
         //everything stays how it is currently in the css file
         break;
-      case -1 <= percent_change < 0:
+      case -2 <= percent_change && percent_change < 0:
         className = "down";
         //direction down
         break;
-      case -2 <= percent_change < -1:
+      case -4 <= percent_change && percent_change < -2:
         className = "speed-down-2";
         //direction down
         //all speeds divided by 2
         break;
-      case -3 <= percent_change < -2:
+      case -6 <= percent_change && percent_change < -4:
         className = "speed-down-3";
         //direction down
         //all speeds divided by 3
         break;
-      case percent_change <= -3:
+      case percent_change <= -6:
         className = "speed-down-4";
         //direction down
         //all speeds divided by 4
@@ -56,7 +55,7 @@ class FavoriteCurrencies extends Component {
   };
 
   render() {
-    const { favorite, removeFromFavorites } = this.props;
+    const { favorite } = this.props;
     return (
       <div className="fave-currency">
         <div className="bubbles bubbles-left">
@@ -77,7 +76,7 @@ class FavoriteCurrencies extends Component {
             {((favorite.percent_change < 0 ? -1 : 1) *
               Math.round(favorite.price * favorite.percent_change)) /
               100}{" "}
-            ({favorite.percent_change}% <img className="arrow" src={Green} />)
+            ({favorite.percent_change}% <img className="arrow" src={Green} alt="" />)
           </p>
         </div>
       </div>

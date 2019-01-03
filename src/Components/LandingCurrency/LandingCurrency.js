@@ -41,7 +41,7 @@ class LandingCurrency extends Component {
       <div className="currency-card">
         <div className="card-inside-text">
           <div className="cc-left">
-            <img src={Icons[this.props.currency.symbol]} />
+            <img src={Icons[this.props.currency.symbol]} alt="" />
           </div>
           <div className="cc-center">
             <p>{symbol}</p>
@@ -73,6 +73,7 @@ class LandingCurrency extends Component {
               src={this.state.faved ? HeartP : Heart}
               className="fave-this"
               onClick={this.handleClick}
+              alt=""
             />
           </div>
         )}

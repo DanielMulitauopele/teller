@@ -5,7 +5,6 @@ import FavoriteCurrencies from "../FavoriteCurrencies/FavoriteCurrencies";
 import settings from "../Settings/Settings";
 import "./slick-theme.css";
 import "./FavoritesContainer.css";
-import TellerAI from "../tellerAI/tellerAI";
 
 class FavoritesContainer extends Component {
   constructor({
@@ -20,7 +19,7 @@ class FavoritesContainer extends Component {
   }
 
   render() {
-    const { favorites, removeFromFavorites, addToFavorites } = this.props;
+    const { favorites, removeFromFavorites } = this.props;
     const favoriteCurrencies = favorites.map(favorite => {
       return (
         <FavoriteCurrencies
