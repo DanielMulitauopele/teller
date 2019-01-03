@@ -20,3 +20,12 @@
   overflow: scroll;
   max-height: 31rem;
 }
+
+@media only screen and (min-width: 700px) {
+  .title-block {
+    font-size: 3rem;
+  }
+  .notes-container-box {
+    max-height: 37rem;
+  }
+}
