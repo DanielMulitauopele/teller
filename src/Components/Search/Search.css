@@ -10,7 +10,7 @@
   right: 35px;
   transform: rotate(45deg);
   width: 56px;
-  z-index: 50;
+  z-index: 30;
   transition: width 0.3s ease-in-out, transform 0.3s linear 0.3s;
 }
 
@@ -32,7 +32,7 @@
   position: fixed;
   right: 35px;
   transition: 0.1s;
-  z-index: 50;
+  z-index: 30;
 }
 
 .search-button-active:hover {

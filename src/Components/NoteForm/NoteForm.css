@@ -1,0 +1,51 @@
+.note-form-literal {
+  width: 100%;
+  margin: 0 auto;
+  bottom: 0rem;
+  position: absolute;
+  background-color: #303859;
+  z-index: 30;
+}
+
+.note-form-literal input {
+  padding: 0.3rem 1rem;
+  display: block;
+  margin: 0.5rem auto 1rem;
+  border: none;
+  width: 18rem;
+  background-color: var(--TellerBGDark);
+  color: var(--AlmostWhite);
+  z-index: 50;
+
+  font-size: 1rem;
+}
+
+.note-form-literal input:first-child {
+  height: 2rem;
+}
+
+.note-form-literal input:nth-child(2) {
+  height: 5rem;
+  overflow: auto;
+}
+
+.submit-note {
+  height: 40px;
+  display: block;
+  width: 120px;
+  border-radius: 5px;
+  background-color: var(--TellerBGDark);
+  border: 1px solid var(--TellerPink);
+  margin: 0 auto;
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: var(--AlmostWhite);
+  box-shadow: 0px 0px 10px transparent;
+  transition: 0.5s;
+  margin-bottom: 2rem;
+}
+
+.submit-note:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px var(--TellerPink);
+}
