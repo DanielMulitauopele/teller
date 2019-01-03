@@ -133,6 +133,7 @@ class App extends Component {
 
   storeToken = (token) => {
     this.setState({ token: token.teller_api_token })
+    console.log(this.state.token)
   }
 
   render() {
