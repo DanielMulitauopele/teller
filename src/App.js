@@ -36,6 +36,7 @@ class App extends Component {
   async componentDidMount() {
     const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
     const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
+    this.checkToken()
     this.setState({ abbrevCurrencies, expandedCurrencies });
   }
 
@@ -71,16 +72,24 @@ class App extends Component {
     this.setState({ notes: filteredNotes });
   };
 
-  logInUser = userEmail => {
-    this.setState({ userEmail });
-    this.setState({ loggedIn: true });
+  toggleLogIn = userEmail => {
+    this.setState({
+      userEmail,
+      loggedIn: true
+    });
   };
 
   setLoginState = () => {
     this.setState({
-      loggedIn: !this.state.loggedIn
+      loggedIn: true
     });
   };
+
+  removeLoginState = () => {
+    this.setState({
+      loggedIn: false
+    })
+  }
 
   displaySearch = async currency => {
     let abbCurr;
@@ -132,8 +141,23 @@ class App extends Component {
   };
 
   storeToken = (token) => {
-    this.setState({ token: token.teller_api_token })
+    this.setState({
+      token: token.teller_api_token,
+      loggedIn: true
+    })
+    localStorage.setItem('userToken', JSON.stringify(token))
     console.log(this.state.token)
+  }
+
+  checkToken = () => {
+    // debugger
+    if (this.state.token || localStorage.getItem('userToken') !== null) {
+      const token = JSON.parse(localStorage.getItem('userToken')).teller_api_token
+      this.setState({
+        token: token,
+        loggedIn: true,
+      })
+    }
   }
 
   render() {
@@ -141,7 +165,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          {this.state.loggedIn && <Hotdog setLoginState={this.setLoginState} />}
+          {this.state.loggedIn && <Hotdog removeLoginState={this.removeLoginState} />}
           {this.state.loggedIn && <Search displaySearch={this.displaySearch} />}
           {this.state.loggedIn && (
             <div className="app-subtle-bg">
@@ -161,6 +185,7 @@ class App extends Component {
                     removeFromFavorites={this.removeFromFavorites}
                     abbrevCurrencies={abbrevCurrencies}
                     setFilter={this.setFilter}
+                    removeLoginState={this.removeLoginState}
                   />
                 );
               }}
@@ -172,7 +197,9 @@ class App extends Component {
               render={() => {
                 return <LoginContainer 
                           loggedIn={this.setLoginState}
-                          storeToken={this.storeToken} />;
+                          toggleLogIn={this.toggleLogIn}
+                          storeToken={this.storeToken}
+                        />;
               }}
             />
             <Route
