@@ -5,9 +5,9 @@ import DataCleaner from "./Utils/Cleaners/";
 import Search from "./Components/Search/Search";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Landing from "./Components/Landing/Landing";
-import NotesContainer from "./Components/NotesContainer/NotesContainer"
+import NotesContainer from "./Components/NotesContainer/NotesContainer";
 import LoginContainer from "./Components/LoginContainer/LoginContainer";
-import Onboarding from "./Components/Onboarding/Onboarding";
+import Onboarding from "./Components/OnboardingContainer/OnboardingContainer";
 import AboutUs from "./Components/AboutUs/AboutUs";
 
 class App extends Component {
@@ -28,7 +28,7 @@ class App extends Component {
       news: [],
       loggedIn: false,
       notes: [],
-      token: ''
+      token: ""
     };
     this.cleaner = new DataCleaner();
   }
@@ -131,10 +131,10 @@ class App extends Component {
     });
   };
 
-  storeToken = (token) => {
-    this.setState({ token: token.teller_api_token })
-    console.log(this.state.token)
-  }
+  storeToken = token => {
+    this.setState({ token: token.teller_api_token });
+    console.log(this.state.token);
+  };
 
   render() {
     const { abbrevCurrencies, favorites, notes } = this.state;
@@ -170,9 +170,12 @@ class App extends Component {
               exact
               path="/"
               render={() => {
-                return <LoginContainer 
-                          loggedIn={this.setLoginState}
-                          storeToken={this.storeToken} />;
+                return (
+                  <LoginContainer
+                    loggedIn={this.setLoginState}
+                    storeToken={this.storeToken}
+                  />
+                );
               }}
             />
             <Route
@@ -202,17 +205,17 @@ class App extends Component {
                 return <AboutUs />;
               }}
             />
-            <Route 
+            <Route
               exact
               path="/notes"
               render={() => {
                 return (
-                  <NotesContainer 
+                  <NotesContainer
                     notes={notes}
                     addToNotes={this.addToNotes}
                     removeFromNotes={this.removeFromNotes}
                   />
-                )
+                );
               }}
             />
           </Switch>

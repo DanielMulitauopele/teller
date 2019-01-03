@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import "./LoginContainer.css";
 import LoginForm from "../LoginForm/LoginForm";
 import { NavLink } from "react-router-dom";
-import RegisterForm from '../RegisterForm/RegisterForm'
-
+import RegisterForm from "../RegisterForm/RegisterForm";
 
 class LoginContainer extends Component {
   constructor({ props, loggedIn, storeToken }) {
@@ -32,8 +31,8 @@ class LoginContainer extends Component {
       <div className="login-container">
         <h1 className="app-title"> teller. </h1>
         <p>Your Personal Crypto Analyst</p>
-        <RegisterForm
-          storeToken={this.props.storeToken} />
+        {/* <RegisterForm
+          storeToken={this.props.storeToken} /> */}
         <div className="form-box">
           <div className={expandedLogIn ? "button-box" : "button-box-expanded"}>
             <button onClick={this.expandLogIn} className="login">
