@@ -11,18 +11,14 @@ export class LoginForm extends Component {
     };
   }
 
-  handleSubmit = async e => {
+  handleClick = async e => {
     e.preventDefault();
     const { email, password } = this.state
     const user = JSON.stringify({
       "email": email,
       "password": password
     })
-
-    //check password against password stored in db
-    //if password doesn't match, display error
-    //if password matches, call logInUser
-    const token = logInUser(user)
+    const token = await logInUser(user)
     this.props.toggleLogIn(email);
     this.props.storeToken(token)
   };
@@ -52,7 +48,7 @@ export class LoginForm extends Component {
             onChange={this.handleChange}
             placeholder="Password"
           />
-          <p className="login-button" onSubmit={this.handleSubmit}>
+          <p className="login-button" onClick={this.handleClick}>
             Go
           </p>
         </form>

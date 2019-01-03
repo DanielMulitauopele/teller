@@ -41,7 +41,7 @@ class LoginContainer extends Component {
             </button>
             <LoginForm
               toggleLogIn={this.props.toggleLogIn}
-              storeToken={this.storeToken} />
+              storeToken={this.props.storeToken} />
             <div
               className={
                 !expandedRegister ? "register-box-expanded" : "register-box"
