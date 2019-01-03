@@ -10,14 +10,14 @@ class Note extends Component {
   }
 
   render() {
-    const { note } = this.props;
+    const { note, addToNotes, removeFromNotes } = this.props;
     return (
       <div className="note-card">
         <div className="note-text">
           <h3>{note.title}</h3>
           <p>{note.body}</p>
         </div>
-        <div className="note-dots">
+        <div className="note-dots" onClick={() => removeFromNotes()}>
           <div />
           <div />
           <div />
