@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { send } from '../../Utils/API'
+import { registerUser } from '../../Utils/API'
 
 class RegisterForm extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class RegisterForm extends Component {
                       "password_confirmation": confirmedPassword
                     }
                   })
-    const token = await send(user)
+    const token = await registerUser(user)
     this.checkPassword()
     this.props.storeToken(token)
     this.setState({

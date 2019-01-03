@@ -8,7 +8,7 @@ export const retrieve = async (url) => {
   }
 }
 
-export const send = async (user) => {
+export const registerUser = async (user) => {
   const url = 'https://guarded-reef-25579.herokuapp.com/users'
   const response = await fetch(url, {
     headers: {
@@ -22,6 +22,21 @@ export const send = async (user) => {
   const result = await clone.json()
   console.log(result)
   console.log(result.teller_api_token)
+  return result
+} 
+
+export const logInUser = async (user) => {
+  const url = ''
+  const response = await fetch(url, {
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+    }, 
+    method: 'POST',
+    body: user
+  })
+  const clone = await response.clone()
+  const result = await clone.json()
   return result
 }
 

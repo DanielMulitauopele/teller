@@ -71,9 +71,11 @@ class App extends Component {
     this.setState({ notes: filteredNotes });
   };
 
-  logInUser = userEmail => {
-    this.setState({ userEmail });
-    this.setState({ loggedIn: true });
+  toggleLogIn = userEmail => {
+    this.setState({
+      userEmail,
+      loggedIn: true
+    });
   };
 
   setLoginState = () => {
@@ -133,6 +135,7 @@ class App extends Component {
 
   storeToken = (token) => {
     this.setState({ token: token.teller_api_token })
+    localStorage.setItem(JSON.stringify(token))
     console.log(this.state.token)
   }
 
@@ -172,6 +175,8 @@ class App extends Component {
               render={() => {
                 return <LoginContainer 
                           loggedIn={this.setLoginState}
+                          storeToken={this.storeToken}
+                          toggleLogIn={this.toggleLogIn}
                           storeToken={this.storeToken} />;
               }}
             />

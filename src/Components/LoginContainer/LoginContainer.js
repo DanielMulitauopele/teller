@@ -6,7 +6,7 @@ import RegisterForm from '../RegisterForm/RegisterForm'
 
 
 class LoginContainer extends Component {
-  constructor({ props, loggedIn, storeToken }) {
+  constructor({ props, loggedIn, storeToken, toggleLogIn }) {
     super(props);
     this.state = {
       expandedLogIn: false,
@@ -39,7 +39,9 @@ class LoginContainer extends Component {
             <button onClick={this.expandLogIn} className="login">
               Log in
             </button>
-            <LoginForm />
+            <LoginForm
+              toggleLogIn={this.props.toggleLogIn}
+              storeToken={this.storeToken} />
             <div
               className={
                 !expandedRegister ? "register-box-expanded" : "register-box"
