@@ -30,16 +30,21 @@ class RegisterForm extends Component {
                     }
                   })
     const token = await send(user)
+    this.checkPassword()
     this.props.storeToken(token)
-    if (!password || !confirmedPassword || password !== confirmedPassword) {
-      this.togglePasswordError()
-    }
     this.setState({
       name: "",
       email: "",
       password: "",
       confirmedPassword: "",
     })
+  }
+
+  checkPassword = () => {
+    const { password, confirmedPassword } = this.state
+    if (!password || !confirmedPassword || password !== confirmedPassword) {
+      this.togglePasswordError()
+    } 
   }
 
   togglePasswordError = () => {
