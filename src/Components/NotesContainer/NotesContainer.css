@@ -9,5 +9,14 @@
   text-align: center;
   font-size: 0.8rem;
   color: white;
+  margin: 0 auto;
+  display: inline-block;
   text-transform: capitalize;
+}
+
+.notes-container-box {
+  display: flex;
+  flex-flow: wrap;
+  overflow: scroll;
+  max-height: 31rem;
 }

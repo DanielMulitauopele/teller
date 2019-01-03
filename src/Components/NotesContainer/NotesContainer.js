@@ -25,12 +25,14 @@ class NotesContainer extends Component {
         <div className="title-block">
           <h1> Notes </h1>
         </div>
-        <NoteForm notes={notes} addToNotes={addToNotes} />
-        {notes.length ? (
-          displayedNotes
-        ) : (
-          <p className="no-notes-saved">You currently have no notes saved.</p>
-        )}
+        <div className="notes-container-box">
+          <NoteForm notes={notes} addToNotes={addToNotes} />
+          {notes.length ? (
+            displayedNotes
+          ) : (
+            <p className="no-notes-saved">You currently have no notes saved.</p>
+          )}
+        </div>
       </div>
     );
   }

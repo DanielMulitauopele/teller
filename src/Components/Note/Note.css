@@ -8,7 +8,7 @@
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.459);
   background-color: #394161;
   color: var(--AlmostWhite);
-  z-index: 300;
+  z-index: 60;
   overflow: scroll;
   display: grid;
   grid-template-columns: 1fr 30px;
