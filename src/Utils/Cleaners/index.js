@@ -1,4 +1,3 @@
-
 import { retrieve } from '../API/'
 
 class DataCleaner {
