@@ -1,7 +1,7 @@
 import React from 'react'
-import API from './'
+import { retrieve } from './'
 
-describe('API', () => {
+describe('retrieve function', () => {
   it('should call fetch with the correct params', async () => {
     const mockUrl = 'someUrl.com'
     window.fetch = jest.fn().mockImplementation(() => 
@@ -10,7 +10,7 @@ describe('API', () => {
         json: () => Promise.resolve()
       })
     )
-    await API(mockUrl)
+    await retrieve(mockUrl)
     expect(window.fetch).toHaveBeenCalledWith(mockUrl)
   })
 
@@ -21,6 +21,6 @@ describe('API', () => {
         error: 'Fetch has failed'
       })
     )
-    expect(API(mockUrl)).rejects.toEqual({error: 'Fetch has failed'})
+    expect(retrieve(mockUrl)).rejects.toEqual({error: 'Fetch has failed'})
   })
 })
