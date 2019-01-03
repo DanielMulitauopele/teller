@@ -15,7 +15,7 @@
   --Tranquil: linear-gradient(to bottom, #9862da, #db5db2);
   --AlmostWhite: rgb(230, 230, 230);
   --TellerBG: #303859;
-  --TellerBGDark: #232941d5;
+  --TellerBGDark: #232941;
   --TellerPink: #fc599f;
   margin: 0;
   padding: 0;
@@ -41,6 +41,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #232941d5;
+  z-index: 0;
 }
 
 .app-subtle-bg h1 {

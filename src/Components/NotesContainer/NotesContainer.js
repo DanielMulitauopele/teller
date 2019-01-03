@@ -21,7 +21,7 @@ class NotesContainer extends Component {
       );
     });
     return (
-      <div>
+      <div className="notes-container-literal">
         <div className="title-block">
           <h1> Notes </h1>
         </div>

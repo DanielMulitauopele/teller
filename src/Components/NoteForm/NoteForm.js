@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import "./NoteForm.css";
 
 class NoteForm extends Component {
-  constructor(props) {
-    super(props);
+  constructor(props, addToNotes) {
+    super(props, addToNotes);
     this.state = {
       title: "",
       body: ""
@@ -17,6 +17,8 @@ class NoteForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    this.props.addToNotes(this.state);
+    this.setState({ title: "", body: "" });
   };
 
   render() {
@@ -40,9 +42,7 @@ class NoteForm extends Component {
             onChange={this.handleChange}
             autoComplete="off"
           />
-          <button onClick={this.handleSubmit} className="submit-note">
-            Submit
-          </button>
+          <button className="submit-note">Submit</button>
         </form>
       </div>
     );
