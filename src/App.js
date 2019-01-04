@@ -169,7 +169,6 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Hotdog removeLoginState={this.removeLoginState} />
-          <Search displaySearch={this.displaySearch} />
           {this.state.loggedIn && (
             <div className="app-subtle-bg">
               <h1>teller.</h1>
@@ -182,14 +181,17 @@ class App extends Component {
               path="/home"
               render={() => {
                 return (
-                  <Landing
-                    favorites={favorites}
-                    addToFavorites={this.addToFavorites}
-                    removeFromFavorites={this.removeFromFavorites}
-                    abbrevCurrencies={abbrevCurrencies}
-                    setFilter={this.setFilter}
-                    removeLoginState={this.removeLoginState}
-                  />
+                  <div>
+                    <Landing
+                      favorites={favorites}
+                      addToFavorites={this.addToFavorites}
+                      removeFromFavorites={this.removeFromFavorites}
+                      abbrevCurrencies={abbrevCurrencies}
+                      setFilter={this.setFilter}
+                      removeLoginState={this.removeLoginState}
+                    />
+                    <Search displaySearch={this.displaySearch} />
+                  </div>
                 );
               }}
             />
