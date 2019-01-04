@@ -78,20 +78,20 @@
 }
 
 .hotdog-menu-expanded {
-  position: fixed;
+  background-color: var(--TellerBG);
+  bottom: 0;
+  box-shadow: 1px 1px 5px rgb(27, 27, 27);
   height: 100%;
+  position: fixed;
   opacity: 1;
-  text-align: center;
   overflow: scroll;
+  text-align: center;
+  transition: 0.5s ease-in-out, opacity 0s;
   width: 100%;
   z-index: 70;
-  background-color: var(--TellerBG);
-  box-shadow: 1px 1px 5px rgb(27, 27, 27);
-  bottom: 0;
-  -webkit-transition: 0.5s ease-in-out;
   -moz-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out, opacity 0s;
+  -webkit-transition: 0.5s ease-in-out;
 }
 
 .menu-card {
@@ -104,20 +104,20 @@
 
 .hotdog-menu h1,
 .hotdog-menu-expanded h1 {
-  font-family: teller;
-  display: inline-block;
-  text-transform: lowercase;
-  font-size: 3rem;
-  color: #fc599f;
-  margin-bottom: 2rem;
   border-bottom: 5px solid #fc599f;
+  color: #fc599f;
+  display: inline-block;
+  font-family: teller;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-transform: lowercase;
 }
 
 .hotdog-menu li,
 .hotdog-menu-expanded li {
+  color: white;
   font-size: 2rem;
   padding: 1rem 0;
-  color: white;
   transition: 0.4s;
 }
 
@@ -131,8 +131,8 @@
 .donate {
   color: rgb(206, 206, 206);
   left: 0;
-  right: 0;
   margin: 0 auto;
+  right: 0;
 }
 
 .menu-card a {
@@ -167,6 +167,7 @@
 
   .hotdog-menu-expanded li:hover {
     background-color: #424d79;
+    cursor: pointer;
   }
 
   .menu-card li {

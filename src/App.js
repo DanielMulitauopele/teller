@@ -5,9 +5,9 @@ import DataCleaner from "./Utils/Cleaners/";
 import Search from "./Components/Search/Search";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Landing from "./Components/Landing/Landing";
-import NotesContainer from "./Components/NotesContainer/NotesContainer"
+import NotesContainer from "./Components/NotesContainer/NotesContainer";
 import LoginContainer from "./Components/LoginContainer/LoginContainer";
-import Onboarding from "./Components/Onboarding/Onboarding";
+import Onboarding from "./Components/OnboardingContainer/OnboardingContainer";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import { fetchFavorites, fetchNotes } from "./Utils/API/"
 
@@ -22,7 +22,7 @@ class App extends Component {
       news: [],
       loggedIn: false,
       notes: [],
-      token: ''
+      token: ""
     };
     this.cleaner = new DataCleaner();
   }
@@ -220,17 +220,17 @@ class App extends Component {
                 return <AboutUs />;
               }}
             />
-            <Route 
+            <Route
               exact
               path="/notes"
               render={() => {
                 return (
-                  <NotesContainer 
+                  <NotesContainer
                     notes={notes}
                     addToNotes={this.addToNotes}
                     removeFromNotes={this.removeFromNotes}
                   />
-                )
+                );
               }}
             />
           </Switch>
