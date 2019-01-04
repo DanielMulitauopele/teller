@@ -7,11 +7,7 @@ import "./slick-theme.css";
 import "./FavoritesContainer.css";
 
 class FavoritesContainer extends Component {
-  constructor({
-      props,
-      favorites,
-      removeFromFavorites,
-    }) {
+  constructor(props) {
     super(props);
     this.state = {
       expanded: false

@@ -4,9 +4,10 @@ import Heart from "../../Assets/heart.svg";
 import HeartP from "../../Assets/heartpink.svg";
 import { Icons } from "../../Assets/cryptoIcons/cryptoIcons";
 import DataCleaner from "../../Utils/Cleaners/";
+import { sendFavorites } from "../../Utils/API/";
 
 class LandingCurrency extends Component {
-  constructor({ props, currency, addToFavorites }) {
+  constructor(props) {
     super(props);
     this.state = {
       expanded: false,
@@ -30,8 +31,14 @@ class LandingCurrency extends Component {
   handleClick = async e => {
     const { name } = e.target;
     const fave = await this.cleaner.formatFavorite(name);
-    this.props.addToFavorites(fave);
+    sendFavorites(JSON.stringify({
+          "name": fave.name,
+          "price_usd": fave.price,
+          "percent_change_24_hr": fave.percent_change
+        }), this.props.token)
+    this.props.addToFavorites();
     this.faved();
+    this.props.displayExpanded(this.props.currency.name)
   };
 
   render() {
@@ -64,10 +71,13 @@ class LandingCurrency extends Component {
         </div>
         {this.state.expanded && (
           <div className="expanded-currency">
-            <div className="ec-right">
-              <p>{name}</p>
-              <p>{rank}</p>
-            </div>
+            <button 
+              className="ec-right"
+              onClick={this.handleClick}
+              name={name}> 
+              {name}
+              {rank}
+            </button>
             <img
               name={name}
               src={this.state.faved ? HeartP : Heart}

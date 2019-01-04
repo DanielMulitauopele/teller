@@ -3,10 +3,10 @@ import "./LandingCurrencyContainer.css";
 import LandingCurrency from "../LandingCurrency/LandingCurrency";
 
 class LandingCurrencyContainer extends Component {
-  constructor({ props, abbrevCurrencies, setFilter, addToFavorites }) {
+  constructor(props) {
     super(props);
     this.state = {
-      active: false
+      active: false,
     };
   }
 
@@ -16,7 +16,8 @@ class LandingCurrencyContainer extends Component {
   };
 
   render() {
-    const { abbrevCurrencies, addToFavorites } = this.props;
+    const { abbrevCurrencies, addToFavorites, displayExpanded, token } = this.props;
+
     const landingCurrencies = abbrevCurrencies.map((currency, i) => {
       return (
         <LandingCurrency
@@ -24,6 +25,8 @@ class LandingCurrencyContainer extends Component {
           index={i}
           currency={currency}
           addToFavorites={addToFavorites}
+          displayExpanded={displayExpanded}
+          token={token}
         />
       );
     });
@@ -34,7 +37,6 @@ class LandingCurrencyContainer extends Component {
           <div className="sort">
             <button
               className="rank-link"
-              // href="javascript:void(0)"
               name="Rank"
               onClick={this.handleClick}
             >
@@ -42,7 +44,6 @@ class LandingCurrencyContainer extends Component {
             </button>
             <button
               className="price-link"
-              // href="javascript:void(0)"
               name="Price"
               onClick={this.handleClick}
             >
@@ -50,7 +51,6 @@ class LandingCurrencyContainer extends Component {
             </button>
             <button
               className="percent-change-link"
-              // href="javascript:void(0)"
               name="%Change"
               onClick={this.handleClick}
             >
