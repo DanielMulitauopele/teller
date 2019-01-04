@@ -9,6 +9,7 @@ import NotesContainer from "./Components/NotesContainer/NotesContainer";
 import LoginContainer from "./Components/LoginContainer/LoginContainer";
 import Onboarding from "./Components/OnboardingContainer/OnboardingContainer";
 import AboutUs from "./Components/AboutUs/AboutUs";
+import RegisterForm from "./Components/RegisterForm/RegisterForm";
 
 class App extends Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class App extends Component {
   async componentDidMount() {
     const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
     const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
-    this.checkToken()
+    this.checkToken();
     this.setState({ abbrevCurrencies, expandedCurrencies });
   }
 
@@ -88,8 +89,8 @@ class App extends Component {
   removeLoginState = () => {
     this.setState({
       loggedIn: false
-    })
-  }
+    });
+  };
 
   displaySearch = async currency => {
     let abbCurr;
@@ -140,32 +141,35 @@ class App extends Component {
     });
   };
 
-  storeToken = (token) => {
+  storeToken = token => {
     this.setState({
       token: token.teller_api_token,
       loggedIn: true
-    })
-    localStorage.setItem('userToken', JSON.stringify(token))
-    console.log(this.state.token)
-  }
+    });
+    localStorage.setItem("userToken", JSON.stringify(token));
+    console.log(this.state.token);
+  };
 
   checkToken = () => {
     // debugger
-    if (this.state.token || localStorage.getItem('userToken') !== null) {
-      const token = JSON.parse(localStorage.getItem('userToken')).teller_api_token
+    if (this.state.token || localStorage.getItem("userToken") !== null) {
+      const token = JSON.parse(localStorage.getItem("userToken"))
+        .teller_api_token;
       this.setState({
         token: token,
-        loggedIn: true,
-      })
+        loggedIn: true
+      });
     }
-  }
+  };
 
   render() {
     const { abbrevCurrencies, favorites, notes } = this.state;
     return (
       <BrowserRouter>
         <div className="App">
-          {this.state.loggedIn && <Hotdog removeLoginState={this.removeLoginState} />}
+          {this.state.loggedIn && (
+            <Hotdog removeLoginState={this.removeLoginState} />
+          )}
           {this.state.loggedIn && <Search displaySearch={this.displaySearch} />}
           {this.state.loggedIn && (
             <div className="app-subtle-bg">
@@ -195,11 +199,13 @@ class App extends Component {
               exact
               path="/"
               render={() => {
-                return <LoginContainer 
-                          loggedIn={this.setLoginState}
-                          toggleLogIn={this.toggleLogIn}
-                          storeToken={this.storeToken}
-                        />;
+                return (
+                  <LoginContainer
+                    loggedIn={this.setLoginState}
+                    toggleLogIn={this.toggleLogIn}
+                    storeToken={this.storeToken}
+                  />
+                );
               }}
             />
             <Route
@@ -240,6 +246,13 @@ class App extends Component {
                     removeFromNotes={this.removeFromNotes}
                   />
                 );
+              }}
+            />
+            <Route
+              exact
+              path="/register"
+              render={() => {
+                return <RegisterForm />;
               }}
             />
           </Switch>
