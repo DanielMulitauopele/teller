@@ -17,35 +17,35 @@ class OnboardingContainer extends Component {
     this.state = {
       extended: false,
       images: [slide1, slide2, slide3, slide4, slide5, slide6],
-      currentIndex: 0,
-      translateValue: 0
+      currIndex: 0,
+      tValue: 0
     };
   }
 
   prevSlide = () => {
-    if (!this.state.currentIndex) {
+    if (!this.state.currIndex) {
       return this.setState({
-        currentIndex: 0,
-        translateValue: 0
+        currIndex: 0,
+        tValue: 0
       });
     }
 
     this.setState(prevState => ({
-      currentIndex: prevState.currentIndex - 1,
-      translateValue: prevState.translateValue + this.slideWidth()
+      currIndex: prevState.currIndex - 1,
+      tValue: prevState.tValue + this.slideWidth()
     }));
   };
 
   nextSlide = () => {
-    if (this.state.currentIndex === this.state.images.length - 1) {
+    if (this.state.currIndex === this.state.images.length - 1) {
       return this.setState({
-        currentIndex: 0,
-        translateValue: 0
+        currIndex: 0,
+        tValue: 0
       });
     }
     this.setState(prevState => ({
-      currentIndex: prevState.currentIndex + 1,
-      translateValue: prevState.translateValue + -this.slideWidth()
+      currIndex: prevState.currIndex + 1,
+      tValue: prevState.tValue + -this.slideWidth()
     }));
   };
 
@@ -63,7 +63,7 @@ class OnboardingContainer extends Component {
         <div
           className="slider-wrapper"
           style={{
-            transform: `translateX(${this.state.translateValue}px)`,
+            transform: `translateX(${this.state.tValue}px)`,
             transition: "transform ease-out 0.5s"
           }}
         >

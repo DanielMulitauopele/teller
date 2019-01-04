@@ -45,7 +45,7 @@ class AboutUs extends Component {
   };
 
   slideWidth = () => {
-    return document.querySelector("./aboutSlide").clientWidth;
+    return document.querySelector(".about-slide").clientWidth;
   };
 
   render() {
