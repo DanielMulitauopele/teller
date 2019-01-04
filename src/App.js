@@ -169,12 +169,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Hotdog removeLoginState={this.removeLoginState} />
-          {this.state.loggedIn && (
-            <div className="app-subtle-bg">
-              <h1>teller.</h1>
-              <p> Your Personal CryptoCurrency Analyst </p>
-            </div>
-          )}
+
           <Switch>
             <Route
               exact
@@ -191,6 +186,12 @@ class App extends Component {
                       removeLoginState={this.removeLoginState}
                     />
                     <Search displaySearch={this.displaySearch} />
+                    {this.state.loggedIn && (
+                      <div className="app-subtle-bg">
+                        <h1>teller.</h1>
+                        <p> Your Personal CryptoCurrency Analyst </p>
+                      </div>
+                    )}
                   </div>
                 );
               }}
@@ -221,11 +222,19 @@ class App extends Component {
               path="/notes"
               render={() => {
                 return (
-                  <NotesContainer
-                    notes={notes}
-                    addToNotes={this.addToNotes}
-                    removeFromNotes={this.removeFromNotes}
-                  />
+                  <div>
+                    {this.state.loggedIn && (
+                      <div className="app-subtle-bg">
+                        <h1>teller.</h1>
+                        <p> Your Personal CryptoCurrency Analyst </p>
+                      </div>
+                    )}
+                    <NotesContainer
+                      notes={notes}
+                      addToNotes={this.addToNotes}
+                      removeFromNotes={this.removeFromNotes}
+                    />
+                  </div>
                 );
               }}
             />

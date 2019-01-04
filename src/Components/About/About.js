@@ -1,9 +1,10 @@
 import React from "react";
+import "./About.css";
 
 const About = ({ image }) => {
   const styles = {
     background: `url(${image})`,
-    backgroundSize: "containt",
+    backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "50% 50%"
   };

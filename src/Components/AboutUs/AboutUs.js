@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import {
-  LeftCaret,
-  RightCaret
-} from "../Onboarding/OnboardingArrows/OnboardingArrows";
+import { LeftCaret, RightCaret } from "../Onboarding/OnboardingArrows";
 import caret from "../../Assets/caret.svg";
-import dev1 from "../../Assets/devs/autumn.png";
-import dev3 from "../../Assets/devs/dina.png";
-import dev2 from "../../Assets/devs/daniel.png";
-import dev4 from "../../Assets/devs/nick.png";
+import dev1 from "../../Assets/images/autumn.png";
+import dev3 from "../../Assets/images/dina.png";
+import dev2 from "../../Assets/images/daniel.png";
+import dev4 from "../../Assets/images/nick.png";
+import About from "../About/About";
+import "./AboutUs.css";
 
 class AboutUs extends Component {
   constructor(props) {
