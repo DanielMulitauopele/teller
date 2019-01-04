@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import './CurrencyExpanded.css'
-import Heart from "../../Assets/heart.svg" 
+import Heart from "../../Assets/heart.svg"
 import HeartP from "../../Assets/heartpink.svg"
 import DataCleaner from "../../Utils/Cleaners/"
-import Green from "../../Assets/green.svg" 
+import Green from "../../Assets/green.svg"
+import LineChart from '../LineChart/LineChart.js'
 
 class CurrencyExpanded extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class CurrencyExpanded extends Component {
     const { displayedCurrency } = this.props;
     if (displayedCurrency !== this.state.displayedCurrency) {
       this.setState({ displayedCurrency: displayedCurrency})
-    } 
+    }
   }
 
   faved = () => {
@@ -79,6 +80,7 @@ class CurrencyExpanded extends Component {
               </p>
             </div>
           </section>
+          <LineChart />
         </main>
       </div>
     )
