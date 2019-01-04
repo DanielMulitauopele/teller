@@ -167,14 +167,12 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          {this.state.loggedIn && (
-            <Hotdog removeLoginState={this.removeLoginState} />
-          )}
+          <Hotdog removeLoginState={this.removeLoginState} />
           {this.state.loggedIn && <Search displaySearch={this.displaySearch} />}
           {this.state.loggedIn && (
             <div className="app-subtle-bg">
               <h1>teller.</h1>
-              <p> Your Personal Crypto Analyst </p>
+              <p> Your Personal CryptoCurrency Analyst </p>
             </div>
           )}
           <Switch>
@@ -194,7 +192,7 @@ class App extends Component {
                 );
               }}
             />
-            )}}
+            )
             <Route
               exact
               path="/"
