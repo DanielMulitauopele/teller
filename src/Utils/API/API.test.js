@@ -1,5 +1,5 @@
 import React from 'react'
-import { retrieve, send } from './'
+import { retrieve, registerUser } from './'
 
 describe('API', () => {
   describe('retrieve function', () => {
@@ -26,7 +26,7 @@ describe('API', () => {
     })
   })
 
-  describe('send function', () => {
+  describe('registerUser function', () => {
     
   })
     

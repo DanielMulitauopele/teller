@@ -9,8 +9,8 @@ import Donate from "../../Assets/donate.svg";
 import { NavLink } from "react-router-dom";
 
 class Hotdog extends Component {
-  constructor() {
-    super();
+  constructor({ props, removeLoginState }) {
+    super(props);
     this.state = {
       expanded: false
     };
@@ -66,7 +66,7 @@ class Hotdog extends Component {
                   <span>About</span>
                 </NavLink>
               </li>
-              <li onClick={this.props.setLoginState}>
+              <li onClick={this.props.removeLoginState}>
                 <NavLink to="/">
                   <img src={Exit} alt="exit-icon" />
                   <span className="logout">Quit</span>

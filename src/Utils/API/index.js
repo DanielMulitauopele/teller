@@ -8,8 +8,8 @@ export const retrieve = async (url) => {
   }
 }
 
-export const send = async (user) => {
-  const url = 'https://guarded-reef-25579.herokuapp.com/users'
+export const registerUser = async (user) => {
+  const url = 'https://teller-api.herokuapp.com/users'
   const response = await fetch(url, {
     headers: {
       "Content-Type": "application/json",
@@ -22,6 +22,22 @@ export const send = async (user) => {
   const result = await clone.json()
   console.log(result)
   console.log(result.teller_api_token)
+  return result
+} 
+
+export const logInUser = async (user) => {
+  const url = 'https://teller-api.herokuapp.com/authentications'
+  const response = await fetch(url, {
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+    }, 
+    method: 'POST',
+    body: user
+  })
+  const clone = await response.clone()
+  const result = await clone.json()
+  console.log(result)
   return result
 }
 
