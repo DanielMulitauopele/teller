@@ -51,6 +51,10 @@
   font-size: 12px;
 }
 
+.ec-right:hover {
+  cursor: pointer;
+}
+
 .fave-this {
   fill: #000;
   height: 20px;
