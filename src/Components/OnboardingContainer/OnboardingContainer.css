@@ -57,9 +57,9 @@
 
 .slider {
   position: relative;
-  width: 500px;
+  width: 600px;
   margin: 0 auto;
-  height: 500px;
+  height: 600px;
   overflow: hidden;
   white-space: nowrap;
 }

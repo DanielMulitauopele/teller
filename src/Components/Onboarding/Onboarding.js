@@ -3,7 +3,7 @@ import React from "react";
 const Onboarding = ({ image }) => {
   const styles = {
     background: `url(${image})`,
-    backgroundSize: "cover",
+    backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "50% 50%"
   };

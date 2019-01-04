@@ -4,22 +4,14 @@ import "./OnboardingContainer.css";
 import { LeftCaret, RightCaret } from "../Onboarding/OnboardingArrows";
 import { NavLink } from "react-router-dom";
 import caret from "../../Assets/caret.svg";
+import slide1 from "../../Assets/images/tellercropped.png";
 
 class OnboardingContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       extended: false,
-      images: [
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/aurora.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/canyon.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/city.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/desert.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/mountains.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/redsky.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg"
-      ],
+      images: [slide1, slide1, slide1, slide1, slide1],
       currentIndex: 0,
       translateValue: 0
     };
