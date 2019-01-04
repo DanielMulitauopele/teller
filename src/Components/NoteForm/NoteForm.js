@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./NoteForm.css";
+import { sendNote } from "../../Utils/API/"
 
 class NoteForm extends Component {
-  constructor(props, addToNotes) {
-    super(props, addToNotes);
+  constructor(props) {
+    super(props);
     this.state = {
       title: "",
       body: ""
@@ -17,7 +18,12 @@ class NoteForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.addToNotes(this.state);
+    const { title, body } = this.state
+    sendNote(JSON.stringify({
+          "title": title,
+          "text": body
+        }), this.props.token)
+    this.props.addToNotes();
     this.setState({ title: "", body: "" });
   };
 

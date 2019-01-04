@@ -4,12 +4,12 @@ import Note from "../Note/Note";
 import NoteForm from "../NoteForm/NoteForm";
 
 class NotesContainer extends Component {
-  constructor({ props, notes, addToNotes, removeFromNotes }) {
+  constructor({ props, notes, addToNotes, removeFromNotes, token }) {
     super(props);
   }
 
   render() {
-    const { notes, addToNotes, removeFromNotes } = this.props;
+    const { notes, addToNotes, removeFromNotes, token } = this.props;
     const displayedNotes = notes.map((note, i) => {
       return (
         <Note
@@ -26,7 +26,10 @@ class NotesContainer extends Component {
           <h1> Notes </h1>
         </div>
         <div className="notes-container-box">
-          <NoteForm notes={notes} addToNotes={addToNotes} />
+          <NoteForm 
+            notes={notes} 
+            addToNotes={addToNotes}
+            token={token} />
           {notes.length ? (
             displayedNotes
           ) : (

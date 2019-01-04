@@ -11,19 +11,13 @@ import Onboarding from "./Components/OnboardingContainer/OnboardingContainer";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import RegisterForm from "./Components/RegisterForm/RegisterForm";
 import { Invalid } from "./Components/Invalid/Invalid";
+import { fetchFavorites, fetchNotes } from "./Utils/API/"
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      favorites: [
-        {
-          id: 12345,
-          name: "No favorites saved",
-          price: "0",
-          percent_change: "0"
-        }
-      ],
+      favorites: [],
       abbrevCurrencies: [],
       expandedCurrencies: [],
       userEmail: "",
@@ -38,20 +32,18 @@ class App extends Component {
   async componentDidMount() {
     const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
     const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
-    this.checkToken();
-    this.setState({ abbrevCurrencies, expandedCurrencies });
+    this.checkToken()
+    this.addToFavorites()
+    this.addToNotes()
+    this.setState({
+      abbrevCurrencies,
+      expandedCurrencies,
+    });
   }
 
-  addToFavorites = favorite => {
-    const { favorites } = this.state;
-    const newFave = { id: Date.now(), ...favorite };
-    if (favorites.length < 5) {
-      this.setState({ favorites: [newFave, ...favorites] });
-    } else if (favorites.length >= 5) {
-      this.setState({
-        favorites: [newFave, ...favorites.slice(0, 4)]
-      });
-    }
+  addToFavorites = async () => {
+    const favorites = await fetchFavorites(this.state.token)
+    this.setState({ favorites })
   };
 
   removeFromFavorites = id => {
@@ -61,12 +53,9 @@ class App extends Component {
     this.setState({ favorites: filteredFavorites });
   };
 
-  addToNotes = note => {
-    const { notes } = this.state;
-    const newNote = { id: Date.now(), ...note };
-    this.setState({
-      notes: [newNote, ...notes]
-    });
+  addToNotes = async () => {
+    const notes = await fetchNotes(this.state.token)
+    this.setState({ notes })
   };
 
   removeFromNotes = id => {
@@ -164,7 +153,7 @@ class App extends Component {
   };
 
   render() {
-    const { abbrevCurrencies, favorites, notes } = this.state;
+    const { abbrevCurrencies, favorites, notes, token } = this.state;
     return (
       <BrowserRouter>
         <div className="App">
@@ -184,6 +173,7 @@ class App extends Component {
                       abbrevCurrencies={abbrevCurrencies}
                       setFilter={this.setFilter}
                       removeLoginState={this.removeLoginState}
+                      token={token}
                     />
                     <Search displaySearch={this.displaySearch} />
                     {this.state.loggedIn && (
@@ -233,6 +223,7 @@ class App extends Component {
                       notes={notes}
                       addToNotes={this.addToNotes}
                       removeFromNotes={this.removeFromNotes}
+                      token={token}
                     />
                   </div>
                 );
