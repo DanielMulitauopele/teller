@@ -28,8 +28,9 @@
 }
 
 .price-progress {
-  display: inline-block;
+  /*display: inline-block;*/
   font-size: 0.8rem;
+  margin: auto;
 }
 
 .fave-currency .positive + .negative {

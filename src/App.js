@@ -78,9 +78,10 @@ class App extends Component {
 
   removeLoginState = () => {
     this.setState({
-      loggedIn: false
-    });
-  };
+      loggedIn: false,
+      token: ""
+    })
+  }
 
   displaySearch = async currency => {
     let abbCurr;

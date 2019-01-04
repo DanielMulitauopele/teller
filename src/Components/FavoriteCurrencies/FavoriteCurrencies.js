@@ -1,13 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import "./FavoriteCurrencies.css";
 import Green from "../../Assets/green.svg";
 
-class FavoriteCurrencies extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  controlBubbleSpeed = percent_change_24_hr => {
+const FavoriteCurrencies = (props) => {
+  const controlBubbleSpeed = percent_change_24_hr => {
     let className = "";
     switch (true) {
       case percent_change_24_hr >= 6:
@@ -54,34 +50,32 @@ class FavoriteCurrencies extends Component {
     return className;
   };
 
-  render() {
-    const { favorite } = this.props;
-    const percent_change = parseInt(favorite.percent_change_24_hr)
-    console.log(percent_change)
-    return (
-      <div className="fave-currency">
-        <div className="bubbles bubbles-left">
-          <div className={this.controlBubbleSpeed(percent_change)} />
-          <div className={this.controlBubbleSpeed(percent_change)} />
-          <div className={this.controlBubbleSpeed(percent_change)} />
-        </div>
-        <p className="fave-name">{favorite.name}</p>
-        <p className="fave-price">${favorite.price_usd}</p>
-        <div className="bubbles bubbles-right">
-          <div className={this.controlBubbleSpeed(percent_change)} />
-          <div className={this.controlBubbleSpeed(percent_change)} />
-          <div className={this.controlBubbleSpeed(percent_change)} />
-        </div>
-        <div className="price-progress">
-          <p>
-            {percent_change < 0 ? "-" : "+"}$
-            {((percent_change < 0 ? -1 : 1) * Math.round(favorite.price_usd * percent_change)) /100}{" "}
-            ({percent_change}% <img className="arrow" src={Green} alt="" />)
-          </p>
-        </div>
+
+  const { favorite } = props;
+  const percent_change = parseInt(favorite.percent_change_24_hr)
+  return (
+    <div className="fave-currency">
+      <div className="bubbles bubbles-left">
+        <div className={controlBubbleSpeed(percent_change)} />
+        <div className={controlBubbleSpeed(percent_change)} />
+        <div className={controlBubbleSpeed(percent_change)} />
       </div>
-    );
-  }
+      <p className="fave-name">{favorite.name}</p>
+      <p className="fave-price">${favorite.price_usd}</p>
+      <div className="bubbles bubbles-right">
+        <div className={controlBubbleSpeed(percent_change)} />
+        <div className={controlBubbleSpeed(percent_change)} />
+        <div className={controlBubbleSpeed(percent_change)} />
+      </div>
+      <div className="price-progress">
+        <p>
+          {percent_change < 0 ? "-" : "+"}$
+          {((percent_change < 0 ? -1 : 1) * Math.round(favorite.price_usd * percent_change)) /100}{" "}
+          ({percent_change}% {<img className="arrow" src={Green} alt="" />})
+        </p>
+      </div>
+    </div>
+  )
 }
 
 export default FavoriteCurrencies;

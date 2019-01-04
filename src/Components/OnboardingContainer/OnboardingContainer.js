@@ -3,7 +3,6 @@ import Onboarding from "../Onboarding/Onboarding";
 import "./OnboardingContainer.css";
 import { LeftCaret, RightCaret } from "../Onboarding/OnboardingArrows";
 import { NavLink } from "react-router-dom";
-import caret from "../../Assets/caret.svg";
 import slide1 from "../../Assets/images/tellerslide1.png";
 import slide2 from "../../Assets/images/tellerslide2.png";
 import slide3 from "../../Assets/images/tellerslide3.png";
@@ -81,6 +80,4 @@ class OnboardingContainer extends Component {
   }
 }
 
-{
-}
 export default OnboardingContainer;

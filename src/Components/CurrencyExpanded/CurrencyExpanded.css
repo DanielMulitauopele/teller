@@ -1,0 +1,47 @@
+.expanded-container {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  border-radius: 15px;
+  background: linear-gradient(to right, #424b6e, #272e4e);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.459);
+  color: var(--AlmostWhite);
+  transition: 0.7s;
+  width: 60%;
+}
+
+header {
+  margin-top: 4rem;
+  padding: 1rem 1rem 0;
+}
+
+.arrow {
+  height: 1rem;
+  width: 0.5rem;
+  transform: rotate(90deg);
+  margin-bottom: -2px;
+}
+
+.currency-symbol-expanded {
+  color: rgba(255, 255, 255, 0.609)
+}
+
+.currency-name-expanded {
+  font-size: 5em;
+}
+
+.fave-this-expanded {
+  fill: #000;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  transition: 0.2s;
+  margin-right: 1rem;
+}
+
+.price-progress-expanded {
+  display: flex;
+  margin: 1rem;
+}
+
+.percent-change-expanded {
+  font-size: 1.5em;
+}
