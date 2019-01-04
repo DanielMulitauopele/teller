@@ -12,12 +12,10 @@ class LineChart extends React.Component {
     const url =
       "https://cors-anywhere.herokuapp.com/https://teller-api.herokuapp.com/api/v1/assets/bitcoin/history?interval=h2";
     const response = await fetch(url);
-    // const response = await fetch(`https://api.coinmarketcap.com/v1/ticker/?limit=10`);
     const json = await response.json();
     this.setState({ data: json });
   }
   render() {
-    console.log(this.state.data)
     const allHistoryData = this.state.data
     let x_values = []
     let y_values = []
@@ -25,7 +23,6 @@ class LineChart extends React.Component {
       x_values.push(data.date)
       y_values.push(data.price)
     });
-    console.log(x_values)
 
     return ([
       <section>
