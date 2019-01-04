@@ -29,6 +29,7 @@ class OnboardingContainer extends Component {
         translateValue: 0
       });
     }
+
     this.setState(prevState => ({
       currentIndex: prevState.currentIndex - 1,
       translateValue: prevState.translateValue + this.slideWidth()

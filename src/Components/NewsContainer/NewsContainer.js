@@ -13,8 +13,6 @@ class NewsContainer extends Component {
     };
   }
 
-  updateNews = () => {};
-
   render() {
     return (
       <div className="news-container-literal">

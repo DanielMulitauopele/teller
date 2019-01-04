@@ -61,7 +61,7 @@ class Hotdog extends Component {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/aboutus">
+                <NavLink to="/about">
                   <img src={Code} alt="about-us-icon" />
                   <span>About</span>
                 </NavLink>
