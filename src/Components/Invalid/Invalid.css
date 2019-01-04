@@ -1,0 +1,12 @@
+.wrong-way h1 {
+  color: var(--TellerPink);
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.wrong-way a {
+  text-align: center;
+  display: block;
+  color: white;
+  text-decoration: none;
+}

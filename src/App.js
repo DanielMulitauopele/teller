@@ -10,6 +10,7 @@ import LoginContainer from "./Components/LoginContainer/LoginContainer";
 import Onboarding from "./Components/OnboardingContainer/OnboardingContainer";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import RegisterForm from "./Components/RegisterForm/RegisterForm";
+import { Invalid } from "./Components/Invalid/Invalid";
 
 class App extends Component {
   constructor(props) {
@@ -253,6 +254,7 @@ class App extends Component {
                 return <RegisterForm />;
               }}
             />
+            <Route component={Invalid} />
           </Switch>
         </div>
       </BrowserRouter>
