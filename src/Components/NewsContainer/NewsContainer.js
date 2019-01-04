@@ -8,14 +8,15 @@ class NewsContainer extends Component {
     super();
 
     this.state = {
-      active: false
+      active: false,
+      news: []
     };
   }
 
   render() {
     return (
       <div className="news-container-literal">
-        <NewsCard news={this.props.news} />
+        <NewsCard news={this.state.news} />
       </div>
     );
   }

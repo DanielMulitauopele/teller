@@ -9,6 +9,8 @@ import NotesContainer from "./Components/NotesContainer/NotesContainer";
 import LoginContainer from "./Components/LoginContainer/LoginContainer";
 import Onboarding from "./Components/OnboardingContainer/OnboardingContainer";
 import AboutUs from "./Components/AboutUs/AboutUs";
+import RegisterForm from "./Components/RegisterForm/RegisterForm";
+import { Invalid } from "./Components/Invalid/Invalid";
 import { fetchFavorites, fetchNotes } from "./Utils/API/"
 
 class App extends Component {
@@ -130,67 +132,73 @@ class App extends Component {
     });
   };
 
-  storeToken = (token) => {
+  storeToken = token => {
     this.setState({
       token: token.teller_api_token,
       loggedIn: true
-    })
-    localStorage.setItem('userToken', JSON.stringify(token))
-    console.log(this.state.token)
-  }
+    });
+    localStorage.setItem("userToken", JSON.stringify(token));
+    console.log(this.state.token);
+  };
 
   checkToken = () => {
     // debugger
-    if (this.state.token || localStorage.getItem('userToken') !== null) {
-      const token = JSON.parse(localStorage.getItem('userToken')).teller_api_token
+    if (this.state.token || localStorage.getItem("userToken") !== null) {
+      const token = JSON.parse(localStorage.getItem("userToken"))
+        .teller_api_token;
       this.setState({
         token: token,
-        loggedIn: true,
-      })
+        loggedIn: true
+      });
     }
-  }
+  };
 
   render() {
     const { abbrevCurrencies, favorites, notes, token } = this.state;
     return (
       <BrowserRouter>
         <div className="App">
-          {this.state.loggedIn && <Hotdog removeLoginState={this.removeLoginState} />}
-          {this.state.loggedIn && <Search displaySearch={this.displaySearch} />}
-          {this.state.loggedIn && (
-            <div className="app-subtle-bg">
-              <h1>teller.</h1>
-              <p> Your Personal Crypto Analyst </p>
-            </div>
-          )}
+          <Hotdog removeLoginState={this.removeLoginState} />
+
           <Switch>
             <Route
               exact
               path="/home"
               render={() => {
                 return (
-                  <Landing
-                    favorites={favorites}
-                    addToFavorites={this.addToFavorites}
-                    removeFromFavorites={this.removeFromFavorites}
-                    abbrevCurrencies={abbrevCurrencies}
-                    setFilter={this.setFilter}
-                    removeLoginState={this.removeLoginState}
-                    token={token}
-                  />
+                  <div>
+                    <Landing
+                      favorites={favorites}
+                      addToFavorites={this.addToFavorites}
+                      removeFromFavorites={this.removeFromFavorites}
+                      abbrevCurrencies={abbrevCurrencies}
+                      setFilter={this.setFilter}
+                      removeLoginState={this.removeLoginState}
+                      token={token}
+                    />
+                    <Search displaySearch={this.displaySearch} />
+                    {this.state.loggedIn && (
+                      <div className="app-subtle-bg">
+                        <h1>teller.</h1>
+                        <p> Your Personal CryptoCurrency Analyst </p>
+                      </div>
+                    )}
+                  </div>
                 );
               }}
             />
-            )}}
+            )
             <Route
               exact
               path="/"
               render={() => {
-                return <LoginContainer 
-                          loggedIn={this.setLoginState}
-                          toggleLogIn={this.toggleLogIn}
-                          storeToken={this.storeToken}
-                        />;
+                return (
+                  <LoginContainer
+                    loggedIn={this.setLoginState}
+                    toggleLogIn={this.toggleLogIn}
+                    storeToken={this.storeToken}
+                  />
+                );
               }}
             />
             <Route
@@ -205,12 +213,20 @@ class App extends Component {
               path="/notes"
               render={() => {
                 return (
-                  <NotesContainer
-                    notes={notes}
-                    addToNotes={this.addToNotes}
-                    removeFromNotes={this.removeFromNotes}
-                    token={token}
-                  />
+                  <div>
+                    {this.state.loggedIn && (
+                      <div className="app-subtle-bg">
+                        <h1>teller.</h1>
+                        <p> Your Personal CryptoCurrency Analyst </p>
+                      </div>
+                    )}
+                    <NotesContainer
+                      notes={notes}
+                      addToNotes={this.addToNotes}
+                      removeFromNotes={this.removeFromNotes}
+                      token={token}
+                    />
+                  </div>
                 );
               }}
             />
@@ -234,6 +250,14 @@ class App extends Component {
                 );
               }}
             />
+            <Route
+              exact
+              path="/register"
+              render={() => {
+                return <RegisterForm />;
+              }}
+            />
+            <Route component={Invalid} />
           </Switch>
         </div>
       </BrowserRouter>
