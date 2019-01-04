@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Note.css";
 
 class Note extends Component {
-  constructor({ props, note, addToNotes, removeFromNotes }) {
+  constructor(props) {
     super(props);
     this.state = {
       expanded: false
@@ -10,7 +10,7 @@ class Note extends Component {
   }
 
   render() {
-    const { note, addToNotes, removeFromNotes } = this.props;
+    const { note, removeFromNotes } = this.props;
     return (
       <div className="note-card">
         <div className="note-text">

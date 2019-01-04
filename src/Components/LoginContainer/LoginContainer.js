@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import "./LoginContainer.css";
 import LoginForm from "../LoginForm/LoginForm";
 import { NavLink } from "react-router-dom";
-import RegisterForm from "../RegisterForm/RegisterForm";
 import infoIcon from "../../Assets/information.svg";
 
 class LoginContainer extends Component {
-  constructor({ props, loggedIn, storeToken, toggleLogIn }) {
+  constructor(props) {
     super(props);
     this.state = {
       expandedLogIn: false,
@@ -31,7 +30,7 @@ class LoginContainer extends Component {
     return (
       <div className="login-container">
         <NavLink to="/onboarding">
-          <img src={infoIcon} className="info-button" />
+          <img src={infoIcon} className="info-button" alt="" />
         </NavLink>
 
         <h1 className="app-title"> teller. </h1>

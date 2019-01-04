@@ -75,8 +75,7 @@ class LandingCurrency extends Component {
               className="ec-right"
               onClick={this.handleClick}
               name={name}> 
-              {name}
-              {rank}
+              View
             </button>
             <img
               name={name}

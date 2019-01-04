@@ -98,19 +98,3 @@ export const fetchNotes = async (token) => {
   return result
 } 
 
-export const logInUser = async (user) => {
-  const url = 'https://teller-api.herokuapp.com/authentications'
-  const response = await fetch(url, {
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json",
-    }, 
-    method: 'POST',
-    body: user
-  })
-  const clone = await response.clone()
-  const result = await clone.json()
-  console.log(result)
-  return result
-}
-

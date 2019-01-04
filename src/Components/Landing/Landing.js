@@ -22,7 +22,6 @@ class Landing extends Component {
   };
 
   displayExpanded = (name) => {
-    console.log(name)
     if(!this.state.displayedCurrency) {
       this.setState({
         displayedCurrency: this.props.abbrevCurrencies[0].name

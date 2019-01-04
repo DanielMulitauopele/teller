@@ -10,7 +10,7 @@ class CurrencyExpanded extends Component {
     super(props)
     this.state = {
       faved: false,
-      displayedCurrency: this.props.displayedCurrency
+      displayedCurrency: this.props.displayedCurrency || "Bitcoin"
     }
     this.cleaner = new DataCleaner()
   }
@@ -35,45 +35,51 @@ class CurrencyExpanded extends Component {
     this.faved();
   };
 
-  // matchCurrency = async () => {
-  //   const { displayedCurrency } = this.state
-  //   const { currencies } = this.props
-  //   const newCurrency = currencies.find(currency => currency.name === displayedCurrency)
-  //   // debugger
-  //   return await newCurrency
-  // }
+  showExpanded = (name) => {
+    let match
+    if (this.props.currencies.length === 0 || this.state.displayedCurrency === "") {
+      match = {
+        name: "Bitcoin",
+        symbol: "BTC",
+        price: 3589.62,
+        percent_change: 22.4,
+        rank: 1
+      }
+    } else if (this.props.currencies.length !== 0) {
+      match = this.props.currencies.find(currency => currency.name === name)
+    }
+    return match
+  }
 
   render() {
-    // const currency = this.matchCurrency()
-    // const { symbol, name, percent_change, price } = this.matchCurrency()
-    // console.log(currency)
+    const currency = this.showExpanded(this.state.displayedCurrency)
+    console.log(currency)
     return(
-      <div>
-      <h1>hi</h1>
-        {/*<header>
-                  <h1>{symbol}</h1>
-                  <h3>{name}</h3>
-                  <img
-                      name={name}
-                      src={this.state.faved ? HeartP : Heart}
-                      className="fave-this"
-                      onClick={this.handleFaveClick}
-                      alt=""
-                    />
-                </header>
-                <main>
-                  <section>
-                    <div className="price-progress">
-                      <p>
-                        {percent_change < 0 ? "-" : "+"}$
-                        {((percent_change < 0 ? -1 : 1) *
-                          Math.round(price * percent_change)) /
-                          100}{" "}
-                        ({percent_change}% <img className="arrow" src={Green} alt="" />)
-                      </p>
-                    </div>
-                  </section>
-                </main>*/}
+      <div className="expanded-container">
+        <header>
+          <h1 className="currency-symbol-expanded">{currency.symbol}</h1>
+          <h1 className="currency-name-expanded">{currency.name}</h1>
+        </header>
+        <main>
+          <section>
+            <div className="price-progress-expanded">
+              <img
+                  name={currency.name}
+                  src={this.state.faved ? HeartP : Heart}
+                  className="fave-this-expanded"
+                  onClick={this.handleFaveClick}
+                  alt=""
+                />
+              <p className="percent-change-expanded">
+                {currency.percent_change < 0 ? "-" : "+"}$
+                {((currency.percent_change < 0 ? -1 : 1) *
+                  Math.round(currency.price * currency.percent_change)) /
+                  100}{" "}
+                ({currency.percent_change}% {<img className="arrow" src={Green} alt="" />})
+              </p>
+            </div>
+          </section>
+        </main>
       </div>
     )
   }

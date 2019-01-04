@@ -51,6 +51,15 @@
   font-size: 12px;
 }
 
+.ec-right {
+  height: 2em;
+  width: 4em;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #424b6e, #272e4e);
+  color: var(--AlmostWhite);
+}
+
 .ec-right:hover {
   cursor: pointer;
 }
@@ -62,7 +71,6 @@
   width: 20px;
   position: relative;
   transition: 0.2s;
-  bottom: -1rem;
 }
 
 .fave-this:hover {
