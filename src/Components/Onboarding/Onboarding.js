@@ -1,40 +1,14 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
+import React from "react";
 
-export default class SimpleSlider extends Component {
-  render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      nextArrow: false,
-      slidesToScroll: 1
-    };
-    return (
-      <div>
-        <h2> Single Item</h2>
-        <Slider {...settings}>
-          <div className="slide">
-            <h3>1</h3>
-          </div>
-          <div className="slide">
-            <h3>2</h3>
-          </div>
-          <div className="slide">
-            <h3>3</h3>
-          </div>
-          <div className="slide">
-            <h3>4</h3>
-          </div>
-          <div className="slide">
-            <h3>5</h3>
-          </div>
-          <div className="slide">
-            <h3>6</h3>
-          </div>
-        </Slider>
-      </div>
-    );
-  }
-}
+const Onboarding = ({ image }) => {
+  const styles = {
+    background: `url(${image})`,
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "50% 50%"
+  };
+  console.log(styles);
+  return <div className="slide" style={styles} />;
+};
+
+export default Onboarding;
