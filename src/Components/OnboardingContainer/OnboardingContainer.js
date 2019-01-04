@@ -4,14 +4,19 @@ import "./OnboardingContainer.css";
 import { LeftCaret, RightCaret } from "../Onboarding/OnboardingArrows";
 import { NavLink } from "react-router-dom";
 import caret from "../../Assets/caret.svg";
-import slide1 from "../../Assets/images/tellercropped.png";
+import slide1 from "../../Assets/images/tellerslide1.png";
+import slide2 from "../../Assets/images/tellerslide2.png";
+import slide3 from "../../Assets/images/tellerslide3.png";
+import slide4 from "../../Assets/images/tellerslide4.png";
+import slide5 from "../../Assets/images/tellerslid5.png";
+import slide6 from "../../Assets/images/tellerslide6.png";
 
 class OnboardingContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       extended: false,
-      images: [slide1, slide1, slide1, slide1, slide1],
+      images: [slide1, slide2, slide3, slide4, slide5, slide6],
       currentIndex: 0,
       translateValue: 0
     };
