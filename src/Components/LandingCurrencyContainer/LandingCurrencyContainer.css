@@ -41,4 +41,5 @@
 
 .sort-box button:hover {
   border-bottom: 3px solid #fc599f;
+  cursor: pointer;
 }

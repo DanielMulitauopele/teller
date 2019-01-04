@@ -92,7 +92,7 @@
 .button-box .login-form {
   opacity: 1;
   transition: 0s;
-  height: 50px;
+  height: 8rem;
 }
 
 .button-box-expanded .login-form {
@@ -108,7 +108,7 @@
 .button-box .form-wrapper {
   height: 8rem;
   opacity: 1;
-  transition: 0.5s;
+  transition: 0s;
 }
 
 @media only screen and (min-width: 700px) {
