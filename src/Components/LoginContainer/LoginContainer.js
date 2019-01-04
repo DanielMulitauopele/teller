@@ -3,6 +3,7 @@ import "./LoginContainer.css";
 import LoginForm from "../LoginForm/LoginForm";
 import { NavLink } from "react-router-dom";
 import RegisterForm from "../RegisterForm/RegisterForm";
+import infoIcon from "../../Assets/information.svg";
 
 class LoginContainer extends Component {
   constructor({ props, loggedIn, storeToken }) {
@@ -29,10 +30,15 @@ class LoginContainer extends Component {
     const { expandedLogIn, expandedRegister } = this.state;
     return (
       <div className="login-container">
+        <NavLink to="/onboarding">
+          <img src={infoIcon} className="info-button" />
+        </NavLink>
+
         <h1 className="app-title"> teller. </h1>
-        <p>Your Personal Crypto Analyst</p>
-        {/* <RegisterForm
-          storeToken={this.props.storeToken} /> */}
+        <p>
+          Your Personal <br />
+          CryptoCurrency Analyst
+        </p>
         <div className="form-box">
           <div className={expandedLogIn ? "button-box" : "button-box-expanded"}>
             <button onClick={this.expandLogIn} className="login">
@@ -44,9 +50,7 @@ class LoginContainer extends Component {
                 !expandedRegister ? "register-box-expanded" : "register-box"
               }
             >
-              <NavLink to="/onboarding">
-                <button className="register">Register</button>
-              </NavLink>
+              <button className="register">Register</button>
             </div>
             <NavLink to="/home" className="skip" onClick={this.props.loggedIn}>
               Skip
