@@ -1,13 +1,14 @@
 import React from "react";
+import "./About.css";
 
-const Onboarding = ({ image }) => {
+const About = ({ image }) => {
   const styles = {
     background: `url(${image})`,
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "50% 50%"
   };
-  return <div className="slide" style={styles} />;
+  return <div className="about-slide" style={styles} />;
 };
 
-export default Onboarding;
+export default About;

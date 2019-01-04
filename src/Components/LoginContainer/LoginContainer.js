@@ -46,13 +46,12 @@ class LoginContainer extends Component {
             </button>
             <LoginForm
               toggleLogIn={this.props.toggleLogIn}
-              storeToken={this.props.storeToken} />
-            <div
-              className={
-                !expandedRegister ? "register-box-expanded" : "register-box"
-              }
-            >
-              <button className="register">Register</button>
+              storeToken={this.props.storeToken}
+            />
+            <div>
+              <NavLink to="/register">
+                <button className="register">Register</button>
+              </NavLink>
             </div>
             <NavLink to="/home" className="skip" onClick={this.props.loggedIn}>
               Skip

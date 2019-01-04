@@ -111,6 +111,10 @@
   transition: 0s;
 }
 
+.landing-register-box-expanded {
+  height: 0;
+}
+
 @media only screen and (min-width: 700px) {
   .login-container {
     width: 30rem;
@@ -121,10 +125,6 @@
     border-radius: 15px;
     background-color: #3d476d;
   }
-}
-
-.register-box-expanded .onboarding-box {
-  display: none;
 }
 
 .slide {

@@ -1,5 +1,77 @@
 .register-box {
+  height: 100vh;
+}
+
+.register-header {
+  width: 20rem;
+  margin: 0 auto;
+}
+
+.register-header h1 {
+  text-align: center;
+  color: var(--TellerPink);
+  font-family: teller;
+  margin-top: 1rem;
+}
+
+.bottom-register-box {
   display: block;
-  background-color: red;
-  height: 5rem;
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 2rem;
+}
+
+.register-form {
+  text-align: center;
+  display: block;
+  margin: 14rem auto 0;
+}
+
+.pls-password {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.5rem;
+  margin-top: -1rem;
+}
+
+.register-form input {
+  display: block;
+  width: 12rem;
+  height: 2rem;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid var(--TellerPink);
+  background-color: transparent;
+  margin: 1rem auto;
+  color: white;
+  text-align: center;
+}
+
+.register-form input:placeholder {
+  text-align: center;
+  color: white;
+}
+
+.register-confirm-input {
+  border-top: 1px solid var(--TellerPink);
+}
+
+.register-button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+  background-color: var(--TellerPink);
+}
+
+.go-back-button {
+  color: white;
+  text-decoration: none;
+  margin-top: 2rem;
+  display: block;
 }

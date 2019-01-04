@@ -4,8 +4,8 @@
   height: 1rem;
   position: fixed;
   padding: 1rem;
-  left: 0.8rem;
-  top: 0.5rem;
+  left: 0.5rem;
+  top: 0.3rem;
   z-index: 190;
   cursor: pointer;
 }
