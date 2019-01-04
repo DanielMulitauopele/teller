@@ -5,7 +5,7 @@
 .wrong-way h1 {
   color: var(--TellerPink);
   text-align: center;
-  margin-top: 10rem;
+  margin: 10rem 2rem 0;
 }
 
 .wrong-way a {
@@ -16,5 +16,9 @@
   display: inline-block;
   padding: 0.5rem 2rem;
   border-radius: 10px;
-  margin-top: 10rem;
+  margin-top: 1rem;
+}
+
+.wrong-way a:hover {
+  box-shadow: 2px 2px 2px var(--TellerBGDark);
 }

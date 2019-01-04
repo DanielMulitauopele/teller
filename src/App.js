@@ -169,7 +169,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Hotdog removeLoginState={this.removeLoginState} />
-          {this.state.loggedIn && <Search displaySearch={this.displaySearch} />}
+          <Search displaySearch={this.displaySearch} />
           {this.state.loggedIn && (
             <div className="app-subtle-bg">
               <h1>teller.</h1>
