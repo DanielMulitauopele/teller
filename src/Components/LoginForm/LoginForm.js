@@ -7,7 +7,7 @@ export class LoginForm extends Component {
   constructor(props) {
     super(props);
 
-    const { toggleLogIn, storeToken } = this.props
+    // const { toggleLogIn, storeToken, addToFavorites, addToNotes, setCurrencies } = this.props
 
     this.state = {
       email: "",
@@ -26,6 +26,9 @@ export class LoginForm extends Component {
     const token = await logInUser(user)
     this.props.toggleLogIn(email);
     this.props.storeToken(token)
+    this.props.addToNotes()
+    this.props.addToFavorites()
+    this.props.setCurrencies()
     this.setState({ token: token.teller_api_token })
   };
 
@@ -36,34 +39,36 @@ export class LoginForm extends Component {
 
   render() {
     const { email, password, token } = this.state;
-    // const path = token ? "home" : ""
-    if (token !== "" && typeof token !== "object"){
+    if (token !== "" && token !== undefined){
       return <Redirect to="/home" />
+    } else {
+      return (
+        <div className="form-wrapper">
+          <form className="login-form" onSubmit={this.handleSubmit}>
+            <input
+              className="form-input user-email"
+              name="email"
+              value={email}
+              onChange={this.handleChange}
+              placeholder="Email"
+              // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
+            />
+            <input
+              className="form-input user-password"
+              type="password"
+              name="password"
+              value={password}
+              onChange={this.handleChange}
+              placeholder="Password"
+              // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
+            />
+            <p className="login-button" onClick={this.handleClick}>
+                Go
+            </p>
+          </form>
+        </div>
+      );
     }
-    return (
-      <div className="form-wrapper">
-        <form className="login-form" onSubmit={this.handleSubmit}>
-          <input
-            className="form-input user-email"
-            name="email"
-            value={email}
-            onChange={this.handleChange}
-            placeholder="Email"
-          />
-          <input
-            className="form-input user-password"
-            type="password"
-            name="password"
-            value={password}
-            onChange={this.handleChange}
-            placeholder="Password"
-          />
-          <p className="login-button" onClick={this.handleClick}>
-              Go
-          </p>
-        </form>
-      </div>
-    );
   }
 }
 

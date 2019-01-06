@@ -7,7 +7,8 @@ class NoteForm extends Component {
     super(props);
     this.state = {
       title: "",
-      body: ""
+      body: "",
+      token: this.props.token
     };
   }
 
@@ -28,7 +29,7 @@ class NoteForm extends Component {
   };
 
   render() {
-    const { title, body } = this.state;
+    const { title, body, token } = this.state;
     return (
       <div className="note-form-literal">
         <form onSubmit={this.handleSubmit}>
@@ -48,7 +49,7 @@ class NoteForm extends Component {
             onChange={this.handleChange}
             autoComplete="off"
           />
-          <button className="submit-note">Submit</button>
+          <button className="submit-note" disabled={token ? false : true}>Submit</button>
         </form>
       </div>
     );

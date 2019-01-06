@@ -11,7 +11,8 @@ class LandingCurrency extends Component {
     super(props);
     this.state = {
       expanded: false,
-      faved: false
+      faved: false,
+      token: this.props.token
     };
     this.cleaner = new DataCleaner();
   }
@@ -30,19 +31,23 @@ class LandingCurrency extends Component {
 
   handleClick = async e => {
     const { name } = e.target;
-    const fave = await this.cleaner.formatFavorite(name);
-    sendFavorites(JSON.stringify({
-          "name": fave.name,
-          "price_usd": fave.price,
-          "percent_change_24_hr": fave.percent_change
-        }), this.props.token)
-    this.props.addToFavorites();
-    this.faved();
-    this.props.displayExpanded(this.props.currency.name)
+    if (!this.state.token) {
+      return
+    } else {
+      const fave = await this.cleaner.formatFavorite(name);
+      sendFavorites(JSON.stringify({
+            "name": fave.name,
+            "price_usd": fave.price,
+            "percent_change_24_hr": fave.percent_change
+          }), this.props.token)
+      this.props.addToFavorites();
+      this.faved();
+      this.props.displayExpanded(this.props.currency.name)
+    }
   };
 
   render() {
-    const { symbol, name, price, percent_change, rank } = this.props.currency;
+    const { symbol, name, price, percent_change } = this.props.currency;
     const { expanded } = this.state;
     return (
       <div className="currency-card">

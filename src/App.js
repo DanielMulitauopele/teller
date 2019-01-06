@@ -30,11 +30,15 @@ class App extends Component {
   }
 
   async componentDidMount() {
+    this.setCurrencies()
+    this.checkToken();
+    this.addToFavorites();
+    this.addToNotes();
+  }
+
+  setCurrencies = async () => {
     const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
     const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
-    this.checkToken();
-    // this.addToFavorites();
-    // this.addToNotes();
     this.setState({
       abbrevCurrencies,
       expandedCurrencies
@@ -42,28 +46,48 @@ class App extends Component {
   }
 
   addToFavorites = async () => {
-    const favorites = await fetchFavorites(this.state.token);
-    this.setState({ favorites });
+    let favorites
+    if (!this.state.token) {
+      favorites = [{
+        id: 12345,
+        name: "No favorites saved",
+        price_usd: 0,
+        percent_change_24_hr: 0
+      }]
+    } else {
+      favorites = await fetchFavorites(this.state.token);
+    }
+      this.setState({ favorites });
   };
 
-  removeFromFavorites = id => {
-    const filteredFavorites = this.state.favorites.filter(
-      favorite => favorite.id !== id
-    );
-    this.setState({ favorites: filteredFavorites });
-  };
+  // removeFromFavorites = id => {
+  //   const filteredFavorites = this.state.favorites.filter(
+  //     favorite => favorite.id !== id
+  //   );
+  //   this.setState({ favorites: filteredFavorites });
+  // };
 
   addToNotes = async () => {
-    const notes = await fetchNotes(this.state.token);
+    let notes
+    if (!this.state.token) {
+      notes = [{
+        id: 12345,
+        title: "No notes saved.",
+        body: "You must create an account to save notes."
+      }]
+    } else {
+      notes = await fetchNotes(this.state.token); 
+    }
     this.setState({ notes });
   };
 
-  removeFromNotes = id => {
-    const filteredNotes = this.state.notes.filter(note => note.id !== id);
-    this.setState({ notes: filteredNotes });
-  };
+  // removeFromNotes = id => {
+  //   const filteredNotes = this.state.notes.filter(note => note.id !== id);
+  //   this.setState({ notes: filteredNotes });
+  // };
 
   toggleLogIn = userEmail => {
+    // debugger
     this.setState({
       userEmail,
       loggedIn: true
@@ -142,24 +166,37 @@ class App extends Component {
   };
 
   checkToken = () => {
-    if (!this.state.loggedIn) {
-      return;
-    } else if (this.state.token || localStorage.getItem("userToken") !== null) {
+    if (!this.state.token && localStorage.getItem("userToken") !== null) {
       const token = JSON.parse(localStorage.getItem("userToken"))
-        .teller_api_token;
       this.setState({
-        token: token,
-        loggedIn: true
-      });
+        token: token.teller_api_token,
+        loggedIn: true,
+      })
     }
   };
+
+  clearUser = () => {
+    localStorage.clear()
+    this.setState({
+      favorites: [],
+      abbrevCurrencies: [],
+      expandedCurrencies: [],
+      userEmail: "",
+      news: [],
+      loggedIn: false,
+      notes: [],
+      token: ""
+    })
+  }
 
   render() {
     const { abbrevCurrencies, favorites, notes, token } = this.state;
     return (
       <BrowserRouter>
         <div className="App">
-          <Hotdog removeLoginState={this.removeLoginState} />
+          <Hotdog 
+            removeLoginState={this.removeLoginState}
+            clearUser={this.clearUser} />
 
           <Switch>
             <Route
@@ -198,6 +235,9 @@ class App extends Component {
                     loggedIn={this.setLoginState}
                     toggleLogIn={this.toggleLogIn}
                     storeToken={this.storeToken}
+                    addToNotes={this.addToNotes}
+                    addToFavorites={this.addToFavorites}
+                    setCurrencies={this.setCurrencies}
                   />
                 );
               }}

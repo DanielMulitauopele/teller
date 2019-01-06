@@ -7,7 +7,7 @@ class RegisterForm extends Component {
   constructor(props) {
     super(props);
 
-    const { storeToken } = this.props
+    // const { storeToken } = this.props
 
     this.state = {
       name: "",
@@ -61,7 +61,7 @@ class RegisterForm extends Component {
   render() {
     const { name, email, password, confirmedPassword, token } = this.state;
 
-    if (token !== "" && typeof token !== "object") {
+    if (token !== "" && token !== undefined) {
       return <Redirect to="/home" />
     }
     return (
@@ -77,6 +77,7 @@ class RegisterForm extends Component {
             name="name"
             onChange={this.handleChange}
             value={name}
+            // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
           />
           <input
             className="register-input register-email-input"
@@ -85,6 +86,7 @@ class RegisterForm extends Component {
             name="email"
             onChange={this.handleChange}
             value={email}
+            // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
           />
           <input
             className="register-input register-password-input"
@@ -93,6 +95,7 @@ class RegisterForm extends Component {
             name="password"
             onChange={this.handleChange}
             value={password}
+            // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
           />
           <p className="pls-password">(At least 10 characters please)</p>
           <input
@@ -102,6 +105,7 @@ class RegisterForm extends Component {
             name="confirmedPassword"
             onChange={this.handleChange}
             value={confirmedPassword}
+            // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
           />
           <button className="register-button">Register</button>
           <NavLink to="/" className="go-back-button">
@@ -110,7 +114,7 @@ class RegisterForm extends Component {
         </form>
         <div className="bottom-register-box">
           <p>
-            (An account is not necessary to use the majority of functionality
+            (*An account is not necessary to use the majority of functionality
             our app provides.)
           </p>
         </div>

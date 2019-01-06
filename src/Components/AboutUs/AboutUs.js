@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { LeftCaret, RightCaret } from "../Onboarding/OnboardingArrows";
-import caret from "../../Assets/caret.svg";
 import dev1 from "../../Assets/images/autumn.png";
 import dev3 from "../../Assets/images/dina.png";
 import dev2 from "../../Assets/images/daniel.png";
@@ -75,6 +74,4 @@ class AboutUs extends Component {
   }
 }
 
-{
-}
 export default AboutUs;
