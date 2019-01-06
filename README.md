@@ -22,25 +22,25 @@ By compiling all of this information into one place, users can feel confident in
 
 #### APIs
 
-twitter
-ShapeShift
-CoinCap
-IBM Watson
+* Twitter
+* ShapeShift
+* CoinCap
+* IBM Watson
 
 ### BackEnd
 
-PostgresSQL
-Python
-django
-Ruby
-Ruby on Rails
+* PostgresSQL
+* Python
+* Django
+* Ruby
+* Ruby on Rails
 
 ### FrontEnd
 
-React
-React Router
-Heroku
-Plotly
+* React
+* React Router
+* Heroku
+* Plotly
 
 ## Challenges
 
