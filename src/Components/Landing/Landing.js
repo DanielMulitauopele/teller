@@ -3,13 +3,13 @@ import "./Landing.css";
 import FavoritesContainer from "../FavoritesContainer/FavoritesContainer";
 import LandingCurrencyContainer from "../LandingCurrencyContainer/LandingCurrencyContainer";
 import NewsContainer from "../../Components/NewsContainer/NewsContainer";
-import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded"
+// import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded"
 
 class Landing extends Component {
   constructor(props) {
     super(props);
 
-    const { favorites, addToFavorites, removeFromFavorites, abbrevCurrencies, setFilter, removeLoginState, token, } = this.props
+    // const { favorites, addToFavorites, removeFromFavorites, abbrevCurrencies, setFilter, removeLoginState, token, } = this.props
     
     this.state = {
       active: false,

@@ -42,7 +42,7 @@ class LandingCurrency extends Component {
   };
 
   render() {
-    const { symbol, name, price, percent_change, rank } = this.props.currency;
+    const { symbol, name, price, percent_change } = this.props.currency;
     const { expanded } = this.state;
     return (
       <div className="currency-card">

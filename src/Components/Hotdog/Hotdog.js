@@ -11,7 +11,7 @@ import { NavLink } from "react-router-dom";
 class Hotdog extends Component {
   constructor(props) {
     super(props);
-    const { removeLoginState } = this.props
+    // const { removeLoginState } = this.props
     this.state = {
       expanded: false
     };

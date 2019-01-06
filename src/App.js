@@ -33,8 +33,8 @@ class App extends Component {
     const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
     const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
     this.checkToken();
-    // this.addToFavorites();
-    // this.addToNotes();
+    this.addToFavorites();
+    this.addToNotes();
     this.setState({
       abbrevCurrencies,
       expandedCurrencies
@@ -42,26 +42,45 @@ class App extends Component {
   }
 
   addToFavorites = async () => {
-    const favorites = await fetchFavorites(this.state.token);
-    this.setState({ favorites });
+    let favorites
+    if (!this.state.token) {
+      favorites = [{
+        id: 12345,
+        name: "No favorites saved",
+        price_usd: 0,
+        percent_change_24_hr: 0
+      }]
+    } else {
+      favorites = await fetchFavorites(this.state.token);
+    }
+      this.setState({ favorites });
   };
 
-  removeFromFavorites = id => {
-    const filteredFavorites = this.state.favorites.filter(
-      favorite => favorite.id !== id
-    );
-    this.setState({ favorites: filteredFavorites });
-  };
+  // removeFromFavorites = id => {
+  //   const filteredFavorites = this.state.favorites.filter(
+  //     favorite => favorite.id !== id
+  //   );
+  //   this.setState({ favorites: filteredFavorites });
+  // };
 
   addToNotes = async () => {
-    const notes = await fetchNotes(this.state.token);
+    let notes
+    if (!this.state.token) {
+      notes = [{
+        id: 12345,
+        title: "No notes saved.",
+        body: "You must create an account to save notes."
+      }]
+    } else {
+      notes = await fetchNotes(this.state.token); 
+    }
     this.setState({ notes });
   };
 
-  removeFromNotes = id => {
-    const filteredNotes = this.state.notes.filter(note => note.id !== id);
-    this.setState({ notes: filteredNotes });
-  };
+  // removeFromNotes = id => {
+  //   const filteredNotes = this.state.notes.filter(note => note.id !== id);
+  //   this.setState({ notes: filteredNotes });
+  // };
 
   toggleLogIn = userEmail => {
     this.setState({

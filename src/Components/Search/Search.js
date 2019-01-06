@@ -7,7 +7,7 @@ class Search extends Component {
   constructor(props) {
     super(props);
 
-    const { displaySearch } = this.props
+    // const { displaySearch } = this.props
     
     this.state = {
       active: false,
@@ -55,7 +55,8 @@ class Search extends Component {
               placeholder="Search"
               name="search"
               value={search}
-              onChange={this.handleChange}/>
+              onChange={this.handleChange}
+              pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"/>
           </form>
         </div>
       </div>

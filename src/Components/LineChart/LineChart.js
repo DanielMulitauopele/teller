@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import ReactDOM from 'react-dom';
 import Plot from 'react-plotly.js';
-import { render } from 'react-dom';
 
-class LineChart extends React.Component {
+class LineChart extends Component {
   constructor() {
     super();
     this.state = { data: [] };

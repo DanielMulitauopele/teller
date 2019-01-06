@@ -5,7 +5,7 @@ import HeartP from "../../Assets/heartpink.svg"
 import DataCleaner from "../../Utils/Cleaners/"
 import Green from "../../Assets/green.svg"
 import LineChart from '../LineChart/LineChart.js'
-import { fetchAnalysis } from "../../Utils/API/"
+// import { fetchAnalysis } from "../../Utils/API/"
 
 class CurrencyExpanded extends Component {
   constructor(props) {

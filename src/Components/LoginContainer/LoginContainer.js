@@ -8,7 +8,7 @@ class LoginContainer extends Component {
   constructor(props) {
     super(props);
 
-    const { loggedIn, toggleLogIn, storeToken } = this.props
+    // const { loggedIn, toggleLogIn, storeToken } = this.props
 
     this.state = {
       expandedLogIn: false,
@@ -29,7 +29,7 @@ class LoginContainer extends Component {
   };
 
   render() {
-    const { expandedLogIn, expandedRegister } = this.state;
+    const { expandedLogIn } = this.state;
     const { toggleLogIn, storeToken, loggedIn } = this.props
     return (
       <div className="login-container">
