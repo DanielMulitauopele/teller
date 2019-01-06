@@ -50,7 +50,7 @@ Configuration was not intuitive and we spent more time figuring out configuratio
 
 #### Learning a New Language / Framework
 
-Learning Python and Django was a task in and of itself, but Autumn and Daniel spent time figuring data in D3/Plotly
+Learning Python and Django was a task in and of itself, but Autumn spent time figuring data in D3/Plotly
 
 #### Connecting Projects
 
