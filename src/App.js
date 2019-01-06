@@ -30,11 +30,15 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
-    const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
+    this.setCurrencies()
     this.checkToken();
     this.addToFavorites();
     this.addToNotes();
+  }
+
+  setCurrencies = async () => {
+    const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
+    const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
     this.setState({
       abbrevCurrencies,
       expandedCurrencies
@@ -83,6 +87,7 @@ class App extends Component {
   // };
 
   toggleLogIn = userEmail => {
+    // debugger
     this.setState({
       userEmail,
       loggedIn: true
@@ -161,24 +166,37 @@ class App extends Component {
   };
 
   checkToken = () => {
-    if (!this.state.loggedIn) {
-      return;
-    } else if (this.state.token || localStorage.getItem("userToken") !== null) {
+    if (!this.state.token && localStorage.getItem("userToken") !== null) {
       const token = JSON.parse(localStorage.getItem("userToken"))
-        .teller_api_token;
       this.setState({
-        token: token,
-        loggedIn: true
-      });
+        token: token.teller_api_token,
+        loggedIn: true,
+      })
     }
   };
+
+  clearUser = () => {
+    localStorage.clear()
+    this.setState({
+      favorites: [],
+      abbrevCurrencies: [],
+      expandedCurrencies: [],
+      userEmail: "",
+      news: [],
+      loggedIn: false,
+      notes: [],
+      token: ""
+    })
+  }
 
   render() {
     const { abbrevCurrencies, favorites, notes, token } = this.state;
     return (
       <BrowserRouter>
         <div className="App">
-          <Hotdog removeLoginState={this.removeLoginState} />
+          <Hotdog 
+            removeLoginState={this.removeLoginState}
+            clearUser={this.clearUser} />
 
           <Switch>
             <Route
@@ -217,6 +235,9 @@ class App extends Component {
                     loggedIn={this.setLoginState}
                     toggleLogIn={this.toggleLogIn}
                     storeToken={this.storeToken}
+                    addToNotes={this.addToNotes}
+                    addToFavorites={this.addToFavorites}
+                    setCurrencies={this.setCurrencies}
                   />
                 );
               }}

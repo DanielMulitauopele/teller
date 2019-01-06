@@ -11,7 +11,7 @@ import { NavLink } from "react-router-dom";
 class Hotdog extends Component {
   constructor(props) {
     super(props);
-    // const { removeLoginState } = this.props
+    // const { removeLoginState, clearUser } = this.props
     this.state = {
       expanded: false
     };
@@ -22,10 +22,6 @@ class Hotdog extends Component {
       expanded: !this.state.expanded
     });
   };
-
-  clearTokenStorage = () => {
-    localStorage.clear()
-  }
 
   render() {
     const { expanded } = this.state;
@@ -73,8 +69,8 @@ class Hotdog extends Component {
               </li>
               <li onClick={this.props.removeLoginState}>
                 <NavLink to="/">
-                  <img src={Exit} alt="exit-icon" onClick={this.clearTokenStorage} />
-                  <span className="logout" onClick={this.clearTokenStorage}>Quit</span>
+                  <img src={Exit} alt="exit-icon" onClick={this.props.clearUser} />
+                  <span className="logout" onClick={this.props.clearUser}>Quit</span>
                 </NavLink>
               </li>
             </ul>

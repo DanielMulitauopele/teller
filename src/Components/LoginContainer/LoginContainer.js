@@ -8,7 +8,7 @@ class LoginContainer extends Component {
   constructor(props) {
     super(props);
 
-    // const { loggedIn, toggleLogIn, storeToken } = this.props
+    // const { loggedIn, toggleLogIn, storeToken, addToFavorites, addToNotes, setCurrencies } = this.props
 
     this.state = {
       expandedLogIn: false,
@@ -30,7 +30,7 @@ class LoginContainer extends Component {
 
   render() {
     const { expandedLogIn } = this.state;
-    const { toggleLogIn, storeToken, loggedIn } = this.props
+    const { toggleLogIn, storeToken, loggedIn, addToNotes, addToFavorites, setCurrencies } = this.props
     return (
       <div className="login-container">
         <NavLink to="/onboarding">
@@ -51,6 +51,9 @@ class LoginContainer extends Component {
               toggleLogIn={toggleLogIn}
               storeToken={storeToken}
               loggedIn={loggedIn}
+              addToNotes={addToNotes}
+              addToFavorites={addToFavorites}
+              setCurrencies={setCurrencies}
             />
             <div>
               <NavLink to="/register">
