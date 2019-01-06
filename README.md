@@ -5,10 +5,10 @@
 <img width="1148" alt="screen shot 2019-01-06 at 3 45 29 pm" src="https://user-images.githubusercontent.com/34214595/50742564-23035e00-11ca-11e9-8a0b-c46b0d615175.png">
 
 ### Contributors
-[Autumn Martin](https://github.com/Autumn-Martin)
-[Daniel Mulitauopele](https://github.com/DanielMulitauopele)
-[Dina Caraballo](https://github.com/djcaraballo)
-[Nick Dambrosio](https://github.com/30ozSteak)
+* [Autumn Martin](https://github.com/Autumn-Martin)
+* [Daniel Mulitauopele](https://github.com/DanielMulitauopele)
+* [Dina Caraballo](https://github.com/djcaraballo)
+* [Nick Dambrosio](https://github.com/30ozSteak)
 
 ### Summary
 
