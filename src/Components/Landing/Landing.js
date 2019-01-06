@@ -8,6 +8,7 @@ import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded
 class Landing extends Component {
   constructor(props) {
     super(props);
+    const { favorites, addToFavorites, removeFromFavorites, abbrevCurrencies, setFilter, removeLoginState, token, } = this.props
     this.state = {
       active: false,
       news: [],
@@ -56,10 +57,10 @@ class Landing extends Component {
           displayExpanded={this.displayExpanded}
           token={token}
         />
-        <CurrencyExpanded
-          currencies={abbrevCurrencies}
-          addToFavorites={addToFavorites}
-          displayedCurrency={this.state.displayedCurrency} />
+        {/*<CurrencyExpanded
+                  currencies={abbrevCurrencies}
+                  addToFavorites={addToFavorites}
+                  displayedCurrency={this.state.displayedCurrency} />*/}
       </div>
     );
   }

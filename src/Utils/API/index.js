@@ -98,3 +98,24 @@ export const fetchNotes = async (token) => {
   return result
 } 
 
+export const fetchGraphData = async () => {
+  const url =
+      "https://cors-anywhere.herokuapp.com/https://teller-api.herokuapp.com/api/v1/assets/bitcoin/history?interval=h2";
+  const response = await fetch(url);
+  const result = await response.json();
+  return result
+}
+
+export const fetchAnalysis = async (currency) => {
+  const url = `https://cors-anywhere.herokuapp.com/https://teller-ai.herokuapp.com/teller/watson_analysis?coin=${currency}`
+  const response = await fetch(url, {
+    headers: {
+      "Origin": ""
+    },
+    method: "GET"
+  })
+  const result = await response.json()
+  console.log(result)
+  return result
+}
+

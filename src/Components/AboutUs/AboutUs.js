@@ -31,6 +31,7 @@ class AboutUs extends Component {
       translateValue: prevState.translateValue + this.slideWidth()
     }));
   };
+  
   nextSlide = () => {
     if (this.state.currentIndex === this.state.images.length - 1) {
       return this.setState({

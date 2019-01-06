@@ -9,8 +9,9 @@ import Donate from "../../Assets/donate.svg";
 import { NavLink } from "react-router-dom";
 
 class Hotdog extends Component {
-  constructor({ props, removeLoginState }) {
+  constructor(props) {
     super(props);
+    const { removeLoginState } = this.props
     this.state = {
       expanded: false
     };

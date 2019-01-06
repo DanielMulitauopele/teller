@@ -7,6 +7,9 @@ import infoIcon from "../../Assets/information.svg";
 class LoginContainer extends Component {
   constructor(props) {
     super(props);
+
+    const { loggedIn, toggleLogIn, storeToken } = this.props
+
     this.state = {
       expandedLogIn: false,
       expandedRegister: false

@@ -6,6 +6,9 @@ import { NavLink } from "react-router-dom";
 class RegisterForm extends Component {
   constructor(props) {
     super(props);
+
+    const { storeToken } = this.props
+
     this.state = {
       name: "",
       email: "",

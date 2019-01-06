@@ -4,8 +4,9 @@ import Note from "../Note/Note";
 import NoteForm from "../NoteForm/NoteForm";
 
 class NotesContainer extends Component {
-  constructor({ props, notes, addToNotes, removeFromNotes, token }) {
+  constructor(props) {
     super(props);
+    const { notes, addToNotes, removeFromNotes, token } = this.props
   }
 
   render() {

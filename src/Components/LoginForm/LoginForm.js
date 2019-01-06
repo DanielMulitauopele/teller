@@ -12,6 +12,7 @@ export class LoginForm extends Component {
   }
 
   handleClick = async e => {
+    debugger
     e.preventDefault();
     const { email, password } = this.state
     const user = JSON.stringify({
