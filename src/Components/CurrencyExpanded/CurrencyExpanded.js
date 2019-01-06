@@ -5,13 +5,15 @@ import HeartP from "../../Assets/heartpink.svg"
 import DataCleaner from "../../Utils/Cleaners/"
 import Green from "../../Assets/green.svg"
 import LineChart from '../LineChart/LineChart.js'
+import { fetchAnalysis } from "../../Utils/API/"
 
 class CurrencyExpanded extends Component {
   constructor(props) {
     super(props)
     this.state = {
       faved: false,
-      displayedCurrency: this.props.displayedCurrency || "Bitcoin"
+      displayedCurrency: this.props.displayedCurrency || "Bitcoin",
+      analysis: ''
     }
     this.cleaner = new DataCleaner()
   }
@@ -21,6 +23,7 @@ class CurrencyExpanded extends Component {
     if (displayedCurrency !== this.state.displayedCurrency) {
       this.setState({ displayedCurrency: displayedCurrency})
     }
+    // const analysis = fetchAnalysis(displayedCurrency)
   }
 
   faved = () => {

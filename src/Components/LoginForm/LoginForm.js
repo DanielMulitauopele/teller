@@ -1,13 +1,18 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import "./LoginForm.css";
 import { logInUser } from '../../Utils/API'
 
 export class LoginForm extends Component {
-  constructor({ props, toggleLogIn, storeToken }) {
+  constructor(props) {
     super(props);
+
+    const { toggleLogIn, storeToken } = this.props
+
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      token: ""
     };
   }
 
@@ -21,6 +26,7 @@ export class LoginForm extends Component {
     const token = await logInUser(user)
     this.props.toggleLogIn(email);
     this.props.storeToken(token)
+    this.setState({ token })
   };
 
   handleChange = async e => {
@@ -29,7 +35,11 @@ export class LoginForm extends Component {
   };
 
   render() {
-    const { email, password } = this.state;
+    const { email, password, token } = this.state;
+    // const path = token ? "home" : ""
+    if (token !== "" && typeof token !== "object"){
+      return <Redirect to="/home" />
+    }
     return (
       <div className="form-wrapper">
         <form className="login-form" onSubmit={this.handleSubmit}>
@@ -49,7 +59,7 @@ export class LoginForm extends Component {
             placeholder="Password"
           />
           <p className="login-button" onClick={this.handleClick}>
-            Go
+              Go
           </p>
         </form>
       </div>

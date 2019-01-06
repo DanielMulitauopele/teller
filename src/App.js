@@ -30,14 +30,11 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    // if (!this.state.loggedIn) {
-    //   return;
-    // }
     const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
     const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
     this.checkToken();
-    this.addToFavorites();
-    this.addToNotes();
+    // this.addToFavorites();
+    // this.addToNotes();
     this.setState({
       abbrevCurrencies,
       expandedCurrencies
@@ -147,8 +144,7 @@ class App extends Component {
   checkToken = () => {
     if (!this.state.loggedIn) {
       return;
-    }
-    if (this.state.token || localStorage.getItem("userToken") !== null) {
+    } else if (this.state.token || localStorage.getItem("userToken") !== null) {
       const token = JSON.parse(localStorage.getItem("userToken"))
         .teller_api_token;
       this.setState({

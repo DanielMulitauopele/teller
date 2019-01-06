@@ -4,8 +4,11 @@ import SearchGlass from "../../Assets/search.svg";
 import Cancel from "../../Assets/cancel.svg";
 
 class Search extends Component {
-  constructor({ props, displaySearch }) {
+  constructor(props) {
     super(props);
+
+    const { displaySearch } = this.props
+    
     this.state = {
       active: false,
       hasText: false,

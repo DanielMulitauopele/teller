@@ -1,17 +1,21 @@
 import React, { Component } from "react";
 import { registerUser } from "../../Utils/API";
 import "./RegisterForm.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 
 class RegisterForm extends Component {
   constructor(props) {
     super(props);
+
+    const { storeToken } = this.props
+
     this.state = {
       name: "",
       email: "",
       password: "",
       confirmedPassword: "",
-      passwordError: false
+      passwordError: false,
+      token: ""
     };
   }
 
@@ -37,7 +41,8 @@ class RegisterForm extends Component {
       name: "",
       email: "",
       password: "",
-      confirmedPassword: ""
+      confirmedPassword: "",
+      token
     });
   };
 
@@ -54,7 +59,11 @@ class RegisterForm extends Component {
   };
 
   render() {
-    const { name, email, password, confirmedPassword } = this.state;
+    const { name, email, password, confirmedPassword, token } = this.state;
+
+    if (token !== "" && typeof token !== "object") {
+      return <Redirect to="/home" />
+    }
     return (
       <div className="register-box">
         <div className="register-header">
