@@ -43,34 +43,40 @@ class Hotdog extends Component {
               t<span>eller</span>.
             </h1>
             <ul>
-              <li className="home-li" onClick={this.changeActiveRoute}>
+              <li className="home-li" onClick={this.toggleHotdog}>
                 <NavLink to="/home">
                   <img src={Home} alt="home-icon" />
                   <span>Home</span>
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/blogs">
+                <NavLink to="/blogs" onClick={this.toggleHotdog}>
                   <img src={Blog} alt="blog-icon" />
                   <span>Blog</span>
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/notes">
+                <NavLink to="/notes" onClick={this.toggleHotdog}>
                   <img src={Notes} alt="notes-icon" />
                   <span>Notes</span>
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/about">
+                <NavLink to="/about" onClick={this.toggleHotdog}>
                   <img src={Code} alt="about-us-icon" />
                   <span>About</span>
                 </NavLink>
               </li>
               <li onClick={this.props.removeLoginState}>
-                <NavLink to="/">
-                  <img src={Exit} alt="exit-icon" onClick={this.props.clearUser} />
-                  <span className="logout" onClick={this.props.clearUser}>Quit</span>
+                <NavLink to="/" onClick={this.toggleHotdog}>
+                  <img
+                    src={Exit}
+                    alt="exit-icon"
+                    onClick={this.props.clearUser}
+                  />
+                  <span className="logout" onClick={this.props.clearUser}>
+                    Quit
+                  </span>
                 </NavLink>
               </li>
             </ul>
