@@ -11,7 +11,7 @@ import Onboarding from "./Components/OnboardingContainer/OnboardingContainer";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import RegisterForm from "./Components/RegisterForm/RegisterForm";
 import { Invalid } from "./Components/Invalid/Invalid";
-import { fetchFavorites, fetchNotes } from "./Utils/API/"
+import { fetchFavorites, fetchNotes } from "./Utils/API/";
 
 class App extends Component {
   constructor(props) {
@@ -30,20 +30,23 @@ class App extends Component {
   }
 
   async componentDidMount() {
+    // if (!this.state.loggedIn) {
+    //   return;
+    // }
     const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
     const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
-    this.checkToken()
-    this.addToFavorites()
-    this.addToNotes()
+    this.checkToken();
+    this.addToFavorites();
+    this.addToNotes();
     this.setState({
       abbrevCurrencies,
-      expandedCurrencies,
+      expandedCurrencies
     });
   }
 
   addToFavorites = async () => {
-    const favorites = await fetchFavorites(this.state.token)
-    this.setState({ favorites })
+    const favorites = await fetchFavorites(this.state.token);
+    this.setState({ favorites });
   };
 
   removeFromFavorites = id => {
@@ -54,8 +57,8 @@ class App extends Component {
   };
 
   addToNotes = async () => {
-    const notes = await fetchNotes(this.state.token)
-    this.setState({ notes })
+    const notes = await fetchNotes(this.state.token);
+    this.setState({ notes });
   };
 
   removeFromNotes = id => {
@@ -80,8 +83,8 @@ class App extends Component {
     this.setState({
       loggedIn: false,
       token: ""
-    })
-  }
+    });
+  };
 
   displaySearch = async currency => {
     let abbCurr;
@@ -142,7 +145,9 @@ class App extends Component {
   };
 
   checkToken = () => {
-    // debugger
+    if (!this.state.loggedIn) {
+      return;
+    }
     if (this.state.token || localStorage.getItem("userToken") !== null) {
       const token = JSON.parse(localStorage.getItem("userToken"))
         .teller_api_token;
@@ -254,7 +259,7 @@ class App extends Component {
               exact
               path="/register"
               render={() => {
-                return <RegisterForm />;
+                return <RegisterForm storeToken={this.storeToken} />;
               }}
             />
             <Route component={Invalid} />
