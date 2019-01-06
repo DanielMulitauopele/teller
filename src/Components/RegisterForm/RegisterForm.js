@@ -114,7 +114,7 @@ class RegisterForm extends Component {
         </form>
         <div className="bottom-register-box">
           <p>
-            (An account is not necessary to use the majority of functionality
+            (*An account is not necessary to use the majority of functionality
             our app provides.)
           </p>
         </div>
