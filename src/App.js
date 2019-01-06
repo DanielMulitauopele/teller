@@ -144,8 +144,7 @@ class App extends Component {
   checkToken = () => {
     if (!this.state.loggedIn) {
       return;
-    }
-    if (this.state.token || localStorage.getItem("userToken") !== null) {
+    } else if (this.state.token || localStorage.getItem("userToken") !== null) {
       const token = JSON.parse(localStorage.getItem("userToken"))
         .teller_api_token;
       this.setState({

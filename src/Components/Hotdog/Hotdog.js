@@ -23,6 +23,10 @@ class Hotdog extends Component {
     });
   };
 
+  clearTokenStorage = () => {
+    localStorage.clear()
+  }
+
   render() {
     const { expanded } = this.state;
     return (
@@ -69,8 +73,8 @@ class Hotdog extends Component {
               </li>
               <li onClick={this.props.removeLoginState}>
                 <NavLink to="/">
-                  <img src={Exit} alt="exit-icon" />
-                  <span className="logout">Quit</span>
+                  <img src={Exit} alt="exit-icon" onClick={this.clearTokenStorage} />
+                  <span className="logout" onClick={this.clearTokenStorage}>Quit</span>
                 </NavLink>
               </li>
             </ul>

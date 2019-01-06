@@ -30,6 +30,7 @@ class LoginContainer extends Component {
 
   render() {
     const { expandedLogIn, expandedRegister } = this.state;
+    const { toggleLogIn, storeToken, loggedIn } = this.props
     return (
       <div className="login-container">
         <NavLink to="/onboarding">
@@ -47,15 +48,16 @@ class LoginContainer extends Component {
               Log in
             </button>
             <LoginForm
-              toggleLogIn={this.props.toggleLogIn}
-              storeToken={this.props.storeToken}
+              toggleLogIn={toggleLogIn}
+              storeToken={storeToken}
+              loggedIn={loggedIn}
             />
             <div>
               <NavLink to="/register">
                 <button className="register">Register</button>
               </NavLink>
             </div>
-            <NavLink to="/home" className="skip" onClick={this.props.loggedIn}>
+            <NavLink to="/home" className="skip" onClick={loggedIn}>
               Skip
             </NavLink>
           </div>

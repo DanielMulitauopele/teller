@@ -8,7 +8,9 @@ import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded
 class Landing extends Component {
   constructor(props) {
     super(props);
+
     const { favorites, addToFavorites, removeFromFavorites, abbrevCurrencies, setFilter, removeLoginState, token, } = this.props
+    
     this.state = {
       active: false,
       news: [],
