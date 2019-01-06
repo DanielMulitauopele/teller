@@ -42,7 +42,7 @@ class RegisterForm extends Component {
       email: "",
       password: "",
       confirmedPassword: "",
-      token
+      token: token.teller_api_token
     });
   };
 

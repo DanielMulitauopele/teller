@@ -26,7 +26,7 @@ export class LoginForm extends Component {
     const token = await logInUser(user)
     this.props.toggleLogIn(email);
     this.props.storeToken(token)
-    this.setState({ token })
+    this.setState({ token: token.teller_api_token })
   };
 
   handleChange = async e => {
