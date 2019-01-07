@@ -1,8 +1,9 @@
-import { retrieve } from '../API/'
+import { retrieve, fetchAnalysis } from '../API/'
 
 class DataCleaner {
   constructor() {
     this.fetchData = retrieve
+    this.fetchAnalysis = fetchAnalysis
   }
 
   getAbbrevCurrencies = async () => {
@@ -60,6 +61,24 @@ class DataCleaner {
       percent_change: Math.round(faveCurrency.percent_change_24_hr * 100) / 100
     };
   };
+
+  formatAnalysis = async (currency) => {
+    const analysis = await this.fetchAnalysis(currency)
+    const toneArray = analysis.document_tone.tones
+    const sentenceArray = analysis.sentences_tone.filter(sentence => sentence.tones !== [] && sentence.text !== "" && sentence.text.includes(currency)).slice(0, 20)
+    const tonesDisplay = toneArray.map(tone => {
+      return {
+        name: tone.tone_name,
+        score: Math.round(tone.score * 1000) / 1000
+      }
+    })
+    const sentencesDisplay = sentenceArray.map((sentence, i) => sentence.text)
+    return {
+      id: Date.now(),
+      tones: tonesDisplay,
+      tweets: sentencesDisplay
+    }
+  }
 }
 
 export default DataCleaner;

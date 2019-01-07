@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-import Plot from 'react-plotly.js';
+import Plot from "react-plotly.js";
+import { fetchGraphData } from "../../Utils/API/"
 
 class LineChart extends Component {
   constructor() {
     super();
     this.state = { data: [] };
   }
+
   async componentDidMount() {
-    const url =
-      "https://cors-anywhere.herokuapp.com/https://teller-api.herokuapp.com/api/v1/assets/bitcoin/history?interval=h2";
-    const response = await fetch(url);
-    const json = await response.json();
-    this.setState({ data: json });
+    const data = await fetchGraphData()
+    this.setState({ data })
   }
+
   render() {
     const allHistoryData = this.state.data
     let x_values = []
@@ -22,8 +22,8 @@ class LineChart extends Component {
       y_values.push(data.price)
     });
 
-    return ([
-      <section>
+    return (
+      <div>
         <Plot data={[
           {
             x: x_values,
@@ -49,8 +49,8 @@ class LineChart extends Component {
           }
         }
         />
-      </section>
-    ])
+      </div>
+    )
   }
 }
 

@@ -31,6 +31,11 @@ class LandingCurrency extends Component {
 
   handleClick = async e => {
     const { name } = e.target;
+    this.props.displayExpanded(name)
+  };
+
+  handleFaveClick = async e => {
+    const { name } = e.target;
     if (!this.state.token) {
       return
     } else {
@@ -42,9 +47,8 @@ class LandingCurrency extends Component {
           }), this.props.token)
       this.props.addToFavorites();
       this.faved();
-      this.props.displayExpanded(this.props.currency.name)
     }
-  };
+  }
 
   render() {
     const { symbol, name, price, percent_change } = this.props.currency;
@@ -86,7 +90,7 @@ class LandingCurrency extends Component {
               name={name}
               src={this.state.faved ? HeartP : Heart}
               className="fave-this"
-              onClick={this.handleClick}
+              onClick={this.handleFaveClick}
               alt=""
             />
           </div>

@@ -51,7 +51,8 @@ class Landing extends Component {
         <NewsContainer />
         <FavoritesContainer 
           favorites={favorites}
-          removeFromFavorites={removeFromFavorites}/>
+          removeFromFavorites={removeFromFavorites}
+        />
         <LandingCurrencyContainer 
           setFilter={setFilter}
           addToFavorites={addToFavorites}
@@ -62,7 +63,8 @@ class Landing extends Component {
         {/*<CurrencyExpanded
                   currencies={abbrevCurrencies}
                   addToFavorites={addToFavorites}
-                  displayedCurrency={this.state.displayedCurrency} />*/}
+                  displayedCurrency={this.state.displayedCurrency}
+                />*/}
       </div>
     );
   }
