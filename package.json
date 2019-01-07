@@ -2,6 +2,10 @@
   "name": "teller",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  },
   "dependencies": {
     "cryptocurrency-icons": "^0.9.3",
     "plotly.js": "^1.43.1",
