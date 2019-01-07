@@ -26,17 +26,10 @@ class Landing extends Component {
   };
 
   displayExpanded = (name) => {
-    if(!this.state.displayedCurrency) {
-      this.setState({
-        displayedCurrency: this.props.abbrevCurrencies[0].name,
-        displayExpanded: !this.state.displayExpanded
-      })
-    } else {
-      this.setState({
-        displayedCurrency: name,
-        displayExpanded: !this.state.displayExpanded
-      })
-    }
+    this.setState({
+      displayedCurrency: name,
+      displayExpanded: !this.state.displayExpanded
+    })
   }
 
   render() {

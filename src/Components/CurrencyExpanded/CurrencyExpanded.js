@@ -69,7 +69,7 @@ class CurrencyExpanded extends Component {
     if (this.props.displayExpanded !== true) {
       return (<div></div>)
     } else {
-      return (
+      return(
         <div className="expanded-container">
           <header>
             <h1 className="currency-symbol-expanded">{currency.symbol}</h1>
