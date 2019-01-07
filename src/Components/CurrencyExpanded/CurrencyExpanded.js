@@ -11,7 +11,7 @@ class CurrencyExpanded extends Component {
   constructor(props) {
     super(props)
 
-    // const { currencies, addToFavorites, displayedCurrency, currExpanded } = this.props
+    // const { currencies, addToFavorites, displayedCurrency, displayExpanded } = this.props
 
     this.state = {
       faved: false,
@@ -22,7 +22,7 @@ class CurrencyExpanded extends Component {
     this.cleaner = new DataCleaner()
   }
 
-  async componentDidUpdate() {
+  async componentDidMount() {
     const { displayedCurrency } = this.props;
     if (displayedCurrency !== this.state.displayedCurrency) {
       this.setState({ displayedCurrency: displayedCurrency})
@@ -66,10 +66,10 @@ class CurrencyExpanded extends Component {
     const { displayedCurrency, faved, analysis } = this.state
     const currency = this.showExpanded(displayedCurrency)
     console.log(currency)
-    if (this.props.expanded !== true) {
+    if (this.props.displayExpanded !== true) {
       return (<div></div>)
     } else {
-      return(
+      return (
         <div className="expanded-container">
           <header>
             <h1 className="currency-symbol-expanded">{currency.symbol}</h1>

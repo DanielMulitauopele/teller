@@ -31,7 +31,7 @@ class LandingCurrency extends Component {
 
   handleClick = async e => {
     const { name } = e.target;
-    this.props.displayExpanded(name)
+      this.props.displayExpanded(name)
   };
 
   handleFaveClick = async e => {

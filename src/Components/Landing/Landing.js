@@ -3,7 +3,7 @@ import "./Landing.css";
 import FavoritesContainer from "../FavoritesContainer/FavoritesContainer";
 import LandingCurrencyContainer from "../LandingCurrencyContainer/LandingCurrencyContainer";
 import NewsContainer from "../../Components/NewsContainer/NewsContainer";
-// import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded"
+import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded"
 
 class Landing extends Component {
   constructor(props) {
@@ -15,6 +15,7 @@ class Landing extends Component {
       active: false,
       news: [],
       displayedCurrency: "",
+      displayExpanded: false
     };
   }
 
@@ -27,11 +28,13 @@ class Landing extends Component {
   displayExpanded = (name) => {
     if(!this.state.displayedCurrency) {
       this.setState({
-        displayedCurrency: this.props.abbrevCurrencies[0].name
+        displayedCurrency: this.props.abbrevCurrencies[0].name,
+        displayExpanded: !this.state.displayExpanded
       })
     } else {
       this.setState({
-        displayedCurrency: name
+        displayedCurrency: name,
+        displayExpanded: !this.state.displayExpanded
       })
     }
   }
@@ -60,11 +63,12 @@ class Landing extends Component {
           displayExpanded={this.displayExpanded}
           token={token}
         />
-        {/*<CurrencyExpanded
-                  currencies={abbrevCurrencies}
-                  addToFavorites={addToFavorites}
-                  displayedCurrency={this.state.displayedCurrency}
-                />*/}
+        <CurrencyExpanded
+          currencies={abbrevCurrencies}
+          addToFavorites={addToFavorites}
+          displayedCurrency={this.state.displayedCurrency}
+          displayExpanded={this.state.displayExpanded}
+        />
       </div>
     );
   }
