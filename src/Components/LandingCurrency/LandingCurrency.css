@@ -29,12 +29,11 @@
 }
 
 .expanded-graph {
-  padding: 0.5rem 0;
   transition: 0.2s;
 }
 
 .plot-container.plotly {
-  transform: scale(0.9);
+  transform: scale(0.8);
   padding: 0%;
 }
 

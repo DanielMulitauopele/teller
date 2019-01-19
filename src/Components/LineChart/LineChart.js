@@ -40,16 +40,26 @@ class LineChart extends Component {
         ]} style={{width: '100%', height: '100%'}}
           layout={
           {
-            width: 400,
-            height: 400,
-            // autosize: true,
+            margin: {
+              l: 60,
+              r: 40,
+              b: 20,
+              t: 25,
+              pad: 5
+            },
+            width: 350,
+            height: 330,
             title: 'Price History',
             font: {color: 'white'},
             visible: false,
-            xaxis: {title: 'Time',
+            xaxis: {title: false,
                     showgrid: false},
-            yaxis: {title:'Price',
+            yaxis: {title:'Price $',
+                    titlefont: {
+                    size: 16,
+                    },
                     showgrid: false},
+
                     paper_bgcolor: 'rgba(0,0,0,0)',
                     plot_bgcolor: 'rgba(0,0,0,0)',
           }
