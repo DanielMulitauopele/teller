@@ -10,3 +10,5 @@ window.matchMedia = window.matchMedia || function() {
     removeListener: function() {}
   };
 };
+
+window.URL.createObjectURL = function() {};

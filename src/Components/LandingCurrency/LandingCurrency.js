@@ -5,7 +5,7 @@ import HeartP from "../../Assets/heartpink.svg";
 import { Icons } from "../../Assets/cryptoIcons/cryptoIcons";
 import DataCleaner from "../../Utils/Cleaners/";
 import { sendFavorites } from "../../Utils/API/";
-
+import LineChart from "../LineChart/LineChart"
 class LandingCurrency extends Component {
   constructor(props) {
     super(props);
@@ -76,10 +76,10 @@ class LandingCurrency extends Component {
         </div>
         {this.state.expanded && (
           <div className="expanded-currency">
-            <button 
+            <button
               className="ec-right"
               onClick={this.handleClick}
-              name={name}> 
+              name={name}>
               View
             </button>
             <img
@@ -89,6 +89,11 @@ class LandingCurrency extends Component {
               onClick={this.handleClick}
               alt=""
             />
+          </div>
+        )}
+        {this.state.expanded && (
+          <div className="expanded-graph">
+            <LineChart />
           </div>
         )}
       </div>
