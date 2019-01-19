@@ -28,6 +28,16 @@
   text-transform: uppercase;
 }
 
+.expanded-graph {
+  padding: 0.5rem 0;
+  transition: 0.2s;
+}
+
+.plot-container.plotly {
+  transform: scale(0.9);
+  padding: 0%;
+}
+
 .cc-left img {
   width: 20px;
   height: 20px;
