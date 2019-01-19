@@ -89,6 +89,10 @@ class LandingCurrency extends Component {
               onClick={this.handleClick}
               alt=""
             />
+          </div>
+        )}
+        {this.state.expanded && (
+          <div className="expanded-graph">
             <LineChart />
           </div>
         )}
