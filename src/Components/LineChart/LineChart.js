@@ -47,7 +47,6 @@ class LineChart extends Component {
               t: 25,
               pad: 5
             },
-            width: 350,
             height: 330,
             title: 'Price History',
             font: {color: 'white'},
