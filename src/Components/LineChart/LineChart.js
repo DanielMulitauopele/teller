@@ -21,22 +21,28 @@ class LineChart extends Component {
       x_values.push(data.date)
       y_values.push(data.price)
     });
-
+    const modeBarConfig = {displayModeBar: false}
     return ([
+      <div
+        style={{
+          width: this.state.fullWidth ? '100%' : '100%',
+        }}>
       <section>
-        <Plot data={[
+        <Plot config={modeBarConfig} data={[
           {
             x: x_values,
             y: y_values,
             type: 'linear',
             mode: 'lines',
-            marker: {color: 'green'},
+            marker: {color: '#794dff'},
             fill: 'tozeroy',
           }
-        ]} layout={
+        ]} style={{width: '100%', height: '100%'}}
+          layout={
           {
-            width: 320,
-            height: 240,
+            width: 400,
+            height: 400,
+            // autosize: true,
             title: 'Price History',
             font: {color: 'white'},
             visible: false,
@@ -50,6 +56,7 @@ class LineChart extends Component {
         }
         />
       </section>
+      </div>
     ])
   }
 }
