@@ -29,14 +29,6 @@
   z-index: 25;
 }
 
-.login-container .skip {
-  padding: 1rem;
-  z-index: 30;
-  text-transform: uppercase;
-  color: darkgray;
-  transition: 0.6s;
-}
-
 .skip:hover {
   filter: brightness(1.5);
 }
