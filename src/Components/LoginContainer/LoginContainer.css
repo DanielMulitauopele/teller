@@ -2,11 +2,21 @@
   text-align: center;
 }
 
-.login-container h1 {
+.app-title {
   font-size: 4rem;
   font-family: teller;
   color: var(--TellerPink);
   margin-top: 8rem;
+  opacity: 1;
+  transition: 0.3s;
+}
+.app-title-hidden {
+  font-size: 2rem;
+  font-family: teller;
+  color: var(--TellerPink);
+  margin-top: 0.8rem;
+  opacity: 1;
+  transition: 0.3s;
 }
 
 .login-container p,
@@ -62,6 +72,8 @@
   box-sizing: border-box;
   background: var(--TellerPink);
   border: none;
+  transition: 0.2s;
+  opacity: 1;
 }
 
 .button-box .login {

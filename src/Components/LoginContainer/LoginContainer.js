@@ -43,7 +43,10 @@ class LoginContainer extends Component {
         <NavLink to="/onboarding">
           <img src={infoIcon} className="info-button" alt="" />
         </NavLink>
-        <h1 className="app-title"> teller. </h1>
+        <h1 className={expandedLogIn ? "app-title-hidden" : "app-title"}>
+          {" "}
+          teller.{" "}
+        </h1>
         <p className={expandedLogIn ? "hide-this" : "login-subtitle"}>
           Your Personal <br />
           CryptoCurrency Analyst
