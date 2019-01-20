@@ -6,7 +6,7 @@
   font-size: 4rem;
   font-family: teller;
   color: var(--TellerPink);
-  margin-top: 10rem;
+  margin-top: 8rem;
 }
 
 .login-container p,
@@ -115,6 +115,21 @@
   height: 0;
 }
 
+.login-subtitle {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.hide-this {
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.welcome-back-message {
+  transition: 0.3s;
+  opacity: 1;
+}
+
 @media only screen and (min-width: 700px) {
   .login-container {
     width: 30rem;
@@ -125,8 +140,4 @@
     border-radius: 15px;
     background-color: #3d476d;
   }
-}
-
-.slide {
-  height: 25rem;
 }

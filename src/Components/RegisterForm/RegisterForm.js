@@ -62,7 +62,7 @@ class RegisterForm extends Component {
     const { name, email, password, confirmedPassword, token } = this.state;
 
     if (token !== "" && token !== undefined) {
-      return <Redirect to="/home" />
+      return <Redirect to="/home" />;
     }
     return (
       <div className="register-box">
@@ -112,12 +112,6 @@ class RegisterForm extends Component {
             <p>Go Back</p>
           </NavLink>
         </form>
-        <div className="bottom-register-box">
-          <p>
-            (*An account is not necessary to use the majority of functionality
-            our app provides.)
-          </p>
-        </div>
       </div>
     );
   }
