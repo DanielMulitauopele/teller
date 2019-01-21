@@ -77,7 +77,6 @@ class RegisterForm extends Component {
             name="name"
             onChange={this.handleChange}
             value={name}
-            // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
           />
           <input
             className="register-input register-email-input"
@@ -86,7 +85,6 @@ class RegisterForm extends Component {
             name="email"
             onChange={this.handleChange}
             value={email}
-            // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
           />
           <input
             className="register-input register-password-input"
@@ -95,7 +93,6 @@ class RegisterForm extends Component {
             name="password"
             onChange={this.handleChange}
             value={password}
-            // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
           />
           <p className="pls-password">(At least 10 characters please)</p>
           <input

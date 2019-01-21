@@ -50,10 +50,6 @@
   cursor: pointer;
 }
 
-.login-container button:hover {
-  box-shadow: 0px 0px 5px 5px #fc59a081;
-}
-
 .login-button:hover {
   color: var(--TellerPink);
   cursor: pointer;
@@ -135,7 +131,7 @@
 
 .welcome-back-message {
   opacity: 1;
-  animation: messageAppear 1.5s forwards;
+  animation: messageAppear 2.5s forwards;
 }
 
 @keyframes messageAppear {

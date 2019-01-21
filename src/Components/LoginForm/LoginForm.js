@@ -40,7 +40,7 @@ export class LoginForm extends Component {
   render() {
     const { email, password, token } = this.state;
     if (token !== "" && token !== undefined) {
-      return <Redirect to="/home" />;
+      return <Redirect to="/" />;
     } else {
       return (
         <div className="form-wrapper">
