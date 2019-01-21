@@ -52,7 +52,10 @@ class LoginContainer extends Component {
         </p>
         <div className="form-box">
           <div className={expandedLogIn ? "button-box" : "button-box-expanded"}>
-            <button onClick={this.expandLogIn} className="login">
+            <button
+              onClick={this.expandLogIn}
+              className={expandedLogIn ? "hide-this-login" : "login"}
+            >
               Log in
             </button>
             <LoginForm
@@ -70,6 +73,12 @@ class LoginContainer extends Component {
                 </NavLink>
               )}
             </div>
+            <p
+              onClick={this.expandLogIn}
+              className={expandedLogIn ? "go-back-button" : "hide-this"}
+            >
+              Go Back
+            </p>
           </div>
         </div>
       </div>

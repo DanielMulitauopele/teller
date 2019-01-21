@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import "./LoginForm.css";
 import { logInUser } from "../../Utils/API";
+import { NavLink } from "react-router-dom";
 
 export class LoginForm extends Component {
   constructor(props) {

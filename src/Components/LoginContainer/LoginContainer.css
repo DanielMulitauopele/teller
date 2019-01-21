@@ -13,10 +13,10 @@
 }
 
 .app-title-hidden {
-  font-size: 2rem;
+  font-size: 4rem;
   font-family: teller;
   color: var(--TellerPink);
-  margin-top: 0.8rem;
+  margin-top: 8rem;
   margin-bottom: -2rem;
   opacity: 1;
   transition: 0.3s;
@@ -45,9 +45,14 @@
   font-size: 1.5rem;
   margin: 0.5rem 0;
   width: 15rem;
-  transition: 0.5s;
+  transition: 0s;
+  outline: none;
   position: relative;
   cursor: pointer;
+}
+
+.hide-this-login {
+  display: none;
 }
 
 .login-button:hover {
@@ -75,7 +80,7 @@
   left: 0;
   right: 0;
   bottom: 5rem;
-  transition: 2s;
+  transition: 0.2s;
 }
 
 .login-form {
@@ -90,7 +95,7 @@
 
 .button-box .login-form {
   opacity: 1;
-  transition: 2s;
+  transition: 0.2s;
   height: 8rem;
 }
 
@@ -101,7 +106,7 @@
 }
 
 .form-wrapper input {
-  width: 13rem;
+  width: 100%;
   color: white;
 }
 
