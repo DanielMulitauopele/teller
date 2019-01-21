@@ -68,10 +68,6 @@
   opacity: 1;
 }
 
-.button-box .login {
-  margin-bottom: 3rem;
-}
-
 .button-box,
 .button-box-expanded {
   position: absolute;
@@ -90,19 +86,33 @@
 }
 
 .login-form .login-button {
-  margin: 1rem auto;
+  margin-bottom: -1rem;
 }
 
 .button-box .login-form {
   opacity: 1;
   transition: 0.5s;
-  height: 8rem;
+  height: 6rem;
+  position: relative;
+  animation: formContainerAppear 2s forwards;
+}
+
+@keyframes formContainerAppear {
+  0% {
+    opacity: 0;
+    bottom: 1rem;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 3rem;
+  }
 }
 
 .button-box-expanded .login-form {
   height: 0;
   opacity: 0;
-  transition: opacity 0s height 2s;
+  transition: 0s;
 }
 
 .form-wrapper input {
@@ -148,12 +158,6 @@
   }
   100% {
     opacity: 1;
-  }
-}
-
-@media only screen and (min-width: 375px) {
-  .app-title-hidden {
-    font-size: 3rem;
   }
 }
 
