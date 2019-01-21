@@ -8,6 +8,7 @@
   height: 72vh;
   -webkit-overflow-scrolling: touch;
   z-index: 2;
+  animation: messageAppear 2s forwards;
 }
 
 .sort-box {

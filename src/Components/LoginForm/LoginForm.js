@@ -13,7 +13,8 @@ export class LoginForm extends Component {
     this.state = {
       email: "",
       password: "",
-      token: ""
+      token: "",
+      disabled: true
     };
   }
 
@@ -62,7 +63,11 @@ export class LoginForm extends Component {
               onChange={this.handleChange}
               placeholder="Password"
             />
-            <button className="login-button" onClick={this.handleClick}>
+            <button
+              disabled={!(this.state.email && this.state.password)}
+              className="login-button"
+              onClick={this.handleClick}
+            >
               Let's Go!
             </button>
           </form>
