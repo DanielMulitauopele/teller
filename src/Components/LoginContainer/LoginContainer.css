@@ -7,14 +7,17 @@
   font-family: teller;
   color: var(--TellerPink);
   margin-top: 8rem;
+  margin-bottom: -0.5rem;
   opacity: 1;
   transition: 0.3s;
 }
+
 .app-title-hidden {
   font-size: 2rem;
   font-family: teller;
   color: var(--TellerPink);
   margin-top: 0.8rem;
+  margin-bottom: -2rem;
   opacity: 1;
   transition: 0.3s;
 }
@@ -107,12 +110,16 @@
 
 .form-wrapper input {
   width: 13rem;
+  color: white;
 }
 
+.form-wrapper input::placeholder {
+  color: white;
+}
 .button-box .form-wrapper {
   height: 8rem;
   opacity: 1;
-  transition: 0s;
+  transition: 0.2s;
 }
 
 .landing-register-box-expanded {
@@ -121,17 +128,35 @@
 
 .login-subtitle {
   opacity: 1;
-  transition: 0.3s;
+  animation: messageAppear 1.5s forwards;
 }
 
 .hide-this {
-  transition: 0.3s;
+  transition: 0.2s;
   opacity: 0;
 }
 
 .welcome-back-message {
-  transition: 0.3s;
   opacity: 1;
+  animation: messageAppear 1.5s forwards;
+}
+
+@keyframes messageAppear {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .app-title-hidden {
+    font-size: 3rem;
+  }
 }
 
 @media only screen and (min-width: 700px) {
