@@ -30,6 +30,10 @@
   cursor: pointer;
 }
 
+.login-form hr {
+  border: 2px solid var(--TellerPink);
+}
+
 .login-form button:hover {
   box-shadow: none;
 }

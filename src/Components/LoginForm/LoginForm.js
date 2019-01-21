@@ -53,6 +53,7 @@ export class LoginForm extends Component {
               onChange={this.handleChange}
               placeholder="Email"
             />
+            <hr />
             <input
               className="form-input user-password"
               type="password"
