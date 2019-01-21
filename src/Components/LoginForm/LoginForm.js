@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import "./LoginForm.css";
-import { logInUser } from '../../Utils/API'
+import { logInUser } from "../../Utils/API";
 
 export class LoginForm extends Component {
   constructor(props) {
@@ -18,18 +18,18 @@ export class LoginForm extends Component {
 
   handleClick = async e => {
     e.preventDefault();
-    const { email, password } = this.state
+    const { email, password } = this.state;
     const user = JSON.stringify({
-      "email": email,
-      "password": password
-    })
-    const token = await logInUser(user)
+      email: email,
+      password: password
+    });
+    const token = await logInUser(user);
     this.props.toggleLogIn(email);
-    this.props.storeToken(token)
-    this.props.addToNotes()
-    this.props.addToFavorites()
-    this.props.setCurrencies()
-    this.setState({ token: token.teller_api_token })
+    this.props.storeToken(token);
+    this.props.addToNotes();
+    this.props.addToFavorites();
+    this.props.setCurrencies();
+    this.setState({ token: token.teller_api_token });
   };
 
   handleChange = async e => {
@@ -39,8 +39,8 @@ export class LoginForm extends Component {
 
   render() {
     const { email, password, token } = this.state;
-    if (token !== "" && token !== undefined){
-      return <Redirect to="/home" />
+    if (token !== "" && token !== undefined) {
+      return <Redirect to="/home" />;
     } else {
       return (
         <div className="form-wrapper">
@@ -51,7 +51,6 @@ export class LoginForm extends Component {
               value={email}
               onChange={this.handleChange}
               placeholder="Email"
-              // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
             />
             <input
               className="form-input user-password"
@@ -60,11 +59,10 @@ export class LoginForm extends Component {
               value={password}
               onChange={this.handleChange}
               placeholder="Password"
-              // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
             />
-            <p className="login-button" onClick={this.handleClick}>
-                Go
-            </p>
+            <button className="login-button" onClick={this.handleClick}>
+              Let's Go!
+            </button>
           </form>
         </div>
       );

@@ -64,9 +64,11 @@ class LoginContainer extends Component {
               setCurrencies={setCurrencies}
             />
             <div>
-              <NavLink to="/register">
-                <button className="register">Register</button>
-              </NavLink>
+              {this.state.expandedLogIn || (
+                <NavLink to="/register">
+                  <button className="register">Register</button>
+                </NavLink>
+              )}
             </div>
           </div>
         </div>

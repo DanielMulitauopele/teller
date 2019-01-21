@@ -16,15 +16,21 @@
 }
 
 .login-form input {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
 }
 
-.form-wrapper .login-button {
+.login-form button {
+  display: block;
+  color: white;
   border: none;
-  display: inline;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  width: 15rem;
+  transition: 0.5s;
+  position: relative;
+  cursor: pointer;
 }
 
-.play-button {
-  width: 15px;
-  height: 15px;
+.login-form button:hover {
+  box-shadow: none;
 }
