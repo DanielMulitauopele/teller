@@ -44,12 +44,14 @@ class LoginContainer extends Component {
           <img src={infoIcon} className="info-button" alt="" />
         </NavLink>
         <h1 className={expandedLogIn ? "app-title-hidden" : "app-title"}>
-          {" "}
-          teller.{" "}
+          teller.
         </h1>
         <p className={expandedLogIn ? "hide-this" : "login-subtitle"}>
           Your Personal <br />
           CryptoCurrency Analyst
+        </p>
+        <p className={expandedLogIn ? "welcome-back-message" : "hide-this"}>
+          Welcome Back
         </p>
         <div className="form-box">
           <div className={expandedLogIn ? "button-box" : "button-box-expanded"}>
@@ -68,11 +70,6 @@ class LoginContainer extends Component {
               <NavLink to="/register">
                 <button className="register">Register</button>
               </NavLink>
-              <p
-                className={expandedLogIn ? "welcome-back-message" : "hide-this"}
-              >
-                Welcome Back
-              </p>
             </div>
           </div>
         </div>
