@@ -1,18 +1,18 @@
 .currency-card {
-  margin: 0.5rem 0;
-  border-radius: 15px;
   background: linear-gradient(to right, #424b6e, #272e4e);
+  border-radius: 15px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.459);
   color: var(--AlmostWhite);
+  margin: 0.5rem 0;
   transition: 0.7s;
   width: 95%;
 }
 
 .card-inside-text {
-  height: 5rem;
+  align-items: center;
   display: grid;
   grid-template-columns: 50px 3rem 7rem 5rem 30px;
-  align-items: center;
+  height: 5rem;
   padding: 0 1rem;
 }
 
@@ -21,11 +21,11 @@
 }
 
 .expanded-currency {
-  padding: 0.5rem 0;
-  transition: 0.2s;
   display: flex;
+  padding: 0.5rem 0;
   justify-content: space-around;
   text-transform: uppercase;
+  transition: 0.2s;
 }
 
 .expanded-graph {
@@ -37,11 +37,11 @@
 }
 
 .cc-left img {
-  width: 20px;
-  height: 20px;
   background: var(--Peachy);
   border-radius: 5px;
+  height: 20px;
   padding: 5px;
+  width: 20px;
 }
 
 .cc-center p:first-child {
@@ -50,8 +50,8 @@
 }
 
 .cc-center-right {
-  text-align: center;
   font-size: 1rem;
+  text-align: center;
 }
 
 .cc-center p:nth-child(2) {
@@ -60,12 +60,12 @@
 }
 
 .ec-right {
-  height: 2em;
-  width: 4em;
-  border-radius: 10px;
-  margin-bottom: 10px;
   background: linear-gradient(to right, #424b6e, #272e4e);
+  border-radius: 10px;
   color: var(--AlmostWhite);
+  height: 2em;
+  margin-bottom: 10px;
+  width: 4em;
 }
 
 .ec-right:hover {
@@ -75,10 +75,10 @@
 .fave-this {
   fill: #000;
   height: 20px;
-  right: 0rem;
-  width: 20px;
   position: relative;
+  right: 0rem;
   transition: 0.2s;
+  width: 20px;
 }
 
 .fave-this:hover {
@@ -91,18 +91,18 @@
 
 .expansion-dots-glowing,
 .expansion-dots {
-  height: 100%;
   cursor: pointer;
+  height: 100%;
 }
 
 .expansion-dots div,
 .expansion-dots-glowing div {
+  background-color: rgba(109, 109, 109, 0.514);
+  border-radius: 50%;
   height: 5px;
-  width: 5px;
   margin: 2px 0px 2px 10px;
   position: relative;
-  border-radius: 50%;
-  background-color: rgba(109, 109, 109, 0.514);
+  width: 5px;
 }
 
 .expansion-dots-glowing div:first-child,
