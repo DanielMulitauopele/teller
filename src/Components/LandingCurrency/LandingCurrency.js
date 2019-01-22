@@ -47,9 +47,10 @@ class LandingCurrency extends Component {
             "price_usd": currency.price,
             "percent_change_24_hr": currency.percent_change
           }), this.props.token)
+          // debugger
       addToFavorites({
         name: currency.name,
-        price_usd: currency.price_usd,
+        price_usd: currency.price,
         percent_change: currency.percent_change
       });
       this.faved();
