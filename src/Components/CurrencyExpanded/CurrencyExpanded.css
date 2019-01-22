@@ -20,6 +20,13 @@ header {
   margin-bottom: -2px;
 }
 
+.arrow-down {
+  height: 1rem;
+  width: 0.5rem;
+  transform: rotate(270deg);
+  margin-bottom: -2px;
+}
+
 .currency-symbol-expanded {
   color: rgba(255, 255, 255, 0.609)
 }

@@ -71,7 +71,7 @@ const FavoriteCurrencies = (props) => {
         <p>
           {percent_change < 0 ? "-" : "+"}$
           {((percent_change < 0 ? -1 : 1) * Math.round((favorite.price_usd || favorite.price) * percent_change)) /100}{" "}
-          ({percent_change}% {<img className="arrow" src={Green} alt="" />})
+          ({percent_change}% {<img className={favorite.percent_change > 0 ? "arrow" : "arrow-down"} src={Green} alt="" />})
         </p>
       </div>
     </div>

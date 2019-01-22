@@ -77,7 +77,7 @@ class CurrencyExpanded extends Component {
                 {((currency.percent_change < 0 ? -1 : 1) *
                   Math.round(currency.price * currency.percent_change)) /
                   100}{" "}
-                ({currency.percent_change}% {<img className="arrow" src={Green} alt="" />})
+                ({currency.percent_change}% {<img className={currency.percent_change > 0 ? "arrow" : "arrow-down"} src={Green} alt="" />})
               </p>
             </div>
             <LineChart />
