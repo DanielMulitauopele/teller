@@ -8,7 +8,7 @@ export class LoginForm extends Component {
   constructor(props) {
     super(props);
 
-    // const { toggleLogIn, storeToken, addToFavorites, addToNotes, setCurrencies } = this.props
+    // const { toggleLogIn, storeUserInfo, addToFavorites, addToNotes, setCurrencies } = this.props
 
     this.state = {
       email: "",
@@ -28,9 +28,9 @@ export class LoginForm extends Component {
     const token = await logInUser(user);
     this.props.toggleLogIn(email);
     this.props.storeUserInfo(token, email);
-    // this.props.addToNotes();
-    // this.props.addToFavorites();
-    // this.props.setCurrencies();
+    this.props.addToNotes(null);
+    this.props.addToFavorites(null);
+    this.props.setCurrencies();
     this.setState({ token: token.teller_api_token });
   };
 

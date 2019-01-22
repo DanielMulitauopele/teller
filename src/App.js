@@ -32,8 +32,9 @@ class App extends Component {
   async componentDidMount() {
     this.setCurrencies();
     this.checkUser();
-    this.addToFavorites();
-    this.addToNotes();
+    setTimeout(() => this.addToFavorites(null), 100);
+    setTimeout(() => this.addToNotes(null), 100);
+    console.log(this.state.token, this.state.userEmail)
   }
 
   setCurrencies = async () => {
@@ -47,11 +48,13 @@ class App extends Component {
 
   addToFavorites = async (favorite) => {
     let favorites
-    this.setState({
-      favorites: [favorite, ...this.state.favorites]
-    })
+    if(favorite !== null) {
+      this.setState({
+        favorites: [favorite, ...this.state.favorites]
+      })
+    }
 
-    if (!this.state.token) {
+    if (!this.state.token && (favorite === null || undefined)) {
       favorites = [
         {
           id: 12345,
@@ -73,9 +76,15 @@ class App extends Component {
   //   this.setState({ favorites: filteredFavorites });
   // };
 
-  addToNotes = async () => {
+  addToNotes = async (note) => {
     let notes;
-    if (!this.state.token) {
+    if(note !== null) {
+      this.setState({
+        notes: [note, ...this.state.notes]
+      })
+    }
+
+    if (!this.state.token && (note === null || undefined)) {
       notes = [
         {
           id: 12345,
