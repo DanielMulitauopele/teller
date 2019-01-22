@@ -15,7 +15,7 @@ class CurrencyExpanded extends Component {
 
     this.state = {
       faved: false,
-      displayedCurrency: this.props.displayedCurrency || "Bitcoin",
+      displayedCurrency: "",
       analysis: {},
       expanded: false
     }
@@ -23,11 +23,10 @@ class CurrencyExpanded extends Component {
   }
 
   async componentDidMount() {
-    const { displayedCurrency } = this.props;
-    if (displayedCurrency !== this.state.displayedCurrency) {
-      this.setState({ displayedCurrency: displayedCurrency})
-    }
-    const analysis = await this.cleaner.formatAnalysis(displayedCurrency)
+    setTimeout(this.setState({
+      displayedCurrency: this.props.displayedCurrency
+    }), 1000)
+    const analysis = await this.cleaner.formatAnalysis(this.props.displayedCurrency)
     this.setState({
       analysis
     })
@@ -47,24 +46,13 @@ class CurrencyExpanded extends Component {
   };
 
   showExpanded = (name) => {
-    let match
-    if (this.props.currencies.length === 0 || this.state.displayedCurrency === "") {
-      match = {
-        name: "Bitcoin",
-        symbol: "BTC",
-        price: 3589.62,
-        percent_change: 22.4,
-        rank: 1
-      }
-    } else if (this.props.currencies.length !== 0) {
-      match = this.props.currencies.find(currency => currency.name === name)
-    }
+    const match = this.props.currencies.find(currency => currency.name === name)
     return match
   }
 
   render() {
     const { displayedCurrency, faved, analysis } = this.state
-    const currency = this.showExpanded(displayedCurrency)
+    const currency = this.showExpanded(this.props.displayedCurrency)
     console.log(currency)
     if (this.props.displayExpanded !== true) {
       return (<div></div>)
