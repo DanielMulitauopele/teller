@@ -62,7 +62,7 @@ class RegisterForm extends Component {
     const { name, email, password, confirmedPassword, token } = this.state;
 
     if (token !== "" && token !== undefined) {
-      return <Redirect to="/home" />
+      return <Redirect to="/home" />;
     }
     return (
       <div className="register-box">
@@ -72,30 +72,27 @@ class RegisterForm extends Component {
         <form className="register-form" onSubmit={this.handleSubmit}>
           <input
             className="register-input register-name-input"
-            placeholder="Enter Full Name"
+            placeholder="Name"
             type="text"
             name="name"
             onChange={this.handleChange}
             value={name}
-            // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
           />
           <input
             className="register-input register-email-input"
-            placeholder="Enter Email Address"
+            placeholder="Email Address"
             type="email"
             name="email"
             onChange={this.handleChange}
             value={email}
-            // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
           />
           <input
             className="register-input register-password-input"
-            placeholder="Enter Password"
+            placeholder="Password"
             type="password"
             name="password"
             onChange={this.handleChange}
             value={password}
-            // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
           />
           <p className="pls-password">(At least 10 characters please)</p>
           <input
@@ -105,19 +102,12 @@ class RegisterForm extends Component {
             name="confirmedPassword"
             onChange={this.handleChange}
             value={confirmedPassword}
-            // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
           />
           <button className="register-button">Register</button>
           <NavLink to="/" className="go-back-button">
             <p>Go Back</p>
           </NavLink>
         </form>
-        <div className="bottom-register-box">
-          <p>
-            (*An account is not necessary to use the majority of functionality
-            our app provides.)
-          </p>
-        </div>
       </div>
     );
   }
