@@ -1,12 +1,12 @@
 .currency-container {
+  height: 72vh;
   margin-top: 10rem;
-  width: 95%;
   overflow: scroll;
   position: absolute;
   right: 0;
   top: 1rem;
-  height: 72vh;
   -webkit-overflow-scrolling: touch;
+  width: 95%;
   z-index: 2;
 }
 
@@ -15,29 +15,29 @@
 }
 
 .sort {
-  text-align: right;
-  position: sticky;
-  top: 0rem;
   background-color: var(--TellerBG);
-  right: 0;
-  z-index: 4;
-  width: 100%;
   display: flex;
   justify-content: space-around;
   margin: 1rem 0;
+  position: sticky;
+  right: 0;
+  text-align: right;
+  top: 0rem;
+  width: 100%;
+  z-index: 4;
 }
 
 .sort button {
-  color: white;
   background-color: transparent;
-  text-transform: uppercase;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: white;
+  display: inline-block;
   font-size: 0.8rem;
   letter-spacing: 1px;
   text-decoration: none;
-  display: inline-block;
+  text-transform: uppercase;
   transition: 0.3s;
-  border: none;
-  border-bottom: 3px solid transparent;
 }
 
 .sort-box button:hover {
