@@ -45,8 +45,12 @@ class App extends Component {
     });
   }
 
-  addToFavorites = async () => {
+  addToFavorites = async (favorite) => {
     let favorites
+    this.setState({
+      favorites: [favorite, ...this.state.favorites]
+    })
+    
     if (!this.state.token) {
       favorites = [{
         id: 12345,
@@ -76,7 +80,7 @@ class App extends Component {
         body: "You must create an account to save notes."
       }]
     } else {
-      notes = await fetchNotes(this.state.token); 
+      notes = await fetchNotes(this.state.token);
     }
     this.setState({ notes });
   };
@@ -194,7 +198,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Hotdog 
+          <Hotdog
             removeLoginState={this.removeLoginState}
             clearUser={this.clearUser} />
 
