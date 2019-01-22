@@ -30,7 +30,7 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    this.setCurrencies()
+    this.setCurrencies();
     this.checkToken();
     this.addToFavorites();
     this.addToNotes();
@@ -43,25 +43,27 @@ class App extends Component {
       abbrevCurrencies,
       expandedCurrencies
     });
-  }
+  };
 
   addToFavorites = async (favorite) => {
     let favorites
     this.setState({
       favorites: [favorite, ...this.state.favorites]
     })
-    
+
     if (!this.state.token) {
-      favorites = [{
-        id: 12345,
-        name: "No favorites saved",
-        price_usd: 0,
-        percent_change_24_hr: 0
-      }]
+      favorites = [
+        {
+          id: 12345,
+          name: "No favorites saved",
+          price_usd: 0,
+          percent_change_24_hr: 0
+        }
+      ];
     } else {
       favorites = await fetchFavorites(this.state.token);
     }
-      this.setState({ favorites });
+    this.setState({ favorites });
   };
 
   // removeFromFavorites = id => {
@@ -72,13 +74,15 @@ class App extends Component {
   // };
 
   addToNotes = async () => {
-    let notes
+    let notes;
     if (!this.state.token) {
-      notes = [{
-        id: 12345,
-        title: "No notes saved.",
-        body: "You must create an account to save notes."
-      }]
+      notes = [
+        {
+          id: 12345,
+          title: "No notes saved.",
+          body: "You must create an account to save notes."
+        }
+      ];
     } else {
       notes = await fetchNotes(this.state.token);
     }
@@ -171,16 +175,16 @@ class App extends Component {
 
   checkToken = () => {
     if (!this.state.token && localStorage.getItem("userToken") !== null) {
-      const token = JSON.parse(localStorage.getItem("userToken"))
+      const token = JSON.parse(localStorage.getItem("userToken"));
       this.setState({
         token: token.teller_api_token,
-        loggedIn: true,
-      })
+        loggedIn: true
+      });
     }
   };
 
   clearUser = () => {
-    localStorage.clear()
+    localStorage.clear();
     this.setState({
       favorites: [],
       abbrevCurrencies: [],
@@ -190,17 +194,20 @@ class App extends Component {
       loggedIn: false,
       notes: [],
       token: ""
-    })
-  }
+    });
+  };
 
   render() {
     const { abbrevCurrencies, favorites, notes, token } = this.state;
     return (
       <BrowserRouter>
         <div className="App">
-          <Hotdog
-            removeLoginState={this.removeLoginState}
-            clearUser={this.clearUser} />
+          {this.state.loggedIn && (
+            <Hotdog
+              removeLoginState={this.removeLoginState}
+              clearUser={this.clearUser}
+            />
+          )}
 
           <Switch>
             <Route

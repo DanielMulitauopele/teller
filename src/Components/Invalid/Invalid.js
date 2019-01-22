@@ -6,7 +6,7 @@ export const Invalid = () => {
   return (
     <div className="wrong-way">
       <h1> Woops! How'd you get here? </h1>
-      <NavLink to="/">Go Back</NavLink>
+      <NavLink to="/home">Go Back</NavLink>
     </div>
   );
 };

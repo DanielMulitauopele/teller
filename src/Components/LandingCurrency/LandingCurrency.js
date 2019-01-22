@@ -5,7 +5,7 @@ import HeartP from "../../Assets/heartpink.svg";
 import { Icons } from "../../Assets/cryptoIcons/cryptoIcons";
 import DataCleaner from "../../Utils/Cleaners/";
 import { sendFavorites } from "../../Utils/API/";
-
+import LineChart from "../LineChart/LineChart"
 class LandingCurrency extends Component {
   constructor(props) {
     super(props);
@@ -99,6 +99,11 @@ class LandingCurrency extends Component {
               onClick={this.handleFaveClick}
               alt=""
             />
+          </div>
+        )}
+        {this.state.expanded && (
+          <div className="expanded-graph">
+            <LineChart />
           </div>
         )}
       </div>

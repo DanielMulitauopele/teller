@@ -1,44 +1,74 @@
+# teller.
+
+## Your personal CryptoCurrency Analyst
+
+<img width="1148" alt="screen shot 2019-01-06 at 3 45 29 pm" src="https://user-images.githubusercontent.com/34214595/50742564-23035e00-11ca-11e9-8a0b-c46b0d615175.png">
+
+### Contributors
+* [Autumn Martin](https://github.com/Autumn-Martin)
+* [Daniel Mulitauopele](https://github.com/DanielMulitauopele)
+* [Dina Caraballo](https://github.com/djcaraballo)
+* [Nick Dambrosio](https://github.com/30ozSteak)
+
+### Summary
+
+teller (™️) was born out of the desire to eliminate the barrier to entry into the cryptocurrency world, and present assets and market research in an intuitive way.
+
+teller simplifies the data-gathering process that comes with researching currencies and analyzes current trends to help guide users to a more informed investing experience.
+
+By compiling all of this information into one place, users can feel confident in having done their due diligence.
+
+### Technologies
+
+#### APIs
+
+* Twitter
+* ShapeShift
+* CoinCap
+* IBM Watson
+
+### BackEnd
+
+* PostgresSQL
+* Python
+* Django
+* Ruby
+* Ruby on Rails
+
+### FrontEnd
+
+* React
+* React Router
+* Heroku
+* Plotly
+
+## Challenges
+
+#### TravisCI
+
+Configuration was not intuitive and we spent more time figuring out configuration for Travis than should have been necessary.
+
+#### Learning a New Language / Framework
+
+Learning Python and Django was a task in and of itself, but Autumn spent time figuring data in D3/Plotly
+
+#### Connecting Projects
+
+Although conceptually it was not difficult, we ran into more than a few bugs that slowed our connections between backend and frontend.
+
+## Future Iterations
+
+Websockets - We hope to have a live stream of market price changes soon, hopefully before demo night
+
+TellerAI Comparitive Analysis - We had hoped to create our own machine learning feature and use it to compare against Watson's AI. More to come
+
+Database with Background Jobs - The biggest drawback to our backend is that it relies on pulling from the external APIs. We hope to implement background workers to fill our database with recent information in case of an API outage
+
+<img width="1150" alt="screen shot 2019-01-06 at 3 46 04 pm" src="https://user-images.githubusercontent.com/34214595/50742568-37475b00-11ca-11e9-9db2-d6914433705d.png">
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Clone this project and `npm i` to install this project and all of its dependencies.

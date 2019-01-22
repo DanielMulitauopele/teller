@@ -46,6 +46,7 @@
 .search-field input {
   background: black;
   padding: 1rem 1rem;
+  color: white;
 }
 
 .search-button input {
@@ -66,6 +67,10 @@
   text-transform: uppercase;
   transition: 0.5s;
   width: 15rem;
+}
+
+.search-bar-active input::placeholder {
+  color: white;
 }
 
 .search-button img {
