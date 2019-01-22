@@ -110,12 +110,12 @@ export const fetchAnalysis = async (currency) => {
   const url = `https://cors-anywhere.herokuapp.com/https://teller-ai.herokuapp.com/teller/watson_analysis?coin=${currency}`
   const response = await fetch(url, {
     headers: {
-      "Origin": ""
+      "Content-Type": "application/json",
+      "Accept": "application/json"
     },
     method: "GET"
   })
   const result = await response.json()
-  console.log(result)
   return result
 }
 

@@ -2,7 +2,6 @@ const newsKey = process.env.newsKey;
 import { fetchRequest } from "./NewsApi";
 
 export const fetchNews = async type => {
-  console.log("fetching news!");
   let path = "";
   switch (type) {
     case "tech":
@@ -23,7 +22,6 @@ export const fetchNews = async type => {
     default:
       path = "q=memes";
   }
-  console.log("fetchRequest should be called...right...about...");
   return await fetchRequest(
     `https://newsapi.org/v2/everything?${path}&from=2019-1-18&sortBy=publishedAt&apiKey=${newsKey}`
   );

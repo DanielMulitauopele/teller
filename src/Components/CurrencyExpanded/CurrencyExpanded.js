@@ -4,26 +4,33 @@ import Heart from "../../Assets/heart.svg"
 import HeartP from "../../Assets/heartpink.svg"
 import DataCleaner from "../../Utils/Cleaners/"
 import Green from "../../Assets/green.svg"
-import LineChart from '../LineChart/LineChart.js'
-// import { fetchAnalysis } from "../../Utils/API/"
+import LineChart from "../LineChart/LineChart"
+import TweetContainer from "../TweetContainer/TweetContainer"
 
 class CurrencyExpanded extends Component {
   constructor(props) {
     super(props)
+
+    // const { currencies, addToFavorites, displayedCurrency, displayExpanded } = this.props
+
     this.state = {
       faved: false,
       displayedCurrency: this.props.displayedCurrency || "Bitcoin",
-      analysis: ''
+      analysis: {},
+      expanded: false
     }
     this.cleaner = new DataCleaner()
   }
 
-  componentDidUpdate() {
+  async componentDidMount() {
     const { displayedCurrency } = this.props;
     if (displayedCurrency !== this.state.displayedCurrency) {
       this.setState({ displayedCurrency: displayedCurrency})
     }
-    // const analysis = fetchAnalysis(displayedCurrency)
+    const analysis = await this.cleaner.formatAnalysis(displayedCurrency)
+    this.setState({
+      analysis
+    })
   }
 
   faved = () => {
@@ -56,20 +63,23 @@ class CurrencyExpanded extends Component {
   }
 
   render() {
-    const currency = this.showExpanded(this.state.displayedCurrency)
+    const { displayedCurrency, faved, analysis } = this.state
+    const currency = this.showExpanded(displayedCurrency)
     console.log(currency)
-    return(
-      <div className="expanded-container">
-        <header>
-          <h1 className="currency-symbol-expanded">{currency.symbol}</h1>
-          <h1 className="currency-name-expanded">{currency.name}</h1>
-        </header>
-        <main>
-          <section>
+    if (this.props.displayExpanded !== true) {
+      return (<div></div>)
+    } else {
+      return(
+        <div className="expanded-container">
+          <header>
+            <h1 className="currency-symbol-expanded">{currency.symbol}</h1>
+            <h1 className="currency-name-expanded">{currency.name}</h1>
+          </header>
+          <main>
             <div className="price-progress-expanded">
               <img
                   name={currency.name}
-                  src={this.state.faved ? HeartP : Heart}
+                  src={faved ? HeartP : Heart}
                   className="fave-this-expanded"
                   onClick={this.handleFaveClick}
                   alt=""
@@ -82,11 +92,14 @@ class CurrencyExpanded extends Component {
                 ({currency.percent_change}% {<img className="arrow" src={Green} alt="" />})
               </p>
             </div>
-          </section>
-          <LineChart />
-        </main>
-      </div>
-    )
+            <LineChart />
+            <TweetContainer
+              analysis={analysis}
+            />
+          </main>
+        </div>
+      )
+    }
   }
 }
 

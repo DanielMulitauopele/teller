@@ -45,8 +45,12 @@ class App extends Component {
     });
   };
 
-  addToFavorites = async () => {
-    let favorites;
+  addToFavorites = async (favorite) => {
+    let favorites
+    this.setState({
+      favorites: [favorite, ...this.state.favorites]
+    })
+
     if (!this.state.token) {
       favorites = [
         {

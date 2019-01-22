@@ -31,20 +31,30 @@ class LandingCurrency extends Component {
 
   handleClick = async e => {
     const { name } = e.target;
+      this.props.displayExpanded(name)
+  };
+
+  handleFaveClick = async e => {
+    const { name } = e.target;
+    const { addToFavorites, currency } = this.props
     if (!this.state.token) {
+      //call function that renders error component
       return
     } else {
-      const fave = await this.cleaner.formatFavorite(name);
+      // const fave = await this.cleaner.formatFavorite(name);
       sendFavorites(JSON.stringify({
-            "name": fave.name,
-            "price_usd": fave.price,
-            "percent_change_24_hr": fave.percent_change
+            "name": currency.name,
+            "price_usd": currency.price,
+            "percent_change_24_hr": currency.percent_change
           }), this.props.token)
-      this.props.addToFavorites();
+      addToFavorites({
+        name: currency.name,
+        price_usd: currency.price_usd,
+        percent_change: currency.percent_change
+      });
       this.faved();
-      this.props.displayExpanded(this.props.currency.name)
     }
-  };
+  }
 
   render() {
     const { symbol, name, price, percent_change } = this.props.currency;
@@ -86,7 +96,7 @@ class LandingCurrency extends Component {
               name={name}
               src={this.state.faved ? HeartP : Heart}
               className="fave-this"
-              onClick={this.handleClick}
+              onClick={this.handleFaveClick}
               alt=""
             />
           </div>
