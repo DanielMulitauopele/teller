@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Plot from "react-plotly.js";
+import "./LineChart.css";
 
 class LineChart extends Component {
   constructor() {
@@ -24,12 +25,14 @@ class LineChart extends Component {
     const modeBarConfig = { displayModeBar: false };
     return [
       <div
-        style={{
-          width: this.state.fullWidth ? "100%" : "100%"
-        }}
+        // style={{
+        //   width: this.state.fullWidth ? "100%" : "100%"
+        // }}
+        className="plotly-graph-box"
       >
         <section>
           <Plot
+            className="plot-line"
             config={modeBarConfig}
             data={[
               {
@@ -37,8 +40,7 @@ class LineChart extends Component {
                 y: y_values,
                 type: "linear",
                 mode: "lines",
-                marker: { color: "#794dff" }
-                // fill: "tozeroy"
+                marker: { color: "#9862da" }
               }
             ]}
             style={{ width: "100%", height: "100%" }}
@@ -55,10 +57,7 @@ class LineChart extends Component {
               visible: false,
               xaxis: { title: false, showgrid: false },
               yaxis: {
-                title: "Price $",
-                titlefont: {
-                  size: 16
-                },
+                title: false,
                 showgrid: false
               },
 
