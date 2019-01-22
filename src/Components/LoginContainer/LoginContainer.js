@@ -29,7 +29,7 @@ class LoginContainer extends Component {
     const { expandedLogIn } = this.state;
     const {
       toggleLogIn,
-      storeToken,
+      storeUserInfo,
       loggedIn,
       addToNotes,
       addToFavorites,
@@ -60,7 +60,7 @@ class LoginContainer extends Component {
             </button>
             <LoginForm
               toggleLogIn={toggleLogIn}
-              storeToken={storeToken}
+              storeUserInfo={storeUserInfo}
               loggedIn={loggedIn}
               addToNotes={addToNotes}
               addToFavorites={addToFavorites}

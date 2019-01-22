@@ -31,7 +31,7 @@ class App extends Component {
 
   async componentDidMount() {
     this.setCurrencies();
-    this.checkToken();
+    this.checkUser();
     this.addToFavorites();
     this.addToNotes();
   }
@@ -95,7 +95,6 @@ class App extends Component {
   // };
 
   toggleLogIn = userEmail => {
-    // debugger
     this.setState({
       userEmail,
       loggedIn: true
@@ -164,23 +163,33 @@ class App extends Component {
     });
   };
 
-  storeToken = token => {
+  storeUserInfo = (token, email) => {
     this.setState({
       token: token.teller_api_token,
+      userEmail: email,
       loggedIn: true
     });
     localStorage.setItem("userToken", JSON.stringify(token));
+    localStorage.setItem("userEmail", JSON.stringify(email));
     console.log(this.state.token);
+    console.log(this.state.userEmail);
   };
 
-  checkToken = () => {
+  checkUser = () => {
+    let token
+    let userEmail
     if (!this.state.token && localStorage.getItem("userToken") !== null) {
-      const token = JSON.parse(localStorage.getItem("userToken"));
-      this.setState({
-        token: token.teller_api_token,
-        loggedIn: true
-      });
+      token = JSON.parse(localStorage.getItem("userToken"));
     }
+    if(!this.state.userEmail && localStorage.getItem("userEmail") !== null) {
+      userEmail = JSON.parse(localStorage.getItem("userEmail"))
+    }
+    this.setState({
+      token: token.teller_api_token,
+      userEmail: userEmail,
+      loggedIn: true
+    });
+
   };
 
   clearUser = () => {
@@ -245,7 +254,7 @@ class App extends Component {
                   <LoginContainer
                     loggedIn={this.setLoginState}
                     toggleLogIn={this.toggleLogIn}
-                    storeToken={this.storeToken}
+                    storeUserInfo={this.storeUserInfo}
                     addToNotes={this.addToNotes}
                     addToFavorites={this.addToFavorites}
                     setCurrencies={this.setCurrencies}
@@ -306,7 +315,7 @@ class App extends Component {
               exact
               path="/register"
               render={() => {
-                return <RegisterForm storeToken={this.storeToken} />;
+                return <RegisterForm storeUserInfo={this.storeUserInfo} />;
               }}
             />
             <Route component={Invalid} />

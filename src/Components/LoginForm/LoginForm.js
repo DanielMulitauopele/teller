@@ -27,10 +27,10 @@ export class LoginForm extends Component {
     });
     const token = await logInUser(user);
     this.props.toggleLogIn(email);
-    this.props.storeToken(token);
-    this.props.addToNotes();
-    this.props.addToFavorites();
-    this.props.setCurrencies();
+    this.props.storeUserInfo(token, email);
+    // this.props.addToNotes();
+    // this.props.addToFavorites();
+    // this.props.setCurrencies();
     this.setState({ token: token.teller_api_token });
   };
 
