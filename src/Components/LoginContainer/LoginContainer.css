@@ -25,10 +25,10 @@
 .login-container p,
 .login-container a {
   color: white;
+  display: block;
   font-size: 1rem;
   letter-spacing: 0.9px;
   text-decoration: none;
-  display: block;
   z-index: 25;
 }
 
@@ -64,8 +64,8 @@
   box-sizing: border-box;
   background: var(--TellerPink);
   border: none;
-  transition: 0.2s;
   opacity: 1;
+  transition: 0.2s;
 }
 
 .button-box,
