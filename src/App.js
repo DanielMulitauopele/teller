@@ -52,9 +52,7 @@ class App extends Component {
       this.setState({
         favorites: [favorite, ...this.state.favorites]
       })
-    }
-
-    if (!this.state.token && (favorite === null || undefined)) {
+    } else if (!this.state.token && (favorite === null || undefined)) {
       favorites = [
         {
           id: 12345,
@@ -63,10 +61,11 @@ class App extends Component {
           percent_change_24_hr: 0
         }
       ];
+      this.setState({ favorites });
     } else {
       favorites = await fetchFavorites(this.state.token);
+      this.setState({ favorites });
     }
-    this.setState({ favorites });
   };
 
   // removeFromFavorites = id => {
@@ -82,9 +81,7 @@ class App extends Component {
       this.setState({
         notes: [note, ...this.state.notes]
       })
-    }
-
-    if (!this.state.token && (note === null || undefined)) {
+    } else if (!this.state.token && (note === null || undefined)) {
       notes = [
         {
           id: 12345,
@@ -92,10 +89,11 @@ class App extends Component {
           body: "You must create an account to save notes."
         }
       ];
+      this.setState({ notes });
     } else {
       notes = await fetchNotes(this.state.token);
+      this.setState({ notes });
     }
-    this.setState({ notes });
   };
 
   // removeFromNotes = id => {
@@ -198,7 +196,6 @@ class App extends Component {
       userEmail: userEmail,
       loggedIn: true
     });
-
   };
 
   clearUser = () => {
