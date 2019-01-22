@@ -5,7 +5,12 @@
   color: var(--AlmostWhite);
   margin: 0.5rem 0 0.5rem 0.5rem;
   transition: 0.7s;
-  width: 70%;
+  width: 60%;
+  margin: 5rem 0 0 6rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  z-index: 10;
+  position: relative;
 }
 
 header {
@@ -17,7 +22,7 @@ header {
   height: 1rem;
   margin-bottom: -2px;
   transform: rotate(90deg);
-  width: 0.5rem;
+  width: 1rem;
 }
 
 .currency-symbol-expanded {
@@ -44,4 +49,10 @@ header {
 
 .percent-change-expanded {
   font-size: 1.5em;
+}
+
+@media only screen and (max-width: 700px) {
+  .expanded-container {
+    display: none;
+  }
 }

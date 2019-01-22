@@ -1,10 +1,14 @@
 .plotly-graph-box {
   width: 28rem;
-  margin-left: -3rem;
+  margin-left: -5rem;
   margin-right: -2rem;
-  margin-top: -5rem;
+  margin-top: -7rem;
+  margin-bottom: 0;
+  padding: -2rem;
 }
 
 .plot-line {
   width: 1rem;
+  color: red;
+  padding: -5rem;
 }

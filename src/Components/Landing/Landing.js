@@ -3,18 +3,26 @@ import "./Landing.css";
 import FavoritesContainer from "../FavoritesContainer/FavoritesContainer";
 import LandingCurrencyContainer from "../LandingCurrencyContainer/LandingCurrencyContainer";
 import NewsContainer from "../../Components/NewsContainer/NewsContainer";
-// import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded"
+import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded";
 
 class Landing extends Component {
   constructor(props) {
     super(props);
 
-    // const { favorites, addToFavorites, removeFromFavorites, abbrevCurrencies, setFilter, removeLoginState, token } = this.props
-    
+    const {
+      favorites,
+      addToFavorites,
+      removeFromFavorites,
+      abbrevCurrencies,
+      setFilter,
+      removeLoginState,
+      token
+    } = this.props;
+
     this.state = {
       active: false,
       news: [],
-      displayedCurrency: "",
+      displayedCurrency: ""
     };
   }
 
@@ -24,17 +32,17 @@ class Landing extends Component {
     });
   };
 
-  displayExpanded = (name) => {
-    if(!this.state.displayedCurrency) {
+  displayExpanded = name => {
+    if (!this.state.displayedCurrency) {
       this.setState({
         displayedCurrency: this.props.abbrevCurrencies[0].name
-      })
+      });
     } else {
       this.setState({
         displayedCurrency: name
-      })
+      });
     }
-  }
+  };
 
   render() {
     const {
@@ -49,20 +57,23 @@ class Landing extends Component {
     return (
       <div className="landing-literal">
         <NewsContainer />
-        <FavoritesContainer 
+        <FavoritesContainer
           favorites={favorites}
-          removeFromFavorites={removeFromFavorites}/>
-        <LandingCurrencyContainer 
+          removeFromFavorites={removeFromFavorites}
+        />
+        <LandingCurrencyContainer
           setFilter={setFilter}
           addToFavorites={addToFavorites}
           abbrevCurrencies={abbrevCurrencies}
           displayExpanded={this.displayExpanded}
           token={token}
         />
-        {/*<CurrencyExpanded
-                  currencies={abbrevCurrencies}
-                  addToFavorites={addToFavorites}
-                  displayedCurrency={this.state.displayedCurrency} />*/}
+        <CurrencyExpanded
+          className="currency-expanded-div"
+          currencies={abbrevCurrencies}
+          addToFavorites={addToFavorites}
+          displayedCurrency={this.state.displayedCurrency}
+        />
       </div>
     );
   }
