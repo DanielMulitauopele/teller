@@ -13,9 +13,13 @@ class NoteForm extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({
+    this.setToken()
+  }
+
+  setToken = () => {
+    this.setState({
       token: this.props.token
-    }), 1000)
+    })
   }
 
   handleChange = e => {

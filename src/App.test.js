@@ -4,7 +4,7 @@ import App from './App';
 import { shallow } from 'enzyme'
 import { mockFavorites } from './Utils/MockData/mockFavorites'
 import { mockNotes } from './Utils/MockData/mockNotes'
-import { mockAbbrevCurrencies } from './Utils/MockData/mockAbbrevCurrencies'
+import { mockcurrencies } from './Utils/MockData/mockcurrencies'
 import { mockExpandedCurrencies } from './Utils/MockData/mockExpandedCurrencies'
 
 let wrapper
@@ -20,7 +20,7 @@ describe('App Component', () => {
 
   it('should start with the correct default state', () => {
     expect(wrapper.state().favorites).toEqual([])
-    expect(wrapper.state().abbrevCurrencies).toEqual([])
+    expect(wrapper.state().currencies).toEqual([])
     expect(wrapper.state().expandedCurrencies).toEqual([])
     expect(wrapper.state().userEmail).toEqual("")
     expect(wrapper.state().news).toEqual([])
@@ -92,7 +92,7 @@ describe('App Component', () => {
 
     })
     
-    xit('should call getAbbrevCurrencies if search field is empty', () => {
+    xit('should call getCurrencies if search field is empty', () => {
       wrapper.instance().displaySearch("")
 
 

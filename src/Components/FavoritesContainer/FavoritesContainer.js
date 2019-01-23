@@ -14,6 +14,10 @@ class FavoritesContainer extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.setFavorites()
+  }
+
   render() {
     const { favorites, removeFromFavorites } = this.props;
     const favoriteCurrencies = favorites.map(favorite => {

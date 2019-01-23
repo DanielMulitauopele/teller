@@ -6,12 +6,13 @@ import DataCleaner from "../../Utils/Cleaners/"
 import Green from "../../Assets/green.svg"
 import LineChart from "../LineChart/LineChart"
 import TweetContainer from "../TweetContainer/TweetContainer"
+import { fetchAnalysis } from "../../Utils/API/";
 
 class CurrencyExpanded extends Component {
   constructor(props) {
     super(props)
 
-    // const { currencies, addToFavorites, displayedCurrency, displayExpanded } = this.props
+    // const { currencies, addToFavorites, displayedCurrency, displayExpanded, graphData } = this.props
 
     this.state = {
       faved: false,
@@ -22,14 +23,19 @@ class CurrencyExpanded extends Component {
     this.cleaner = new DataCleaner()
   }
 
-  async componentDidMount() {
-    setTimeout(this.setState({
-      displayedCurrency: this.props.displayedCurrency
-    }), 1000)
-    const analysis = await this.cleaner.formatAnalysis(this.props.displayedCurrency)
+  async componentDidMount(){
     this.setState({
-      analysis
+      displayedCurrency: this.props.displayedCurrency
     })
+    // const analysis = await this.cleaner.formatAnalysis(this.props.displayedCurrency)
+    // this.setState({
+    //   analysis
+    // })
+    this.setAnalysis()
+  }
+
+  setAnalysis = () => {
+    console.log(this.props.displayedCurrency)
   }
 
   faved = () => {
@@ -51,7 +57,7 @@ class CurrencyExpanded extends Component {
   }
 
   render() {
-    const { displayedCurrency, faved, analysis } = this.state
+    const { faved, analysis } = this.state
     const currency = this.showExpanded(this.props.displayedCurrency)
     console.log(currency)
     if (this.props.displayExpanded !== true) {
@@ -80,7 +86,9 @@ class CurrencyExpanded extends Component {
                 ({currency.percent_change}% {<img className={currency.percent_change > 0 ? "arrow" : "arrow-down"} src={Green} alt="" />})
               </p>
             </div>
-            <LineChart />
+            <LineChart
+              graphData={this.props.graphData}
+            />
             <TweetContainer
               analysis={analysis}
             />

@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import "./LoginForm.css";
 import { logInUser } from "../../Utils/API";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 export class LoginForm extends Component {
   constructor(props) {
     super(props);
 
-    // const { toggleLogIn, storeUserInfo, addToFavorites, addToNotes, setCurrencies } = this.props
+    // const { toggleLogIn, storeUserInfo, setFavorites, setNotes, setCurrencies } = this.props
 
     this.state = {
       email: "",
@@ -28,8 +28,8 @@ export class LoginForm extends Component {
     const token = await logInUser(user);
     this.props.toggleLogIn(email);
     this.props.storeUserInfo(token, email);
-    this.props.addToNotes(null);
-    this.props.addToFavorites(null);
+    this.props.setNotes();
+    this.props.setFavorites();
     this.props.setCurrencies();
     this.setState({ token: token.teller_api_token });
   };

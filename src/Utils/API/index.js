@@ -14,14 +14,14 @@ export const registerUser = async (user) => {
     headers: {
       "Content-Type": "application/json",
       "Accept": "application/json",
-    }, 
+    },
     method: 'POST',
     body: user
-  }) 
+  })
   const clone = await response.clone()
   const result = await clone.json()
   return result
-} 
+}
 
 export const logInUser = async (user) => {
   const url = 'https://teller-api.herokuapp.com/authentications'
@@ -29,7 +29,7 @@ export const logInUser = async (user) => {
     headers: {
       "Content-Type": "application/json",
       "Accept": "application/json",
-    }, 
+    },
     method: 'POST',
     body: user
   })
@@ -96,11 +96,11 @@ export const fetchNotes = async (token) => {
   })
   const result = await response.json()
   return result
-} 
+}
 
-export const fetchGraphData = async () => {
+export const fetchGraphData = async (currency) => {
   const url =
-      "https://cors-anywhere.herokuapp.com/https://teller-api.herokuapp.com/api/v1/assets/bitcoin/history?interval=h2";
+      `https://cors-anywhere.herokuapp.com/https://teller-api.herokuapp.com/api/v1/assets/${currency}/history?interval=h2`;
   const response = await fetch(url);
   const result = await response.json();
   return result
@@ -118,4 +118,3 @@ export const fetchAnalysis = async (currency) => {
   const result = await response.json()
   return result
 }
-

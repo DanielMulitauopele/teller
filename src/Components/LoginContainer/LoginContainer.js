@@ -31,8 +31,8 @@ class LoginContainer extends Component {
       toggleLogIn,
       storeUserInfo,
       loggedIn,
-      addToNotes,
-      addToFavorites,
+      setNotes,
+      setFavorites,
       setCurrencies
     } = this.props;
     return (
@@ -62,8 +62,8 @@ class LoginContainer extends Component {
               toggleLogIn={toggleLogIn}
               storeUserInfo={storeUserInfo}
               loggedIn={loggedIn}
-              addToNotes={addToNotes}
-              addToFavorites={addToFavorites}
+              setNotes={setNotes}
+              setFavorites={setFavorites}
               setCurrencies={setCurrencies}
             />
             <div>

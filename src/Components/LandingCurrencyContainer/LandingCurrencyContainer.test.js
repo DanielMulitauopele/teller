@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import LandingCurrencyContainer from './LandingCurrencyContainer'
-import { mockAbbrevCurrencies } from '../../Utils/MockData/mockAbbrevCurrencies'
+import { mockcurrencies } from '../../Utils/MockData/mockcurrencies'
 
 describe('LandingCurrencyContainer Component', () => {
   let wrapper
@@ -10,7 +10,7 @@ describe('LandingCurrencyContainer Component', () => {
 
   beforeEach(() => {
     wrapper = shallow(<LandingCurrencyContainer
-                        abbrevCurrencies={mockAbbrevCurrencies}
+                        currencies={mockcurrencies}
                         setFilter={mockSetFilter}
                         addToFavorites={mockAddToFavorites}
                       />)

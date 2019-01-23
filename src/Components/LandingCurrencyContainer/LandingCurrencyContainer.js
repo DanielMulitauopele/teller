@@ -16,9 +16,9 @@ class LandingCurrencyContainer extends Component {
   };
 
   render() {
-    const { abbrevCurrencies, addToFavorites, displayExpanded, token } = this.props;
+    const { currencies, addToFavorites, displayExpanded, token } = this.props;
 
-    const landingCurrencies = abbrevCurrencies.map((currency, i) => {
+    const landingCurrencies = currencies.map((currency, i) => {
       return (
         <LandingCurrency
           key={i}

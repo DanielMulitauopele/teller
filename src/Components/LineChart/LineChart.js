@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import Plot from "react-plotly.js";
-import { fetchGraphData } from "../../Utils/API/"
+// import { fetchGraphData } from "../../Utils/API/"
 
 class LineChart extends Component {
-  constructor() {
-    super();
-    this.state = { data: [] };
+  constructor(props) {
+    super(props);
+    this.state = {
+       data: []
+    };
   }
 
   async componentDidMount() {
-    const data = await fetchGraphData()
-    this.setState({ data })
+    this.setState({
+      data: this.props.graphData
+    })
   }
 
   render() {

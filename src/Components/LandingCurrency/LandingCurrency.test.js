@@ -1,7 +1,7 @@
 import React from 'react'
 import LandingCurrency from './LandingCurrency'
 import { shallow } from 'enzyme'
-import { mockAbbrevCurrencies } from '../../Utils/MockData/mockAbbrevCurrencies'
+import { mockcurrencies } from '../../Utils/MockData/mockcurrencies'
 import DataCleaner from '../../Utils/Cleaners'
 
 describe('LandingCurrency Component', () => {
@@ -13,7 +13,7 @@ describe('LandingCurrency Component', () => {
   beforeEach(() => {
     wrapper = shallow(<LandingCurrency
                         index={i}
-                        currency={mockAbbrevCurrencies[1]}
+                        currency={mockcurrencies[1]}
                         addToFavorites={mockAddToFavorites}
                       />)
   })
