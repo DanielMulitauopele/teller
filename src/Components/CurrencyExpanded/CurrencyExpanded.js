@@ -9,9 +9,6 @@ import Analysis from "../Analysis/Analysis"
 class CurrencyExpanded extends Component {
   constructor(props) {
     super(props)
-
-    // const { currencies, addToFavorites, displayedCurrency, expandView, graphData, tones } = this.props
-
     this.state = {
       faved: false,
       displayedCurrency: "",
@@ -51,7 +48,7 @@ class CurrencyExpanded extends Component {
   }
 
   render() {
-    const { faved, analysis } = this.state
+    const { faved } = this.state
     const { displayedCurrency, displayExpanded, graphData, tones } = this.props
     const currency = this.showExpanded(displayedCurrency)
     if (displayExpanded !== true) {
