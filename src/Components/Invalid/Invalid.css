@@ -4,19 +4,19 @@
 
 .wrong-way h1 {
   color: var(--TellerPink);
-  text-align: center;
   margin: 10rem 2rem 0;
+  text-align: center;
 }
 
 .wrong-way a {
-  text-align: center;
   color: white;
-  text-decoration: none;
   border: 1px solid var(--TellerPink);
-  display: inline-block;
-  padding: 0.5rem 2rem;
   border-radius: 10px;
+  display: inline-block;
   margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 .wrong-way a:hover {

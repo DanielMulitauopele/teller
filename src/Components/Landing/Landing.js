@@ -10,7 +10,15 @@ class Landing extends Component {
   constructor(props) {
     super(props);
 
-    // const { favorites, addToFavorites, removeFromFavorites, currencies, setFilter, removeLoginState, token, setFavorites } = this.props
+    const {
+      favorites,
+      addToFavorites,
+      removeFromFavorites,
+      abbrevCurrencies,
+      setFilter,
+      removeLoginState,
+      token
+    } = this.props;
 
     this.state = {
       active: false,
@@ -81,6 +89,7 @@ class Landing extends Component {
           graphData={graphData}
         />
         <CurrencyExpanded
+          className="currency-expanded-div"
           currencies={currencies}
           addToFavorites={addToFavorites}
           displayedCurrency={displayedCurrency}

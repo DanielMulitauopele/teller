@@ -8,7 +8,7 @@ import Analysis from "../Analysis/Analysis"
 
 class CurrencyExpanded extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       faved: false,
       displayedCurrency: "",
@@ -86,4 +86,4 @@ class CurrencyExpanded extends Component {
   }
 }
 
-export default CurrencyExpanded
+export default CurrencyExpanded;
