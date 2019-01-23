@@ -27,7 +27,7 @@ class Landing extends Component {
     });
   };
 
-  displayExpanded = async (name) => {
+  expandView = async (name) => {
     const graphData = await fetchGraphData(name)
     this.setState({
       displayedCurrency: name,
@@ -66,8 +66,9 @@ class Landing extends Component {
           setFilter={setFilter}
           addToFavorites={addToFavorites}
           currencies={currencies}
-          displayExpanded={this.displayExpanded}
+          expandView={this.expandView}
           token={token}
+          graphData={graphData}
         />
         <CurrencyExpanded
           currencies={currencies}

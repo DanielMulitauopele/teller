@@ -112,24 +112,6 @@ class App extends Component {
     this.setState({
       notes: [note, ...notes]
     })
-    // let notes;
-    // if(note !== null) {
-    //   this.setState({
-    //     notes: [note, ...this.state.notes]
-    //   })
-    // } else if (!this.state.token && (note === null || undefined)) {
-    //   notes = [
-    //     {
-    //       id: 12345,
-    //       title: "No notes saved.",
-    //       body: "You must create an account to save notes."
-    //     }
-    //   ];
-    //   this.setState({ notes });
-    // } else {
-    //   notes = await fetchNotes(this.state.token);
-    //   this.setState({ notes });
-    // }
   };
 
   // removeFromNotes = id => {

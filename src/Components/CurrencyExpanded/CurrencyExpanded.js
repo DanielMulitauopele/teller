@@ -12,7 +12,7 @@ class CurrencyExpanded extends Component {
   constructor(props) {
     super(props)
 
-    // const { currencies, addToFavorites, displayedCurrency, displayExpanded, graphData } = this.props
+    // const { currencies, addToFavorites, displayedCurrency, expandView, graphData } = this.props
 
     this.state = {
       faved: false,

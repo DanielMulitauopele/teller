@@ -31,7 +31,7 @@ class LandingCurrency extends Component {
 
   handleClick = async e => {
     const { name } = e.target;
-    this.props.displayExpanded(name)
+    this.props.expandView(name)
   };
 
   handleFaveClick = async e => {
@@ -97,7 +97,9 @@ class LandingCurrency extends Component {
         )}
         {this.state.expanded && (
           <div className="expanded-graph">
-            {/*<LineChart />*/}
+            {/*<LineChart
+              graphData={this.props.graphData}
+              />*/}
           </div>
         )}
       </div>

@@ -16,7 +16,7 @@ class LandingCurrencyContainer extends Component {
   };
 
   render() {
-    const { currencies, addToFavorites, displayExpanded, token } = this.props;
+    const { currencies, addToFavorites, expandView, token } = this.props;
 
     const landingCurrencies = currencies.map((currency, i) => {
       return (
@@ -25,7 +25,7 @@ class LandingCurrencyContainer extends Component {
           index={i}
           currency={currency}
           addToFavorites={addToFavorites}
-          displayExpanded={displayExpanded}
+          expandView={expandView}
           token={token}
         />
       );
