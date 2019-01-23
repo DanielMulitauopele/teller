@@ -59,7 +59,6 @@ class App extends Component {
 
   setFavorites = async () => {
     const token = JSON.parse(localStorage.getItem("userToken"));
-    // debugger
     const favorites = await fetchFavorites(token.teller_api_token);
     this.setState({
       favorites

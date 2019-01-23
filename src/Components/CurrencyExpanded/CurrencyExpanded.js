@@ -2,18 +2,15 @@ import React, { Component } from 'react'
 import './CurrencyExpanded.css'
 import Heart from "../../Assets/heart.svg"
 import HeartP from "../../Assets/heartpink.svg"
-import DataCleaner from "../../Utils/Cleaners/"
 import Green from "../../Assets/green.svg"
 import LineChart from "../LineChart/LineChart"
-import TweetContainer from "../TweetContainer/TweetContainer"
-import { fetchAnalysis } from "../../Utils/API/";
-
+import Analysis from "../Analysis/Analysis"
 
 class CurrencyExpanded extends Component {
   constructor(props) {
     super(props)
 
-    // const { currencies, addToFavorites, displayedCurrency, expandView, graphData } = this.props
+    // const { currencies, addToFavorites, displayedCurrency, expandView, graphData, tones } = this.props
 
     this.state = {
       faved: false,
@@ -21,22 +18,12 @@ class CurrencyExpanded extends Component {
       analysis: {},
       expanded: false
     }
-    this.cleaner = new DataCleaner()
   }
 
   async componentDidMount(){
     this.setState({
       displayedCurrency: this.props.displayedCurrency
     })
-    // const analysis = await this.cleaner.formatAnalysis(this.props.displayedCurrency)
-    // this.setState({
-    //   analysis
-    // })
-    this.setAnalysis()
-  }
-
-  setAnalysis = () => {
-    console.log(this.props.displayedCurrency)
   }
 
   faved = () => {
@@ -47,8 +34,14 @@ class CurrencyExpanded extends Component {
 
   handleFaveClick = async e => {
     const { name } = e.target;
-    const fave = await this.cleaner.formatFavorite(name);
-    this.props.addToFavorites(fave);
+    const { currencies } = this.props
+    const faveCurrency = currencies.find(currency => currency.name === name)
+    const newFave = {
+      name: faveCurrency.name,
+      price: Math.round(faveCurrency.price_usd * 100) / 100,
+      percent_change: Math.round(faveCurrency.percent_change_24_hr * 100) / 100
+    }
+    this.props.addToFavorites(newFave);
     this.faved();
   };
 
@@ -59,9 +52,9 @@ class CurrencyExpanded extends Component {
 
   render() {
     const { faved, analysis } = this.state
-    const currency = this.showExpanded(this.props.displayedCurrency)
-    console.log(currency)
-    if (this.props.displayExpanded !== true) {
+    const { displayedCurrency, displayExpanded, graphData, tones } = this.props
+    const currency = this.showExpanded(displayedCurrency)
+    if (displayExpanded !== true) {
       return (<div></div>)
     } else {
       return(
@@ -87,12 +80,8 @@ class CurrencyExpanded extends Component {
                 ({currency.percent_change}% {<img className={currency.percent_change > 0 ? "arrow" : "arrow-down"} src={Green} alt="" />})
               </p>
             </div>
-            <LineChart
-              graphData={this.props.graphData}
-            />
-            <TweetContainer
-              analysis={analysis}
-            />
+            <LineChart graphData={graphData}/>
+            <Analysis tones={tones} currency={currency.name}/>
           </main>
         </div>
       )
