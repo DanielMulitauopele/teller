@@ -51,7 +51,7 @@ const FavoriteCurrencies = props => {
   };
 
   const { favorite } = props;
-  const percent_change = parseInt(favorite.percent_change_24_hr);
+  const percent_change = parseInt(favorite.percent_change_24_hr || favorite.percent_change)
   return (
     <div className="fave-currency">
       <div className="bubbles bubbles-left">
@@ -60,7 +60,7 @@ const FavoriteCurrencies = props => {
         <div className={controlBubbleSpeed(percent_change)} />
       </div>
       <p className="fave-name">{favorite.name}</p>
-      <p className="fave-price">${favorite.price_usd}</p>
+      <p className="fave-price">${favorite.price_usd || favorite.price}</p>
       <div className="bubbles bubbles-right">
         <div className={controlBubbleSpeed(percent_change)} />
         <div className={controlBubbleSpeed(percent_change)} />
@@ -69,10 +69,8 @@ const FavoriteCurrencies = props => {
       <div className="price-progress">
         <p>
           {percent_change < 0 ? "-" : "+"}$
-          {((percent_change < 0 ? -1 : 1) *
-            Math.round(favorite.price_usd * percent_change)) /
-            100}{" "}
-          ({percent_change}% {<img className="arrow" src={Green} alt="" />})
+          {((percent_change < 0 ? -1 : 1) * Math.round((favorite.price_usd || favorite.price) * percent_change)) /100}{" "}
+          ({percent_change}% {<img className={favorite.percent_change > 0 ? "arrow" : "arrow-down"} src={Green} alt="" />})
         </p>
       </div>
     </div>

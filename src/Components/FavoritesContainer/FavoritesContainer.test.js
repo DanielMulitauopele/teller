@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import FavoritesContainer from './FavoritesContainer'
 import { mockCurrencies } from '../../Utils/MockData/mockCurrencies'
-import { mockAbbrevCurrencies } from '../../Utils/MockData/mockAbbrevCurrencies'
+import { mockcurrencies } from '../../Utils/MockData/mockcurrencies'
 
 describe('FavoritesContainer Component', () => {
   let wrapper

@@ -8,8 +8,18 @@ class NoteForm extends Component {
     this.state = {
       title: "",
       body: "",
-      token: this.props.token
+      token: ""
     };
+  }
+
+  componentDidMount() {
+    this.setToken()
+  }
+
+  setToken = () => {
+    this.setState({
+      token: this.props.token
+    })
   }
 
   handleChange = e => {
@@ -24,7 +34,10 @@ class NoteForm extends Component {
           "title": title,
           "text": body
         }), this.props.token)
-    this.props.addToNotes();
+    this.props.addToNotes({
+      title: this.state.title,
+      body: this.state.body
+    });
     this.setState({ title: "", body: "" });
   };
 

@@ -3,10 +3,13 @@ import Plot from "react-plotly.js";
 import "./LineChart.css";
 
 class LineChart extends Component {
-  constructor() {
-    super();
-    this.state = { data: [] };
+  constructor(props) {
+    super(props);
+    this.state = {
+       data: []
+    };
   }
+
   async componentDidMount() {
     const url =
       "https://cors-anywhere.herokuapp.com/https://teller-api.herokuapp.com/api/v1/assets/bitcoin/history?interval=d1";

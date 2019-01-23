@@ -29,10 +29,10 @@ class LoginContainer extends Component {
     const { expandedLogIn } = this.state;
     const {
       toggleLogIn,
-      storeToken,
+      storeUserInfo,
       loggedIn,
-      addToNotes,
-      addToFavorites,
+      setNotes,
+      setFavorites,
       setCurrencies
     } = this.props;
     return (
@@ -60,10 +60,10 @@ class LoginContainer extends Component {
             </button>
             <LoginForm
               toggleLogIn={toggleLogIn}
-              storeToken={storeToken}
+              storeUserInfo={storeUserInfo}
               loggedIn={loggedIn}
-              addToNotes={addToNotes}
-              addToFavorites={addToFavorites}
+              setNotes={setNotes}
+              setFavorites={setFavorites}
               setCurrencies={setCurrencies}
             />
             <div>

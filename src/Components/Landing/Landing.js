@@ -3,7 +3,8 @@ import "./Landing.css";
 import FavoritesContainer from "../FavoritesContainer/FavoritesContainer";
 import LandingCurrencyContainer from "../LandingCurrencyContainer/LandingCurrencyContainer";
 import NewsContainer from "../../Components/NewsContainer/NewsContainer";
-import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded";
+import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded"
+import { fetchGraphData, fetchAnalysis } from "../../Utils/API/"
 
 class Landing extends Component {
   constructor(props) {
@@ -22,7 +23,10 @@ class Landing extends Component {
     this.state = {
       active: false,
       news: [],
-      displayedCurrency: ""
+      displayedCurrency: "",
+      displayExpanded: false,
+      graphData: [],
+      tones: []
     };
   }
 
@@ -32,27 +36,41 @@ class Landing extends Component {
     });
   };
 
-  displayExpanded = name => {
-    if (!this.state.displayedCurrency) {
-      this.setState({
-        displayedCurrency: this.props.abbrevCurrencies[0].name
-      });
-    } else {
-      this.setState({
-        displayedCurrency: name
-      });
-    }
-  };
+  expandView = async (name) => {
+    const graphData = await fetchGraphData(name)
+    this.setAnalysis(name)
+    this.setState({
+      displayedCurrency: name,
+      displayExpanded: !this.state.displayExpanded,
+      graphData
+    })
+  }
+
+  setAnalysis = async (currency) => {
+    const analysis = await fetchAnalysis(currency)
+    const tones = analysis.document_tones
+    this.setState({
+      tones
+    })
+  }
 
   render() {
     const {
       favorites,
       addToFavorites,
       removeFromFavorites,
-      abbrevCurrencies,
+      currencies,
       setFilter,
-      token
+      token,
+      setFavorites
     } = this.props;
+
+    const {
+      displayedCurrency,
+      displayExpanded,
+      graphData,
+      tones
+    } = this.state;
 
     return (
       <div className="landing-literal">
@@ -60,19 +78,24 @@ class Landing extends Component {
         <FavoritesContainer
           favorites={favorites}
           removeFromFavorites={removeFromFavorites}
+          setFavorites={setFavorites}
         />
         <LandingCurrencyContainer
           setFilter={setFilter}
           addToFavorites={addToFavorites}
-          abbrevCurrencies={abbrevCurrencies}
-          displayExpanded={this.displayExpanded}
+          currencies={currencies}
+          expandView={this.expandView}
           token={token}
+          graphData={graphData}
         />
         <CurrencyExpanded
           className="currency-expanded-div"
-          currencies={abbrevCurrencies}
+          currencies={currencies}
           addToFavorites={addToFavorites}
-          displayedCurrency={this.state.displayedCurrency}
+          displayedCurrency={displayedCurrency}
+          displayExpanded={displayExpanded}
+          graphData={graphData}
+          tones={tones}
         />
       </div>
     );

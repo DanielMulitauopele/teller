@@ -64,6 +64,8 @@ TellerAI Comparitive Analysis - We had hoped to create our own machine learning 
 
 Database with Background Jobs - The biggest drawback to our backend is that it relies on pulling from the external APIs. We hope to implement background workers to fill our database with recent information in case of an API outage
 
+GraphQL - We hope to wrap REST API's in GraphQL to consolidate interactions with backend.
+
 <img width="1150" alt="screen shot 2019-01-06 at 3 46 04 pm" src="https://user-images.githubusercontent.com/34214595/50742568-37475b00-11ca-11e9-9db2-d6914433705d.png">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
