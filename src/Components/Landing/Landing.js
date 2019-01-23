@@ -4,7 +4,7 @@ import FavoritesContainer from "../FavoritesContainer/FavoritesContainer";
 import LandingCurrencyContainer from "../LandingCurrencyContainer/LandingCurrencyContainer";
 import NewsContainer from "../../Components/NewsContainer/NewsContainer";
 import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded"
-import { fetchGraphData } from "../../Utils/API/"
+import { fetchGraphData, fetchAnalysis } from "../../Utils/API/"
 
 class Landing extends Component {
   constructor(props) {
@@ -17,7 +17,8 @@ class Landing extends Component {
       news: [],
       displayedCurrency: "",
       displayExpanded: false,
-      graphData: []
+      graphData: [],
+      tones: []
     };
   }
 
@@ -27,14 +28,22 @@ class Landing extends Component {
     });
   };
 
-  displayExpanded = async (name) => {
+  expandView = async (name) => {
     const graphData = await fetchGraphData(name)
+    this.setAnalysis(name)
     this.setState({
       displayedCurrency: name,
       displayExpanded: !this.state.displayExpanded,
       graphData
     })
-    console.log(graphData)
+  }
+
+  setAnalysis = async (currency) => {
+    const analysis = await fetchAnalysis(currency)
+    const tones = analysis.document_tones
+    this.setState({
+      tones
+    })
   }
 
   render() {
@@ -51,7 +60,8 @@ class Landing extends Component {
     const {
       displayedCurrency,
       displayExpanded,
-      graphData
+      graphData,
+      tones
     } = this.state;
 
     return (
@@ -66,8 +76,9 @@ class Landing extends Component {
           setFilter={setFilter}
           addToFavorites={addToFavorites}
           currencies={currencies}
-          displayExpanded={this.displayExpanded}
+          expandView={this.expandView}
           token={token}
+          graphData={graphData}
         />
         <CurrencyExpanded
           currencies={currencies}
@@ -75,6 +86,7 @@ class Landing extends Component {
           displayedCurrency={displayedCurrency}
           displayExpanded={displayExpanded}
           graphData={graphData}
+          tones={tones}
         />
       </div>
     );

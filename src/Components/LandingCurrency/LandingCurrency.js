@@ -5,7 +5,7 @@ import HeartP from "../../Assets/heartpink.svg";
 import { Icons } from "../../Assets/cryptoIcons/cryptoIcons";
 import DataCleaner from "../../Utils/Cleaners/";
 import { sendFavorites } from "../../Utils/API/";
-// import LineChart from "../LineChart/LineChart"
+
 class LandingCurrency extends Component {
   constructor(props) {
     super(props);
@@ -31,11 +31,10 @@ class LandingCurrency extends Component {
 
   handleClick = async e => {
     const { name } = e.target;
-    this.props.displayExpanded(name)
+    this.props.expandView(name)
   };
 
   handleFaveClick = async e => {
-    // const { name } = e.target;
     const { addToFavorites, currency } = this.props
     sendFavorites(JSON.stringify({
       "name": currency.name,
@@ -44,7 +43,7 @@ class LandingCurrency extends Component {
     }), this.props.token)
     addToFavorites({
       name: currency.name,
-      price_usd: currency.price,
+      price: currency.price,
       percent_change: currency.percent_change
     });
     this.faved();
@@ -93,11 +92,6 @@ class LandingCurrency extends Component {
               onClick={this.handleFaveClick}
               alt=""
             />
-          </div>
-        )}
-        {this.state.expanded && (
-          <div className="expanded-graph">
-            {/*<LineChart />*/}
           </div>
         )}
       </div>

@@ -23,7 +23,7 @@ class FavoritesContainer extends Component {
     const favoriteCurrencies = favorites.map(favorite => {
       return (
         <FavoriteCurrencies
-          key={favorite.id}
+          key={favorite.price}
           favorite={favorite}
           removeFromFavorites={removeFromFavorites}
         />
