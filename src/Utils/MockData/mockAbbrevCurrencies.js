@@ -1,4 +1,4 @@
-export const mockAbbrevCurrencies = [
+export const mockcurrencies = [
   {
     "symbol": "BTC",
     "price": 3586.16,

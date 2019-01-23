@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "./TweetContainer"
-import Tweet from '../Tweet/Tweet'
+// import Tweet from '../Tweet/Tweet'
 
 class TweetContainer extends Component {
   constructor(props) {

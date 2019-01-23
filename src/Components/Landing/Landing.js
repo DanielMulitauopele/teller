@@ -4,18 +4,20 @@ import FavoritesContainer from "../FavoritesContainer/FavoritesContainer";
 import LandingCurrencyContainer from "../LandingCurrencyContainer/LandingCurrencyContainer";
 import NewsContainer from "../../Components/NewsContainer/NewsContainer";
 import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded"
+import { fetchGraphData } from "../../Utils/API/"
 
 class Landing extends Component {
   constructor(props) {
     super(props);
 
-    // const { favorites, addToFavorites, removeFromFavorites, abbrevCurrencies, setFilter, removeLoginState, token } = this.props
-    
+    // const { favorites, addToFavorites, removeFromFavorites, currencies, setFilter, removeLoginState, token, setFavorites } = this.props
+
     this.state = {
       active: false,
       news: [],
       displayedCurrency: "",
-      displayExpanded: false
+      displayExpanded: false,
+      graphData: []
     };
   }
 
@@ -25,11 +27,14 @@ class Landing extends Component {
     });
   };
 
-  displayExpanded = (name) => {
+  displayExpanded = async (name) => {
+    const graphData = await fetchGraphData(name)
     this.setState({
       displayedCurrency: name,
-      displayExpanded: !this.state.displayExpanded
+      displayExpanded: !this.state.displayExpanded,
+      graphData
     })
+    console.log(graphData)
   }
 
   render() {
@@ -37,30 +42,39 @@ class Landing extends Component {
       favorites,
       addToFavorites,
       removeFromFavorites,
-      abbrevCurrencies,
+      currencies,
       setFilter,
-      token
+      token,
+      setFavorites
     } = this.props;
+
+    const {
+      displayedCurrency,
+      displayExpanded,
+      graphData
+    } = this.state;
 
     return (
       <div className="landing-literal">
         <NewsContainer />
-        <FavoritesContainer 
+        <FavoritesContainer
           favorites={favorites}
           removeFromFavorites={removeFromFavorites}
+          setFavorites={setFavorites}
         />
-        <LandingCurrencyContainer 
+        <LandingCurrencyContainer
           setFilter={setFilter}
           addToFavorites={addToFavorites}
-          abbrevCurrencies={abbrevCurrencies}
+          currencies={currencies}
           displayExpanded={this.displayExpanded}
           token={token}
         />
         <CurrencyExpanded
-          currencies={abbrevCurrencies}
+          currencies={currencies}
           addToFavorites={addToFavorites}
-          displayedCurrency={this.state.displayedCurrency}
-          displayExpanded={this.state.displayExpanded}
+          displayedCurrency={displayedCurrency}
+          displayExpanded={displayExpanded}
+          graphData={graphData}
         />
       </div>
     );

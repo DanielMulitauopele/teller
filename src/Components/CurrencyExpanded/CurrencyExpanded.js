@@ -6,31 +6,37 @@ import DataCleaner from "../../Utils/Cleaners/"
 import Green from "../../Assets/green.svg"
 import LineChart from "../LineChart/LineChart"
 import TweetContainer from "../TweetContainer/TweetContainer"
+import { fetchAnalysis } from "../../Utils/API/";
+
 
 class CurrencyExpanded extends Component {
   constructor(props) {
     super(props)
 
-    // const { currencies, addToFavorites, displayedCurrency, displayExpanded } = this.props
+    // const { currencies, addToFavorites, displayedCurrency, displayExpanded, graphData } = this.props
 
     this.state = {
       faved: false,
-      displayedCurrency: this.props.displayedCurrency || "Bitcoin",
+      displayedCurrency: "",
       analysis: {},
       expanded: false
     }
     this.cleaner = new DataCleaner()
   }
 
-  async componentDidMount() {
-    const { displayedCurrency } = this.props;
-    if (displayedCurrency !== this.state.displayedCurrency) {
-      this.setState({ displayedCurrency: displayedCurrency})
-    }
-    const analysis = await this.cleaner.formatAnalysis(displayedCurrency)
+  async componentDidMount(){
     this.setState({
-      analysis
+      displayedCurrency: this.props.displayedCurrency
     })
+    // const analysis = await this.cleaner.formatAnalysis(this.props.displayedCurrency)
+    // this.setState({
+    //   analysis
+    // })
+    this.setAnalysis()
+  }
+
+  setAnalysis = () => {
+    console.log(this.props.displayedCurrency)
   }
 
   faved = () => {
@@ -47,24 +53,13 @@ class CurrencyExpanded extends Component {
   };
 
   showExpanded = (name) => {
-    let match
-    if (this.props.currencies.length === 0 || this.state.displayedCurrency === "") {
-      match = {
-        name: "Bitcoin",
-        symbol: "BTC",
-        price: 3589.62,
-        percent_change: 22.4,
-        rank: 1
-      }
-    } else if (this.props.currencies.length !== 0) {
-      match = this.props.currencies.find(currency => currency.name === name)
-    }
+    const match = this.props.currencies.find(currency => currency.name === name)
     return match
   }
 
   render() {
-    const { displayedCurrency, faved, analysis } = this.state
-    const currency = this.showExpanded(displayedCurrency)
+    const { faved, analysis } = this.state
+    const currency = this.showExpanded(this.props.displayedCurrency)
     console.log(currency)
     if (this.props.displayExpanded !== true) {
       return (<div></div>)
@@ -89,10 +84,12 @@ class CurrencyExpanded extends Component {
                 {((currency.percent_change < 0 ? -1 : 1) *
                   Math.round(currency.price * currency.percent_change)) /
                   100}{" "}
-                ({currency.percent_change}% {<img className="arrow" src={Green} alt="" />})
+                ({currency.percent_change}% {<img className={currency.percent_change > 0 ? "arrow" : "arrow-down"} src={Green} alt="" />})
               </p>
             </div>
-            <LineChart />
+            <LineChart
+              graphData={this.props.graphData}
+            />
             <TweetContainer
               analysis={analysis}
             />

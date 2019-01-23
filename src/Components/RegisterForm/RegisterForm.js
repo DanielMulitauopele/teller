@@ -7,7 +7,7 @@ class RegisterForm extends Component {
   constructor(props) {
     super(props);
 
-    // const { storeToken } = this.props
+    // const { storeUserInfo } = this.props
 
     this.state = {
       name: "",
@@ -36,7 +36,7 @@ class RegisterForm extends Component {
     });
     const token = await registerUser(user);
     this.checkPassword();
-    this.props.storeToken(token);
+    this.props.storeUserInfo(token, email);
     this.setState({
       name: "",
       email: "",

@@ -18,8 +18,7 @@ class App extends Component {
     super(props);
     this.state = {
       favorites: [],
-      abbrevCurrencies: [],
-      expandedCurrencies: [],
+      currencies: [],
       userEmail: "",
       news: [],
       loggedIn: false,
@@ -30,40 +29,56 @@ class App extends Component {
   }
 
   async componentDidMount() {
+    this.checkUser();
     this.setCurrencies();
-    this.checkToken();
-    this.addToFavorites();
-    this.addToNotes();
   }
 
-  setCurrencies = async () => {
-    const abbrevCurrencies = await this.cleaner.getAbbrevCurrencies();
-    const expandedCurrencies = await this.cleaner.getExpandedCurrencies();
+  checkUser = async () => {
+    let token
+    let userEmail
+    if (!this.state.token && localStorage.getItem("userToken") !== null) {
+      token = JSON.parse(localStorage.getItem("userToken"));
+    }
+    if(!this.state.userEmail && localStorage.getItem("userEmail") !== null) {
+      userEmail = JSON.parse(localStorage.getItem("userEmail"))
+    }
     this.setState({
-      abbrevCurrencies,
-      expandedCurrencies
+      token: token.teller_api_token,
+      userEmail: userEmail,
+      loggedIn: true,
+    });
+    this.setNotes()
+  };
+
+  setCurrencies = async () => {
+    const currencies = await this.cleaner.getCurrencies();
+    this.setState({
+      currencies,
     });
   };
 
-  addToFavorites = async (favorite) => {
-    let favorites
+  setFavorites = async () => {
+    const token = JSON.parse(localStorage.getItem("userToken"));
+    // debugger
+    const favorites = await fetchFavorites(token.teller_api_token);
     this.setState({
-      favorites: [favorite, ...this.state.favorites]
+      favorites
     })
+  }
 
-    if (!this.state.token) {
-      favorites = [
-        {
-          id: 12345,
-          name: "No favorites saved",
-          price_usd: 0,
-          percent_change_24_hr: 0
-        }
-      ];
-    } else {
-      favorites = await fetchFavorites(this.state.token);
-    }
-    this.setState({ favorites });
+  setNotes = async () => {
+    const token = JSON.parse(localStorage.getItem("userToken"));
+    const notes = await fetchNotes(token.teller_api_token);
+    this.setState({
+      notes
+    })
+  }
+
+  addToFavorites = async (favorite) => {
+    const { favorites } = this.state
+    this.setState({
+      favorites: [favorite, ...favorites]
+    })
   };
 
   // removeFromFavorites = id => {
@@ -73,20 +88,11 @@ class App extends Component {
   //   this.setState({ favorites: filteredFavorites });
   // };
 
-  addToNotes = async () => {
-    let notes;
-    if (!this.state.token) {
-      notes = [
-        {
-          id: 12345,
-          title: "No notes saved.",
-          body: "You must create an account to save notes."
-        }
-      ];
-    } else {
-      notes = await fetchNotes(this.state.token);
-    }
-    this.setState({ notes });
+  addToNotes = async (note) => {
+    const { notes } = this.state
+    this.setState({
+      notes: [note, ...notes]
+    })
   };
 
   // removeFromNotes = id => {
@@ -95,7 +101,6 @@ class App extends Component {
   // };
 
   toggleLogIn = userEmail => {
-    // debugger
     this.setState({
       userEmail,
       loggedIn: true
@@ -117,78 +122,55 @@ class App extends Component {
 
   displaySearch = async currency => {
     let abbCurr;
-    let expCurr;
-    const { abbrevCurrencies, expandedCurrencies } = this.state;
+    const { currencies } = this.state;
     if (currency === "") {
-      abbCurr = await this.cleaner.getAbbrevCurrencies();
-      expCurr = await this.cleaner.getExpandedCurrencies();
+      abbCurr = await this.cleaner.getCurrencies();
     } else {
-      abbCurr = abbrevCurrencies.filter(
-        curr =>
-          curr.name.toUpperCase().includes(currency.toUpperCase()) ||
-          curr.name.toUpperCase() === currency.toUpperCase()
-      );
-      expCurr = expandedCurrencies.filter(
+      abbCurr = currencies.filter(
         curr =>
           curr.name.toUpperCase().includes(currency.toUpperCase()) ||
           curr.name.toUpperCase() === currency.toUpperCase()
       );
     }
     this.setState({
-      abbrevCurrencies: abbCurr,
-      expandedCurrencies: expCurr
+      currencies: abbCurr,
     });
   };
 
   setFilter = filterCategory => {
-    const { abbrevCurrencies, expandedCurrencies } = this.state;
+    const { currencies } = this.state;
     let sortedAbbrev;
-    let sortedExp;
     if (filterCategory === "Rank") {
-      sortedAbbrev = abbrevCurrencies.sort((a, b) => a.rank - b.rank);
-      sortedExp = expandedCurrencies.sort((a, b) => a.rank - b.rank);
+      sortedAbbrev = currencies.sort((a, b) => a.rank - b.rank);
     } else if (filterCategory === "Price") {
-      sortedAbbrev = abbrevCurrencies.sort((a, b) => a.price - b.price);
-      sortedExp = expandedCurrencies.sort((a, b) => a.price - b.price);
+      sortedAbbrev = currencies.sort((a, b) => a.price - b.price);
     } else if (filterCategory === "%Change") {
-      sortedAbbrev = abbrevCurrencies.sort(
-        (a, b) => a.percent_change - b.percent_change
-      );
-      sortedExp = expandedCurrencies.sort(
+      sortedAbbrev = currencies.sort(
         (a, b) => a.percent_change - b.percent_change
       );
     }
     this.setState({
-      abbrevCurrencies: sortedAbbrev,
-      expandedCurrencies: sortedExp
+      currencies: sortedAbbrev,
     });
   };
 
-  storeToken = token => {
+  storeUserInfo = (token, email) => {
     this.setState({
       token: token.teller_api_token,
+      userEmail: email,
       loggedIn: true
     });
     localStorage.setItem("userToken", JSON.stringify(token));
+    localStorage.setItem("userEmail", JSON.stringify(email));
     console.log(this.state.token);
-  };
-
-  checkToken = () => {
-    if (!this.state.token && localStorage.getItem("userToken") !== null) {
-      const token = JSON.parse(localStorage.getItem("userToken"));
-      this.setState({
-        token: token.teller_api_token,
-        loggedIn: true
-      });
-    }
+    console.log(this.state.userEmail);
   };
 
   clearUser = () => {
     localStorage.clear();
     this.setState({
       favorites: [],
-      abbrevCurrencies: [],
-      expandedCurrencies: [],
+      currencies: [],
       userEmail: "",
       news: [],
       loggedIn: false,
@@ -198,7 +180,7 @@ class App extends Component {
   };
 
   render() {
-    const { abbrevCurrencies, favorites, notes, token } = this.state;
+    const { currencies, favorites, notes, token } = this.state;
     return (
       <BrowserRouter>
         <div className="App">
@@ -220,10 +202,11 @@ class App extends Component {
                       favorites={favorites}
                       addToFavorites={this.addToFavorites}
                       removeFromFavorites={this.removeFromFavorites}
-                      abbrevCurrencies={abbrevCurrencies}
+                      currencies={currencies}
                       setFilter={this.setFilter}
                       removeLoginState={this.removeLoginState}
                       token={token}
+                      setFavorites={this.setFavorites}
                     />
                     <Search displaySearch={this.displaySearch} />
                     {this.state.loggedIn && (
@@ -245,9 +228,9 @@ class App extends Component {
                   <LoginContainer
                     loggedIn={this.setLoginState}
                     toggleLogIn={this.toggleLogIn}
-                    storeToken={this.storeToken}
-                    addToNotes={this.addToNotes}
-                    addToFavorites={this.addToFavorites}
+                    storeUserInfo={this.storeUserInfo}
+                    setNotes={this.setNotes}
+                    setFavorites={this.setFavorites}
                     setCurrencies={this.setCurrencies}
                   />
                 );
@@ -306,7 +289,7 @@ class App extends Component {
               exact
               path="/register"
               render={() => {
-                return <RegisterForm storeToken={this.storeToken} />;
+                return <RegisterForm storeUserInfo={this.storeUserInfo} />;
               }}
             />
             <Route component={Invalid} />

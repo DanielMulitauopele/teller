@@ -3,7 +3,7 @@ import DataCleaner from './'
 import API from '../API/'
 import { mockUsers } from '../MockData/mockUsers'
 import { mockCurrencies } from '../MockData/mockCurrencies'
-import { mockAbbrevCurrencies } from '../MockData/mockAbbrevCurrencies'
+import { mockcurrencies } from '../MockData/mockcurrencies'
 import { mockExpandedCurrencies } from '../MockData/mockExpandedCurrencies'
 import { mockCoinNames } from '../MockData/mockCoinNames'
 
@@ -14,15 +14,15 @@ describe('DataCleaner', () => {
     return mockCurrencies
   })
 
-  describe('getAbbrevCurrencies function', () => {
+  describe('getCurrencies function', () => {
     it('should call fetchData', async () => {
-      await mockCleaner.getAbbrevCurrencies()
+      await mockCleaner.getCurrencies()
       expect(mockCleaner.fetchData).toHaveBeenCalled()
     })
 
     it('should return an array of abbreviated clean objects', async () => {
-      const cleanedCurrencies = await mockCleaner.getAbbrevCurrencies()
-      expect(cleanedCurrencies).toEqual(mockAbbrevCurrencies)
+      const cleanedCurrencies = await mockCleaner.getCurrencies()
+      expect(cleanedCurrencies).toEqual(mockcurrencies)
     })
   })
 

@@ -5,7 +5,7 @@ import HeartP from "../../Assets/heartpink.svg";
 import { Icons } from "../../Assets/cryptoIcons/cryptoIcons";
 import DataCleaner from "../../Utils/Cleaners/";
 import { sendFavorites } from "../../Utils/API/";
-import LineChart from "../LineChart/LineChart"
+// import LineChart from "../LineChart/LineChart"
 class LandingCurrency extends Component {
   constructor(props) {
     super(props);
@@ -31,29 +31,23 @@ class LandingCurrency extends Component {
 
   handleClick = async e => {
     const { name } = e.target;
-      this.props.displayExpanded(name)
+    this.props.displayExpanded(name)
   };
 
   handleFaveClick = async e => {
-    const { name } = e.target;
+    // const { name } = e.target;
     const { addToFavorites, currency } = this.props
-    if (!this.state.token) {
-      //call function that renders error component
-      return
-    } else {
-      // const fave = await this.cleaner.formatFavorite(name);
-      sendFavorites(JSON.stringify({
-            "name": currency.name,
-            "price_usd": currency.price,
-            "percent_change_24_hr": currency.percent_change
-          }), this.props.token)
-      addToFavorites({
-        name: currency.name,
-        price_usd: currency.price_usd,
-        percent_change: currency.percent_change
-      });
-      this.faved();
-    }
+    sendFavorites(JSON.stringify({
+      "name": currency.name,
+      "price_usd": currency.price,
+      "percent_change_24_hr": currency.percent_change
+    }), this.props.token)
+    addToFavorites({
+      name: currency.name,
+      price_usd: currency.price,
+      percent_change: currency.percent_change
+    });
+    this.faved();
   }
 
   render() {
@@ -103,7 +97,7 @@ class LandingCurrency extends Component {
         )}
         {this.state.expanded && (
           <div className="expanded-graph">
-            <LineChart />
+            {/*<LineChart />*/}
           </div>
         )}
       </div>
