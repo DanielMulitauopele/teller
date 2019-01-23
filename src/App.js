@@ -79,25 +79,6 @@ class App extends Component {
     this.setState({
       favorites: [favorite, ...favorites]
     })
-    // let favorites
-    // if(favorite !== null) {
-    //   this.setState({
-    //     favorites: [favorite, ...this.state.favorites]
-    //   })
-    // } else if (!this.state.token && (favorite === null || undefined)) {
-    //   favorites = [
-    //     {
-    //       id: 12345,
-    //       name: "No favorites saved",
-    //       price_usd: 0,
-    //       percent_change_24_hr: 0
-    //     }
-    //   ];
-    //   this.setState({ favorites });
-    // } else {
-    //   favorites = await fetchFavorites(this.state.token);
-    //   this.setState({ favorites });
-    // }
   };
 
   // removeFromFavorites = id => {
