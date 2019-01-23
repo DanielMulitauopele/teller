@@ -8,6 +8,7 @@ import LineChart from "../LineChart/LineChart"
 import TweetContainer from "../TweetContainer/TweetContainer"
 import { fetchAnalysis } from "../../Utils/API/";
 
+
 class CurrencyExpanded extends Component {
   constructor(props) {
     super(props)
