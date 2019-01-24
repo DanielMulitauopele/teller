@@ -7,9 +7,6 @@ import infoIcon from "../../Assets/information.svg";
 class LoginContainer extends Component {
   constructor(props) {
     super(props);
-
-    // const { loggedIn, toggleLogIn, storeToken, addToFavorites, addToNotes, setCurrencies } = this.props
-
     this.state = {
       expandedLogIn: false,
       expandedRegister: false
@@ -30,39 +27,58 @@ class LoginContainer extends Component {
 
   render() {
     const { expandedLogIn } = this.state;
-    const { toggleLogIn, storeToken, loggedIn, addToNotes, addToFavorites, setCurrencies } = this.props
+    const {
+      toggleLogIn,
+      storeUserInfo,
+      loggedIn,
+      setNotes,
+      setFavorites,
+      setCurrencies
+    } = this.props;
     return (
       <div className="login-container">
         <NavLink to="/onboarding">
           <img src={infoIcon} className="info-button" alt="" />
         </NavLink>
-
-        <h1 className="app-title"> teller. </h1>
-        <p>
+        <h1 className={expandedLogIn ? "app-title-hidden" : "app-title"}>
+          teller.
+        </h1>
+        <p className={expandedLogIn ? "hide-this" : "login-subtitle"}>
           Your Personal <br />
           CryptoCurrency Analyst
         </p>
+        <p className={expandedLogIn ? "welcome-back-message" : "hide-this"}>
+          Welcome Back
+        </p>
         <div className="form-box">
           <div className={expandedLogIn ? "button-box" : "button-box-expanded"}>
-            <button onClick={this.expandLogIn} className="login">
+            <button
+              onClick={this.expandLogIn}
+              className={expandedLogIn ? "hide-this-login" : "login"}
+            >
               Log in
             </button>
             <LoginForm
               toggleLogIn={toggleLogIn}
-              storeToken={storeToken}
+              storeUserInfo={storeUserInfo}
               loggedIn={loggedIn}
-              addToNotes={addToNotes}
-              addToFavorites={addToFavorites}
+              setNotes={setNotes}
+              setFavorites={setFavorites}
               setCurrencies={setCurrencies}
             />
             <div>
-              <NavLink to="/register">
-                <button className="register">Register</button>
-              </NavLink>
+              {this.state.expandedLogIn || (
+                <NavLink to="/register">
+                  <button className="register">Register</button>
+                </NavLink>
+              )}
             </div>
-            <NavLink to="/home" className="skip" onClick={loggedIn}>
-              Skip
-            </NavLink>
+            <p
+              onClick={this.expandLogIn}
+              className={expandedLogIn ? "go-back-button" : "hide-this"}
+            >
+              Go Back
+            </p>
           </div>
         </div>
       </div>

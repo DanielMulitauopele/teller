@@ -3,29 +3,37 @@
 }
 
 .form-wrapper input {
-  display: block;
   background-color: transparent;
   border: none;
   color: white;
+  display: inline-block;
   font-size: 1rem;
   text-align: center;
 }
 
-.form-wrapper input:first-child {
-  border-bottom: 1px solid var(--TellerPink);
-}
-
 .login-form input {
-  padding: 0.5rem 1rem;
+  padding: 1rem 0;
 }
 
-.form-wrapper .login-button {
+.login-form button {
+  background: var(--TellerPink);
   border: none;
-  width: 50px;
-  height: 50px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+  margin: 0.5rem 0;
+  transition: 0.2s;
+  width: 15rem;
 }
 
-.play-button {
-  width: 15px;
-  height: 15px;
+.login-form hr {
+  border: 2px solid var(--TellerPink);
+}
+
+.login-form button:hover {
+  box-shadow: none;
 }

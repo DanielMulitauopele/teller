@@ -4,7 +4,7 @@ exports[`Landing Component should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Landing
-    abbrevCurrencies={
+    currencies={
       Array [
         Object {
           "name": "Bitcoin",
@@ -218,7 +218,7 @@ ShallowWrapper {
           removeFromFavorites={[MockFunction]}
         />,
         <LandingCurrencyContainer
-          abbrevCurrencies={
+          currencies={
             Array [
               Object {
                 "name": "Bitcoin",
@@ -381,7 +381,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "abbrevCurrencies": Array [
+          "currencies": Array [
             Object {
               "name": "Bitcoin",
               "percent_change": 0.83,
@@ -534,7 +534,7 @@ ShallowWrapper {
             removeFromFavorites={[MockFunction]}
           />,
           <LandingCurrencyContainer
-            abbrevCurrencies={
+            currencies={
               Array [
                 Object {
                   "name": "Bitcoin",
@@ -697,7 +697,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "abbrevCurrencies": Array [
+            "currencies": Array [
               Object {
                 "name": "Bitcoin",
                 "percent_change": 0.83,

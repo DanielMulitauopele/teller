@@ -1,30 +1,29 @@
 .about-slider {
-  height: 100vh;
-  position: relative;
-  width: 375px;
-  margin: -2rem auto 0;
   height: 650px;
+  margin: -2rem auto 0;
+  position: relative;
   overflow: hidden;
+  width: 375px;
   white-space: nowrap;
 }
 
 .about-slider-wrapper {
-  position: relative;
   height: 100%;
+  position: relative;
   width: 100%;
 }
 
 .about-arrow-box {
-  display: flex;
   align-items: flex-end;
+  bottom: 1rem;
+  display: flex;
   justify-content: space-between;
+  left: 50%;
+  position: fixed;
   text-align: center;
+  transform: translate(-50%, -50%);
   width: 15rem;
   z-index: 10;
-  position: fixed;
-  bottom: 1rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .right-caret,
@@ -34,10 +33,10 @@
 }
 
 .caret {
-  width: 2rem;
-  height: 2rem;
-  transition: 0.2s;
   cursor: pointer;
+  transition: 0.2s;
+  height: 2rem;
+  width: 2rem;
 }
 
 .caret:hover {

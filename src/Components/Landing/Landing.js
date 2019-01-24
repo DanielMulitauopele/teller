@@ -3,18 +3,30 @@ import "./Landing.css";
 import FavoritesContainer from "../FavoritesContainer/FavoritesContainer";
 import LandingCurrencyContainer from "../LandingCurrencyContainer/LandingCurrencyContainer";
 import NewsContainer from "../../Components/NewsContainer/NewsContainer";
-// import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded"
+import CurrencyExpanded from "../../Components/CurrencyExpanded/CurrencyExpanded"
+import { fetchGraphData, fetchAnalysis } from "../../Utils/API/"
 
 class Landing extends Component {
   constructor(props) {
     super(props);
 
-    // const { favorites, addToFavorites, removeFromFavorites, abbrevCurrencies, setFilter, removeLoginState, token } = this.props
-    
+    const {
+      favorites,
+      addToFavorites,
+      removeFromFavorites,
+      abbrevCurrencies,
+      setFilter,
+      removeLoginState,
+      token
+    } = this.props;
+
     this.state = {
       active: false,
       news: [],
       displayedCurrency: "",
+      displayExpanded: false,
+      graphData: [],
+      tones: []
     };
   }
 
@@ -24,16 +36,22 @@ class Landing extends Component {
     });
   };
 
-  displayExpanded = (name) => {
-    if(!this.state.displayedCurrency) {
-      this.setState({
-        displayedCurrency: this.props.abbrevCurrencies[0].name
-      })
-    } else {
-      this.setState({
-        displayedCurrency: name
-      })
-    }
+  expandView = async (name) => {
+    const graphData = await fetchGraphData(name)
+    this.setAnalysis(name)
+    this.setState({
+      displayedCurrency: name,
+      displayExpanded: !this.state.displayExpanded,
+      graphData
+    })
+  }
+
+  setAnalysis = async (currency) => {
+    const analysis = await fetchAnalysis(currency)
+    const tones = analysis.document_tones
+    this.setState({
+      tones
+    })
   }
 
   render() {
@@ -41,28 +59,44 @@ class Landing extends Component {
       favorites,
       addToFavorites,
       removeFromFavorites,
-      abbrevCurrencies,
+      currencies,
       setFilter,
-      token
+      token,
+      setFavorites
     } = this.props;
+
+    const {
+      displayedCurrency,
+      displayExpanded,
+      graphData,
+      tones
+    } = this.state;
 
     return (
       <div className="landing-literal">
         <NewsContainer />
-        <FavoritesContainer 
+        <FavoritesContainer
           favorites={favorites}
-          removeFromFavorites={removeFromFavorites}/>
-        <LandingCurrencyContainer 
+          removeFromFavorites={removeFromFavorites}
+          setFavorites={setFavorites}
+        />
+        <LandingCurrencyContainer
           setFilter={setFilter}
           addToFavorites={addToFavorites}
-          abbrevCurrencies={abbrevCurrencies}
-          displayExpanded={this.displayExpanded}
+          currencies={currencies}
+          expandView={this.expandView}
           token={token}
+          graphData={graphData}
         />
-        {/*<CurrencyExpanded
-                  currencies={abbrevCurrencies}
-                  addToFavorites={addToFavorites}
-                  displayedCurrency={this.state.displayedCurrency} />*/}
+        <CurrencyExpanded
+          className="currency-expanded-div"
+          currencies={currencies}
+          addToFavorites={addToFavorites}
+          displayedCurrency={displayedCurrency}
+          displayExpanded={displayExpanded}
+          graphData={graphData}
+          tones={tones}
+        />
       </div>
     );
   }

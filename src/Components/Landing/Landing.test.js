@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import Landing from './Landing'
 import { mockCurrencies } from '../../Utils/MockData/mockCurrencies'
-import { mockAbbrevCurrencies } from '../../Utils/MockData/mockAbbrevCurrencies'
+import { mockcurrencies } from '../../Utils/MockData/mockcurrencies'
 
 describe('Landing Component', () => {
   let wrapper
@@ -15,7 +15,7 @@ describe('Landing Component', () => {
                         favorites={favorites}
                         addToFavorites={mockAddToFavorites}
                         removeFromFavorites={mockRemoveFromFavorites}
-                        abbrevCurrencies={mockAbbrevCurrencies}
+                        currencies={mockcurrencies}
                      />)
   })
 

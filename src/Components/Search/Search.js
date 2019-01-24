@@ -56,7 +56,8 @@ class Search extends Component {
               name="search"
               value={search}
               onChange={this.handleChange}
-              pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"/>
+              // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
+            />
           </form>
         </div>
       </div>

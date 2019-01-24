@@ -2,28 +2,25 @@ import React, { Component } from 'react'
 import './CurrencyExpanded.css'
 import Heart from "../../Assets/heart.svg"
 import HeartP from "../../Assets/heartpink.svg"
-import DataCleaner from "../../Utils/Cleaners/"
 import Green from "../../Assets/green.svg"
-import LineChart from '../LineChart/LineChart.js'
-// import { fetchAnalysis } from "../../Utils/API/"
+import LineChart from "../LineChart/LineChart"
+import Analysis from "../Analysis/Analysis"
 
 class CurrencyExpanded extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       faved: false,
-      displayedCurrency: this.props.displayedCurrency || "Bitcoin",
-      analysis: ''
+      displayedCurrency: "",
+      analysis: {},
+      expanded: false
     }
-    this.cleaner = new DataCleaner()
   }
 
-  componentDidUpdate() {
-    const { displayedCurrency } = this.props;
-    if (displayedCurrency !== this.state.displayedCurrency) {
-      this.setState({ displayedCurrency: displayedCurrency})
-    }
-    // const analysis = fetchAnalysis(displayedCurrency)
+  async componentDidMount(){
+    this.setState({
+      displayedCurrency: this.props.displayedCurrency
+    })
   }
 
   faved = () => {
@@ -34,42 +31,40 @@ class CurrencyExpanded extends Component {
 
   handleFaveClick = async e => {
     const { name } = e.target;
-    const fave = await this.cleaner.formatFavorite(name);
-    this.props.addToFavorites(fave);
+    const { currencies } = this.props
+    const faveCurrency = currencies.find(currency => currency.name === name)
+    const newFave = {
+      name: faveCurrency.name,
+      price: Math.round(faveCurrency.price_usd * 100) / 100,
+      percent_change: Math.round(faveCurrency.percent_change_24_hr * 100) / 100
+    }
+    this.props.addToFavorites(newFave);
     this.faved();
   };
 
   showExpanded = (name) => {
-    let match
-    if (this.props.currencies.length === 0 || this.state.displayedCurrency === "") {
-      match = {
-        name: "Bitcoin",
-        symbol: "BTC",
-        price: 3589.62,
-        percent_change: 22.4,
-        rank: 1
-      }
-    } else if (this.props.currencies.length !== 0) {
-      match = this.props.currencies.find(currency => currency.name === name)
-    }
+    const match = this.props.currencies.find(currency => currency.name === name)
     return match
   }
 
   render() {
-    const currency = this.showExpanded(this.state.displayedCurrency)
-    console.log(currency)
-    return(
-      <div className="expanded-container">
-        <header>
-          <h1 className="currency-symbol-expanded">{currency.symbol}</h1>
-          <h1 className="currency-name-expanded">{currency.name}</h1>
-        </header>
-        <main>
-          <section>
+    const { faved } = this.state
+    const { displayedCurrency, displayExpanded, graphData, tones } = this.props
+    const currency = this.showExpanded(displayedCurrency)
+    if (displayExpanded !== true) {
+      return (<div></div>)
+    } else {
+      return(
+        <div className="expanded-container">
+          <header>
+            <h1 className="currency-symbol-expanded">{currency.symbol}</h1>
+            <h1 className="currency-name-expanded">{currency.name}</h1>
+          </header>
+          <main>
             <div className="price-progress-expanded">
               <img
                   name={currency.name}
-                  src={this.state.faved ? HeartP : Heart}
+                  src={faved ? HeartP : Heart}
                   className="fave-this-expanded"
                   onClick={this.handleFaveClick}
                   alt=""
@@ -79,15 +74,16 @@ class CurrencyExpanded extends Component {
                 {((currency.percent_change < 0 ? -1 : 1) *
                   Math.round(currency.price * currency.percent_change)) /
                   100}{" "}
-                ({currency.percent_change}% {<img className="arrow" src={Green} alt="" />})
+                ({currency.percent_change}% {<img className={currency.percent_change > 0 ? "arrow" : "arrow-down"} src={Green} alt="" />})
               </p>
             </div>
-          </section>
-          <LineChart />
-        </main>
-      </div>
-    )
+            <LineChart graphData={graphData}/>
+            <Analysis tones={tones} currency={currency.name}/>
+          </main>
+        </div>
+      )
+    }
   }
 }
 
-export default CurrencyExpanded
+export default CurrencyExpanded;

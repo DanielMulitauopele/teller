@@ -3,17 +3,25 @@ import Plot from "react-plotly.js";
 import "./LineChart.css";
 
 class LineChart extends Component {
-  constructor() {
-    super();
-    this.state = { data: [] };
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    };
   }
+
   async componentDidMount() {
     const url =
-      "https://cors-anywhere.herokuapp.com/https://teller-api.herokuapp.com/api/v1/assets/bitcoin/history?interval=m30";
+      "https://cors-anywhere.herokuapp.com/https://teller-api.herokuapp.com/api/v1/assets/bitcoin/history?interval=d1";
     const response = await fetch(url);
     const json = await response.json();
     this.setState({ data: json });
   }
+
+  rNG() {
+    return Math.floor(Math.random() * 5);
+  }
+
   render() {
     const allHistoryData = this.state.data;
     let x_values = [];
@@ -33,18 +41,24 @@ class LineChart extends Component {
               {
                 x: x_values,
                 y: y_values,
-                type: "linear",
+                type: "scatter",
                 mode: "lines",
-                marker: { color: "#794dff" }
+                marker: { color: "#9862da" },
+                width: 1,
+                line: { shape: "spline", smoothing: 5 }
               }
             ]}
-            style={{ width: "26rem", height: "100%" }}
+            style={{ width: "32rem", height: "100%" }}
             layout={{
-              height: 230,
+              height: 330,
               font: { color: "white" },
               visible: false,
               xaxis: { title: false, showgrid: false },
-              yaxis: { title: false, showgrid: false },
+              smoothing: 1.3,
+              yaxis: {
+                title: false,
+                showgrid: false
+              },
 
               paper_bgcolor: "rgba(0,0,0,0)",
               plot_bgcolor: "rgba(0,0,0,0)"

@@ -1,35 +1,37 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import "./LoginForm.css";
-import { logInUser } from '../../Utils/API'
+import { logInUser } from "../../Utils/API";
+// import { NavLink } from "react-router-dom";
 
 export class LoginForm extends Component {
   constructor(props) {
     super(props);
 
-    // const { toggleLogIn, storeToken, addToFavorites, addToNotes, setCurrencies } = this.props
+    // const { toggleLogIn, storeUserInfo, setFavorites, setNotes, setCurrencies } = this.props
 
     this.state = {
       email: "",
       password: "",
-      token: ""
+      token: "",
+      disabled: true
     };
   }
 
   handleClick = async e => {
     e.preventDefault();
-    const { email, password } = this.state
+    const { email, password } = this.state;
     const user = JSON.stringify({
-      "email": email,
-      "password": password
-    })
-    const token = await logInUser(user)
+      email: email,
+      password: password
+    });
+    const token = await logInUser(user);
     this.props.toggleLogIn(email);
-    this.props.storeToken(token)
-    this.props.addToNotes()
-    this.props.addToFavorites()
-    this.props.setCurrencies()
-    this.setState({ token: token.teller_api_token })
+    this.props.storeUserInfo(token, email);
+    this.props.setNotes();
+    this.props.setFavorites();
+    this.props.setCurrencies();
+    this.setState({ token: token.teller_api_token });
   };
 
   handleChange = async e => {
@@ -39,8 +41,8 @@ export class LoginForm extends Component {
 
   render() {
     const { email, password, token } = this.state;
-    if (token !== "" && token !== undefined){
-      return <Redirect to="/home" />
+    if (token !== "" && token !== undefined) {
+      return <Redirect to="/home" />;
     } else {
       return (
         <div className="form-wrapper">
@@ -51,8 +53,8 @@ export class LoginForm extends Component {
               value={email}
               onChange={this.handleChange}
               placeholder="Email"
-              // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
             />
+            <hr />
             <input
               className="form-input user-password"
               type="password"
@@ -60,11 +62,14 @@ export class LoginForm extends Component {
               value={password}
               onChange={this.handleChange}
               placeholder="Password"
-              // pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}"
             />
-            <p className="login-button" onClick={this.handleClick}>
-                Go
-            </p>
+            <button
+              disabled={!(this.state.email && this.state.password)}
+              className="login-button"
+              onClick={this.handleClick}
+            >
+              Let's Go!
+            </button>
           </form>
         </div>
       );
