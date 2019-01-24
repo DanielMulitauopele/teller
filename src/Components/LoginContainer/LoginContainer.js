@@ -58,14 +58,16 @@ class LoginContainer extends Component {
             >
               Log in
             </button>
-            <LoginForm
-              toggleLogIn={toggleLogIn}
-              storeUserInfo={storeUserInfo}
-              loggedIn={loggedIn}
-              setNotes={setNotes}
-              setFavorites={setFavorites}
-              setCurrencies={setCurrencies}
-            />
+            {this.state.expandedLogIn && (
+              <LoginForm
+                toggleLogIn={toggleLogIn}
+                storeUserInfo={storeUserInfo}
+                loggedIn={loggedIn}
+                setNotes={setNotes}
+                setFavorites={setFavorites}
+                setCurrencies={setCurrencies}
+              />
+            )}
             <div>
               {this.state.expandedLogIn || (
                 <NavLink to="/register">

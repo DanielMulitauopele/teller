@@ -29,31 +29,31 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    this.checkUser();
+    // this.checkUser();
     this.setCurrencies();
   }
 
   checkUser = async () => {
-    let token
-    let userEmail
+    let token;
+    let userEmail;
     if (!this.state.token && localStorage.getItem("userToken") !== null) {
       token = JSON.parse(localStorage.getItem("userToken"));
     }
-    if(!this.state.userEmail && localStorage.getItem("userEmail") !== null) {
-      userEmail = JSON.parse(localStorage.getItem("userEmail"))
+    if (!this.state.userEmail && localStorage.getItem("userEmail") !== null) {
+      userEmail = JSON.parse(localStorage.getItem("userEmail"));
     }
     this.setState({
       token: token.teller_api_token,
       userEmail: userEmail,
-      loggedIn: true,
+      loggedIn: true
     });
-    this.setNotes()
+    this.setNotes();
   };
 
   setCurrencies = async () => {
     const currencies = await this.cleaner.getCurrencies();
     this.setState({
-      currencies,
+      currencies
     });
   };
 
@@ -62,22 +62,22 @@ class App extends Component {
     const favorites = await fetchFavorites(token.teller_api_token);
     this.setState({
       favorites
-    })
-  }
+    });
+  };
 
   setNotes = async () => {
     const token = JSON.parse(localStorage.getItem("userToken"));
     const notes = await fetchNotes(token.teller_api_token);
     this.setState({
       notes
-    })
-  }
+    });
+  };
 
-  addToFavorites = async (favorite) => {
-    const { favorites } = this.state
+  addToFavorites = async favorite => {
+    const { favorites } = this.state;
     this.setState({
       favorites: [favorite, ...favorites]
-    })
+    });
   };
 
   // removeFromFavorites = id => {
@@ -87,11 +87,11 @@ class App extends Component {
   //   this.setState({ favorites: filteredFavorites });
   // };
 
-  addToNotes = async (note) => {
-    const { notes } = this.state
+  addToNotes = async note => {
+    const { notes } = this.state;
     this.setState({
       notes: [note, ...notes]
-    })
+    });
   };
 
   // removeFromNotes = id => {
@@ -132,7 +132,7 @@ class App extends Component {
       );
     }
     this.setState({
-      currencies: abbCurr,
+      currencies: abbCurr
     });
   };
 
@@ -149,7 +149,7 @@ class App extends Component {
       );
     }
     this.setState({
-      currencies: sortedAbbrev,
+      currencies: sortedAbbrev
     });
   };
 

@@ -6,7 +6,7 @@ class LineChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-       data: []
+      data: []
     };
   }
 
@@ -25,20 +25,18 @@ class LineChart extends Component {
 
   render() {
     const allHistoryData = this.state.data;
-    let rng = this.rNG;
     let x_values = [];
     let y_values = [];
-    let smoothTrace;
     allHistoryData.forEach(data => {
       x_values.push(data.date);
       y_values.push(data.price);
     });
     const modeBarConfig = { displayModeBar: false };
     return [
-      <div className="plotly-graph-box">
+      <div>
         <section>
           <Plot
-            className="plot-line"
+            className="plot-box"
             config={modeBarConfig}
             data={[
               {
