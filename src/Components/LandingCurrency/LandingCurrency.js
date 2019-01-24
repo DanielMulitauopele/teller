@@ -31,23 +31,26 @@ class LandingCurrency extends Component {
 
   handleClick = async e => {
     const { name } = e.target;
-    this.props.expandView(name)
+    this.props.expandView(name);
   };
 
   handleFaveClick = async e => {
-    const { addToFavorites, currency } = this.props
-    sendFavorites(JSON.stringify({
-      "name": currency.name,
-      "price_usd": currency.price,
-      "percent_change_24_hr": currency.percent_change
-    }), this.props.token)
+    const { addToFavorites, currency } = this.props;
+    sendFavorites(
+      JSON.stringify({
+        name: currency.name,
+        price_usd: currency.price,
+        percent_change_24_hr: currency.percent_change
+      }),
+      this.props.token
+    );
     addToFavorites({
       name: currency.name,
       price: currency.price,
       percent_change: currency.percent_change
     });
     this.faved();
-  }
+  };
 
   render() {
     const { symbol, name, price, percent_change } = this.props.currency;
@@ -79,10 +82,7 @@ class LandingCurrency extends Component {
         </div>
         {this.state.expanded && (
           <div className="expanded-currency">
-            <button
-              className="ec-right"
-              onClick={this.handleClick}
-              name={name}>
+            <button className="ec-right" onClick={this.handleClick} name={name}>
               View
             </button>
             <img
