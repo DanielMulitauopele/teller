@@ -80,11 +80,6 @@ class Hotdog extends Component {
                 </NavLink>
               </li>
             </ul>
-            <div className="donate">
-              <img src={Donate} alt="donate-button" />
-              <p>Enjoying this app?</p>
-              <p className="wallet-ID">Q2E9RH128EYG9Y1HE88U2T</p>
-            </div>
           </div>
         </div>
       </div>

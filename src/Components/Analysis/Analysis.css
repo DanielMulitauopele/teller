@@ -7,6 +7,6 @@
   padding: 1rem;
 }
 
-.expanded-currency strong:nth-child(3) {
+.expanded-currency strong {
   color: var(--TellerPink);
 }
