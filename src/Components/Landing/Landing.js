@@ -14,7 +14,7 @@ class Landing extends Component {
       favorites,
       addToFavorites,
       removeFromFavorites,
-      abbrevCurrencies,
+      currencies,
       setFilter,
       removeLoginState,
       token
@@ -87,6 +87,7 @@ class Landing extends Component {
           expandView={this.expandView}
           token={token}
           graphData={graphData}
+          setAnalysis={this.setAnalysis}
         />
         <CurrencyExpanded
           className="currency-expanded-div"

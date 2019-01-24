@@ -4,7 +4,10 @@ import Heart from "../../Assets/heart.svg";
 import HeartP from "../../Assets/heartpink.svg";
 import { Icons } from "../../Assets/cryptoIcons/cryptoIcons";
 import DataCleaner from "../../Utils/Cleaners/";
-import { sendFavorites } from "../../Utils/API/";
+import LineChart from "../LineChart/LineChart";
+import Analysis from "../Analysis/Analysis";
+import { sendFavorites, fetchAnalysis } from "../../Utils/API/";
+
 
 class LandingCurrency extends Component {
   constructor(props) {
@@ -12,9 +15,22 @@ class LandingCurrency extends Component {
     this.state = {
       expanded: false,
       faved: false,
-      token: this.props.token
+      token: this.props.token,
+      tones: []
     };
     this.cleaner = new DataCleaner();
+  }
+
+  componentDidMount() {
+    this.setAnalysis()
+  }
+
+  setAnalysis = async () => {
+    const analysis = await fetchAnalysis(this.props.currency.name)
+    const tones = analysis.document_tones
+    this.setState({
+      tones
+    })
   }
 
   expand = () => {
@@ -92,6 +108,8 @@ class LandingCurrency extends Component {
               onClick={this.handleFaveClick}
               alt=""
             />
+            <LineChart currency={this.props.currency} />
+            <Analysis tones={this.state.tones} currency={name}/>
           </div>
         )}
       </div>

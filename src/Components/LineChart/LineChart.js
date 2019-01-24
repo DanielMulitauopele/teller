@@ -11,8 +11,9 @@ class LineChart extends Component {
   }
 
   async componentDidMount() {
+    const currency = this.props.currency
     const url =
-      "https://cors-anywhere.herokuapp.com/https://teller-api.herokuapp.com/api/v1/assets/bitcoin/history?interval=d1";
+      `https://cors-anywhere.herokuapp.com/https://teller-api.herokuapp.com/api/v1/assets/bitcoin/history?interval=d1`;
     const response = await fetch(url);
     const json = await response.json();
     this.setState({ data: json });
