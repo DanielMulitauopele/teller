@@ -1,0 +1,12 @@
+.expanded-currency span {
+  color: var(--TellerPink);
+  font-weight: 500;
+}
+
+.expanded-currency p {
+  padding: 1rem;
+}
+
+.expanded-currency strong:nth-child(3) {
+  color: var(--TellerPink);
+}

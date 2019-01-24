@@ -11,9 +11,8 @@ class LineChart extends Component {
   }
 
   async componentDidMount() {
-    const currency = this.props.currency
-    const url =
-      `https://cors-anywhere.herokuapp.com/https://teller-api.herokuapp.com/api/v1/assets/bitcoin/history?interval=d1`;
+    const currency = this.props.currency;
+    const url = `https://cors-anywhere.herokuapp.com/https://teller-api.herokuapp.com/api/v1/assets/bitcoin/history?interval=d1`;
     const response = await fetch(url);
     const json = await response.json();
     this.setState({ data: json });
@@ -49,9 +48,9 @@ class LineChart extends Component {
                 line: { shape: "spline", smoothing: 5 }
               }
             ]}
-            style={{ width: "32rem", height: "100%" }}
+            style={{ width: "27rem", height: "100%" }}
             layout={{
-              height: 330,
+              height: 230,
               font: { color: "white" },
               visible: false,
               xaxis: { title: false, showgrid: false },
