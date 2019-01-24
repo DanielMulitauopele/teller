@@ -1,7 +1,8 @@
 .currency-container {
   height: 78vh;
   margin-top: 10rem;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   position: absolute;
   right: 0;
   top: 1rem;
