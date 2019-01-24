@@ -2,7 +2,7 @@ import React from "react";
 import "./FavoriteCurrencies.css";
 import Green from "../../Assets/green.svg";
 
-const FavoriteCurrencies = (props) => {
+const FavoriteCurrencies = props => {
   const controlBubbleSpeed = percent_change_24_hr => {
     let className = "";
     switch (true) {
@@ -50,7 +50,6 @@ const FavoriteCurrencies = (props) => {
     return className;
   };
 
-
   const { favorite } = props;
   const percent_change = parseInt(favorite.percent_change_24_hr || favorite.percent_change)
   return (
@@ -75,7 +74,7 @@ const FavoriteCurrencies = (props) => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default FavoriteCurrencies;

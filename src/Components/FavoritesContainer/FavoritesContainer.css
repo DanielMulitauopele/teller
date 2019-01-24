@@ -1,12 +1,12 @@
 .container-box {
-  overflow: hidden;
   height: 11rem;
-  width: 100%;
+  margin-bottom: 1rem;
   position: absolute;
+  overflow: hidden;
   right: 0;
   top: 0;
+  width: 100%;
   z-index: 4;
-  margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 700px) {

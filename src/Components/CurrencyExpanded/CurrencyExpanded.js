@@ -86,4 +86,4 @@ class CurrencyExpanded extends Component {
   }
 }
 
-export default CurrencyExpanded
+export default CurrencyExpanded;

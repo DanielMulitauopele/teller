@@ -1,11 +1,16 @@
 .expanded-container {
-  margin: 0.5rem 0 0.5rem 0.5rem;
-  border-radius: 15px;
   background: linear-gradient(to right, #424b6e, #272e4e);
+  border-radius: 15px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.459);
   color: var(--AlmostWhite);
+  margin: 0.5rem 0 0.5rem 0.5rem;
   transition: 0.7s;
-  width: 70%;
+  width: 60%;
+  margin: 5rem 0 0 6rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  z-index: 10;
+  position: relative;
 }
 
 header {
@@ -15,9 +20,9 @@ header {
 
 .arrow {
   height: 1rem;
-  width: 0.5rem;
-  transform: rotate(90deg);
   margin-bottom: -2px;
+  transform: rotate(90deg);
+  width: 1rem;
 }
 
 .arrow-down {
@@ -28,7 +33,7 @@ header {
 }
 
 .currency-symbol-expanded {
-  color: rgba(255, 255, 255, 0.609)
+  color: rgba(255, 255, 255, 0.609);
 }
 
 .currency-name-expanded {
@@ -38,10 +43,10 @@ header {
 .fave-this-expanded {
   fill: #000;
   height: 40px;
-  width: 40px;
+  margin-right: 1rem;
   position: relative;
   transition: 0.2s;
-  margin-right: 1rem;
+  width: 40px;
 }
 
 .price-progress-expanded {
@@ -51,4 +56,10 @@ header {
 
 .percent-change-expanded {
   font-size: 1.5em;
+}
+
+@media only screen and (max-width: 700px) {
+  .expanded-container {
+    display: none;
+  }
 }
