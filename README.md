@@ -18,7 +18,7 @@ teller simplifies the data-gathering process that comes with researching currenc
 
 By compiling all of this information into one place, users can feel confident in having done their due diligence.
 
-## Relevant Links
+### Relevant Links
 
  * [Agile Board](https://waffle.io/DanielMulitauopele/teller)
  * [Teller API Production](https://teller-api.herokuapp.com/api/v1/assets)
