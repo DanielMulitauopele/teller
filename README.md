@@ -27,6 +27,10 @@ By compiling all of this information into one place, users can feel confident in
  * [Teller A.I. Repository](https://github.com/DanielMulitauopele/teller-ai)
  * [Teller Prototype Production](https://danielmulitauopele.github.io/teller-js/)
  * [Teller Prototype Repository](https://github.com/DanielMulitauopele/teller-js)
+ 
+### Demo
+
+<img src="https://user-images.githubusercontent.com/36902512/51807912-2e3a2e80-224a-11e9-996e-a30dac144aad.gif">
 
 ### Technologies
 
